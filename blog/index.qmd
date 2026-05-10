@@ -1,0 +1,34 @@
+---
+title: "Blog"
+subtitle: "A stacked Y2K archive for technical notes."
+toc: false
+page-bg: "assets/backgrounds/6.jpg"
+page-theme: "y2k-stack"
+body-class: "page-blog page-bg-6 page-theme-y2k-stack"
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+---
+
+::: {.blog-landing .pixel-dissolve}
+::: {.pixel-kicker}
+Archive interface
+:::
+
+[Research notes]{.holo-chip} [Technical sketches]{.holo-chip} [Open problems]{.holo-chip}
+
+::: {.holo-divider .holo-strip}
+:::
+
+::: {.page-lead}
+Short technical notes, research sketches, and working essays on graph learning, online prediction, fairness, and robustness.
+:::
+
+Posts are intentionally compact: enough structure to preserve an idea, enough whitespace to make it easy to return to later.
+:::
+
+::: {.section-kicker .pixel-kicker}
+Entries
+:::

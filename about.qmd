@@ -1,0 +1,58 @@
+---
+title: "About"
+toc: false
+---
+
+::: {.page-lead}
+I am an undergraduate student interested in graph learning, online prediction, fairness, robustness, and deployment-aware machine learning.
+:::
+
+::: {.holo-divider}
+:::
+
+This site collects research notes, technical essays, project updates, and short reflections on how machine learning systems behave once they meet real deployment conditions.
+
+## Academic Profile
+
+My current interests center on machine learning systems that operate over time: online graph prediction, fairness under feedback, robust evaluation, and methods for understanding when aggregate metrics hide important failures.
+
+::: {.tech-callout .idea}
+### Working style
+
+I use this site as a clean archive for ideas in progress: concise notes, equations, experiments, and project sketches that can later grow into papers or longer technical essays.
+:::
+
+## Topics
+
+::: {.mini-card-grid}
+::: {.mini-card .pixel-panel .pixel-dissolve}
+### Graph Learning
+
+Temporal networks, relational structure, and evolving prediction tasks.
+:::
+
+::: {.mini-card .pixel-panel .pixel-dissolve}
+### Online Prediction
+
+Evaluation protocols for systems that update over time.
+:::
+
+::: {.mini-card .pixel-panel .pixel-dissolve}
+### Fairness
+
+Counterfactual and performative perspectives on deployment feedback.
+:::
+
+::: {.mini-card .pixel-panel .pixel-dissolve}
+### Robustness
+
+Tail behavior, subgroup instability, and distribution shift.
+:::
+:::
+
+## Keywords
+
+- Graph learning and temporal networks
+- Online prediction and regret
+- Counterfactual and performative fairness
+- Robustness, tail behavior, and deployment-aware evaluation

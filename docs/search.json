@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "A concise CV page for education, research interests, projects, and selected writing.\n\nThe full CV or PDF can be linked here later.\n\nCV placeholder\nThis page is structured so a PDF link, selected papers, teaching, and awards can be added without changing the site layout.\n\n\n\nEducation\nUndergraduate student. Details can be added here.\n\n\nResearch Interests\nGraph learning, online prediction, counterfactual fairness, performative prediction, and robust evaluation.\n\n\nProjects\nCOPF, online graph prediction notes, and robustness-focused evaluation work.\n\n\nWriting\nSelected posts and technical essays can be linked from this section as the blog grows."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Archive interface\n\nResearch notes Technical sketches Open problems\n\n\n\n\nShort technical notes, research sketches, and working essays on graph learning, online prediction, fairness, and robustness.\n\nPosts are intentionally compact: enough structure to preserve an idea, enough whitespace to make it easy to return to later.\n\n\nEntries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\n\nBlog\n\nTest\n\n\n\nA short demonstration post with a clean article surface, one display equation, and two pixel-tech callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Y2K research log\n\nGraph learning Online prediction Fairness Robustness\n\n\n\n\nNotes on graph learning, online prediction, fairness, and robustness.\n\nThis is the main archive for compact technical notes, derivations, experiments, and research sketches. The outer layer can be noisy, electronic, and stacked; the reading surface stays clean.\nOpen archive\n\n\nLatest entries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\n\nBlog\n\nTest\n\n\n\nA short demonstration post with a clean article surface, one display equation, and two pixel-tech callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Selected project directions and research notes. More detailed project pages can be added as the work develops.\n\n\n\n\n\n\nCOPF\nCounterfactual-Omni Performative Fairness in evolving graphs, focused on fairness notions that remain meaningful under feedback and structural change.\n\nFairness / graphs\n\n\n\nOnline Graph Prediction\nNotes and experiments on sequential prediction for evolving graphs, including dynamic evaluation protocols and regret-style comparisons.\n\nOnline learning\n\n\n\nRobust Evaluation\nTools and essays for reading beyond mean performance, with special attention to tail error, subgroup instability, and deployment drift.\n\nEvaluation\n\n\n\nTechnical Notebook\nShort derivations, implementation notes, and compact examples that support longer research projects.\n\nNotes"
+  },
+  {
+    "objectID": "blog/2026-05-10-test-post.html",
+    "href": "blog/2026-05-10-test-post.html",
+    "title": "Test Post",
+    "section": "",
+    "text": "This is my first test post. It demonstrates the default reading style for short technical notes on this site."
+  },
+  {
+    "objectID": "blog/2026-05-10-test-post.html#research-note",
+    "href": "blog/2026-05-10-test-post.html#research-note",
+    "title": "Test Post",
+    "section": "Research Note",
+    "text": "Research Note\n\nResearch note\nThis block should read as a pixel-tech note: clear heading, sharp frame, holographic edge, and no decorative icon."
+  },
+  {
+    "objectID": "blog/2026-05-10-test-post.html#a-small-regret-expression",
+    "href": "blog/2026-05-10-test-post.html#a-small-regret-expression",
+    "title": "Test Post",
+    "section": "A Small Regret Expression",
+    "text": "A Small Regret Expression\nHere is an equation:\n\nR_T = \\sum_{t=1}^T \\ell_t(f_t) - \\ell_t(f^\\star)."
+  },
+  {
+    "objectID": "blog/2026-05-10-test-post.html#failure-mode",
+    "href": "blog/2026-05-10-test-post.html#failure-mode",
+    "title": "Test Post",
+    "section": "Failure Mode",
+    "text": "Failure Mode\n\nFailure mode\nA mean metric can look stable while the upper-tail error becomes worse."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am an undergraduate student interested in graph learning, online prediction, fairness, robustness, and deployment-aware machine learning.\nThis site collects research notes, technical essays, project updates, and short reflections on how machine learning systems behave once they meet real deployment conditions."
+  },
+  {
+    "objectID": "about.html#academic-profile",
+    "href": "about.html#academic-profile",
+    "title": "About",
+    "section": "Academic Profile",
+    "text": "Academic Profile\nMy current interests center on machine learning systems that operate over time: online graph prediction, fairness under feedback, robust evaluation, and methods for understanding when aggregate metrics hide important failures.\n\nWorking style\nI use this site as a clean archive for ideas in progress: concise notes, equations, experiments, and project sketches that can later grow into papers or longer technical essays."
+  },
+  {
+    "objectID": "about.html#topics",
+    "href": "about.html#topics",
+    "title": "About",
+    "section": "Topics",
+    "text": "Topics\n\n\nGraph Learning\nTemporal networks, relational structure, and evolving prediction tasks.\n\n\nOnline Prediction\nEvaluation protocols for systems that update over time.\n\n\nFairness\nCounterfactual and performative perspectives on deployment feedback.\n\n\nRobustness\nTail behavior, subgroup instability, and distribution shift."
+  },
+  {
+    "objectID": "about.html#keywords",
+    "href": "about.html#keywords",
+    "title": "About",
+    "section": "Keywords",
+    "text": "Keywords\n\nGraph learning and temporal networks\nOnline prediction and regret\nCounterfactual and performative fairness\nRobustness, tail behavior, and deployment-aware evaluation"
+  }
+]

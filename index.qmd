@@ -1,0 +1,36 @@
+---
+title: "Blog"
+subtitle: "Notes on graph learning, online prediction, fairness, and robustness."
+toc: false
+page-bg: "assets/backgrounds/6.jpg"
+page-theme: "y2k-stack"
+body-class: "page-blog page-bg-6 page-theme-y2k-stack"
+listing:
+  contents: "blog/20*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+---
+
+::: {.blog-landing .pixel-dissolve}
+::: {.pixel-kicker}
+Y2K research log
+:::
+
+[Graph learning]{.holo-chip} [Online prediction]{.holo-chip} [Fairness]{.holo-chip} [Robustness]{.holo-chip}
+
+::: {.holo-divider .holo-strip}
+:::
+
+::: {.page-lead}
+Notes on graph learning, online prediction, fairness, and robustness.
+:::
+
+This is the main archive for compact technical notes, derivations, experiments, and research sketches. The outer layer can be noisy, electronic, and stacked; the reading surface stays clean.
+
+[Open archive](blog/index.qmd){.button-primary}
+:::
+
+::: {.section-kicker .pixel-kicker}
+Latest entries
+:::

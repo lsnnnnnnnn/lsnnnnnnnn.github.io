@@ -1,0 +1,53 @@
+---
+title: "Projects"
+toc: false
+---
+
+::: {.page-lead}
+Selected project directions and research notes. More detailed project pages can be added as the work develops.
+:::
+
+::: {.holo-divider}
+:::
+
+::: {.project-grid}
+::: {.project-card .window-panel .pixel-panel}
+### COPF
+
+Counterfactual-Omni Performative Fairness in evolving graphs, focused on fairness notions that remain meaningful under feedback and structural change.
+
+::: {.section-kicker}
+Fairness / graphs
+:::
+:::
+
+::: {.project-card .window-panel .pixel-panel}
+### Online Graph Prediction
+
+Notes and experiments on sequential prediction for evolving graphs, including dynamic evaluation protocols and regret-style comparisons.
+
+::: {.section-kicker}
+Online learning
+:::
+:::
+
+::: {.project-card .window-panel .pixel-panel}
+### Robust Evaluation
+
+Tools and essays for reading beyond mean performance, with special attention to tail error, subgroup instability, and deployment drift.
+
+::: {.section-kicker}
+Evaluation
+:::
+:::
+
+::: {.project-card .window-panel .pixel-panel}
+### Technical Notebook
+
+Short derivations, implementation notes, and compact examples that support longer research projects.
+
+::: {.section-kicker}
+Notes
+:::
+:::
+:::

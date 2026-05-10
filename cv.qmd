@@ -1,0 +1,42 @@
+---
+title: "CV"
+toc: false
+---
+
+::: {.page-lead}
+A concise CV page for education, research interests, projects, and selected writing.
+:::
+
+The full CV or PDF can be linked here later.
+
+::: {.tech-callout .idea .holo-panel}
+### CV placeholder
+
+This page is structured so a PDF link, selected papers, teaching, and awards can be added without changing the site layout.
+:::
+
+::: {.cv-grid}
+::: {.cv-section .window-panel .pixel-panel}
+### Education
+
+Undergraduate student. Details can be added here.
+:::
+
+::: {.cv-section .window-panel .pixel-panel}
+### Research Interests
+
+Graph learning, online prediction, counterfactual fairness, performative prediction, and robust evaluation.
+:::
+
+::: {.cv-section .window-panel .pixel-panel}
+### Projects
+
+COPF, online graph prediction notes, and robustness-focused evaluation work.
+:::
+
+::: {.cv-section .window-panel .pixel-panel}
+### Writing
+
+Selected posts and technical essays can be linked from this section as the blog grows.
+:::
+:::

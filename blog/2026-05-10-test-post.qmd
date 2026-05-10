@@ -1,0 +1,35 @@
+---
+title: "Test Post"
+date: "2026-05-10"
+description: "A short demonstration post with a clean article surface, one display equation, and two pixel-tech callout blocks."
+categories: [Blog, Test]
+page-bg: "assets/backgrounds/6.jpg"
+page-theme: "y2k-stack"
+body-class: "page-post page-bg-6 page-theme-y2k-stack"
+---
+
+This is my first test post. It demonstrates the default reading style for short technical notes on this site.
+
+## Research Note
+
+::: {.tech-callout .note .pixel-dissolve}
+**Research note**
+
+This block should read as a pixel-tech note: clear heading, sharp frame, holographic edge, and no decorative icon.
+:::
+
+## A Small Regret Expression
+
+Here is an equation:
+
+$$
+R_T = \sum_{t=1}^T \ell_t(f_t) - \ell_t(f^\star).
+$$
+
+## Failure Mode
+
+::: {.tech-callout .failure .pixel-dissolve}
+**Failure mode**
+
+A mean metric can look stable while the upper-tail error becomes worse.
+:::
