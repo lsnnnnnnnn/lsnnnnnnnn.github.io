@@ -14,7 +14,7 @@ listing:
 
 ::: {.blog-landing .pixel-dissolve}
 ::: {.pixel-kicker}
-Y2K research log
+research log
 :::
 
 [Graph learning]{.holo-chip} [Online prediction]{.holo-chip} [Fairness]{.holo-chip} [Robustness]{.holo-chip}
