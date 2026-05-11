@@ -1,11 +1,13 @@
 ---
 title: "Test Post"
 date: "2026-05-10"
-description: "A short demonstration post with a clean article surface, one display equation, and two pixel-tech callout blocks."
+description: "A short demonstration post with one display equation and two technical callout blocks."
 categories: [Blog, Test]
-page-bg: "assets/backgrounds/6.jpg"
-page-theme: "y2k-stack"
-body-class: "page-post page-bg-6 page-theme-y2k-stack"
+toc: true
+page-bg: "assets/curated/bg-06.jpg"
+format:
+  html:
+    body-classes: "y2k-post bg-06"
 ---
 
 This is my first test post. It demonstrates the default reading style for short technical notes on this site.
@@ -15,7 +17,7 @@ This is my first test post. It demonstrates the default reading style for short 
 ::: {.tech-callout .note .pixel-dissolve}
 **Research note**
 
-This block should read as a pixel-tech note: clear heading, sharp frame, holographic edge, and no decorative icon.
+Track the assumption that changes the proof, not only the lemma that survives into the final draft.
 :::
 
 ## A Small Regret Expression

@@ -2,16 +2,25 @@ project:
   type: website
   output-dir: docs
   resources:
+    - assets/curated
     - assets/backgrounds/6.jpg
     - assets/backgrounds/12.jpg
     - assets/backgrounds/18.jpg
+    - assets/backgrounds/bg-06.jpg
+    - assets/backgrounds/bg-10.jpg
+    - assets/backgrounds/bg-12.jpg
     - assets/deco/chrome-pack.png
     - assets/deco/flip-phone.png
     - assets/deco/info-pixel.png
     - assets/deco/loading-pixel.png
     - assets/deco/pixel-badge.png
+    - assets/deco/pixel-arrow.png
+    - assets/deco/pixel-glyph-blue.png
     - assets/deco/pixel-triangle.png
+    - assets/deco/pixel-window-small.png
     - assets/deco/retro-computer.png
+    - assets/deco/tiny-pixel-37.png
+    - assets/deco/tiny-pixel-52.png
     - assets/deco/tiny-pixel-91.png
     - assets/deco/tiny-pixel-140.png
     - assets/deco/wow-burst.png
@@ -36,7 +45,7 @@ website:
     foreground: "#243042"
     right:
       - text: Blog
-        href: index.qmd
+        href: blog/index.qmd
 
 format:
   html:
@@ -49,3 +58,4 @@ format:
     code-copy: true
     html-math-method: katex
     smooth-scroll: true
+    include-before-body: _includes/y2k-deco.html

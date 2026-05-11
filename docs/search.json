@@ -11,14 +11,14 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Archive interface\n\nResearch notes Technical sketches Open problems\n\n\n\n\nShort technical notes, research sketches, and working essays on graph learning, online prediction, fairness, and robustness.\n\nPosts are intentionally compact: enough structure to preserve an idea, enough whitespace to make it easy to return to later.\n\n\nEntries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\n\nBlog\n\nTest\n\n\n\nA short demonstration post with a clean article surface, one display equation, and two pixel-tech callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Old web archive\n\nResearch notes Technical sketches Open problems\n\n\n\n\nShort technical notes, research sketches, and working essays on graph learning, online prediction, fairness, and robustness.\n\nCompact entries for derivations, experiments, open questions, and notes worth returning to.\n\n\nEntries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\nA short demonstration post with one display equation and two technical callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "research log\n\nGraph learning Online prediction Fairness Robustness\n\n\n\n\nNotes on graph learning, online prediction, fairness, and robustness.\n\nThis is the main archive for compact technical notes, derivations, experiments, and research sketches. The outer layer can be noisy, electronic, and stacked; the reading surface stays clean.\nOpen archive\n\n\nLatest entries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\n\nBlog\n\nTest\n\n\n\nA short demonstration post with a clean article surface, one display equation, and two pixel-tech callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
+    "text": "notes\n\nGraph learning Online prediction Fairness Robustness\n\n\n\n\nNotes on graph learning, online prediction, fairness, and robustness.\n\nCompact technical notes, derivations, experiments, and research sketches.\nOpen notes\n\n\nLatest entries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\nA short demonstration post with one display equation and two technical callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects.html",
@@ -39,7 +39,7 @@
     "href": "blog/2026-05-10-test-post.html#research-note",
     "title": "Test Post",
     "section": "Research Note",
-    "text": "Research Note\n\nResearch note\nThis block should read as a pixel-tech note: clear heading, sharp frame, holographic edge, and no decorative icon."
+    "text": "Research Note\n\nResearch note\nTrack the assumption that changes the proof, not only the lemma that survives into the final draft."
   },
   {
     "objectID": "blog/2026-05-10-test-post.html#a-small-regret-expression",
@@ -60,7 +60,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am an undergraduate student interested in graph learning, online prediction, fairness, robustness, and deployment-aware machine learning.\nThis site collects research notes, technical essays, project updates, and short reflections on how machine learning systems behave once they meet real deployment conditions."
+    "text": "This site collects research notes, technical essays, project updates, and short reflections on how machine learning systems behave once they meet real deployment conditions."
   },
   {
     "objectID": "about.html#academic-profile",

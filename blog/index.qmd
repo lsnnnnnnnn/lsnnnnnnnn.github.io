@@ -1,23 +1,24 @@
 ---
 title: "Blog"
-subtitle: "A stacked Y2K archive for technical notes."
+subtitle: "Sheng'en's notes."
 toc: false
-page-bg: "assets/backgrounds/6.jpg"
-page-theme: "y2k-stack"
-body-class: "page-blog page-bg-6 page-theme-y2k-stack"
+page-bg: "assets/curated/bg-06.jpg"
+format:
+  html:
+    body-classes: "y2k-blog bg-06"
 listing:
   contents: "*.qmd"
   sort: "date desc"
   type: default
-  categories: true
+  categories: false
 ---
 
 ::: {.blog-landing .pixel-dissolve}
 ::: {.pixel-kicker}
-Archive interface
+Notes
 :::
 
-[Research notes]{.holo-chip} [Technical sketches]{.holo-chip} [Open problems]{.holo-chip}
+[Research]{.holo-chip} [Sketches]{.holo-chip} [Questions]{.holo-chip}
 
 ::: {.holo-divider .holo-strip}
 :::
@@ -26,7 +27,7 @@ Archive interface
 Short technical notes, research sketches, and working essays on graph learning, online prediction, fairness, and robustness.
 :::
 
-Posts are intentionally compact: enough structure to preserve an idea, enough whitespace to make it easy to return to later.
+Compact entries for derivations, experiments, open questions, and notes worth returning to.
 :::
 
 ::: {.section-kicker .pixel-kicker}

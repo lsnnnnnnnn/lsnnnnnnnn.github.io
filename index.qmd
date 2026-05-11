@@ -1,20 +1,21 @@
 ---
 title: "Blog"
-subtitle: "Notes on graph learning, online prediction, fairness, and robustness."
+subtitle: "Sheng'en's notes."
 toc: false
-page-bg: "assets/backgrounds/6.jpg"
-page-theme: "y2k-stack"
-body-class: "page-blog page-bg-6 page-theme-y2k-stack"
+page-bg: "assets/curated/bg-06.jpg"
+format:
+  html:
+    body-classes: "y2k-blog bg-06"
 listing:
   contents: "blog/20*.qmd"
   sort: "date desc"
   type: default
-  categories: true
+  categories: false
 ---
 
 ::: {.blog-landing .pixel-dissolve}
 ::: {.pixel-kicker}
-research log
+notes
 :::
 
 [Graph learning]{.holo-chip} [Online prediction]{.holo-chip} [Fairness]{.holo-chip} [Robustness]{.holo-chip}
@@ -26,9 +27,9 @@ research log
 Notes on graph learning, online prediction, fairness, and robustness.
 :::
 
-This is the main archive for compact technical notes, derivations, experiments, and research sketches. The outer layer can be noisy, electronic, and stacked; the reading surface stays clean.
+Compact technical notes, derivations, experiments, and research sketches.
 
-[Open archive](blog/index.qmd){.button-primary}
+[Open notes](blog/index.qmd){.button-primary}
 :::
 
 ::: {.section-kicker .pixel-kicker}

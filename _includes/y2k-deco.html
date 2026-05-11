@@ -1,0 +1,58 @@
+<div class="y2k-deco-layer deco-back" aria-hidden="true">
+  <img class="deco back-soft deco-large-01" src="/assets/curated/deco-large-01.png" alt="">
+  <img class="deco back-soft deco-large-02" src="/assets/curated/deco-large-02.png" alt="">
+  <img class="deco back-soft deco-large-03" src="/assets/curated/deco-large-03.png" alt="">
+  <img class="deco back-soft deco-large-04" src="/assets/curated/deco-large-04.png" alt="">
+  <img class="deco back-soft deco-medium-03" src="/assets/curated/deco-medium-03.png" alt="">
+  <img class="deco back-soft deco-medium-08" src="/assets/curated/deco-medium-08.png" alt="">
+  <img class="deco back-soft deco-small-05" src="/assets/curated/deco-small-05.png" alt="">
+  <img class="deco back-soft deco-small-17" src="/assets/curated/deco-small-17.png" alt="">
+  <img class="deco back-texture deco-texture-01" src="/assets/curated/texture-01.png" alt="">
+  <img class="deco back-texture deco-texture-02" src="/assets/curated/texture-02.png" alt="">
+  <img class="deco back-texture deco-texture-03" src="/assets/curated/texture-03.png" alt="">
+</div>
+
+<div class="y2k-deco-layer deco-mid" aria-hidden="true">
+  <img class="deco mid-soft deco-medium-01" src="/assets/curated/deco-medium-01.png" alt="">
+  <img class="deco mid-soft deco-medium-02" src="/assets/curated/deco-medium-02.png" alt="">
+  <img class="deco mid-soft deco-medium-04" src="/assets/curated/deco-medium-04.png" alt="">
+  <img class="deco mid-soft deco-medium-05" src="/assets/curated/deco-medium-05.png" alt="">
+  <img class="deco mid-soft deco-medium-06" src="/assets/curated/deco-medium-06.png" alt="">
+  <img class="deco mid-soft deco-medium-07" src="/assets/curated/deco-medium-07.png" alt="">
+  <img class="deco mid-soft deco-medium-09" src="/assets/curated/deco-medium-09.png" alt="">
+  <img class="deco mid-soft deco-medium-10" src="/assets/curated/deco-medium-10.png" alt="">
+  <img class="deco mid-soft deco-medium-11" src="/assets/curated/deco-medium-11.png" alt="">
+  <img class="deco mid-soft deco-medium-12" src="/assets/curated/deco-medium-12.png" alt="">
+  <img class="deco mid-soft deco-small-02" src="/assets/curated/deco-small-02.png" alt="">
+  <img class="deco mid-soft deco-small-09" src="/assets/curated/deco-small-09.png" alt="">
+  <img class="deco mid-soft deco-small-18" src="/assets/curated/deco-small-18.png" alt="">
+  <img class="deco mid-soft deco-small-24" src="/assets/curated/deco-small-24.png" alt="">
+</div>
+
+<div class="y2k-deco-layer deco-front" aria-hidden="true">
+  <img class="deco front-pop deco-small-01" src="/assets/curated/deco-small-01.png" alt="">
+  <img class="deco front-pop deco-small-03" src="/assets/curated/deco-small-03.png" alt="">
+  <img class="deco front-pop deco-small-04" src="/assets/curated/deco-small-04.png" alt="">
+  <img class="deco front-pop deco-small-06" src="/assets/curated/deco-small-06.png" alt="">
+  <img class="deco front-pop deco-small-07" src="/assets/curated/deco-small-07.png" alt="">
+  <img class="deco front-pop deco-small-08" src="/assets/curated/deco-small-08.png" alt="">
+  <img class="deco front-pop deco-small-10" src="/assets/curated/deco-small-10.png" alt="">
+  <img class="deco front-pop deco-small-11" src="/assets/curated/deco-small-11.png" alt="">
+  <img class="deco front-pop deco-small-13" src="/assets/curated/deco-small-13.png" alt="">
+  <img class="deco front-pop deco-small-16" src="/assets/curated/deco-small-16.png" alt="">
+  <img class="deco front-pop deco-small-20" src="/assets/curated/deco-small-20.png" alt="">
+  <img class="deco front-pop deco-small-21" src="/assets/curated/deco-small-21.png" alt="">
+</div>
+
+<script>
+(() => {
+  const layers = document.querySelectorAll(".y2k-deco-layer");
+  const header = document.getElementById("quarto-header");
+  const anchor = header ? header.nextSibling : document.body.firstChild;
+  layers.forEach((layer) => {
+    if (layer.parentElement !== document.body) {
+      document.body.insertBefore(layer, anchor);
+    }
+  });
+})();
+</script>
