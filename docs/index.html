@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog – Sheng’en Li</title>
+<title>Reliable Machine Learning – Sheng’en Li</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,18 +32,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c4a6cd76124f2f114c791fef6c81be8f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-54d71bb383ca1a706f4d3d625c91970e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,85 +68,17 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script>
+}</script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script><style>html{ scroll-behavior: smooth; }</style>
-<style id="page-bg-style">body{--page-bg-image:url("./assets/curated/bg-06.jpg");}</style>
-
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Reliable Machine Learning">
+<meta property="og:image" content="https://lsnnnnnnnn.github.io/assets/research-graph.svg">
+<meta property="og:site_name" content="Sheng’en Li">
+<meta property="og:image:alt" content="An illustrative graph with observed variables, an intervention, and a counterfactual outcome.">
 </head>
 
-<body class="nav-fixed y2k-blog bg-06 fullcontent quarto-light">
+<body class="nav-fixed home-page fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -166,8 +96,24 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./blog/index.html"> 
-<span class="menu-text">Blog</span></a>
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -183,69 +129,12 @@ window.Quarto = {
     
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="y2k-deco-layer deco-back" aria-hidden="true">
-  <img class="deco back-soft deco-large-01" src="./assets/curated/deco-large-01.png" alt="">
-  <img class="deco back-soft deco-large-02" src="./assets/curated/deco-large-02.png" alt="">
-  <img class="deco back-soft deco-large-03" src="./assets/curated/deco-large-03.png" alt="">
-  <img class="deco back-soft deco-large-04" src="./assets/curated/deco-large-04.png" alt="">
-  <img class="deco back-soft deco-medium-03" src="./assets/curated/deco-medium-03.png" alt="">
-  <img class="deco back-soft deco-medium-08" src="./assets/curated/deco-medium-08.png" alt="">
-  <img class="deco back-soft deco-small-05" src="./assets/curated/deco-small-05.png" alt="">
-  <img class="deco back-soft deco-small-17" src="./assets/curated/deco-small-17.png" alt="">
-  <img class="deco back-texture deco-texture-01" src="./assets/curated/texture-01.png" alt="">
-  <img class="deco back-texture deco-texture-02" src="./assets/curated/texture-02.png" alt="">
-  <img class="deco back-texture deco-texture-03" src="./assets/curated/texture-03.png" alt="">
-</div>
-
-<div class="y2k-deco-layer deco-mid" aria-hidden="true">
-  <img class="deco mid-soft deco-medium-01" src="./assets/curated/deco-medium-01.png" alt="">
-  <img class="deco mid-soft deco-medium-02" src="./assets/curated/deco-medium-02.png" alt="">
-  <img class="deco mid-soft deco-medium-04" src="./assets/curated/deco-medium-04.png" alt="">
-  <img class="deco mid-soft deco-medium-05" src="./assets/curated/deco-medium-05.png" alt="">
-  <img class="deco mid-soft deco-medium-06" src="./assets/curated/deco-medium-06.png" alt="">
-  <img class="deco mid-soft deco-medium-07" src="./assets/curated/deco-medium-07.png" alt="">
-  <img class="deco mid-soft deco-medium-09" src="./assets/curated/deco-medium-09.png" alt="">
-  <img class="deco mid-soft deco-medium-10" src="./assets/curated/deco-medium-10.png" alt="">
-  <img class="deco mid-soft deco-medium-11" src="./assets/curated/deco-medium-11.png" alt="">
-  <img class="deco mid-soft deco-medium-12" src="./assets/curated/deco-medium-12.png" alt="">
-  <img class="deco mid-soft deco-small-02" src="./assets/curated/deco-small-02.png" alt="">
-  <img class="deco mid-soft deco-small-09" src="./assets/curated/deco-small-09.png" alt="">
-  <img class="deco mid-soft deco-small-18" src="./assets/curated/deco-small-18.png" alt="">
-  <img class="deco mid-soft deco-small-24" src="./assets/curated/deco-small-24.png" alt="">
-</div>
-
-<div class="y2k-deco-layer deco-front" aria-hidden="true">
-  <img class="deco front-pop deco-small-01" src="./assets/curated/deco-small-01.png" alt="">
-  <img class="deco front-pop deco-small-03" src="./assets/curated/deco-small-03.png" alt="">
-  <img class="deco front-pop deco-small-04" src="./assets/curated/deco-small-04.png" alt="">
-  <img class="deco front-pop deco-small-06" src="./assets/curated/deco-small-06.png" alt="">
-  <img class="deco front-pop deco-small-07" src="./assets/curated/deco-small-07.png" alt="">
-  <img class="deco front-pop deco-small-08" src="./assets/curated/deco-small-08.png" alt="">
-  <img class="deco front-pop deco-small-10" src="./assets/curated/deco-small-10.png" alt="">
-  <img class="deco front-pop deco-small-11" src="./assets/curated/deco-small-11.png" alt="">
-  <img class="deco front-pop deco-small-13" src="./assets/curated/deco-small-13.png" alt="">
-  <img class="deco front-pop deco-small-16" src="./assets/curated/deco-small-16.png" alt="">
-  <img class="deco front-pop deco-small-20" src="./assets/curated/deco-small-20.png" alt="">
-  <img class="deco front-pop deco-small-21" src="./assets/curated/deco-small-21.png" alt="">
-</div>
-
-<script>
-(() => {
-  const layers = document.querySelectorAll(".y2k-deco-layer");
-  const header = document.getElementById("quarto-header");
-  const anchor = header ? header.nextSibling : document.body.firstChild;
-  layers.forEach((layer) => {
-    if (layer.parentElement !== document.body) {
-      document.body.insertBefore(layer, anchor);
-    }
-  });
-})();
-</script>
+<a class="skip-link" href="#quarto-document-content">Skip to content</a>
+<script>document.body.prepend(document.currentScript.previousElementSibling);</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
-<p class="subtitle lead">Sheng’en’s notes.</p>
+<h1 class="title">Home</h1>
 </div>
 
 
@@ -262,63 +151,147 @@ window.Quarto = {
 </header>
 
 
-<div class="blog-landing pixel-dissolve">
-<div class="pixel-kicker">
-<p>notes</p>
+<div class="hero">
+<div class="hero-copy">
+<p><span class="eyebrow">APPLIED MATHEMATICS · MACHINE LEARNING</span></p>
+<h1 class="hero-name">
+Sheng’en Li
+</h1>
+<div class="hero-tagline">
+<p>Reliable learning.<br>Grounded in mathematics.</p>
 </div>
-<p><span class="holo-chip">Graph learning</span> <span class="holo-chip">Online prediction</span> <span class="holo-chip">Fairness</span> <span class="holo-chip">Robustness</span></p>
-<div class="holo-divider holo-strip">
+<p>I’m an undergraduate in the dual-degree program at <strong>Duke Kunshan University and Duke University</strong>. I study how machine learning systems can remain reliable, fair, and auditable as the world around them changes.</p>
+<div class="hero-actions">
+<p><a href="./projects.html" class="button-primary">Explore my research <span aria-hidden="true">↗</span></a> <a href="assets/Shengen_Li_CV.pdf" class="button-secondary" download="Shengen_Li_CV.pdf">Download CV <span aria-hidden="true">↓</span></a></p>
+</div>
+<div class="hero-links">
+<p><a href="mailto:sl879@duke.edu">sl879@duke.edu</a> <span aria-hidden="true">/</span> <a href="https://github.com/lsnnnnnnnn">GitHub ↗</a></p>
+</div>
+</div>
+<div class="hero-aside">
+<figure class="research-figure figure">
+  <img src="assets/research-graph.svg" width="440" height="400" alt="An illustrative graph with observed variables, an intervention, and a counterfactual outcome." class="figure-img">
+  <figcaption><span class="figure-index">01 / A RESEARCH PERSPECTIVE</span><span>From patterns<br>to trustworthy decisions.</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="affiliation-strip">
+<p><span>DUKE KUNSHAN <span class="muted">&amp;</span> DUKE UNIVERSITY</span> <span>B.S. Applied Mathematics <span class="muted">/</span> Expected Dec.&nbsp;2026</span></p>
+</div>
+<div class="home-section">
+<div class="section-heading">
+<div>
+<p><span class="eyebrow">01 / RESEARCH</span></p>
+<section id="questions-i-work-on" class="level2">
+<h2 data-anchor-id="questions-i-work-on">Questions I work on</h2>
+</section>
+</div>
+<p><a href="./projects.html" class="text-link">Research experience <span aria-hidden="true">↗</span></a></p>
+</div>
+<div class="research-grid">
+<div class="research-topic">
+<p><span class="topic-index">I.</span></p>
+<section id="counterfactual-learning" class="level3">
+<h3 data-anchor-id="counterfactual-learning">Counterfactual learning</h3>
+<p>How can adaptive systems make fair decisions under feedback, limited overlap, and distribution shift?</p>
+<p><span class="topic-tags">Causal inference · Policy auditing</span></p>
+</section>
+</div>
+<div class="research-topic">
+<p><span class="topic-index">II.</span></p>
+<section id="graph-temporal-learning" class="level3">
+<h3 data-anchor-id="graph-temporal-learning">Graph &amp; temporal learning</h3>
+<p>How do we learn from evolving relationships and detect anomalies without hiding subgroup failures?</p>
+<p><span class="topic-tags">Graph learning · SPD geometry</span></p>
+</section>
+</div>
+<div class="research-topic">
+<p><span class="topic-index">III.</span></p>
+<section id="scientific-ml-verification" class="level3">
+<h3 data-anchor-id="scientific-ml-verification">Scientific ML &amp; verification</h3>
+<p>When is a model’s structure adequate, its parameters identifiable, and its numerical behavior verifiable?</p>
+<p><span class="topic-tags">Model auditing · Verified computation</span></p>
+</section>
+</div>
+</div>
+</div>
+<div class="home-section">
+<div class="section-heading">
+<div>
+<p><span class="eyebrow">02 / SELECTED PUBLICATIONS</span></p>
+<section id="recent-work" class="level2">
+<h2 data-anchor-id="recent-work">Recent work</h2>
+</section>
+</div>
+<p><a href="./publications.html" class="text-link">All publications &amp; manuscripts <span aria-hidden="true">↗</span></a></p>
+</div>
+<div class="selected-paper">
+<div class="paper-venue">
+<p>ICML<br>2026</p>
+</div>
+<section id="copf-an-online-framework-for-deployment-stable-counterfactual-fairness-in-evolving-graphs" class="level3 paper-body">
+<h3 data-anchor-id="copf-an-online-framework-for-deployment-stable-counterfactual-fairness-in-evolving-graphs"><a href="https://openreview.net/forum?id=2Nfr4u3pK2">COPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs</a></h3>
+<p><span class="paper-authors"><strong>Sheng’en Li</strong>, Dongmian Zou</span></p>
+<p>Online counterfactual estimation, auditing, and fairness control for evolving graph recommendation.</p>
+<p><span class="status-label">First author</span> <a href="https://openreview.net/forum?id=2Nfr4u3pK2" class="paper-link">Paper <span aria-hidden="true">↗</span></a></p>
+</section>
+</div>
+<div class="selected-paper">
+<div class="paper-venue">
+<p>ECAI<br>2025</p>
+</div>
+<section id="enhancing-fairness-in-autoencoders-for-node-level-graph-anomaly-detection" class="level3 paper-body">
+<h3 data-anchor-id="enhancing-fairness-in-autoencoders-for-node-level-graph-anomaly-detection"><a href="https://arxiv.org/abs/2508.10785">Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection</a></h3>
+<p><span class="paper-authors">Shoju Wang*, Yuchen Song*, <strong>Sheng’en Li*</strong></span></p>
+<p>Fairness-aware graph autoencoders with a counterfactual objective based on causal interventions.</p>
+<p><span class="status-label">Co-first author</span> <a href="https://arxiv.org/abs/2508.10785" class="paper-link">Paper <span aria-hidden="true">↗</span></a></p>
+</section>
+</div>
+<p><span class="small-note">* Equal contribution. See the full publication list for manuscripts in preparation and under review.</span></p>
+</div>
+<div class="home-section currently-section">
+<div>
+<p><span class="eyebrow">03 / CURRENTLY</span></p>
+<section id="theory-meets-practice." class="level2">
+<h2 data-anchor-id="theory-meets-practice.">Theory meets practice.</h2>
+</section>
+</div>
+<div class="current-items">
+<div class="current-item">
+<p><span class="eyebrow">RESEARCH COLLABORATION</span></p>
+<section id="verified-taylor-model-flowpipes" class="level3">
+<h3 data-anchor-id="verified-taylor-model-flowpipes">Verified Taylor-model flowpipes</h3>
+<p>Developing a differentiable flowpipe engine in PyTorch with Prof.&nbsp;Huan Zhang’s group at the University of Illinois Urbana-Champaign.</p>
+<p><span class="entry-meta">May 2026 – present</span></p>
+</section>
+</div>
+<div class="current-item">
+<p><span class="eyebrow">INDUSTRY</span></p>
+<section id="quantitative-developer-intern" class="level3">
+<h3 data-anchor-id="quantitative-developer-intern">Quantitative Developer Intern</h3>
+<p>Building reproducible financial-data pipelines and evidence-traceable LLM-agent workflows at Shangchen Private Fund, Shanghai.</p>
+<p><span class="entry-meta">July 2026 – present</span></p>
+</section>
+</div>
+<p><a href="./about.html" class="text-link">More about my background <span aria-hidden="true">↗</span></a></p>
+</div>
+</div>
+<div class="contact-band">
+<div>
+<p><span class="eyebrow">GET IN TOUCH</span></p>
+<section id="lets-talk-research." class="level2">
+<h2 data-anchor-id="lets-talk-research.">Let’s talk research.</h2>
+<p>Counterfactual inference, reliable learning, and the questions in between.</p>
+</section>
+</div>
+<p><a href="mailto:sl879@duke.edu" class="contact-link">sl879@duke.edu <span aria-hidden="true">↗</span></a></p>
+</div>
 
-</div>
-<div class="page-lead">
-<p>Notes on graph learning, online prediction, fairness, and robustness.</p>
-</div>
-<p>Compact technical notes, derivations, experiments, and research sketches.</p>
-<p><a href="./blog/index.html" class="button-primary">Open notes</a></p>
-</div>
-<div class="section-kicker pixel-kicker">
-<p>Latest entries</p>
-</div>
 
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QmxvZyUyQ1Rlc3Q=" data-listing-date-sort="1778342400000" data-listing-file-modified-sort="1778487175067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
-<div class="thumbnail"><a href="./blog/2026-05-10-test-post.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/2026-05-10-test-post.html" class="no-external">Test Post</a>
-</h3>
-<div class="delink listing-description"><a href="./blog/2026-05-10-test-post.html" class="no-external">
-<p>A short demonstration post with one display equation and two technical callout blocks.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/2026-05-10-test-post.html" class="no-external">
-<div class="listing-date">
-May 10, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -383,7 +356,7 @@ May 10, 2026
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/lsnnnnnnnn\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -397,6 +370,11 @@ May 10, 2026
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -711,9 +689,32 @@ May 10, 2026
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Sheng’en Li</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:sl879@duke.edu">
+<p>Email</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/lsnnnnnnnn">
+<p>GitHub</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

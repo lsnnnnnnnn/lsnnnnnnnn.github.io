@@ -1,0 +1,133 @@
+---
+title: Publications
+description: Publications and manuscripts by Sheng’en Li on counterfactual fairness, model auditing, and reliable machine learning.
+toc: false
+---
+
+::: {.eyebrow}
+Papers & manuscripts
+:::
+
+::: {.page-lead}
+Research on counterfactual fairness, model auditing, and reliable learning. Accepted publications and work in progress are listed separately below.
+:::
+
+## Peer-reviewed publications
+
+::: {.paper-list}
+::: {.paper}
+::: {.paper-meta}
+ICML 2026 · Accepted · First author
+:::
+
+### COPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs
+
+::: {.paper-authors}
+**Sheng’en Li**, Dongmian Zou
+:::
+
+An online framework combining counterfactual estimation, outcome-indistinguishability auditing, and fairness control for evolving-graph recommendation.
+
+[Read paper ↗](https://openreview.net/forum?id=2Nfr4u3pK2){.text-link}
+:::
+
+::: {.paper}
+::: {.paper-meta}
+ECAI 2025 · Co-first author
+:::
+
+### Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection
+
+::: {.paper-authors}
+Shoju Wang\*, Yuchen Song\*, **Sheng’en Li**\*
+:::
+
+A fairness-aware graph autoencoder for node-level anomaly detection, with a counterfactual fairness objective based on causal interventions.
+
+[Read paper ↗](https://arxiv.org/abs/2508.10785){.text-link}
+:::
+:::
+
+## Major manuscripts
+
+::: {.paper-list}
+::: {.paper}
+::: {.paper-meta}
+In preparation · First author
+:::
+
+### COMET: Counterfactual Moment Auditing under Weak Overlap and Dependent Feedback
+
+::: {.paper-authors}
+**Sheng’en Li**\* et al.
+:::
+
+Certifying counterfactual moments under weak overlap, heavy-tailed outcomes, graph–time dependence, and distribution drift, with subgroup discovery and certificate-guided policy repair.
+:::
+
+::: {.paper}
+::: {.paper-meta}
+Journal manuscript in preparation · Equal contribution
+:::
+
+### Auditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference
+
+::: {.paper-authors}
+Juntang Wang\*, **Sheng’en Li**\*, Yihan Wang\*, Jiayu Gao\*, Duanduan Wang\*, Dongmian Zou, Shixin Xu
+:::
+
+Separating scaffold adequacy from inverse identifiability to audit and refine partial-physics models for ECG-based electrolyte inference.
+:::
+:::
+
+## Collaborative manuscripts
+
+::: {.section-intro}
+Co-first author on each manuscript below. All are under review at KDD 2027.
+:::
+
+::: {.paper-list}
+::: {.paper}
+::: {.paper-meta}
+Under review · KDD 2027 · Co-first author
+:::
+
+### Pambda: Privacy Alignment with Calibration
+:::
+
+::: {.paper}
+::: {.paper-meta}
+Under review · KDD 2027 · Co-first author
+:::
+
+### LambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding
+:::
+
+::: {.paper}
+::: {.paper-meta}
+Under review · KDD 2027 · Co-first author
+:::
+
+### MHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization
+:::
+
+::: {.paper}
+::: {.paper-meta}
+Under review · KDD 2027 · Co-first author
+:::
+
+### DriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields
+:::
+
+::: {.paper}
+::: {.paper-meta}
+Under review · KDD 2027 · Co-first author
+:::
+
+### FToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction
+:::
+:::
+
+::: {.section-intro}
+\* Equal contribution. Author lists are abbreviated for selected collaborative manuscripts in the CV.
+:::

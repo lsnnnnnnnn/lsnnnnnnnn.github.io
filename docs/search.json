@@ -2,37 +2,58 @@
   {
     "objectID": "cv.html",
     "href": "cv.html",
-    "title": "CV",
+    "title": "Curriculum vitae",
     "section": "",
-    "text": "A concise CV page for education, research interests, projects, and selected writing.\n\nThe full CV or PDF can be linked here later.\n\nCV placeholder\nThis page is structured so a PDF link, selected papers, teaching, and awards can be added without changing the site layout.\n\n\n\nEducation\nUndergraduate student. Details can be added here.\n\n\nResearch Interests\nGraph learning, online prediction, counterfactual fairness, performative prediction, and robust evaluation.\n\n\nProjects\nCOPF, online graph prediction notes, and robustness-focused evaluation work.\n\n\nWriting\nSelected posts and technical essays can be linked from this section as the blog grows."
+    "text": "Skip to content"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Old web archive\n\nResearch notes Technical sketches Open problems\n\n\n\n\nShort technical notes, research sketches, and working essays on graph learning, online prediction, fairness, and robustness.\n\nCompact entries for derivations, experiments, open questions, and notes worth returning to.\n\n\nEntries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\nA short demonstration post with one display equation and two technical callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
+    "objectID": "cv.html#the-full-picture.",
+    "href": "cv.html#the-full-picture.",
+    "title": "Curriculum vitae",
+    "section": "The full picture.",
+    "text": "The full picture.\nEducation, publications, research experience, industry work, and service in a two-page PDF."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "notes\n\nGraph learning Online prediction Fairness Robustness\n\n\n\n\nNotes on graph learning, online prediction, fairness, and robustness.\n\nCompact technical notes, derivations, experiments, and research sketches.\nOpen notes\n\n\nLatest entries\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Post\n\n\nA short demonstration post with one display equation and two technical callout blocks.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\nNo matching items"
+    "objectID": "cv.html#at-a-glance",
+    "href": "cv.html#at-a-glance",
+    "title": "Curriculum vitae",
+    "section": "At a glance",
+    "text": "At a glance\n\n\nEducation\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics, dual-degree program\nExpected December 2026 · GPA 3.80/4.00\nDean’s List with Distinction, Fall 2023 and Spring 2024. Summer Research Scholar, 2024 and 2025.\n\n\nResearch\nReliable and trustworthy machine learning; causal and counterfactual inference; graph and temporal learning; scientific machine learning, model auditing, and numerical verification.\nExplore research experience →\n\n\nPublications & manuscripts\nFirst-author paper at ICML 2026 and co-first-author paper at ECAI 2025, alongside manuscripts in preparation and collaborative work under review.\nRead the full publication list →\n\n\nExperience & service\nQuantitative Developer Intern at Shangchen Private Fund; research collaboration with Prof. Huan Zhang’s group at UIUC; resident assistant, volunteer mathematics instruction, and group technical support.\nBackground and experience →\n\n\nOpen the PDF in your browser ↗"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "Selected project directions and research notes. More detailed project pages can be added as the work develops.\n\n\n\n\n\n\nCOPF\nCounterfactual-Omni Performative Fairness in evolving graphs, focused on fairness notions that remain meaningful under feedback and structural change.\n\nFairness / graphs\n\n\n\nOnline Graph Prediction\nNotes and experiments on sequential prediction for evolving graphs, including dynamic evaluation protocols and regret-style comparisons.\n\nOnline learning\n\n\n\nRobust Evaluation\nTools and essays for reading beyond mean performance, with special attention to tail error, subgroup instability, and deployment drift.\n\nEvaluation\n\n\n\nTechnical Notebook\nShort derivations, implementation notes, and compact examples that support longer research projects.\n\nNotes"
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "publications.html#peer-reviewed-publications",
+    "href": "publications.html#peer-reviewed-publications",
+    "title": "Publications",
+    "section": "Peer-reviewed publications",
+    "text": "Peer-reviewed publications\n\n\n\nICML 2026 · Accepted · First author\n\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\n\nSheng’en Li, Dongmian Zou\n\nAn online framework combining counterfactual estimation, outcome-indistinguishability auditing, and fairness control for evolving-graph recommendation.\nRead paper ↗\n\n\n\n\nECAI 2025 · Co-first author\n\n\nEnhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\n\nShoju Wang*, Yuchen Song*, Sheng’en Li*\n\nA fairness-aware graph autoencoder for node-level anomaly detection, with a counterfactual fairness objective based on causal interventions.\nRead paper ↗"
+  },
+  {
+    "objectID": "publications.html#major-manuscripts",
+    "href": "publications.html#major-manuscripts",
+    "title": "Publications",
+    "section": "Major manuscripts",
+    "text": "Major manuscripts\n\n\n\nIn preparation · First author\n\n\nCOMET: Counterfactual Moment Auditing under Weak Overlap and Dependent Feedback\n\nSheng’en Li* et al.\n\nCertifying counterfactual moments under weak overlap, heavy-tailed outcomes, graph–time dependence, and distribution drift, with subgroup discovery and certificate-guided policy repair.\n\n\n\n\nJournal manuscript in preparation · Equal contribution\n\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\n\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\n\nSeparating scaffold adequacy from inverse identifiability to audit and refine partial-physics models for ECG-based electrolyte inference."
+  },
+  {
+    "objectID": "publications.html#collaborative-manuscripts",
+    "href": "publications.html#collaborative-manuscripts",
+    "title": "Publications",
+    "section": "Collaborative manuscripts",
+    "text": "Collaborative manuscripts\n\nCo-first author on each manuscript below. All are under review at KDD 2027.\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nPambda: Privacy Alignment with Calibration\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nLambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nFToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction\n\n\n\n\n* Equal contribution. Author lists are abbreviated for selected collaborative manuscripts in the CV."
   },
   {
     "objectID": "blog/2026-05-10-test-post.html",
     "href": "blog/2026-05-10-test-post.html",
     "title": "Test Post",
     "section": "",
-    "text": "This is my first test post. It demonstrates the default reading style for short technical notes on this site."
+    "text": "Skip to content\nThis is my first test post. It demonstrates the default reading style for short technical notes on this site."
   },
   {
     "objectID": "blog/2026-05-10-test-post.html#research-note",
@@ -56,31 +77,108 @@
     "text": "Failure Mode\n\nFailure mode\nA mean metric can look stable while the upper-tail error becomes worse."
   },
   {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Research",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "projects.html#selected-research",
+    "href": "projects.html#selected-research",
+    "title": "Research",
+    "section": "Selected research",
+    "text": "Selected research\n\n\n\nJanuary 2025 – September 2026 · Duke Kunshan University / Duke University\n\n\nCounterfactual Learning and Auditing for Adaptive Decision Systems\n\nIndependent research · Advised by Prof. Dongmian Zou and Prof. Fan Wei\n\nI developed COPF, an online framework for fair evolving-graph recommendation. It brings together exploration and propensity logging, graph-aware doubly robust estimation, residual outcome-indistinguishability auditing, and primal–dual fairness control.\nIn COMET, I extended this work to certify counterfactual moments under weak overlap, heavy-tailed outcomes, graph–time dependence, and distribution drift, using sample-split subgroup discovery and certificate-guided policy repair.\nOutcomes: COPF accepted to ICML 2026; COMET in preparation. First author on both.\nCOPF paper ↗\n\n\n\n\nMarch 2026 – August 2026 · Duke Kunshan University\n\n\nAudit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\nCollaborative research · Advised by Prof. Shixin Xu and Prof. Dongmian Zou\n\nI co-developed a model-auditing pipeline that separates scaffold adequacy from inverse identifiability through projective alignment, rank-matched null models, residual–concentration analysis, and tangent/Fisher diagnostics.\nI also built and validated analyte-specific MIMIC-IV-ECG pipelines, implemented PPIDM-Π components, and evaluated potassium-specific reduced-rank refinements on held-out data.\nOutcome: Journal manuscript in preparation.\n\n\n\n\nMay 2026 – Present · University of Illinois Urbana-Champaign\n\n\nVerified Taylor-Model Flowpipes in PyTorch\n\nResearch collaboration with Prof. Huan Zhang’s group\n\nI’m developing a differentiable Taylor-model flowpipe engine in PyTorch and a comparison suite against Flow*. The work covers interval and polynomial arithmetic, Picard propagation, remainder validation, and CPU/GPU consistency.\nI identified repeated materialization of shared remainders across nonlinear paths as a source of long-horizon enclosure growth, and developed step-level diagnostics, regression tests, and controlled comparisons of tightness and runtime.\n\n\n\n\nJune 2025 – June 2026 · Duke Kunshan University\n\n\nMultivariate Time-Series Anomaly Detection via SPD Geometry\n\nIndependent research · Advised by Prof. Dongmian Zou\n\nI developed a normalizing-flow approach over symmetric-positive-definite representations of multivariate sequences, evaluating anomaly detection across heterogeneous datasets and distribution shifts.\n\n\n\n\nJuly 2024 – May 2025 · Duke Kunshan University\n\n\nFair Graph Anomaly Detection\n\nSummer Research Scholar · Advised by Prof. Dongmian Zou\n\nI developed a fairness-aware graph autoencoder for node-level anomaly detection, incorporating a counterfactual fairness objective based on causal interventions. Multi-dataset experiments and ablation studies evaluated the fairness–utility trade-off.\nOutcome: Co-first-author paper accepted to ECAI 2025.\nECAI paper ↗"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "index.html#questions-i-work-on",
+    "href": "index.html#questions-i-work-on",
+    "title": "Home",
+    "section": "Questions I work on",
+    "text": "Questions I work on"
+  },
+  {
+    "objectID": "index.html#recent-work",
+    "href": "index.html#recent-work",
+    "title": "Home",
+    "section": "Recent work",
+    "text": "Recent work"
+  },
+  {
+    "objectID": "index.html#theory-meets-practice.",
+    "href": "index.html#theory-meets-practice.",
+    "title": "Home",
+    "section": "Theory meets practice.",
+    "text": "Theory meets practice."
+  },
+  {
+    "objectID": "index.html#lets-talk-research.",
+    "href": "index.html#lets-talk-research.",
+    "title": "Home",
+    "section": "Let’s talk research.",
+    "text": "Let’s talk research.\nCounterfactual inference, reliable learning, and the questions in between."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Skip to content\nShort derivations, experiments, and research sketches. A place for questions and ideas as they develop."
+  },
+  {
+    "objectID": "blog/index.html#entries",
+    "href": "blog/index.html#entries",
+    "title": "Notes",
+    "section": "Entries",
+    "text": "Entries"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This site collects research notes, technical essays, project updates, and short reflections on how machine learning systems behave once they meet real deployment conditions."
+    "text": "Skip to content"
   },
   {
-    "objectID": "about.html#academic-profile",
-    "href": "about.html#academic-profile",
+    "objectID": "about.html#education",
+    "href": "about.html#education",
     "title": "About",
-    "section": "Academic Profile",
-    "text": "Academic Profile\nMy current interests center on machine learning systems that operate over time: online graph prediction, fairness under feedback, robust evaluation, and methods for understanding when aggregate metrics hide important failures.\n\nWorking style\nI use this site as a clean archive for ideas in progress: concise notes, equations, experiments, and project sketches that can later grow into papers or longer technical essays."
+    "section": "Education",
+    "text": "Education\n\n\n\nExpected December 2026\n\n\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics · Dual-degree program · GPA: 3.80/4.00\nDean’s List with Distinction, Fall 2023 and Spring 2024. Summer Research Scholar, 2024 and 2025."
   },
   {
-    "objectID": "about.html#topics",
-    "href": "about.html#topics",
+    "objectID": "about.html#industry-experience",
+    "href": "about.html#industry-experience",
     "title": "About",
-    "section": "Topics",
-    "text": "Topics\n\n\nGraph Learning\nTemporal networks, relational structure, and evolving prediction tasks.\n\n\nOnline Prediction\nEvaluation protocols for systems that update over time.\n\n\nFairness\nCounterfactual and performative perspectives on deployment feedback.\n\n\nRobustness\nTail behavior, subgroup instability, and distribution shift."
+    "section": "Industry experience",
+    "text": "Industry experience\n\n\n\nJuly 2026 – Present · Shanghai, China\n\n\nQuantitative Developer Intern\nShangchen Private Fund\nI build and validate Python/SQL research-data pipelines for financial filings, report metadata, and point-in-time records, supporting factor and liquidity research with consistent definitions and reproducible validation.\nI also develop internal LLM-agent workflows for financial-document retrieval and database-backed question answering, with an emphasis on evidence traceability, temporal and metric-definition constraints, and repeatable outputs."
   },
   {
-    "objectID": "about.html#keywords",
-    "href": "about.html#keywords",
+    "objectID": "about.html#leadership-service",
+    "href": "about.html#leadership-service",
     "title": "About",
-    "section": "Keywords",
-    "text": "Keywords\n\nGraph learning and temporal networks\nOnline prediction and regret\nCounterfactual and performative fairness\nRobustness, tail behavior, and deployment-aware evaluation"
+    "section": "Leadership & service",
+    "text": "Leadership & service\n\n\n\n2025 – Present\n\n\nGroup technical support\nGPU and server maintenance, and mentoring junior students.\n\n\n\n\nAugust 2024 – May 2025\n\n\nResident Assistant\nDuke Kunshan University\n\n\n\n\nJuly 2024 · Tongren, China\n\n\nVolunteer Mathematics Instructor"
+  },
+  {
+    "objectID": "about.html#technical-background",
+    "href": "about.html#technical-background",
+    "title": "About",
+    "section": "Technical background",
+    "text": "Technical background\nProgramming: Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript.\nFrameworks & tools: PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite.\nMethods: Causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility."
+  },
+  {
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "About",
+    "section": "Get in touch",
+    "text": "Get in touch\nFor research conversations and collaboration, reach me at sl879@duke.edu.\nGitHub ↗ · Curriculum vitae"
   }
 ]

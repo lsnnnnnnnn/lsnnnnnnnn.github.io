@@ -34,16 +34,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c4a6cd76124f2f114c791fef6c81be8f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ba18092739a1b65c6290733eb9f1fe75.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><style>html{ scroll-behavior: smooth; }</style>
-<style id="page-bg-style">body{--page-bg-image:url("../assets/curated/bg-06.jpg");}</style>
+}</script>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -118,9 +117,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Test Post">
+<meta property="og:description" content="A short demonstration post with one display equation and two technical callout blocks.">
+<meta property="og:site_name" content="Sheng’en Li">
 </head>
 
-<body class="nav-fixed y2k-post bg-06 quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -138,8 +140,24 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../projects.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../blog/index.html"> 
-<span class="menu-text">Blog</span></a>
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -152,77 +170,12 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#research-note" id="toc-research-note" class="nav-link active" data-scroll-target="#research-note">Research Note</a></li>
-  <li><a href="#a-small-regret-expression" id="toc-a-small-regret-expression" class="nav-link" data-scroll-target="#a-small-regret-expression">A Small Regret Expression</a></li>
-  <li><a href="#failure-mode" id="toc-failure-mode" class="nav-link" data-scroll-target="#failure-mode">Failure Mode</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="y2k-deco-layer deco-back" aria-hidden="true">
-  <img class="deco back-soft deco-large-01" src="../assets/curated/deco-large-01.png" alt="">
-  <img class="deco back-soft deco-large-02" src="../assets/curated/deco-large-02.png" alt="">
-  <img class="deco back-soft deco-large-03" src="../assets/curated/deco-large-03.png" alt="">
-  <img class="deco back-soft deco-large-04" src="../assets/curated/deco-large-04.png" alt="">
-  <img class="deco back-soft deco-medium-03" src="../assets/curated/deco-medium-03.png" alt="">
-  <img class="deco back-soft deco-medium-08" src="../assets/curated/deco-medium-08.png" alt="">
-  <img class="deco back-soft deco-small-05" src="../assets/curated/deco-small-05.png" alt="">
-  <img class="deco back-soft deco-small-17" src="../assets/curated/deco-small-17.png" alt="">
-  <img class="deco back-texture deco-texture-01" src="../assets/curated/texture-01.png" alt="">
-  <img class="deco back-texture deco-texture-02" src="../assets/curated/texture-02.png" alt="">
-  <img class="deco back-texture deco-texture-03" src="../assets/curated/texture-03.png" alt="">
-</div>
-
-<div class="y2k-deco-layer deco-mid" aria-hidden="true">
-  <img class="deco mid-soft deco-medium-01" src="../assets/curated/deco-medium-01.png" alt="">
-  <img class="deco mid-soft deco-medium-02" src="../assets/curated/deco-medium-02.png" alt="">
-  <img class="deco mid-soft deco-medium-04" src="../assets/curated/deco-medium-04.png" alt="">
-  <img class="deco mid-soft deco-medium-05" src="../assets/curated/deco-medium-05.png" alt="">
-  <img class="deco mid-soft deco-medium-06" src="../assets/curated/deco-medium-06.png" alt="">
-  <img class="deco mid-soft deco-medium-07" src="../assets/curated/deco-medium-07.png" alt="">
-  <img class="deco mid-soft deco-medium-09" src="../assets/curated/deco-medium-09.png" alt="">
-  <img class="deco mid-soft deco-medium-10" src="../assets/curated/deco-medium-10.png" alt="">
-  <img class="deco mid-soft deco-medium-11" src="../assets/curated/deco-medium-11.png" alt="">
-  <img class="deco mid-soft deco-medium-12" src="../assets/curated/deco-medium-12.png" alt="">
-  <img class="deco mid-soft deco-small-02" src="../assets/curated/deco-small-02.png" alt="">
-  <img class="deco mid-soft deco-small-09" src="../assets/curated/deco-small-09.png" alt="">
-  <img class="deco mid-soft deco-small-18" src="../assets/curated/deco-small-18.png" alt="">
-  <img class="deco mid-soft deco-small-24" src="../assets/curated/deco-small-24.png" alt="">
-</div>
-
-<div class="y2k-deco-layer deco-front" aria-hidden="true">
-  <img class="deco front-pop deco-small-01" src="../assets/curated/deco-small-01.png" alt="">
-  <img class="deco front-pop deco-small-03" src="../assets/curated/deco-small-03.png" alt="">
-  <img class="deco front-pop deco-small-04" src="../assets/curated/deco-small-04.png" alt="">
-  <img class="deco front-pop deco-small-06" src="../assets/curated/deco-small-06.png" alt="">
-  <img class="deco front-pop deco-small-07" src="../assets/curated/deco-small-07.png" alt="">
-  <img class="deco front-pop deco-small-08" src="../assets/curated/deco-small-08.png" alt="">
-  <img class="deco front-pop deco-small-10" src="../assets/curated/deco-small-10.png" alt="">
-  <img class="deco front-pop deco-small-11" src="../assets/curated/deco-small-11.png" alt="">
-  <img class="deco front-pop deco-small-13" src="../assets/curated/deco-small-13.png" alt="">
-  <img class="deco front-pop deco-small-16" src="../assets/curated/deco-small-16.png" alt="">
-  <img class="deco front-pop deco-small-20" src="../assets/curated/deco-small-20.png" alt="">
-  <img class="deco front-pop deco-small-21" src="../assets/curated/deco-small-21.png" alt="">
-</div>
-
-<script>
-(() => {
-  const layers = document.querySelectorAll(".y2k-deco-layer");
-  const header = document.getElementById("quarto-header");
-  const anchor = header ? header.nextSibling : document.body.firstChild;
-  layers.forEach((layer) => {
-    if (layer.parentElement !== document.body) {
-      document.body.insertBefore(layer, anchor);
-    }
-  });
-})();
-</script>
+<a class="skip-link" href="#quarto-document-content">Skip to content</a>
+<script>document.body.prepend(document.currentScript.previousElementSibling);</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -257,24 +210,32 @@ window.Quarto = {
 
 </header>
 
-
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#research-note" id="toc-research-note">Research Note</a></li>
+  <li><a href="#a-small-regret-expression" id="toc-a-small-regret-expression">A Small Regret Expression</a></li>
+  <li><a href="#failure-mode" id="toc-failure-mode">Failure Mode</a></li>
+  </ul>
+</nav>
 <p>This is my first test post. It demonstrates the default reading style for short technical notes on this site.</p>
 <section id="research-note" class="level2">
-<h2 class="anchored" data-anchor-id="research-note">Research Note</h2>
+<h2 data-anchor-id="research-note">Research Note</h2>
 <div class="tech-callout note pixel-dissolve">
 <p><strong>Research note</strong></p>
 <p>Track the assumption that changes the proof, not only the lemma that survives into the final draft.</p>
 </div>
 </section>
 <section id="a-small-regret-expression" class="level2">
-<h2 class="anchored" data-anchor-id="a-small-regret-expression">A Small Regret Expression</h2>
+<h2 data-anchor-id="a-small-regret-expression">A Small Regret Expression</h2>
 <p>Here is an equation:</p>
 <p><span class="math display">
 R_T = \sum_{t=1}^T \ell_t(f_t) - \ell_t(f^\star).
 </span></p>
 </section>
 <section id="failure-mode" class="level2">
-<h2 class="anchored" data-anchor-id="failure-mode">Failure Mode</h2>
+<h2 data-anchor-id="failure-mode">Failure Mode</h2>
 <div class="tech-callout failure pixel-dissolve">
 <p><strong>Failure mode</strong></p>
 <p>A mean metric can look stable while the upper-tail error becomes worse.</p>
@@ -286,13 +247,6 @@ R_T = \sum_{t=1}^T \ell_t(f_t) - \ell_t(f^\star).
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -357,7 +311,7 @@ R_T = \sum_{t=1}^T \ell_t(f_t) - \ell_t(f^\star).
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/lsnnnnnnnn\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -371,6 +325,11 @@ R_T = \sum_{t=1}^T \ell_t(f_t) - \ell_t(f^\star).
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -685,9 +644,32 @@ R_T = \sum_{t=1}^T \ell_t(f_t) - \ell_t(f^\star).
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Sheng’en Li</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:sl879@duke.edu">
+<p>Email</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/lsnnnnnnnn">
+<p>GitHub</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

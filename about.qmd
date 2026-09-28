@@ -1,58 +1,93 @@
 ---
-title: "About"
+title: About
+description: Education, industry experience, service, and technical background of Sheng’en Li.
 toc: false
 ---
 
+::: {.eyebrow}
+Background & experience
+:::
+
 ::: {.page-lead}
-I am an undergraduate student interested in graph learning, online prediction, fairness, robustness, and deployment-aware machine learning.
+I’m Sheng’en Li, an applied mathematics undergraduate in the dual-degree program at Duke Kunshan University and Duke University, based in Kunshan, China.
 :::
 
-::: {.holo-divider}
+## Education
+
+::: {.timeline}
+::: {.timeline-item}
+::: {.entry-meta}
+Expected December 2026
 :::
 
-This site collects research notes, technical essays, project updates, and short reflections on how machine learning systems behave once they meet real deployment conditions.
+### Duke Kunshan University & Duke University
 
-## Academic Profile
+**B.S. in Applied Mathematics** · Dual-degree program · GPA: 3.80/4.00
 
-My current interests center on machine learning systems that operate over time: online graph prediction, fairness under feedback, robust evaluation, and methods for understanding when aggregate metrics hide important failures.
-
-::: {.tech-callout .idea}
-### Working style
-
-I use this site as a clean archive for ideas in progress: concise notes, equations, experiments, and project sketches that can later grow into papers or longer technical essays.
-:::
-
-## Topics
-
-::: {.mini-card-grid}
-::: {.mini-card .pixel-panel .pixel-dissolve}
-### Graph Learning
-
-Temporal networks, relational structure, and evolving prediction tasks.
-:::
-
-::: {.mini-card .pixel-panel .pixel-dissolve}
-### Online Prediction
-
-Evaluation protocols for systems that update over time.
-:::
-
-::: {.mini-card .pixel-panel .pixel-dissolve}
-### Fairness
-
-Counterfactual and performative perspectives on deployment feedback.
-:::
-
-::: {.mini-card .pixel-panel .pixel-dissolve}
-### Robustness
-
-Tail behavior, subgroup instability, and distribution shift.
+Dean’s List with Distinction, Fall 2023 and Spring 2024. Summer Research Scholar, 2024 and 2025.
 :::
 :::
 
-## Keywords
+## Industry experience
 
-- Graph learning and temporal networks
-- Online prediction and regret
-- Counterfactual and performative fairness
-- Robustness, tail behavior, and deployment-aware evaluation
+::: {.timeline}
+::: {.timeline-item}
+::: {.entry-meta}
+July 2026 – Present · Shanghai, China
+:::
+
+### Quantitative Developer Intern
+
+**Shangchen Private Fund**
+
+I build and validate Python/SQL research-data pipelines for financial filings, report metadata, and point-in-time records, supporting factor and liquidity research with consistent definitions and reproducible validation.
+
+I also develop internal LLM-agent workflows for financial-document retrieval and database-backed question answering, with an emphasis on evidence traceability, temporal and metric-definition constraints, and repeatable outputs.
+:::
+:::
+
+## Leadership & service
+
+::: {.timeline}
+::: {.timeline-item}
+::: {.entry-meta}
+2025 – Present
+:::
+
+### Group technical support
+
+GPU and server maintenance, and mentoring junior students.
+:::
+
+::: {.timeline-item}
+::: {.entry-meta}
+August 2024 – May 2025
+:::
+
+### Resident Assistant
+
+Duke Kunshan University
+:::
+
+::: {.timeline-item}
+::: {.entry-meta}
+July 2024 · Tongren, China
+:::
+
+### Volunteer Mathematics Instructor
+:::
+:::
+
+## Technical background
+
+**Programming:** Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript.
+
+**Frameworks & tools:** PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite.
+
+**Methods:** Causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility.
+
+## Get in touch
+
+For research conversations and collaboration, reach me at [sl879@duke.edu](mailto:sl879@duke.edu).
+
+[GitHub ↗](https://github.com/lsnnnnnnnn){.text-link} · [Curriculum vitae](cv.qmd){.text-link}

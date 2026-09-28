@@ -4,10 +4,6 @@ date: "2026-05-10"
 description: "A short demonstration post with one display equation and two technical callout blocks."
 categories: [Blog, Test]
 toc: true
-page-bg: "assets/curated/bg-06.jpg"
-format:
-  html:
-    body-classes: "y2k-post bg-06"
 ---
 
 This is my first test post. It demonstrates the default reading style for short technical notes on this site.

@@ -1,35 +1,19 @@
 ---
-title: "Blog"
-subtitle: "Sheng'en's notes."
+title: "Notes"
+description: "Research notes on graph learning, counterfactual inference, fairness, and reliable machine learning."
 toc: false
-page-bg: "assets/curated/bg-06.jpg"
-format:
-  html:
-    body-classes: "y2k-blog bg-06"
 listing:
-  contents: "*.qmd"
+  contents: "20*.qmd"
   sort: "date desc"
   type: default
   categories: false
+  fields: [date, title, description]
 ---
 
-::: {.blog-landing .pixel-dissolve}
-::: {.pixel-kicker}
-Notes
-:::
-
-[Research]{.holo-chip} [Sketches]{.holo-chip} [Questions]{.holo-chip}
-
-::: {.holo-divider .holo-strip}
-:::
-
 ::: {.page-lead}
-Short technical notes, research sketches, and working essays on graph learning, online prediction, fairness, and robustness.
+A working notebook on learning, inference, and reliability.
 :::
 
-Compact entries for derivations, experiments, open questions, and notes worth returning to.
-:::
+Short derivations, experiments, and research sketches. A place for questions and ideas as they develop.
 
-::: {.section-kicker .pixel-kicker}
-Entries
-:::
+## Entries

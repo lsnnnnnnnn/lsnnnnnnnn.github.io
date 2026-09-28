@@ -1,53 +1,103 @@
 ---
-title: "Projects"
+title: Research
+description: Sheng’en Li’s research in counterfactual inference, model auditing, graph learning, and numerical verification.
 toc: false
 ---
 
+::: {.eyebrow}
+Questions & approaches
+:::
+
 ::: {.page-lead}
-Selected project directions and research notes. More detailed project pages can be added as the work develops.
+I study how learning systems can make reliable decisions—and how we can audit the assumptions, models, and numerical methods behind them.
 :::
 
-::: {.holo-divider}
+## Selected research
+
+::: {.timeline}
+::: {.timeline-item}
+::: {.entry-meta}
+January 2025 – September 2026 · Duke Kunshan University / Duke University
 :::
 
-::: {.project-grid}
-::: {.project-card .window-panel .pixel-panel}
-### COPF
+### Counterfactual Learning and Auditing for Adaptive Decision Systems
 
-Counterfactual-Omni Performative Fairness in evolving graphs, focused on fairness notions that remain meaningful under feedback and structural change.
-
-::: {.section-kicker}
-Fairness / graphs
-:::
+::: {.entry-meta}
+Independent research · Advised by Prof. Dongmian Zou and Prof. Fan Wei
 :::
 
-::: {.project-card .window-panel .pixel-panel}
-### Online Graph Prediction
+I developed **COPF**, an online framework for fair evolving-graph recommendation. It brings together exploration and propensity logging, graph-aware doubly robust estimation, residual outcome-indistinguishability auditing, and primal–dual fairness control.
 
-Notes and experiments on sequential prediction for evolving graphs, including dynamic evaluation protocols and regret-style comparisons.
+In **COMET**, I extended this work to certify counterfactual moments under weak overlap, heavy-tailed outcomes, graph–time dependence, and distribution drift, using sample-split subgroup discovery and certificate-guided policy repair.
 
-::: {.section-kicker}
-Online learning
-:::
-:::
+**Outcomes:** COPF accepted to ICML 2026; COMET in preparation. First author on both.
 
-::: {.project-card .window-panel .pixel-panel}
-### Robust Evaluation
-
-Tools and essays for reading beyond mean performance, with special attention to tail error, subgroup instability, and deployment drift.
-
-::: {.section-kicker}
-Evaluation
-:::
+[COPF paper ↗](https://openreview.net/forum?id=2Nfr4u3pK2){.text-link}
 :::
 
-::: {.project-card .window-panel .pixel-panel}
-### Technical Notebook
-
-Short derivations, implementation notes, and compact examples that support longer research projects.
-
-::: {.section-kicker}
-Notes
+::: {.timeline-item}
+::: {.entry-meta}
+March 2026 – August 2026 · Duke Kunshan University
 :::
+
+### Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference
+
+::: {.entry-meta}
+Collaborative research · Advised by Prof. Shixin Xu and Prof. Dongmian Zou
+:::
+
+I co-developed a model-auditing pipeline that separates scaffold adequacy from inverse identifiability through projective alignment, rank-matched null models, residual–concentration analysis, and tangent/Fisher diagnostics.
+
+I also built and validated analyte-specific MIMIC-IV-ECG pipelines, implemented PPIDM-Π components, and evaluated potassium-specific reduced-rank refinements on held-out data.
+
+**Outcome:** Journal manuscript in preparation.
+:::
+
+::: {.timeline-item}
+::: {.entry-meta}
+May 2026 – Present · University of Illinois Urbana-Champaign
+:::
+
+### Verified Taylor-Model Flowpipes in PyTorch
+
+::: {.entry-meta}
+Research collaboration with Prof. Huan Zhang’s group
+:::
+
+I’m developing a differentiable Taylor-model flowpipe engine in PyTorch and a comparison suite against Flow*. The work covers interval and polynomial arithmetic, Picard propagation, remainder validation, and CPU/GPU consistency.
+
+I identified repeated materialization of shared remainders across nonlinear paths as a source of long-horizon enclosure growth, and developed step-level diagnostics, regression tests, and controlled comparisons of tightness and runtime.
+:::
+
+::: {.timeline-item}
+::: {.entry-meta}
+June 2025 – June 2026 · Duke Kunshan University
+:::
+
+### Multivariate Time-Series Anomaly Detection via SPD Geometry
+
+::: {.entry-meta}
+Independent research · Advised by Prof. Dongmian Zou
+:::
+
+I developed a normalizing-flow approach over symmetric-positive-definite representations of multivariate sequences, evaluating anomaly detection across heterogeneous datasets and distribution shifts.
+:::
+
+::: {.timeline-item}
+::: {.entry-meta}
+July 2024 – May 2025 · Duke Kunshan University
+:::
+
+### Fair Graph Anomaly Detection
+
+::: {.entry-meta}
+Summer Research Scholar · Advised by Prof. Dongmian Zou
+:::
+
+I developed a fairness-aware graph autoencoder for node-level anomaly detection, incorporating a counterfactual fairness objective based on causal interventions. Multi-dataset experiments and ablation studies evaluated the fairness–utility trade-off.
+
+**Outcome:** Co-first-author paper accepted to ECAI 2025.
+
+[ECAI paper ↗](https://arxiv.org/abs/2508.10785){.text-link}
 :::
 :::

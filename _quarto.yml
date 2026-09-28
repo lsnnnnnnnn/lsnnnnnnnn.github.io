@@ -2,60 +2,52 @@ project:
   type: website
   output-dir: docs
   resources:
-    - assets/curated
-    - assets/backgrounds/6.jpg
-    - assets/backgrounds/12.jpg
-    - assets/backgrounds/18.jpg
-    - assets/backgrounds/bg-06.jpg
-    - assets/backgrounds/bg-10.jpg
-    - assets/backgrounds/bg-12.jpg
-    - assets/deco/chrome-pack.png
-    - assets/deco/flip-phone.png
-    - assets/deco/info-pixel.png
-    - assets/deco/loading-pixel.png
-    - assets/deco/pixel-badge.png
-    - assets/deco/pixel-arrow.png
-    - assets/deco/pixel-glyph-blue.png
-    - assets/deco/pixel-triangle.png
-    - assets/deco/pixel-window-small.png
-    - assets/deco/retro-computer.png
-    - assets/deco/tiny-pixel-37.png
-    - assets/deco/tiny-pixel-52.png
-    - assets/deco/tiny-pixel-91.png
-    - assets/deco/tiny-pixel-140.png
-    - assets/deco/wow-burst.png
-    - assets/textures/glitch-panel.png
-    - assets/textures/holo-grid.png
-    - assets/textures/pixel-noise.png
-    - assets/textures/screen-noise.png
-    - assets/ui/sound-panel.png
-    - assets/ui/window-bar-blue.png
-    - assets/ui/window-frame-blue.png
-    - assets/ui/window-workbench.png
-
-filters:
-  - page-bg.lua
+    - assets/Shengen_Li_CV.pdf
+    - assets/research-graph.svg
+    - assets/favicon.svg
+    - .nojekyll
 
 website:
-  title: "Sheng'en Li"
-  description: "Notes on graph learning, online prediction, fairness, and robustness."
+  title: "Sheng’en Li"
+  site-url: https://lsnnnnnnnn.github.io
+  description: "Sheng’en Li — applied mathematics, reliable machine learning, counterfactual inference, and scientific model auditing."
+  favicon: assets/favicon.svg
+  open-graph: true
   navbar:
     pinned: true
-    background: "#ffffff"
-    foreground: "#243042"
+    background: light
+    foreground: "#252e29"
     right:
-      - text: Blog
+      - text: Research
+        href: projects.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: About
+        href: about.qmd
+      - text: Notes
         href: blog/index.qmd
+      - text: CV
+        href: cv.qmd
+  page-footer:
+    left: "© 2026 Sheng’en Li"
+    right:
+      - text: Email
+        href: mailto:sl879@duke.edu
+      - text: GitHub
+        href: https://github.com/lsnnnnnnnn
 
 format:
   html:
-    theme: cosmo
+    theme: default
     css: styles.css
-    toc: true
-    toc-location: right
-    toc-depth: 3
-    code-fold: true
+    toc: false
+    pagetitle: "{{< meta title >}}"
+    anchor-sections: false
     code-copy: true
     html-math-method: katex
-    smooth-scroll: true
-    include-before-body: _includes/y2k-deco.html
+    link-external-newwindow: true
+    include-before-body: _includes/skip-link.html
+    grid:
+      body-width: 1100px
+      sidebar-width: 0px
+      margin-width: 0px
