@@ -16,7 +16,8 @@ Commit both the source changes and the generated `docs/` directory. GitHub Pages
 - `publications.qmd`: publications and manuscripts, with separate review statuses
 - `projects.qmd`: research experience (keeps the existing URL)
 - `about.qmd`: education, industry experience, service, and skills
-- `cv.qmd` and `assets/Shengen_Li_CV.pdf`: CV page and downloadable PDF
+- `assets/Shengen_Li_CV.pdf`: CV linked directly from the navigation
+- `assets/profile.jpg`: small homepage portrait
 - `blog/`: research notes and existing posts
 
 Replace the PDF at the same path when updating the CV. Publication statuses and current roles are maintained manually; the September 2026 refresh follows the supplied CV.

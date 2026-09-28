@@ -1,93 +1,21 @@
 ---
-title: About
-description: Education, industry experience, service, and technical background of Sheng’en Li.
+title: More
 toc: false
 ---
 
-::: {.eyebrow}
-Background & experience
-:::
+## Honors
 
-::: {.page-lead}
-I’m Sheng’en Li, an applied mathematics undergraduate in the dual-degree program at Duke Kunshan University and Duke University, based in Kunshan, China.
-:::
+- Dean’s List with Distinction, Fall 2023 and Spring 2024
+- Summer Research Scholar, 2024 and 2025
 
-## Education
+## Leadership and Service
 
-::: {.timeline}
-::: {.timeline-item}
-::: {.entry-meta}
-Expected December 2026
-:::
+- Group technical support: GPU/server maintenance and junior-student mentoring, 2025 – Present
+- Resident Assistant, Duke Kunshan University, Aug. 2024 – May 2025
+- Volunteer Mathematics Instructor, Tongren, China, Jul. 2024
 
-### Duke Kunshan University & Duke University
+## Technical Skills
 
-**B.S. in Applied Mathematics** · Dual-degree program · GPA: 3.80/4.00
-
-Dean’s List with Distinction, Fall 2023 and Spring 2024. Summer Research Scholar, 2024 and 2025.
-:::
-:::
-
-## Industry experience
-
-::: {.timeline}
-::: {.timeline-item}
-::: {.entry-meta}
-July 2026 – Present · Shanghai, China
-:::
-
-### Quantitative Developer Intern
-
-**Shangchen Private Fund**
-
-I build and validate Python/SQL research-data pipelines for financial filings, report metadata, and point-in-time records, supporting factor and liquidity research with consistent definitions and reproducible validation.
-
-I also develop internal LLM-agent workflows for financial-document retrieval and database-backed question answering, with an emphasis on evidence traceability, temporal and metric-definition constraints, and repeatable outputs.
-:::
-:::
-
-## Leadership & service
-
-::: {.timeline}
-::: {.timeline-item}
-::: {.entry-meta}
-2025 – Present
-:::
-
-### Group technical support
-
-GPU and server maintenance, and mentoring junior students.
-:::
-
-::: {.timeline-item}
-::: {.entry-meta}
-August 2024 – May 2025
-:::
-
-### Resident Assistant
-
-Duke Kunshan University
-:::
-
-::: {.timeline-item}
-::: {.entry-meta}
-July 2024 · Tongren, China
-:::
-
-### Volunteer Mathematics Instructor
-:::
-:::
-
-## Technical background
-
-**Programming:** Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript.
-
-**Frameworks & tools:** PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite.
-
-**Methods:** Causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility.
-
-## Get in touch
-
-For research conversations and collaboration, reach me at [sl879@duke.edu](mailto:sl879@duke.edu).
-
-[GitHub ↗](https://github.com/lsnnnnnnnn){.text-link} · [Curriculum vitae](cv.qmd){.text-link}
+- **Programming:** Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript
+- **Frameworks and tools:** PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite
+- **Methods:** causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility

@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lsnnnnnnnn.github.io/cv.html</loc>
-    <lastmod>2026-09-28T06:37:25.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lsnnnnnnnn.github.io/publications.html</loc>
-    <lastmod>2026-09-28T06:36:37.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lsnnnnnnnn.github.io/blog/2026-05-10-test-post.html</loc>
-    <lastmod>2026-09-28T06:45:44.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lsnnnnnnnn.github.io/projects.html</loc>
-    <lastmod>2026-09-28T06:36:38.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lsnnnnnnnn.github.io/index.html</loc>
-    <lastmod>2026-09-28T06:45:44.032Z</lastmod>
+    <loc>https://lsnnnnnnnn.github.io/about.html</loc>
+    <lastmod>2026-09-28T08:40:43.925Z</lastmod>
   </url>
   <url>
     <loc>https://lsnnnnnnnn.github.io/blog/index.html</loc>
     <lastmod>2026-09-28T06:37:25.000Z</lastmod>
   </url>
   <url>
-    <loc>https://lsnnnnnnnn.github.io/about.html</loc>
-    <lastmod>2026-09-28T06:36:38.000Z</lastmod>
+    <loc>https://lsnnnnnnnn.github.io/index.html</loc>
+    <lastmod>2026-09-28T08:44:01.334Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lsnnnnnnnn.github.io/projects.html</loc>
+    <lastmod>2026-09-28T08:40:43.828Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lsnnnnnnnn.github.io/blog/2026-05-10-test-post.html</loc>
+    <lastmod>2026-09-28T06:45:44.219Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lsnnnnnnnn.github.io/publications.html</loc>
+    <lastmod>2026-09-28T08:40:43.736Z</lastmod>
   </url>
 </urlset>

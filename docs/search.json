@@ -1,52 +1,129 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum vitae",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "More",
     "section": "",
     "text": "Skip to content"
   },
   {
-    "objectID": "cv.html#the-full-picture.",
-    "href": "cv.html#the-full-picture.",
-    "title": "Curriculum vitae",
-    "section": "The full picture.",
-    "text": "The full picture.\nEducation, publications, research experience, industry work, and service in a two-page PDF."
+    "objectID": "about.html#honors",
+    "href": "about.html#honors",
+    "title": "More",
+    "section": "Honors",
+    "text": "Honors\n\nDean’s List with Distinction, Fall 2023 and Spring 2024\nSummer Research Scholar, 2024 and 2025"
   },
   {
-    "objectID": "cv.html#at-a-glance",
-    "href": "cv.html#at-a-glance",
-    "title": "Curriculum vitae",
-    "section": "At a glance",
-    "text": "At a glance\n\n\nEducation\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics, dual-degree program\nExpected December 2026 · GPA 3.80/4.00\nDean’s List with Distinction, Fall 2023 and Spring 2024. Summer Research Scholar, 2024 and 2025.\n\n\nResearch\nReliable and trustworthy machine learning; causal and counterfactual inference; graph and temporal learning; scientific machine learning, model auditing, and numerical verification.\nExplore research experience →\n\n\nPublications & manuscripts\nFirst-author paper at ICML 2026 and co-first-author paper at ECAI 2025, alongside manuscripts in preparation and collaborative work under review.\nRead the full publication list →\n\n\nExperience & service\nQuantitative Developer Intern at Shangchen Private Fund; research collaboration with Prof. Huan Zhang’s group at UIUC; resident assistant, volunteer mathematics instruction, and group technical support.\nBackground and experience →\n\n\nOpen the PDF in your browser ↗"
+    "objectID": "about.html#leadership-and-service",
+    "href": "about.html#leadership-and-service",
+    "title": "More",
+    "section": "Leadership and Service",
+    "text": "Leadership and Service\n\nGroup technical support: GPU/server maintenance and junior-student mentoring, 2025 – Present\nResident Assistant, Duke Kunshan University, Aug. 2024 – May 2025\nVolunteer Mathematics Instructor, Tongren, China, Jul. 2024"
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "More",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nProgramming: Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript\nFrameworks and tools: PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite\nMethods: causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Skip to content\nShort derivations, experiments, and research sketches. A place for questions and ideas as they develop."
+  },
+  {
+    "objectID": "blog/index.html#entries",
+    "href": "blog/index.html#entries",
+    "title": "Notes",
+    "section": "Entries",
+    "text": "Entries"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
     "section": "",
     "text": "Skip to content"
   },
   {
-    "objectID": "publications.html#peer-reviewed-publications",
-    "href": "publications.html#peer-reviewed-publications",
-    "title": "Publications",
-    "section": "Peer-reviewed publications",
-    "text": "Peer-reviewed publications\n\n\n\nICML 2026 · Accepted · First author\n\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\n\nSheng’en Li, Dongmian Zou\n\nAn online framework combining counterfactual estimation, outcome-indistinguishability auditing, and fairness control for evolving-graph recommendation.\nRead paper ↗\n\n\n\n\nECAI 2025 · Co-first author\n\n\nEnhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\n\nShoju Wang*, Yuchen Song*, Sheng’en Li*\n\nA fairness-aware graph autoencoder for node-level anomaly detection, with a counterfactual fairness objective based on causal interventions.\nRead paper ↗"
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Home",
+    "section": "News",
+    "text": "News\n\n[2026] COPF was accepted to ICML 2026.\n[2025] Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection was accepted to ECAI 2025."
   },
   {
-    "objectID": "publications.html#major-manuscripts",
-    "href": "publications.html#major-manuscripts",
-    "title": "Publications",
-    "section": "Major manuscripts",
-    "text": "Major manuscripts\n\n\n\nIn preparation · First author\n\n\nCOMET: Counterfactual Moment Auditing under Weak Overlap and Dependent Feedback\n\nSheng’en Li* et al.\n\nCertifying counterfactual moments under weak overlap, heavy-tailed outcomes, graph–time dependence, and distribution drift, with subgroup discovery and certificate-guided policy repair.\n\n\n\n\nJournal manuscript in preparation · Equal contribution\n\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\n\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\n\nSeparating scaffold adequacy from inverse identifiability to audit and refine partial-physics models for ECG-based electrolyte inference."
+    "objectID": "index.html#selected-publications",
+    "href": "index.html#selected-publications",
+    "title": "Home",
+    "section": "Selected Publications",
+    "text": "Selected Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nEnhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShoju Wang*, Yuchen Song*, Sheng’en Li*\nECAI 2025 · Co-first author\npaper\n\n* Equal contribution. Full publication list."
   },
   {
-    "objectID": "publications.html#collaborative-manuscripts",
-    "href": "publications.html#collaborative-manuscripts",
-    "title": "Publications",
-    "section": "Collaborative manuscripts",
-    "text": "Collaborative manuscripts\n\nCo-first author on each manuscript below. All are under review at KDD 2027.\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nPambda: Privacy Alignment with Calibration\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nLambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\n\n\n\n\nUnder review · KDD 2027 · Co-first author\n\n\nFToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction\n\n\n\n\n* Equal contribution. Author lists are abbreviated for selected collaborative manuscripts in the CV."
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Home",
+    "section": "Education",
+    "text": "Education\n\n\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics, dual-degree program\nGPA: 3.80/4.00\n\n\nExpected Dec. 2026\n\n\nDean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar (2024, 2025)."
+  },
+  {
+    "objectID": "index.html#research-experience",
+    "href": "index.html#research-experience",
+    "title": "Home",
+    "section": "Research Experience",
+    "text": "Research Experience\n\n\nCounterfactual Learning and Auditing for Adaptive Decision Systems\nDuke Kunshan University / Duke University · Prof. Dongmian Zou and Prof. Fan Wei\n\n\nJan. 2025 – Sep. 2026\n\n\n\n\nVerified Taylor-Model Flowpipes in PyTorch\nUniversity of Illinois Urbana-Champaign · Prof. Huan Zhang’s group\n\n\nMay 2026 – Present\n\n\n\n\nAudit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\nDuke Kunshan University · Prof. Shixin Xu and Prof. Dongmian Zou\n\n\nMar. 2026 – Aug. 2026\n\n\n\n\nMultivariate Time-Series Anomaly Detection via SPD Geometry\nDuke Kunshan University · Prof. Dongmian Zou\n\n\nJun. 2025 – Jun. 2026\n\n\n\n\nFair Graph Anomaly Detection\nDuke Kunshan University · Prof. Dongmian Zou\n\n\nJul. 2024 – May 2025\n\n\nResearch details"
+  },
+  {
+    "objectID": "index.html#work-experience",
+    "href": "index.html#work-experience",
+    "title": "Home",
+    "section": "Work Experience",
+    "text": "Work Experience\n\n\nShangchen Private Fund\nQuantitative Developer Intern · Shanghai, China\n\n\nJul. 2026 – Present"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Research",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "projects.html#counterfactual-learning-and-auditing-for-adaptive-decision-systems",
+    "href": "projects.html#counterfactual-learning-and-auditing-for-adaptive-decision-systems",
+    "title": "Research",
+    "section": "Counterfactual Learning and Auditing for Adaptive Decision Systems",
+    "text": "Counterfactual Learning and Auditing for Adaptive Decision Systems\nDuke Kunshan University / Duke University · Jan. 2025 – Sep. 2026\nAdvised by Prof. Dongmian Zou and Prof. Fan Wei\n\nDeveloped COPF, an online framework for fair evolving-graph recommendation using counterfactual estimation, auditing, and fairness control.\nExtended the work in COMET to counterfactual moment auditing under weak overlap, dependent feedback, and distribution drift.\n\nCOPF paper"
+  },
+  {
+    "objectID": "projects.html#verified-taylor-model-flowpipes-in-pytorch",
+    "href": "projects.html#verified-taylor-model-flowpipes-in-pytorch",
+    "title": "Research",
+    "section": "Verified Taylor-Model Flowpipes in PyTorch",
+    "text": "Verified Taylor-Model Flowpipes in PyTorch\nUniversity of Illinois Urbana-Champaign · May 2026 – Present\nResearch collaboration with Prof. Huan Zhang’s group\n\nDeveloping a differentiable Taylor-model flowpipe engine in PyTorch and a comparison suite against Flow*.\nWorking on interval and polynomial arithmetic, Picard propagation, remainder validation, and CPU/GPU consistency."
+  },
+  {
+    "objectID": "projects.html#auditrefine-partial-physics-models-for-ecg-based-electrolyte-inference",
+    "href": "projects.html#auditrefine-partial-physics-models-for-ecg-based-electrolyte-inference",
+    "title": "Research",
+    "section": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference",
+    "text": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\nDuke Kunshan University · Mar. 2026 – Aug. 2026\nAdvised by Prof. Shixin Xu and Prof. Dongmian Zou\n\nCo-developed a pipeline for auditing scaffold adequacy and inverse identifiability.\nBuilt analyte-specific MIMIC-IV-ECG pipelines and evaluated potassium-specific reduced-rank refinements."
+  },
+  {
+    "objectID": "projects.html#multivariate-time-series-anomaly-detection-via-spd-geometry",
+    "href": "projects.html#multivariate-time-series-anomaly-detection-via-spd-geometry",
+    "title": "Research",
+    "section": "Multivariate Time-Series Anomaly Detection via SPD Geometry",
+    "text": "Multivariate Time-Series Anomaly Detection via SPD Geometry\nDuke Kunshan University · Jun. 2025 – Jun. 2026\nAdvised by Prof. Dongmian Zou\n\nDeveloped a normalizing-flow approach over symmetric-positive-definite representations of multivariate sequences."
+  },
+  {
+    "objectID": "projects.html#fair-graph-anomaly-detection",
+    "href": "projects.html#fair-graph-anomaly-detection",
+    "title": "Research",
+    "section": "Fair Graph Anomaly Detection",
+    "text": "Fair Graph Anomaly Detection\nDuke Kunshan University · Jul. 2024 – May 2025\nSummer Research Scholar · Advised by Prof. Dongmian Zou\n\nDeveloped a fairness-aware graph autoencoder for node-level anomaly detection.\nEvaluated the fairness–utility trade-off across multiple datasets and ablations.\n\nECAI paper"
   },
   {
     "objectID": "blog/2026-05-10-test-post.html",
@@ -77,108 +154,31 @@
     "text": "Failure Mode\n\nFailure mode\nA mean metric can look stable while the upper-tail error becomes worse."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Research",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "Skip to content"
+    "text": "Skip to content\n* Equal contribution."
   },
   {
-    "objectID": "projects.html#selected-research",
-    "href": "projects.html#selected-research",
-    "title": "Research",
-    "section": "Selected research",
-    "text": "Selected research\n\n\n\nJanuary 2025 – September 2026 · Duke Kunshan University / Duke University\n\n\nCounterfactual Learning and Auditing for Adaptive Decision Systems\n\nIndependent research · Advised by Prof. Dongmian Zou and Prof. Fan Wei\n\nI developed COPF, an online framework for fair evolving-graph recommendation. It brings together exploration and propensity logging, graph-aware doubly robust estimation, residual outcome-indistinguishability auditing, and primal–dual fairness control.\nIn COMET, I extended this work to certify counterfactual moments under weak overlap, heavy-tailed outcomes, graph–time dependence, and distribution drift, using sample-split subgroup discovery and certificate-guided policy repair.\nOutcomes: COPF accepted to ICML 2026; COMET in preparation. First author on both.\nCOPF paper ↗\n\n\n\n\nMarch 2026 – August 2026 · Duke Kunshan University\n\n\nAudit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\nCollaborative research · Advised by Prof. Shixin Xu and Prof. Dongmian Zou\n\nI co-developed a model-auditing pipeline that separates scaffold adequacy from inverse identifiability through projective alignment, rank-matched null models, residual–concentration analysis, and tangent/Fisher diagnostics.\nI also built and validated analyte-specific MIMIC-IV-ECG pipelines, implemented PPIDM-Π components, and evaluated potassium-specific reduced-rank refinements on held-out data.\nOutcome: Journal manuscript in preparation.\n\n\n\n\nMay 2026 – Present · University of Illinois Urbana-Champaign\n\n\nVerified Taylor-Model Flowpipes in PyTorch\n\nResearch collaboration with Prof. Huan Zhang’s group\n\nI’m developing a differentiable Taylor-model flowpipe engine in PyTorch and a comparison suite against Flow*. The work covers interval and polynomial arithmetic, Picard propagation, remainder validation, and CPU/GPU consistency.\nI identified repeated materialization of shared remainders across nonlinear paths as a source of long-horizon enclosure growth, and developed step-level diagnostics, regression tests, and controlled comparisons of tightness and runtime.\n\n\n\n\nJune 2025 – June 2026 · Duke Kunshan University\n\n\nMultivariate Time-Series Anomaly Detection via SPD Geometry\n\nIndependent research · Advised by Prof. Dongmian Zou\n\nI developed a normalizing-flow approach over symmetric-positive-definite representations of multivariate sequences, evaluating anomaly detection across heterogeneous datasets and distribution shifts.\n\n\n\n\nJuly 2024 – May 2025 · Duke Kunshan University\n\n\nFair Graph Anomaly Detection\n\nSummer Research Scholar · Advised by Prof. Dongmian Zou\n\nI developed a fairness-aware graph autoencoder for node-level anomaly detection, incorporating a counterfactual fairness objective based on causal interventions. Multi-dataset experiments and ablation studies evaluated the fairness–utility trade-off.\nOutcome: Co-first-author paper accepted to ECAI 2025.\nECAI paper ↗"
+    "objectID": "publications.html#peer-reviewed-publications",
+    "href": "publications.html#peer-reviewed-publications",
+    "title": "Publications",
+    "section": "Peer-reviewed Publications",
+    "text": "Peer-reviewed Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nEnhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShoju Wang*, Yuchen Song*, Sheng’en Li*\nECAI 2025 · Co-first author\npaper"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Skip to content"
+    "objectID": "publications.html#manuscripts-in-preparation",
+    "href": "publications.html#manuscripts-in-preparation",
+    "title": "Publications",
+    "section": "Manuscripts in Preparation",
+    "text": "Manuscripts in Preparation\n\nCOMET: Counterfactual Moment Auditing under Weak Overlap and Dependent Feedback\nSheng’en Li* et al.\nIn preparation · First author\n\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\nJournal manuscript in preparation · Equal contribution"
   },
   {
-    "objectID": "index.html#questions-i-work-on",
-    "href": "index.html#questions-i-work-on",
-    "title": "Home",
-    "section": "Questions I work on",
-    "text": "Questions I work on"
-  },
-  {
-    "objectID": "index.html#recent-work",
-    "href": "index.html#recent-work",
-    "title": "Home",
-    "section": "Recent work",
-    "text": "Recent work"
-  },
-  {
-    "objectID": "index.html#theory-meets-practice.",
-    "href": "index.html#theory-meets-practice.",
-    "title": "Home",
-    "section": "Theory meets practice.",
-    "text": "Theory meets practice."
-  },
-  {
-    "objectID": "index.html#lets-talk-research.",
-    "href": "index.html#lets-talk-research.",
-    "title": "Home",
-    "section": "Let’s talk research.",
-    "text": "Let’s talk research.\nCounterfactual inference, reliable learning, and the questions in between."
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Notes",
-    "section": "",
-    "text": "Skip to content\nShort derivations, experiments, and research sketches. A place for questions and ideas as they develop."
-  },
-  {
-    "objectID": "blog/index.html#entries",
-    "href": "blog/index.html#entries",
-    "title": "Notes",
-    "section": "Entries",
-    "text": "Entries"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Skip to content"
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About",
-    "section": "Education",
-    "text": "Education\n\n\n\nExpected December 2026\n\n\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics · Dual-degree program · GPA: 3.80/4.00\nDean’s List with Distinction, Fall 2023 and Spring 2024. Summer Research Scholar, 2024 and 2025."
-  },
-  {
-    "objectID": "about.html#industry-experience",
-    "href": "about.html#industry-experience",
-    "title": "About",
-    "section": "Industry experience",
-    "text": "Industry experience\n\n\n\nJuly 2026 – Present · Shanghai, China\n\n\nQuantitative Developer Intern\nShangchen Private Fund\nI build and validate Python/SQL research-data pipelines for financial filings, report metadata, and point-in-time records, supporting factor and liquidity research with consistent definitions and reproducible validation.\nI also develop internal LLM-agent workflows for financial-document retrieval and database-backed question answering, with an emphasis on evidence traceability, temporal and metric-definition constraints, and repeatable outputs."
-  },
-  {
-    "objectID": "about.html#leadership-service",
-    "href": "about.html#leadership-service",
-    "title": "About",
-    "section": "Leadership & service",
-    "text": "Leadership & service\n\n\n\n2025 – Present\n\n\nGroup technical support\nGPU and server maintenance, and mentoring junior students.\n\n\n\n\nAugust 2024 – May 2025\n\n\nResident Assistant\nDuke Kunshan University\n\n\n\n\nJuly 2024 · Tongren, China\n\n\nVolunteer Mathematics Instructor"
-  },
-  {
-    "objectID": "about.html#technical-background",
-    "href": "about.html#technical-background",
-    "title": "About",
-    "section": "Technical background",
-    "text": "Technical background\nProgramming: Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript.\nFrameworks & tools: PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite.\nMethods: Causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility."
-  },
-  {
-    "objectID": "about.html#get-in-touch",
-    "href": "about.html#get-in-touch",
-    "title": "About",
-    "section": "Get in touch",
-    "text": "Get in touch\nFor research conversations and collaboration, reach me at sl879@duke.edu.\nGitHub ↗ · Curriculum vitae"
+    "objectID": "publications.html#under-review",
+    "href": "publications.html#under-review",
+    "title": "Publications",
+    "section": "Under Review",
+    "text": "Under Review\nCo-first author on each manuscript below. Author lists are abbreviated in the CV.\n\nPambda: Privacy Alignment with Calibration\nUnder review at KDD 2027 · Co-first author\n\n\nLambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding\nUnder review at KDD 2027 · Co-first author\n\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\nUnder review at KDD 2027 · Co-first author\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nUnder review at KDD 2027 · Co-first author\n\n\nFToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction\nUnder review at KDD 2027 · Co-first author"
   }
 ]
