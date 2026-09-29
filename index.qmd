@@ -29,23 +29,23 @@ My research interests include reliable machine learning, causal and counterfactu
 
 ## News
 
-- **[2026]** [COPF](https://openreview.net/forum?id=2Nfr4u3pK2) was accepted to **ICML 2026**.
-- **[2025]** [Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
+- **[2026]** [COPF](https://arxiv.org/abs/2606.00700) was accepted to **ICML 2026**.
+- **[2025]** [DECAF-GAD](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
 
 ---
 
 ## Selected Publications
 
 ::: {.publication}
-### [COPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs](https://openreview.net/forum?id=2Nfr4u3pK2)
+### [COPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs](https://arxiv.org/abs/2606.00700)
 
 **Sheng’en Li**, Dongmian Zou  
 ICML 2026 · First author  
-[paper](https://openreview.net/forum?id=2Nfr4u3pK2)
+[paper](https://arxiv.org/abs/2606.00700)
 :::
 
 ::: {.publication}
-### [Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection](https://arxiv.org/abs/2508.10785)
+### [DECAF-GAD](https://arxiv.org/abs/2508.10785)
 
 Shoju Wang\*, Yuchen Song\*, **Sheng’en Li\***  
 ECAI 2025 · Co-first author  

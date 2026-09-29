@@ -11,7 +11,7 @@ Advised by Prof. Dongmian Zou and Prof. Fan Wei
 - Developed **COPF**, an online framework for fair evolving-graph recommendation using counterfactual estimation, auditing, and fairness control.
 - Extended the work in **COMET** to counterfactual moment auditing under weak overlap, dependent feedback, and distribution drift.
 
-[COPF paper](https://openreview.net/forum?id=2Nfr4u3pK2)
+[COPF paper](https://arxiv.org/abs/2606.00700)
 
 ## Verified Taylor-Model Flowpipes in PyTorch
 

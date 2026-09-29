@@ -53,14 +53,14 @@
     "href": "index.html#news",
     "title": "Home",
     "section": "News",
-    "text": "News\n\n[2026] COPF was accepted to ICML 2026.\n[2025] Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection was accepted to ECAI 2025."
+    "text": "News\n\n[2026] COPF was accepted to ICML 2026.\n[2025] DECAF-GAD was accepted to ECAI 2025."
   },
   {
     "objectID": "index.html#selected-publications",
     "href": "index.html#selected-publications",
     "title": "Home",
     "section": "Selected Publications",
-    "text": "Selected Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nEnhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShoju Wang*, Yuchen Song*, Sheng’en Li*\nECAI 2025 · Co-first author\npaper\n\n* Equal contribution. Full publication list."
+    "text": "Selected Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD\nShoju Wang*, Yuchen Song*, Sheng’en Li*\nECAI 2025 · Co-first author\npaper\n\n* Equal contribution. Full publication list."
   },
   {
     "objectID": "index.html#education",
@@ -165,7 +165,7 @@
     "href": "publications.html#peer-reviewed-publications",
     "title": "Publications",
     "section": "Peer-reviewed Publications",
-    "text": "Peer-reviewed Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nEnhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShoju Wang*, Yuchen Song*, Sheng’en Li*\nECAI 2025 · Co-first author\npaper"
+    "text": "Peer-reviewed Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD\nShoju Wang*, Yuchen Song*, Sheng’en Li*\nECAI 2025 · Co-first author\npaper"
   },
   {
     "objectID": "publications.html#manuscripts-in-preparation",

@@ -54,14 +54,14 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--line); opacity: 1;
 
 .profile {
   display: grid;
-  grid-template-columns: 124px minmax(0, 1fr);
+  grid-template-columns: 190px minmax(0, 1fr);
   gap: 1.8rem;
   align-items: start;
 }
 .profile-photo {
   display: block;
-  width: 124px;
-  height: 156px;
+  width: 190px;
+  height: 238px;
   object-fit: cover;
   object-position: 50% 28%;
   border: 1px solid var(--line);
@@ -134,8 +134,8 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--line); opacity: 1;
   .home-page #quarto-document-content { padding-top: 2.2rem; }
   h1, h1.title { font-size: 1.9rem; }
   h2 { margin-top: 2rem; font-size: 1.25rem; }
-  .profile { grid-template-columns: 92px minmax(0, 1fr); gap: 1rem; }
-  .profile-photo { width: 92px; height: 116px; }
+  .profile { grid-template-columns: 120px minmax(0, 1fr); gap: 1rem; }
+  .profile-photo { width: 120px; height: 150px; }
   .profile-photo-wrap { grid-row: 1; }
   .profile-bio { grid-column: 1 / -1; }
   .simple-row { display: block; }
