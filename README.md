@@ -37,3 +37,5 @@ The home page uses compact research previews linking to the corresponding sectio
 | `history-alarm-controls.webp` | Supplied `sw.pdf`, Figure 1.1, PDF page 9 |
 
 The November 2026 descriptions and linked CV follow the supplied revised CV and manuscripts. The ECG paper is listed as submitted to Artificial Intelligence in Medicine; the time-series project is undergraduate Signature Work. Full unpublished manuscripts are not hosted.
+
+The typography follows the compact academic style of [Juntang Wang’s site](https://www.qqgjyx.com/): Palatino/Georgia body text with system sans-serif headings. The stylesheet is included with a version query in `_quarto.yml`; update that query with future visual releases to refresh cached CSS.

@@ -6,6 +6,7 @@ project:
     - assets/profile.jpg
     - assets/favicon.svg
     - assets/research/*.webp
+    - styles.css
     - .nojekyll
 
 website:
@@ -38,7 +39,9 @@ website:
 format:
   html:
     theme: default
-    css: styles.css
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="/styles.css?v=20261110-compact">
     toc: false
     pagetitle: "{{< meta title >}}"
     anchor-sections: false
@@ -46,6 +49,6 @@ format:
     link-external-newwindow: true
     include-before-body: _includes/skip-link.html
     grid:
-      body-width: 850px
+      body-width: 820px
       sidebar-width: 0px
       margin-width: 0px
