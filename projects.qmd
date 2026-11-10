@@ -33,7 +33,13 @@ Evaluations on two Temporal Graph Benchmark streams and a controlled synthetic s
 
 ## Taylor-Model Reachability for Neural-Network-Controlled Systems {#verified-reachability}
 
-:::: {.research-detail .research-detail-text}
+:::: {.research-detail}
+::: {.research-visual}
+<a class="research-thumb" href="assets/research/reachability-system.webp" target="_blank" aria-label="View the neural-network control and flowpipe illustration"><img src="assets/research/reachability-system.webp" alt="Neural-network controller and plant feedback loop, with flowpipes enclosing reachable trajectories between control updates." width="1200" height="431" loading="lazy"></a>
+
+NN control and flowpipes<br>
+Illustration: Xiangru Zhong
+:::
 ::: {.research-copy}
 ::: {.entry-meta}
 **University of Illinois Urbana-Champaign** · May 2026 – Present  

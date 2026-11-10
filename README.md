@@ -26,10 +26,11 @@ The design uses local assets, system fonts, and Quarto’s built-in navigation a
 
 ## Research previews
 
-The home page uses compact research previews linking to the corresponding section of `projects.qmd`. The Research page pairs fuller descriptions with clickable figures. Taylor-model reachability is presented as text only. WebP assets live in `assets/research/`; `_quarto.yml` copies them to the published site.
+The home page uses compact research previews linking to the corresponding section of `projects.qmd`. The Research page pairs fuller descriptions with clickable figures. The research list uses aligned image and text columns, with distinct title, metadata, and summary typography. WebP assets live in `assets/research/`; `_quarto.yml` copies them to the published site.
 
 | Asset | Original source |
 | --- | --- |
+| `reachability-system.webp` | Supplied *Reachability Analysis of Neural-Network Controlled Systems* slides, slide 33, image93.png; Xiangru Zhong (2025-02-13) |
 | `copf-framework.webp` | COPF, protocol schematic (Figure 3); [paper, Appendix B](https://arxiv.org/abs/2606.00700); rendered from the existing `copf_protocol.pdf` crop |
 | `decaf-gad-architecture.webp` | DECAF-GAD, Figure 2, PDF page 4; [paper](https://arxiv.org/abs/2508.10785) |
 | `audit-refine-framework.webp` | Supplied `PPIDM_Pi.pdf`, Figure 1, page 5 |

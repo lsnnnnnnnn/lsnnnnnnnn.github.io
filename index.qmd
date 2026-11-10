@@ -82,7 +82,8 @@ Dean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar
 ### [Counterfactual Learning for Adaptive Decision Systems](projects.qmd#counterfactual-learning)
 
 ::: {.entry-meta}
-Duke Kunshan University / Duke University · Jan. 2025 – Present
+Duke Kunshan University / Duke University<br>
+<span class="research-date">Jan. 2025 – Present</span>
 :::
 ::: {.research-summary}
 Counterfactual estimation, online auditing, and fairness control for evolving graphs; COPF and its COMET extension.
@@ -90,13 +91,15 @@ Counterfactual estimation, online auditing, and fairness control for evolving gr
 :::
 ::::
 
-:::: {.research-row .research-row-text}
+:::: {.research-row}
+<a class="research-thumb" href="projects.qmd#verified-reachability" aria-label="Read about Taylor-model reachability"><img src="assets/research/reachability-system.webp" alt="Neural-network controller and plant feedback loop, with flowpipes enclosing reachable trajectories between control updates." width="1200" height="431" loading="lazy"></a>
 
 ::: {}
 ### [Taylor-Model Reachability for Neural-Network-Controlled Systems](projects.qmd#verified-reachability)
 
 ::: {.entry-meta}
-UIUC · Prof. Huan Zhang’s group · May 2026 – Present
+UIUC · Prof. Huan Zhang’s group<br>
+<span class="research-date">May 2026 – Present</span>
 :::
 ::: {.research-summary}
 A PyTorch engine for validated ODE flowpipes, with step-level comparisons against Flow* and certified neural-network couplings.
@@ -111,7 +114,8 @@ A PyTorch engine for validated ODE flowpipes, with step-level comparisons agains
 ### [Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference](projects.qmd#audit-refine)
 
 ::: {.entry-meta}
-Duke Kunshan University · Mar. 2026 – Aug. 2026
+Duke Kunshan University<br>
+<span class="research-date">Mar. 2026 – Aug. 2026</span>
 :::
 ::: {.research-summary}
 Auditing scaffold adequacy and local identifiability, then testing targeted refinements on MIMIC-IV-ECG.
@@ -126,7 +130,8 @@ Auditing scaffold adequacy and local identifiability, then testing targeted refi
 ### [Contextual Information and Alarm Utility in Time-Series Anomaly Detection](projects.qmd#contextual-anomaly-detection)
 
 ::: {.entry-meta}
-Duke Kunshan University · Signature Work · 2025 – 2026
+Duke Kunshan University · Signature Work<br>
+<span class="research-date">2025 – 2026</span>
 :::
 ::: {.research-summary}
 Matched experiments separate the value of temporal history from alarm timing, recall, and warning burden.
@@ -141,7 +146,8 @@ Matched experiments separate the value of temporal history from alarm timing, re
 ### [Fair Graph Anomaly Detection](projects.qmd#fair-graph-anomaly-detection)
 
 ::: {.entry-meta}
-Duke Kunshan University · Jul. 2024 – May 2025
+Duke Kunshan University<br>
+<span class="research-date">Jul. 2024 – May 2025</span>
 :::
 ::: {.research-summary}
 DECAF-GAD combines causal disentanglement and counterfactual regularization to improve fairness in graph autoencoders.
