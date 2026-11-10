@@ -19,7 +19,7 @@ format:
 :::
 
 ::: {.profile-bio}
-I am an undergraduate in Applied Mathematics in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
+I am an undergraduate in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
 
 My research interests include reliable machine learning, causal and counterfactual inference, graph and temporal learning, scientific machine learning, model auditing, and numerical verification.
 :::
@@ -45,9 +45,9 @@ ICML 2026 · First author
 :::
 
 ::: {.publication}
-### [DECAF-GAD](https://arxiv.org/abs/2508.10785)
+### [DECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection](https://arxiv.org/abs/2508.10785)
 
-Shoju Wang\*, Yuchen Song\*, **Sheng’en Li\***  
+Shouju Wang\*, Yuchen Song\*, **Sheng’en Li\***, Dongmian Zou  
 ECAI 2025 · Co-first author  
 [paper](https://arxiv.org/abs/2508.10785)
 :::
@@ -61,7 +61,7 @@ ECAI 2025 · Co-first author
 ::: {.simple-row}
 ::: {}
 **Duke Kunshan University & Duke University**  
-B.S. in Applied Mathematics, dual-degree program  
+B.S. in Applied Mathematics and Computer Science, dual-degree program  
 GPA: 3.80/4.00
 :::
 ::: {.row-date}
@@ -75,57 +75,81 @@ Dean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar
 
 ## Research Experience
 
-::: {.simple-row}
-::: {}
-**Counterfactual Learning and Auditing for Adaptive Decision Systems**  
-Duke Kunshan University / Duke University · Prof. Dongmian Zou and Prof. Fan Wei
-:::
-::: {.row-date}
-Jan. 2025 – Sep. 2026
-:::
-:::
+:::: {.research-row}
+<a class="research-thumb" href="projects.qmd#counterfactual-learning" aria-label="Read about Counterfactual Learning for Adaptive Decision Systems"><img src="assets/research/copf-framework.webp" alt="COPF protocol linking policy and logging, estimation, auditing, and online control." width="1400" height="756" loading="lazy"></a>
 
-::: {.simple-row}
 ::: {}
-**Verified Taylor-Model Flowpipes in PyTorch**  
-University of Illinois Urbana-Champaign · Prof. Huan Zhang’s group
-:::
-::: {.row-date}
-May 2026 – Present
-:::
-:::
+### [Counterfactual Learning for Adaptive Decision Systems](projects.qmd#counterfactual-learning)
 
-::: {.simple-row}
+::: {.entry-meta}
+Duke Kunshan University / Duke University · Jan. 2025 – Present
+:::
+::: {.research-summary}
+Counterfactual estimation, online auditing, and fairness control for evolving graphs; COPF and its COMET extension.
+:::
+:::
+::::
+
+:::: {.research-row .research-row-text}
+
 ::: {}
-**Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference**  
-Duke Kunshan University · Prof. Shixin Xu and Prof. Dongmian Zou
-:::
-::: {.row-date}
-Mar. 2026 – Aug. 2026
-:::
-:::
+### [Taylor-Model Reachability for Neural-Network-Controlled Systems](projects.qmd#verified-reachability)
 
-::: {.simple-row}
+::: {.entry-meta}
+UIUC · Prof. Huan Zhang’s group · May 2026 – Present
+:::
+::: {.research-summary}
+A PyTorch engine for validated ODE flowpipes, with step-level comparisons against Flow* and certified neural-network couplings.
+:::
+:::
+::::
+
+:::: {.research-row}
+<a class="research-thumb" href="projects.qmd#audit-refine" aria-label="Read about Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference"><img src="assets/research/audit-refine-framework.webp" alt="The Audit–Refine workflow for mechanistic ECG models." width="1200" height="740" loading="lazy"></a>
+
 ::: {}
-**Multivariate Time-Series Anomaly Detection via SPD Geometry**  
-Duke Kunshan University · Prof. Dongmian Zou
-:::
-::: {.row-date}
-Jun. 2025 – Jun. 2026
-:::
-:::
+### [Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference](projects.qmd#audit-refine)
 
-::: {.simple-row}
+::: {.entry-meta}
+Duke Kunshan University · Mar. 2026 – Aug. 2026
+:::
+::: {.research-summary}
+Auditing scaffold adequacy and local identifiability, then testing targeted refinements on MIMIC-IV-ECG.
+:::
+:::
+::::
+
+:::: {.research-row}
+<a class="research-thumb" href="projects.qmd#contextual-anomaly-detection" aria-label="Read about Contextual Information and Alarm Utility in Time-Series Anomaly Detection"><img src="assets/research/history-alarm-controls.webp" alt="Controlled experiments for temporal context and alarm utility." width="1200" height="690" loading="lazy"></a>
+
 ::: {}
-**Fair Graph Anomaly Detection**  
-Duke Kunshan University · Prof. Dongmian Zou
-:::
-::: {.row-date}
-Jul. 2024 – May 2025
-:::
-:::
+### [Contextual Information and Alarm Utility in Time-Series Anomaly Detection](projects.qmd#contextual-anomaly-detection)
 
-[Research details](projects.qmd)
+::: {.entry-meta}
+Duke Kunshan University · Signature Work · 2025 – 2026
+:::
+::: {.research-summary}
+Matched experiments separate the value of temporal history from alarm timing, recall, and warning burden.
+:::
+:::
+::::
+
+:::: {.research-row}
+<a class="research-thumb" href="projects.qmd#fair-graph-anomaly-detection" aria-label="Read about Fair Graph Anomaly Detection"><img src="assets/research/decaf-gad-architecture.webp" alt="The DECAF-GAD architecture for fair graph anomaly detection." width="1197" height="753" loading="lazy"></a>
+
+::: {}
+### [Fair Graph Anomaly Detection](projects.qmd#fair-graph-anomaly-detection)
+
+::: {.entry-meta}
+Duke Kunshan University · Jul. 2024 – May 2025
+:::
+::: {.research-summary}
+DECAF-GAD combines causal disentanglement and counterfactual regularization to improve fairness in graph autoencoders.
+:::
+:::
+::::
+
+[More about my research](projects.qmd)
 
 ---
 
@@ -133,10 +157,13 @@ Jul. 2024 – May 2025
 
 ::: {.simple-row}
 ::: {}
-**Shangchen Private Fund**  
-Quantitative Developer Intern · Shanghai, China
+**Shangchen Private Fund** · Shanghai, China  
+Quantitative Research Intern (Sep. 2026 – Present)  
+Previously Quantitative Developer Intern (Jul. – Sep. 2026)
 :::
 ::: {.row-date}
 Jul. 2026 – Present
 :::
 :::
+
+Liquidity-aware factor backtesting and macroeconomic consensus research, building on earlier work in financial-document retrieval and Python/SQL data pipelines.

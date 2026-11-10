@@ -20,6 +20,19 @@ Commit both the source changes and the generated `docs/` directory. GitHub Pages
 - `assets/profile.jpg`: small homepage portrait
 - `blog/`: research notes and existing posts
 
-Replace the PDF at the same path when updating the CV. Publication statuses and current roles are maintained manually; the September 2026 refresh follows the supplied CV.
+Replace the PDF at the same path when updating the CV. Publication statuses and current roles are maintained manually; the November 2026 refresh follows the supplied revised CV.
 
 The design uses local assets, system fonts, and Quarto’s built-in navigation and search. No additional JavaScript packages or build tools are required.
+
+## Research previews
+
+The home page uses compact research previews linking to the corresponding section of `projects.qmd`. The Research page pairs fuller descriptions with clickable figures. Taylor-model reachability is presented as text only. WebP assets live in `assets/research/`; `_quarto.yml` copies them to the published site.
+
+| Asset | Original source |
+| --- | --- |
+| `copf-framework.webp` | COPF, protocol schematic (Figure 3); [paper, Appendix B](https://arxiv.org/abs/2606.00700); rendered from the existing `copf_protocol.pdf` crop |
+| `decaf-gad-architecture.webp` | DECAF-GAD, Figure 2, PDF page 4; [paper](https://arxiv.org/abs/2508.10785) |
+| `audit-refine-framework.webp` | Supplied `PPIDM_Pi.pdf`, Figure 1, page 5 |
+| `history-alarm-controls.webp` | Supplied `sw.pdf`, Figure 1.1, PDF page 9 |
+
+The November 2026 descriptions and linked CV follow the supplied revised CV and manuscripts. The ECG paper is listed as submitted to Artificial Intelligence in Medicine; the time-series project is undergraduate Signature Work. Full unpublished manuscripts are not hosted.

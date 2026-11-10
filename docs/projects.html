@@ -57,8 +57,9 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Research">
-<meta property="og:description" content="Sheng’en Li — applied mathematics and reliable machine learning.">
+<meta property="og:image" content="https://lsnnnnnnnn.github.io/assets/research/copf-framework.webp">
 <meta property="og:site_name" content="Sheng’en Li">
+<meta property="og:image:alt" content="COPF protocol linking policy and logging, cross-fitted estimation, fairness auditing, and online control.">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -133,51 +134,98 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="counterfactual-learning-and-auditing-for-adaptive-decision-systems" class="level2">
-<h2 data-anchor-id="counterfactual-learning-and-auditing-for-adaptive-decision-systems">Counterfactual Learning and Auditing for Adaptive Decision Systems</h2>
-<p><strong>Duke Kunshan University / Duke University</strong> · Jan.&nbsp;2025 – Sep.&nbsp;2026<br>
+<div class="research-intro">
+<p>I study how learning systems behave under changing data, imperfect models, and deployment feedback. My work spans counterfactual fairness, numerical verification, scientific machine learning, and sequential detection.</p>
+</div>
+<section id="counterfactual-learning" class="level2">
+<h2 data-anchor-id="counterfactual-learning">Counterfactual Learning for Adaptive Decision Systems</h2>
+<div class="research-detail">
+<div class="research-visual">
+<p><a class="research-thumb" href="assets/research/copf-framework.webp" target="_blank" aria-label="View the COPF protocol flowchart"><img src="assets/research/copf-framework.webp" alt="COPF protocol linking policy and logging, cross-fitted estimation, fairness auditing, and online control." width="1400" height="756" loading="lazy"></a></p>
+<p>COPF · Protocol flowchart</p>
+</div>
+<div class="research-copy">
+<div class="entry-meta">
+<p><strong>Duke Kunshan University / Duke University</strong> · Jan.&nbsp;2025 – Present<br>
 Advised by Prof.&nbsp;Dongmian Zou and Prof.&nbsp;Fan Wei</p>
-<ul>
-<li>Developed <strong>COPF</strong>, an online framework for fair evolving-graph recommendation using counterfactual estimation, auditing, and fairness control.</li>
-<li>Extended the work in <strong>COMET</strong> to counterfactual moment auditing under weak overlap, dependent feedback, and distribution drift.</li>
-</ul>
-<p><a href="https://arxiv.org/abs/2606.00700">COPF paper</a></p>
+</div>
+<p>Online recommenders change the graph and feedback they later learn from, so fairness measured on logged outcomes can drift after deployment. I developed <strong>COPF</strong>, a decision-layer framework that combines explicit exploration and propensity logging with graph-aware doubly robust estimation. An online multicalibration auditor and primal–dual controller then monitor and adjust group-level exposure disparities.</p>
+<p>Evaluations on two Temporal Graph Benchmark streams and a controlled synthetic stream show reduced worst-case disparity spikes with modest effects on ranking utility. I am extending this work in <strong>COMET</strong> to study counterfactual moments under weak overlap and dependent feedback.</p>
+<div class="research-links">
+<p><a href="https://arxiv.org/abs/2606.00700">Paper · ICML 2026</a> · <a href="https://github.com/lsnnnnnnnn/COPF">Code</a> · First author</p>
+</div>
+</div>
+</div>
 </section>
-<section id="verified-taylor-model-flowpipes-in-pytorch" class="level2">
-<h2 data-anchor-id="verified-taylor-model-flowpipes-in-pytorch">Verified Taylor-Model Flowpipes in PyTorch</h2>
+<section id="verified-reachability" class="level2">
+<h2 data-anchor-id="verified-reachability">Taylor-Model Reachability for Neural-Network-Controlled Systems</h2>
+<div class="research-detail research-detail-text">
+<div class="research-copy">
+<div class="entry-meta">
 <p><strong>University of Illinois Urbana-Champaign</strong> · May 2026 – Present<br>
 Research collaboration with Prof.&nbsp;Huan Zhang’s group</p>
-<ul>
-<li>Developing a differentiable Taylor-model flowpipe engine in PyTorch and a comparison suite against Flow*.</li>
-<li>Working on interval and polynomial arithmetic, Picard propagation, remainder validation, and CPU/GPU consistency.</li>
-</ul>
+</div>
+<p>I am developing a <strong>PyTorch Taylor-model engine</strong> for safety verification of neural-network-controlled systems. The engine propagates polynomial approximations together with validated remainder bounds through nonlinear ODEs, combining interval arithmetic and Picard iteration. My work includes step-level comparisons against <strong>Flow*</strong> to diagnose polynomial truncation, remainder growth, enclosure tightness, and CPU/GPU consistency.</p>
+<p>The broader project connects GPU-batched flowpipes to CROWN-type neural-network verifiers through certified polynomial couplings. These interfaces preserve dependencies that interval-only bounds discard, helping assess how numerical precision and controller bounds affect the reachable sets used to certify safety.</p>
+</div>
+</div>
 </section>
-<section id="auditrefine-partial-physics-models-for-ecg-based-electrolyte-inference" class="level2">
-<h2 data-anchor-id="auditrefine-partial-physics-models-for-ecg-based-electrolyte-inference">Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference</h2>
+<section id="audit-refine" class="level2">
+<h2 data-anchor-id="audit-refine">Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference</h2>
+<div class="research-detail">
+<div class="research-visual">
+<p><a class="research-thumb" href="assets/research/audit-refine-framework.webp" target="_blank" aria-label="View the Audit–Refine framework figure"><img src="assets/research/audit-refine-framework.webp" alt="Audit–Refine workflow for testing a mechanistic ECG scaffold and evaluating targeted refinements." width="1200" height="740" loading="lazy"></a></p>
+<p>Audit–Refine · Framework overview</p>
+</div>
+<div class="research-copy">
+<div class="entry-meta">
 <p><strong>Duke Kunshan University</strong> · Mar.&nbsp;2026 – Aug.&nbsp;2026<br>
 Advised by Prof.&nbsp;Shixin Xu and Prof.&nbsp;Dongmian Zou</p>
-<ul>
-<li>Co-developed a pipeline for auditing scaffold adequacy and inverse identifiability.</li>
-<li>Built analyte-specific MIMIC-IV-ECG pipelines and evaluated potassium-specific reduced-rank refinements.</li>
-</ul>
+</div>
+<p>I co-developed an <strong>Audit–Refine framework</strong> for testing whether a partial-physics model’s mechanistic scaffold is supported by data. In ECG-based electrolyte inference, a projective Plausibility Index measures waveform alignment, while tangent and Fisher-information diagnostics assess whether electrolyte concentrations can be recovered locally. The framework combines matched null models, held-out inverse error, residual structure, and robustness checks to decide which refinements to accept.</p>
+<p>I built and validated analyte-specific <strong>MIMIC-IV-ECG</strong> pipelines and evaluated reduced-rank potassium refinements. Four of seven electrolyte–scaffold hypotheses passed the audit; the accepted potassium spline reduced held-out MAE from <strong>0.417 to 0.396 mEq/L</strong>, a <strong>5.0%</strong> relative improvement.</p>
+<div class="research-links">
+<p>Submitted to <em>Artificial Intelligence in Medicine</em> · Co-first author</p>
+</div>
+</div>
+</div>
 </section>
-<section id="multivariate-time-series-anomaly-detection-via-spd-geometry" class="level2">
-<h2 data-anchor-id="multivariate-time-series-anomaly-detection-via-spd-geometry">Multivariate Time-Series Anomaly Detection via SPD Geometry</h2>
-<p><strong>Duke Kunshan University</strong> · Jun.&nbsp;2025 – Jun.&nbsp;2026<br>
-Advised by Prof.&nbsp;Dongmian Zou</p>
-<ul>
-<li>Developed a normalizing-flow approach over symmetric-positive-definite representations of multivariate sequences.</li>
-</ul>
+<section id="contextual-anomaly-detection" class="level2">
+<h2 data-anchor-id="contextual-anomaly-detection">Contextual Information and Alarm Utility in Time-Series Anomaly Detection</h2>
+<div class="research-detail">
+<div class="research-visual">
+<p><a class="research-thumb" href="assets/research/history-alarm-controls.webp" target="_blank" aria-label="View the time-series experiment design figure"><img src="assets/research/history-alarm-controls.webp" alt="Two controlled experiments isolate the contribution of temporal history and the effect of alarm rules." width="1200" height="690" loading="lazy"></a></p>
+<p>Signature Work · Experimental design</p>
+</div>
+<div class="research-copy">
+<div class="entry-meta">
+<p><strong>Duke Kunshan University</strong> · 2025 – 2026<br>
+Signature Work · Advised by Prof.&nbsp;Dongmian Zou</p>
+</div>
+<p>My Signature Work separates three questions in anomaly detection: <strong>what temporal context adds, how much evidence a model captures, and when its scores produce useful warnings</strong>. I designed matched-block experiments that preserve observed data while changing history–current pairings, proving chance-level ranking for fixed current-only detectors. A covariance-based Markov model trained on normal data measures the value of contextual relationships.</p>
+<p>I compare thresholding and accumulation on identical scores, tracking event recall, detection delay, and warning burden. CUSUM increased four-block recall by <strong>9.6 and 2.9 percentage points</strong> in two simulated settings. Evaluation across <strong>119 real series from five sources</strong> found no consistent detection gain from accumulation, highlighting the need to evaluate recall alongside the frequency of warnings during normal periods.</p>
+</div>
+</div>
 </section>
 <section id="fair-graph-anomaly-detection" class="level2">
 <h2 data-anchor-id="fair-graph-anomaly-detection">Fair Graph Anomaly Detection</h2>
+<div class="research-detail">
+<div class="research-visual">
+<p><a class="research-thumb" href="assets/research/decaf-gad-architecture.webp" target="_blank" aria-label="View the DECAF-GAD framework figure"><img src="assets/research/decaf-gad-architecture.webp" alt="DECAF-GAD uses original and counterfactual graphs to learn disentangled representations for fair anomaly detection." width="1197" height="753" loading="lazy"></a></p>
+<p>DECAF-GAD · Model architecture</p>
+</div>
+<div class="research-copy">
+<div class="entry-meta">
 <p><strong>Duke Kunshan University</strong> · Jul.&nbsp;2024 – May 2025<br>
 Summer Research Scholar · Advised by Prof.&nbsp;Dongmian Zou</p>
-<ul>
-<li>Developed a fairness-aware graph autoencoder for node-level anomaly detection.</li>
-<li>Evaluated the fairness–utility trade-off across multiple datasets and ablations.</li>
-</ul>
-<p><a href="https://arxiv.org/abs/2508.10785">ECAI paper</a></p>
+</div>
+<p>Graph autoencoders can mistake differences between demographic groups for anomalies. I co-developed <strong>DECAF-GAD</strong>, a fairness-aware framework that uses a structural causal model to separate sensitive information from the representations used for detection. A shared encoder processes original and counterfactual graphs, while disentanglement, adversarial learning, and counterfactual consistency losses guide reconstruction.</p>
+<p>The framework can be added to existing autoencoder-based detectors. Through experiments on synthetic and real-world graphs and component ablations, we evaluated the fairness–utility trade-off and found improved fairness metrics while maintaining competitive anomaly detection performance.</p>
+<div class="research-links">
+<p><a href="https://arxiv.org/abs/2508.10785">Paper · ECAI 2025</a> · <a href="https://github.com/Tlhey/decaf_code">Code</a> · Co-first author</p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -591,7 +639,7 @@ Summer Research Scholar · Advised by Prof.&nbsp;Dongmian Zou</p>
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Last updated September 2026</p>
+<p>Last updated November 2026</p>
 </div>
   </div>
 </footer>

@@ -16,11 +16,21 @@ ICML 2026 · First author
 :::
 
 ::: {.publication}
-### [DECAF-GAD](https://arxiv.org/abs/2508.10785)
+### [DECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection](https://arxiv.org/abs/2508.10785)
 
-Shoju Wang\*, Yuchen Song\*, **Sheng’en Li\***  
+Shouju Wang\*, Yuchen Song\*, **Sheng’en Li\***, Dongmian Zou  
 ECAI 2025 · Co-first author  
 [paper](https://arxiv.org/abs/2508.10785)
+:::
+
+## Submitted Manuscript
+
+::: {.publication}
+### Auditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference
+
+Juntang Wang\*, **Sheng’en Li**\*, Yihan Wang\*, Jiayu Gao\*, Duanduan Wang\*, Dongmian Zou, Shixin Xu  
+Submitted to *Artificial Intelligence in Medicine* · Co-first author  
+[Research overview](projects.qmd#audit-refine)
 :::
 
 ## Manuscripts in Preparation
@@ -32,16 +42,19 @@ ECAI 2025 · Co-first author
 In preparation · First author
 :::
 
-::: {.publication}
-### Auditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference
+## Signature Work
 
-Juntang Wang\*, **Sheng’en Li**\*, Yihan Wang\*, Jiayu Gao\*, Duanduan Wang\*, Dongmian Zou, Shixin Xu  
-Journal manuscript in preparation · Equal contribution
+::: {.publication}
+### Isolating Contextual Information and Alarm Utility in Multivariate Time-Series Anomaly Detection
+
+**Sheng’en Li**  
+Duke Kunshan University · 2026 · Undergraduate Signature Work  
+[Research overview](projects.qmd#contextual-anomaly-detection)
 :::
 
 ## Under Review
 
-Co-first author on each manuscript below. Author lists are abbreviated in the CV.
+Co-first author on each manuscript below.
 
 ::: {.publication}
 ### Pambda: Privacy Alignment with Calibration

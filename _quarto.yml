@@ -5,6 +5,7 @@ project:
     - assets/Shengen_Li_CV.pdf
     - assets/profile.jpg
     - assets/favicon.svg
+    - assets/research/*.webp
     - .nojekyll
 
 website:
@@ -32,7 +33,7 @@ website:
         target: _blank
   page-footer:
     left: "© 2026 Sheng’en Li"
-    right: "Last updated September 2026"
+    right: "Last updated November 2026"
 
 format:
   html:

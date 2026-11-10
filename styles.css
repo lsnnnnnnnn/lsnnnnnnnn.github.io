@@ -91,6 +91,39 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--line); opacity: 1;
 .research-entry { margin-bottom: 2rem; }
 .entry-meta { color: var(--muted); font-size: .92rem; }
 
+.research-row,
+.research-detail {
+  display: grid;
+  grid-template-columns: 164px minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+.research-row { margin: 0 0 1.9rem; }
+.research-detail { grid-template-columns: 190px minmax(0, 1fr); }
+.research-row-text, .research-detail-text { display: block; }
+.research-row > p, .research-summary p { margin: 0; }
+.research-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 108px;
+  padding: .6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+}
+.research-thumb:hover { border-color: var(--link); }
+.research-thumb img { display: block; width: 100%; height: auto; }
+.research-row h3 a { color: var(--text); text-decoration: none; }
+.research-row h3 a:hover { color: var(--link); text-decoration: underline; }
+.research-row .entry-meta { margin-bottom: .4rem; font-size: .84rem; }
+.research-summary { margin: 0; font-size: .92rem; }
+.research-visual p { margin: .4rem 0 0; color: var(--muted); font-size: .75rem; }
+.research-detail .entry-meta { margin-bottom: .85rem; font-size: .85rem; }
+.research-detail p:last-child { margin-bottom: 0; }
+.research-links { margin-top: .9rem; font-size: .88rem; }
+.research-intro { color: var(--muted); max-width: 44rem; }
+
 .quarto-listing-default .quarto-post { padding: 1.1rem 0; border-color: var(--line); }
 .quarto-listing .listing-title a { color: var(--text); }
 .quarto-listing-default .listing-description,
@@ -140,10 +173,14 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--line); opacity: 1;
   .profile-bio { grid-column: 1 / -1; }
   .simple-row { display: block; }
   .row-date { margin-top: .15rem; white-space: normal; }
+  .research-row { grid-template-columns: 100px minmax(0, 1fr); gap: .9rem; }
+  .research-thumb { padding: .35rem; min-height: 72px; }
+  .research-detail { grid-template-columns: 1fr; gap: 1rem; }
+  .research-detail .research-visual { width: min(220px, 100%); }
   .nav-footer { padding: 1.1rem 0; }
 }
 @media print {
   .navbar, .nav-footer, .skip-link { display: none !important; }
   body { font-size: 11pt; }
-  .publication, .simple-row { break-inside: avoid; }
+  .publication, .simple-row, .research-row, .research-detail { break-inside: avoid; }
 }
