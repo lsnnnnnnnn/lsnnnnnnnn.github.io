@@ -1,0 +1,36 @@
+---
+title: Software
+description: "L2-based factor capacity analysis: execution simulation and PDF reporting across initial capital levels."
+toc: false
+---
+
+## L2-Based Factor Capacity Analysis
+
+::: {.entry-meta}
+Developed by Sheng’en Li · Open-source release in preparation
+:::
+
+I developed a factor-capacity evaluation tool that takes a factor signal and generates a **PDF report comparing execution feasibility across initial capital levels**. The engine uses Level-2 market data to simulate how a strategy's planned trades translate into simulated holdings under trading constraints.
+
+## From a factor to a capacity report
+
+1. **Specify the strategy.** Supply the factor signal and the portfolio and trading rules used for the evaluation.
+2. **Simulate each capital level.** Track orders, cash, and holdings under a volume-participation limit, available-cash and sellable-position constraints, trading suspensions, and price limits.
+3. **Inspect the report.** Compare the tested capital levels using completion checks, execution diagnostics, and return differences. Partial fills and unfinished orders help identify where execution becomes constrained.
+
+## What the capacity estimate means
+
+The current evaluation criterion combines a **10% participation limit** with **100% same-day completion of planned trades**. The reported execution capacity is the largest tested capital level that satisfies this criterion over the evaluation period.
+
+This definition makes the result interpretable: it is tied to a specified factor strategy, market-data period, execution protocol, and set of tested capital levels. A larger account changes order sizes, which can change fills, available cash, and subsequent holdings. Repeating the simulation at each capital level captures these changes in the portfolio's path.
+
+My focus is the connection between the desired portfolio and the portfolio that can actually be built. The report makes that connection visible alongside the capacity estimate, so a user can inspect which constraints bind as capital increases.
+
+## Availability
+
+The tool currently runs on company Level-2 data. I am preparing the core engine for open-source release; the public data interface is still being worked out. Code and example-report links will be added when the release is available.
+
+::: {.related-reading}
+**Related research note**  
+[When Does a Factor Become Too Large to Trade?](blog/2026-11-11-factor-capacity.qmd) examines the reasoning behind this execution-capacity criterion.
+:::

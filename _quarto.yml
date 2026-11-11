@@ -23,25 +23,27 @@ website:
     right:
       - text: Home
         href: index.qmd
-      - text: Publications
-        href: publications.qmd
       - text: Research
         href: projects.qmd
-      - text: More
-        href: about.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: Notes
+        href: blog/index.qmd
+      - text: Software
+        href: software.qmd
       - text: CV
         href: assets/Shengen_Li_CV.pdf
         target: _blank
   page-footer:
     left: "© 2026 Sheng’en Li"
-    right: "Last updated November 2026"
+    right: "[More about me](/about.qmd) · Updated November 2026"
 
 format:
   html:
     theme: default
     include-in-header:
       text: |
-        <link rel="stylesheet" href="/styles.css?v=20261110-compact">
+        <link rel="stylesheet" href="/styles.css?v=20261111-notes">
     toc: false
     pagetitle: "{{< meta title >}}"
     anchor-sections: false

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Research notes on graph learning, counterfactual inference, fairness, and reliable machine learning.">
+<meta name="description" content="Notes from my work on evaluating learning and decision systems.">
 
-<title>Notes – Sheng’en Li</title>
+<title>Research Notes – Sheng’en Li</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
-<link rel="stylesheet" href="../styles.css?v=20261110-compact">
+<link rel="stylesheet" href="../styles.css?v=20261111-notes">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -131,8 +131,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Notes">
-<meta property="og:description" content="Research notes on graph learning, counterfactual inference, fairness, and reliable machine learning.">
+<meta property="og:title" content="Research Notes">
+<meta property="og:description" content="Notes from my work on evaluating learning and decision systems.">
 <meta property="og:site_name" content="Sheng’en Li">
 </head>
 
@@ -157,16 +157,20 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">More</span></a>
+    <a class="nav-link" href="../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../software.html"> 
+<span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../assets/Shengen_Li_CV.pdf" target="_blank"> 
@@ -191,12 +195,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
+<h1 class="title">Research Notes</h1>
 </div>
 
 <div>
   <div class="description">
-    Research notes on graph learning, counterfactual inference, fairness, and reliable machine learning.
+    Notes from my work on evaluating learning and decision systems.
   </div>
 </div>
 
@@ -213,32 +217,45 @@ window.Quarto = {
 </header>
 
 
-<div class="page-lead">
-<p>A working notebook on learning, inference, and reliability.</p>
+<div class="research-intro">
+<p>Notes from my research and software development: the questions behind an experiment, the assumptions behind an evaluation, and what the results let us conclude.</p>
 </div>
-<p>Short derivations, experiments, and research sketches. A place for questions and ideas as they develop.</p>
-<section id="entries" class="level2">
-<h2 data-anchor-id="entries">Entries</h2>
 
 
 
-</section>
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QmxvZyUyQ1Rlc3Q=" data-listing-date-sort="1778342400000" data-listing-file-modified-sort="1794288400165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
+<div class="quarto-post image-right" data-index="0" data-categories="U2VxdWVudGlhbCUyMERldGVjdGlvbiUyQ1Jlc2VhcmNoJTIwTm90ZXM=" data-listing-date-sort="1794326400000" data-listing-file-modified-sort="1794387899237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="783">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../blog/2026-05-10-test-post.html" class="no-external">Test Post</a>
+<a href="../blog/2026-11-11-alarm-quality.html" class="no-external">When Does a Better Anomaly Score Lead to Better Alarms?</a>
 </h3>
-<div class="delink listing-description"><a href="../blog/2026-05-10-test-post.html" class="no-external">
-<p>A short demonstration post with one display equation and two technical callout blocks.</p>
+<div class="delink listing-description"><a href="../blog/2026-11-11-alarm-quality.html" class="no-external">
+<p>An anomaly score earns its value through the events its alarms cover, their timing, and their measured warning burden.</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="../blog/2026-05-10-test-post.html" class="no-external">
+<a href="../blog/2026-11-11-alarm-quality.html" class="no-external">
 <div class="listing-date">
-May 10, 2026
+Nov 11, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1794326400000" data-listing-file-modified-sort="1794387964542" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="650">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/2026-11-11-factor-capacity.html" class="no-external">When Does a Factor Become Too Large to Trade?</a>
+</h3>
+<div class="delink listing-description"><a href="../blog/2026-11-11-factor-capacity.html" class="no-external">
+<p>Evaluating factor capacity through capital-scaled L2 execution backtests and a same-day completion rule.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../blog/2026-11-11-factor-capacity.html" class="no-external">
+<div class="listing-date">
+Nov 11, 2026
 </div>
 </a>
 </div>
@@ -654,7 +671,7 @@ May 10, 2026
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Last updated November 2026</p>
+<p><a href="../about.html">More about me</a> · Updated November 2026</p>
 </div>
   </div>
 </footer>

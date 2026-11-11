@@ -1,0 +1,35 @@
+---
+title: "When Does a Factor Become Too Large to Trade?"
+date: 2026-11-11
+description: "Evaluating factor capacity through capital-scaled L2 execution backtests and a same-day completion rule."
+toc: false
+format:
+  html:
+    body-classes: research-note
+---
+
+A factor signal, together with portfolio-construction rules, defines the positions a strategy aims to hold. Increasing the capital allocated to it also increases the trading needed to reach those positions. My question is how far that allocation can grow while the trading plan remains executable under a stated set of rules. Answering it requires following the orders through time: the intended portfolio alone does not tell me which positions the strategy can actually acquire or unwind.
+
+I developed a tool that takes a factor as input, runs execution backtests at multiple initial-capital levels using Level 2 market data, and produces a PDF capacity report. The current evaluation uses a **10% participation-rate limit** and requires **100% of each day's planned trading to finish that day**. These settings give the experiment an explicit pass condition. A run that leaves an order unfinished fails that completion requirement, even if most of its planned trading succeeds.
+
+## Follow the portfolio through execution
+
+The execution simulation tracks fills and maintains the state needed to decide whether orders can fill. That state includes cash and sellable shares, alongside the restrictions associated with suspensions and daily price limits. Partial fills change the portfolio immediately; unfinished orders remain unfinished. This matters because a target weight is only a request. A backtest must account for the holdings and available resources that emerge as the request is executed.
+
+Consider two runs with identical factor inputs but different starting capital. Both receive the same instruction to sell one position and buy another. The larger run requests more shares and needs more execution opportunities within the participation limit. If its sale fills only partially, it retains more of the old position and receives less cash than the plan anticipated. A subsequent purchase must use the cash actually available. The two runs can therefore follow different holding paths even though their factor rankings and target weights agree. Scaling capital changes the sequence of attainable portfolios.
+
+## Execution opportunities have a time window
+
+Timing also explains why a full day's trading volume is insufficient to establish capacity. Consider an order submitted late in the session for a stock that traded heavily earlier that morning. The earlier trades contribute to daily volume, but they provide no execution opportunity for an instruction that did not yet exist. The relevant sequence begins after that instruction and ends at its deadline. Applying the participation rule to the opportunities within that sequence can leave the order incomplete despite a large daily total. Available cash, sellable shares, and trading restrictions further determine which of those opportunities the simulated strategy can use.
+
+## Define the capacity criterion
+
+For this tool, capacity is the **largest tested capital level that passes the execution criteria over the evaluated data period**. The word “tested” is essential. A capital grid produces verdicts for its individual levels; it does not establish an exact optimum between them. The reported value belongs to that grid, that period, and those execution rules. Changing the trading deadline or participation limit changes the question being evaluated. I therefore report the estimate together with the evaluation period and execution settings.
+
+I separate this completion test from the judgment that trading costs are acceptable. An order may finish within the participation limit while the economics of executing it remain unattractive. Conversely, an attractive intended portfolio does not compensate for trades that cannot finish. The current completion criterion answers a feasibility question. Assessing whether the executed strategy is worth allocating capital to requires a further cost judgment.
+
+The question I want the report to make answerable is where feasibility is lost as capital increases. A volume constraint, an incomplete sale, and a purchase blocked by available cash can all leave a plan unfinished, but they point to different changes in the strategy. Tracing those constraints connects a capacity estimate to an explanation of the portfolio that was actually attainable.
+
+The core engine is being prepared for open-source release. [The project page](../software.qmd) describes the current workflow and availability.
+
+[Software](../software.qmd) · [All research notes](index.qmd)

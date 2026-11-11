@@ -18,7 +18,10 @@ Commit both the source changes and the generated `docs/` directory. GitHub Pages
 - `about.qmd`: education, industry experience, service, and skills
 - `assets/Shengen_Li_CV.pdf`: CV linked directly from the navigation
 - `assets/profile.jpg`: small homepage portrait
-- `blog/`: research notes and existing posts
+- `blog/index.qmd`: Research Notes; dated articles are listed automatically
+- `software.qmd`: the L2 factor-capacity tool, with its current criterion and release status
+
+The original test post is retained as a draft and excluded from the published Notes listing.
 
 Replace the PDF at the same path when updating the CV. Publication statuses and current roles are maintained manually; the November 2026 refresh follows the supplied revised CV.
 
@@ -39,3 +42,5 @@ The home page uses compact research previews linking to the corresponding sectio
 The November 2026 descriptions and linked CV follow the supplied revised CV and manuscripts. The ECG paper is listed as submitted to Artificial Intelligence in Medicine; the time-series project is undergraduate Signature Work. Full unpublished manuscripts are not hosted.
 
 The typography follows the compact academic style of [Juntang Wang’s site](https://www.qqgjyx.com/): Palatino/Georgia body text with system sans-serif headings. The stylesheet is included with a version query in `_quarto.yml`; update that query with future visual releases to refresh cached CSS.
+
+The November 11 update adds research notes grounded in the supplied Signature Work manuscript and the author's description of the L2 factor-capacity engine. The software page describes the current 10% participation / 100% same-day completion criterion and labels the open-source release as in preparation. No company market data, source code, or sample results are published with this update.

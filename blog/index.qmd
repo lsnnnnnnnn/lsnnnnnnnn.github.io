@@ -1,6 +1,6 @@
 ---
-title: "Notes"
-description: "Research notes on graph learning, counterfactual inference, fairness, and reliable machine learning."
+title: "Research Notes"
+description: "Notes from my work on evaluating learning and decision systems."
 toc: false
 listing:
   contents: "20*.qmd"
@@ -10,10 +10,6 @@ listing:
   fields: [date, title, description]
 ---
 
-::: {.page-lead}
-A working notebook on learning, inference, and reliability.
+::: {.research-intro}
+Notes from my research and software development: the questions behind an experiment, the assumptions behind an evaluation, and what the results let us conclude.
 :::
-
-Short derivations, experiments, and research sketches. A place for questions and ideas as they develop.
-
-## Entries

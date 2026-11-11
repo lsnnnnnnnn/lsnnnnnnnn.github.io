@@ -1,5 +1,6 @@
 ---
 title: "Test Post"
+draft: true
 date: "2026-05-10"
 description: "A short demonstration post with one display equation and two technical callout blocks."
 categories: [Blog, Test]

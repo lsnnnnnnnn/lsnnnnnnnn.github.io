@@ -93,6 +93,10 @@ Signature Work · Advised by Prof. Dongmian Zou
 My Signature Work separates three questions in anomaly detection: **what temporal context adds, how much evidence a model captures, and when its scores produce useful warnings**. I designed matched-block experiments that preserve observed data while changing history–current pairings, proving chance-level ranking for fixed current-only detectors. A covariance-based Markov model trained on normal data measures the value of contextual relationships.
 
 I compare thresholding and accumulation on identical scores, tracking event recall, detection delay, and warning burden. CUSUM increased four-block recall by **9.6 and 2.9 percentage points** in two simulated settings. Evaluation across **119 real series from five sources** found no consistent detection gain from accumulation, highlighting the need to evaluate recall alongside the frequency of warnings during normal periods.
+
+::: {.research-links}
+[Research note: from anomaly scores to useful alarms](blog/2026-11-11-alarm-quality.qmd)
+:::
 :::
 ::::
 

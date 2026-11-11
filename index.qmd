@@ -21,7 +21,7 @@ format:
 ::: {.profile-bio}
 I am an undergraduate in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
 
-My research interests include reliable machine learning, causal and counterfactual inference, graph and temporal learning, scientific machine learning, model auditing, and numerical verification.
+I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
 :::
 ::::
 
@@ -151,6 +151,38 @@ DECAF-GAD combines causal disentanglement and counterfactual regularization to i
 ::::
 
 [More about my research](projects.qmd)
+
+---
+
+## Research Notes
+
+::: {.note-entry}
+### [When Does a Better Anomaly Score Lead to Better Alarms?](blog/2026-11-11-alarm-quality.qmd)
+
+What a controlled comparison reveals about event recall, detection delay, and the burden of warnings.
+:::
+
+::: {.note-entry}
+### [When Does a Factor Become Too Large to Trade?](blog/2026-11-11-factor-capacity.qmd)
+
+How execution constraints turn a target portfolio into a different realized path as capital increases.
+:::
+
+[All research notes](blog/index.qmd)
+
+---
+
+## Software
+
+::: {.software-entry}
+### [L2-Based Factor Capacity Analysis](software.qmd)
+
+A tool that evaluates factor strategies across initial capital levels using Level-2 execution simulation and generates a PDF capacity report.
+
+::: {.entry-meta}
+Open-source release in preparation · [Project overview](software.qmd)
+:::
+:::
 
 ---
 

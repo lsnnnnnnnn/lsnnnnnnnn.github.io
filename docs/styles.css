@@ -122,6 +122,20 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .research-links { margin-top: 8px; font-size: 13px; }
 .research-intro { color: var(--muted); max-width: 680px; }
 
+.note-entry { margin-bottom: 14px; }
+.note-entry h3 a, .software-entry h3 a { color: var(--text); text-decoration: none; font-weight: inherit; }
+.note-entry h3 a:hover, .software-entry h3 a:hover { color: var(--link); text-decoration: underline; }
+.note-entry p, .software-entry > p { margin: 4px 0 0; }
+.software-entry .entry-meta { margin-top: 6px; }
+.related-reading { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--line); }
+.research-note #title-block-header { margin-bottom: 24px; }
+.research-note h1.title { font-size: 30px; line-height: 1.25; }
+.research-note h2 { font-size: 19px; margin-top: 27px; }
+.research-note figure { margin: 20px 0; }
+.research-note figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.research-note .quarto-title-meta { color: var(--muted); font-size: 13px; }
+.research-note .quarto-title-meta-heading { font-family: var(--heading-font); }
+
 .quarto-listing-default .quarto-post { padding: 14px 0; border-color: var(--line); }
 .quarto-listing .listing-title a { color: var(--text); }
 .quarto-listing-default .listing-description,
@@ -161,7 +175,7 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 }
 @media (max-width: 600px) {
   #quarto-document-content, .home-page #quarto-document-content { padding-top: 23px; }
-  h1, h1.title { font-size: 28px; }
+  h1, h1.title, .research-note h1.title { font-size: 28px; }
   h2 { margin-top: 24px; font-size: 20px; }
   .profile { grid-template-columns: 112px minmax(0, 1fr); column-gap: 16px; row-gap: 12px; }
   .profile-photo { width: 112px; height: 140px; }
