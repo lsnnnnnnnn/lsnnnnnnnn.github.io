@@ -23,7 +23,7 @@ I am an undergraduate in Applied Mathematics and Computer Science in the dual-de
 
 I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
 
-I also write [research notes](blog/index.qmd) about the questions and design choices behind my work, and build [research software](software.qmd). My latest note explains [why I built Reader First](blog/2026-11-14-reader-first.qmd), a writing skill for making technical explanations easier to follow.
+You can find my [research notes](blog/index.qmd) and [software](software.qmd) here.
 :::
 ::::
 
@@ -31,6 +31,8 @@ I also write [research notes](blog/index.qmd) about the questions and design cho
 
 ## News
 
+- **[Nov. 20, 2026 · Upcoming]** I will present my Signature Work at Duke Kunshan University, marking the completion of my undergraduate studies.
+- **[Oct. 2026]** I completed my [L2-based factor capacity analysis tool](software.qmd).
 - **[2026]** [COPF](https://arxiv.org/abs/2606.00700) was accepted to **ICML 2026**.
 - **[2025]** [DECAF-GAD](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
 
@@ -153,44 +155,6 @@ DECAF-GAD combines causal disentanglement and counterfactual regularization to i
 ::::
 
 [More about my research](projects.qmd)
-
----
-
-## Research Notes
-
-::: {.note-entry}
-### [Why I Built Reader First](blog/2026-11-14-reader-first.qmd)
-
-Turning a paper on AI-generated language into a writing skill that makes actions, conditions, and connections easier to follow.
-:::
-
-::: {.note-entry}
-### [When Does a Better Anomaly Score Lead to Better Alarms?](blog/2026-11-11-alarm-quality.qmd)
-
-What a controlled comparison reveals about event recall, detection delay, and the burden of warnings.
-:::
-
-::: {.note-entry}
-### [When Does a Factor Become Too Large to Trade?](blog/2026-11-11-factor-capacity.qmd)
-
-How execution constraints turn a target portfolio into a different realized path as capital increases.
-:::
-
-[All research notes](blog/index.qmd)
-
----
-
-## Software
-
-::: {.software-entry}
-### [L2-Based Factor Capacity Analysis](software.qmd)
-
-A tool that evaluates factor strategies across initial capital levels using Level-2 execution simulation and generates a PDF capacity report.
-
-::: {.entry-meta}
-Open-source release in preparation · [Project overview](software.qmd)
-:::
-:::
 
 ---
 
