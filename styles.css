@@ -135,6 +135,8 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .research-note figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; }
 .research-note .quarto-title-meta { color: var(--muted); font-size: 13px; }
 .research-note .quarto-title-meta-heading { font-family: var(--heading-font); }
+.source-credit { margin: 10px 0 20px; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+.source-credit p { margin: 0; }
 
 .quarto-listing-default .quarto-post { padding: 14px 0; border-color: var(--line); }
 .quarto-listing .listing-title a { color: var(--text); }

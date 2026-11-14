@@ -77,32 +77,102 @@
     "text": "Under Review\nCo-first author on each manuscript below.\n\nPambda: Privacy Alignment with Calibration\nUnder review at KDD 2027 · Co-first author\n\n\nLambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding\nUnder review at KDD 2027 · Co-first author\n\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\nUnder review at KDD 2027 · Co-first author\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nUnder review at KDD 2027 · Co-first author\n\n\nFToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction\nUnder review at KDD 2027 · Co-first author"
   },
   {
-    "objectID": "blog/2026-11-11-factor-capacity.html",
-    "href": "blog/2026-11-11-factor-capacity.html",
-    "title": "When Does a Factor Become Too Large to Trade?",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Research Notes",
     "section": "",
-    "text": "Skip to content\nA factor signal, together with portfolio-construction rules, defines the positions a strategy aims to hold. Increasing the capital allocated to it also increases the trading needed to reach those positions. My question is how far that allocation can grow while the trading plan remains executable under a stated set of rules. Answering it requires following the orders through time: the intended portfolio alone does not tell me which positions the strategy can actually acquire or unwind.\nI developed a tool that takes a factor as input, runs execution backtests at multiple initial-capital levels using Level 2 market data, and produces a PDF capacity report. The current evaluation uses a 10% participation-rate limit and requires 100% of each day’s planned trading to finish that day. These settings give the experiment an explicit pass condition. A run that leaves an order unfinished fails that completion requirement, even if most of its planned trading succeeds."
+    "text": "Skip to content\n\n\n\n\n\n\nNotes from my research and software development: how I frame questions, design evaluations, and turn ideas into tools.\n\n\n\n\n\n\n\n\n\n\nWhy I Built Reader First\n\n\nThe editing decisions behind a writing skill designed to make actions, conditions, and evidence easier to follow while preserving meaning.\n\n\n\n\n\nNov 14, 2026\n\n\n\n\n\n\n\nWhen Does a Better Anomaly Score Lead to Better Alarms?\n\n\nAn anomaly score earns its value through the events its alarms cover, their timing, and their measured warning burden.\n\n\n\n\n\nNov 11, 2026\n\n\n\n\n\n\n\nWhen Does a Factor Become Too Large to Trade?\n\n\nEvaluating factor capacity through capital-scaled L2 execution backtests and a same-day completion rule.\n\n\n\n\n\nNov 11, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
-    "href": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
-    "title": "When Does a Factor Become Too Large to Trade?",
-    "section": "Follow the portfolio through execution",
-    "text": "Follow the portfolio through execution\nThe execution simulation tracks fills and maintains the state needed to decide whether orders can fill. That state includes cash and sellable shares, alongside the restrictions associated with suspensions and daily price limits. Partial fills change the portfolio immediately; unfinished orders remain unfinished. This matters because a target weight is only a request. A backtest must account for the holdings and available resources that emerge as the request is executed.\nConsider two runs with identical factor inputs but different starting capital. Both receive the same instruction to sell one position and buy another. The larger run requests more shares and needs more execution opportunities within the participation limit. If its sale fills only partially, it retains more of the old position and receives less cash than the plan anticipated. A subsequent purchase must use the cash actually available. The two runs can therefore follow different holding paths even though their factor rankings and target weights agree. Scaling capital changes the sequence of attainable portfolios."
+    "objectID": "blog/2026-11-11-alarm-quality.html",
+    "href": "blog/2026-11-11-alarm-quality.html",
+    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
+    "section": "",
+    "text": "Skip to content\nAn anomaly detector produces a score. Someone monitoring a system needs a warning while there is still time to respond. Between those two outputs sit several choices: when a score becomes available, whether to act on it immediately, whether to accumulate evidence, and when an existing alarm should count as a new warning. My Signature Work studies this gap by separating the information a detector uses from the decisions made with its scores."
   },
   {
-    "objectID": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
-    "href": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
-    "title": "When Does a Factor Become Too Large to Trade?",
-    "section": "Execution opportunities have a time window",
-    "text": "Execution opportunities have a time window\nTiming also explains why a full day’s trading volume is insufficient to establish capacity. Consider an order submitted late in the session for a stock that traded heavily earlier that morning. The earlier trades contribute to daily volume, but they provide no execution opportunity for an instruction that did not yet exist. The relevant sequence begins after that instruction and ends at its deadline. Applying the participation rule to the opportunities within that sequence can leave the order incomplete despite a large daily total. Available cash, sellable shares, and trading restrictions further determine which of those opportunities the simulated strategy can use."
+    "objectID": "blog/2026-11-11-alarm-quality.html#the-same-ranking-can-yield-different-warnings",
+    "href": "blog/2026-11-11-alarm-quality.html#the-same-ranking-can-yield-different-warnings",
+    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
+    "section": "The same ranking can yield different warnings",
+    "text": "The same ranking can yield different warnings\nConsider three events, each lasting four observation blocks. Place one high score at the beginning of each event. A threshold rule can warn during all three. Now move those same three high scores into consecutive blocks of a single event. The positive examples retain exactly the same score distribution, and the negative examples are unchanged. Average precision and AUROC therefore stay fixed, even though the warnings cover fewer events.\nIn the analytic construction in my thesis, both arrangements have AP 0.750 and AUROC 0.625. The spread arrangement detects three of three events, each after 64 samples. The concentrated arrangement detects one of three, after 128 samples. Consecutive active ticks count as one alarm interval. These are constructed sequences showing what ranking metrics leave unspecified: they retain score–label relationships while discarding the order that determines event coverage and delay."
   },
   {
-    "objectID": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
-    "href": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
-    "title": "When Does a Factor Become Too Large to Trade?",
-    "section": "Define the capacity criterion",
-    "text": "Define the capacity criterion\nFor this tool, capacity is the largest tested capital level that passes the execution criteria over the evaluated data period. The word “tested” is essential. A capital grid produces verdicts for its individual levels; it does not establish an exact optimum between them. The reported value belongs to that grid, that period, and those execution rules. Changing the trading deadline or participation limit changes the question being evaluated. I therefore report the estimate together with the evaluation period and execution settings.\nI separate this completion test from the judgment that trading costs are acceptable. An order may finish within the participation limit while the economics of executing it remain unattractive. Conversely, an attractive intended portfolio does not compensate for trades that cannot finish. The current completion criterion answers a feasibility question. Assessing whether the executed strategy is worth allocating capital to requires a further cost judgment.\nThe question I want the report to make answerable is where feasibility is lost as capital increases. A volume constraint, an incomplete sale, and a purchase blocked by available cash can all leave a plan unfinished, but they point to different changes in the strategy. Tracing those constraints connects a capacity estimate to an explanation of the portfolio that was actually attainable.\nThe core engine is being prepared for open-source release. The project page describes the current workflow and availability.\nSoftware · All research notes"
+    "objectID": "blog/2026-11-11-alarm-quality.html#hold-the-scores-fixed",
+    "href": "blog/2026-11-11-alarm-quality.html#hold-the-scores-fixed",
+    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
+    "section": "Hold the scores fixed",
+    "text": "Hold the scores fixed\nThis observation also helps distinguish two uses of history. A model can use earlier observations to judge whether the current observation is unusual. An alarm rule can accumulate earlier scores before deciding to warn. To investigate the first, I paired the same raw history and current blocks in different ways. A fixed detector reading only the current block then has identical score distributions in the two classes; any useful distinction must come from their relationship. To investigate the second, I kept the fitted score at every time step fixed and changed the alarm rule.\n\n\n\nTwo experimental controls: re-pairing shared blocks isolates contextual information; applying different alarm rules to a shared score stream isolates the effect of the decision rule.\n\n\nFor the alarm comparison, a threshold responds to an individual score, while CUSUM accumulates transformed score evidence over time. Both receive scores from the same contextual model trained on normal data. In the primary simulated experiment, each rule uses 50,000 normal calibration ticks, a nominal budget of 100 new alarm onsets per 10,000 ticks, and a 5% alarm-occupancy cap. Each score arrives only after its 64-sample block is complete. A hit requires a new alarm onset during the event; an alarm already active when the event starts receives no credit."
+  },
+  {
+    "objectID": "blog/2026-11-11-alarm-quality.html#read-recall-alongside-warning-burden",
+    "href": "blog/2026-11-11-alarm-quality.html#read-recall-alongside-warning-burden",
+    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
+    "section": "Read recall alongside warning burden",
+    "text": "Read recall alongside warning burden\nThe two simulated transition patterns give the following results with fixed fitted detectors:\n\n\n\n\n\n\n\n\n\nSetting\nThreshold event recall\nCUSUM event recall\nThreshold / CUSUM normal onsets\n\n\n\n\nRing\n19.2%\n28.8%\n98.15 / 94.65\n\n\nCluster\n7.8%\n10.7%\n102.85 / 93.45\n\n\n\nRecall counts detections within four completed blocks and keeps every event in the denominator. Normal onsets are measured per 10,000 score ticks on independent normal streams. The common calibration target does not make the observed warning costs identical. Reporting those costs beside recall is necessary to understand what each operating point provides.\nThe recall gains also need a timing explanation. In the ring setting, CUSUM detects 128 events that thresholding misses, while thresholding detects 32 that CUSUM misses, among 1,000 scheduled events. That difference accounts for the 9.6-percentage-point recall gain. On events both rules detect, CUSUM is usually equally fast or slower. Its advantage comes from covering additional events. A utility measure that includes misses and rewards earlier warnings improves clearly for ring; the corresponding cluster interval includes zero."
+  },
+  {
+    "objectID": "blog/2026-11-11-alarm-quality.html#what-changes-in-real-series",
+    "href": "blog/2026-11-11-alarm-quality.html#what-changes-in-real-series",
+    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
+    "section": "What changes in real series",
+    "text": "What changes in real series\nEvaluation on 119 real series from five sources makes the operating-point issue more visible. Accumulation provides no consistent detection gain. In the eight-sample-block comparison, CUSUM reduces both mean event recall and warnings during normal-labeled periods on four sources. Those warning counts describe the normal-labeled portions of mixed streams, where alarm state can carry over from an event. They answer a different question from the independent normal-stream rates in the simulation.\nFor me, a convincing claim about better alarms needs a paired explanation: which events were gained or lost, when the shared detections occurred, and what warning burden accompanied the change. A useful next comparison would examine event coverage and timing across overlapping ranges of measured warning burden. That would help distinguish benefits from accumulated evidence from changes caused by operating at a different alarm cost. A better score creates an opportunity; the deadline and decision rule determine how much of that opportunity reaches the person monitoring the system.\nResearch project · All research notes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Home",
+    "section": "News",
+    "text": "News\n\n[2026] COPF was accepted to ICML 2026.\n[2025] DECAF-GAD was accepted to ECAI 2025."
+  },
+  {
+    "objectID": "index.html#selected-publications",
+    "href": "index.html#selected-publications",
+    "title": "Home",
+    "section": "Selected Publications",
+    "text": "Selected Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShouju Wang*, Yuchen Song*, Sheng’en Li*, Dongmian Zou\nECAI 2025 · Co-first author\npaper\n\n* Equal contribution. Full publication list."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Home",
+    "section": "Education",
+    "text": "Education\n\n\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics and Computer Science, dual-degree program\nGPA: 3.80/4.00\n\n\nExpected Dec. 2026\n\n\nDean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar (2024, 2025)."
+  },
+  {
+    "objectID": "index.html#research-experience",
+    "href": "index.html#research-experience",
+    "title": "Home",
+    "section": "Research Experience",
+    "text": "Research Experience\n\n\n\nCounterfactual Learning for Adaptive Decision Systems\n\nDuke Kunshan University / Duke University · Jan. 2025 – Present\n\n\nCounterfactual estimation, online auditing, and fairness control for evolving graphs; COPF and its COMET extension.\n\n\n\n\n\n\nTaylor-Model Reachability for Neural-Network-Controlled Systems\n\nUIUC · Prof. Huan Zhang’s group · May 2026 – Present\n\n\nA PyTorch engine for validated ODE flowpipes, with step-level comparisons against Flow* and certified neural-network couplings.\n\n\n\n\n\n\nAudit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\n\n\nAuditing scaffold adequacy and local identifiability, then testing targeted refinements on MIMIC-IV-ECG.\n\n\n\n\n\n\nContextual Information and Alarm Utility in Time-Series Anomaly Detection\n\nDuke Kunshan University · Signature Work · 2025 – 2026\n\n\nMatched experiments separate the value of temporal history from alarm timing, recall, and warning burden.\n\n\n\n\n\n\nFair Graph Anomaly Detection\n\nDuke Kunshan University · Jul. 2024 – May 2025\n\n\nDECAF-GAD combines causal disentanglement and counterfactual regularization to improve fairness in graph autoencoders.\n\n\n\nMore about my research"
+  },
+  {
+    "objectID": "index.html#research-notes",
+    "href": "index.html#research-notes",
+    "title": "Home",
+    "section": "Research Notes",
+    "text": "Research Notes\n\nWhy I Built Reader First\nTurning a paper on AI-generated language into a writing skill that makes actions, conditions, and connections easier to follow.\n\n\nWhen Does a Better Anomaly Score Lead to Better Alarms?\nWhat a controlled comparison reveals about event recall, detection delay, and the burden of warnings.\n\n\nWhen Does a Factor Become Too Large to Trade?\nHow execution constraints turn a target portfolio into a different realized path as capital increases.\n\nAll research notes"
+  },
+  {
+    "objectID": "index.html#software",
+    "href": "index.html#software",
+    "title": "Home",
+    "section": "Software",
+    "text": "Software\n\nL2-Based Factor Capacity Analysis\nA tool that evaluates factor strategies across initial capital levels using Level-2 execution simulation and generates a PDF capacity report.\n\nOpen-source release in preparation · Project overview"
+  },
+  {
+    "objectID": "index.html#work-experience",
+    "href": "index.html#work-experience",
+    "title": "Home",
+    "section": "Work Experience",
+    "text": "Work Experience\n\n\nShangchen Private Fund · Shanghai, China\nQuantitative Research Intern (Sep. 2026 – Present)\nPreviously Quantitative Developer Intern (Jul. – Sep. 2026)\n\n\nJul. 2026 – Present\n\n\nLiquidity-aware factor backtesting and macroeconomic consensus research, building on earlier work in financial-document retrieval and Python/SQL data pipelines."
   },
   {
     "objectID": "projects.html",
@@ -147,102 +217,67 @@
     "text": "Fair Graph Anomaly Detection\n\n\n\nDECAF-GAD · Model architecture\n\n\n\nDuke Kunshan University · Jul. 2024 – May 2025\nSummer Research Scholar · Advised by Prof. Dongmian Zou\n\nGraph autoencoders can mistake differences between demographic groups for anomalies. I co-developed DECAF-GAD, a fairness-aware framework that uses a structural causal model to separate sensitive information from the representations used for detection. A shared encoder processes original and counterfactual graphs, while disentanglement, adversarial learning, and counterfactual consistency losses guide reconstruction.\nThe framework can be added to existing autoencoder-based detectors. Through experiments on synthetic and real-world graphs and component ablations, we evaluated the fairness–utility trade-off and found improved fairness metrics while maintaining competitive anomaly detection performance.\n\nPaper · ECAI 2025 · Code · Co-first author"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "blog/2026-11-11-factor-capacity.html",
+    "href": "blog/2026-11-11-factor-capacity.html",
+    "title": "When Does a Factor Become Too Large to Trade?",
     "section": "",
-    "text": "Skip to content"
+    "text": "Skip to content\nA factor signal, together with portfolio-construction rules, defines the positions a strategy aims to hold. Increasing the capital allocated to it also increases the trading needed to reach those positions. My question is how far that allocation can grow while the trading plan remains executable under a stated set of rules. Answering it requires following the orders through time: the intended portfolio alone does not tell me which positions the strategy can actually acquire or unwind.\nI developed a tool that takes a factor as input, runs execution backtests at multiple initial-capital levels using Level 2 market data, and produces a PDF capacity report. The current evaluation uses a 10% participation-rate limit and requires 100% of each day’s planned trading to finish that day. These settings give the experiment an explicit pass condition. A run that leaves an order unfinished fails that completion requirement, even if most of its planned trading succeeds."
   },
   {
-    "objectID": "index.html#news",
-    "href": "index.html#news",
-    "title": "Home",
-    "section": "News",
-    "text": "News\n\n[2026] COPF was accepted to ICML 2026.\n[2025] DECAF-GAD was accepted to ECAI 2025."
+    "objectID": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
+    "href": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
+    "title": "When Does a Factor Become Too Large to Trade?",
+    "section": "Follow the portfolio through execution",
+    "text": "Follow the portfolio through execution\nThe execution simulation tracks fills and maintains the state needed to decide whether orders can fill. That state includes cash and sellable shares, alongside the restrictions associated with suspensions and daily price limits. Partial fills change the portfolio immediately; unfinished orders remain unfinished. This matters because a target weight is only a request. A backtest must account for the holdings and available resources that emerge as the request is executed.\nConsider two runs with identical factor inputs but different starting capital. Both receive the same instruction to sell one position and buy another. The larger run requests more shares and needs more execution opportunities within the participation limit. If its sale fills only partially, it retains more of the old position and receives less cash than the plan anticipated. A subsequent purchase must use the cash actually available. The two runs can therefore follow different holding paths even though their factor rankings and target weights agree. Scaling capital changes the sequence of attainable portfolios."
   },
   {
-    "objectID": "index.html#selected-publications",
-    "href": "index.html#selected-publications",
-    "title": "Home",
-    "section": "Selected Publications",
-    "text": "Selected Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShouju Wang*, Yuchen Song*, Sheng’en Li*, Dongmian Zou\nECAI 2025 · Co-first author\npaper\n\n* Equal contribution. Full publication list."
+    "objectID": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
+    "href": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
+    "title": "When Does a Factor Become Too Large to Trade?",
+    "section": "Execution opportunities have a time window",
+    "text": "Execution opportunities have a time window\nTiming also explains why a full day’s trading volume is insufficient to establish capacity. Consider an order submitted late in the session for a stock that traded heavily earlier that morning. The earlier trades contribute to daily volume, but they provide no execution opportunity for an instruction that did not yet exist. The relevant sequence begins after that instruction and ends at its deadline. Applying the participation rule to the opportunities within that sequence can leave the order incomplete despite a large daily total. Available cash, sellable shares, and trading restrictions further determine which of those opportunities the simulated strategy can use."
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Home",
-    "section": "Education",
-    "text": "Education\n\n\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics and Computer Science, dual-degree program\nGPA: 3.80/4.00\n\n\nExpected Dec. 2026\n\n\nDean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar (2024, 2025)."
+    "objectID": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
+    "href": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
+    "title": "When Does a Factor Become Too Large to Trade?",
+    "section": "Define the capacity criterion",
+    "text": "Define the capacity criterion\nFor this tool, capacity is the largest tested capital level that passes the execution criteria over the evaluated data period. The word “tested” is essential. A capital grid produces verdicts for its individual levels; it does not establish an exact optimum between them. The reported value belongs to that grid, that period, and those execution rules. Changing the trading deadline or participation limit changes the question being evaluated. I therefore report the estimate together with the evaluation period and execution settings.\nI separate this completion test from the judgment that trading costs are acceptable. An order may finish within the participation limit while the economics of executing it remain unattractive. Conversely, an attractive intended portfolio does not compensate for trades that cannot finish. The current completion criterion answers a feasibility question. Assessing whether the executed strategy is worth allocating capital to requires a further cost judgment.\nThe question I want the report to make answerable is where feasibility is lost as capital increases. A volume constraint, an incomplete sale, and a purchase blocked by available cash can all leave a plan unfinished, but they point to different changes in the strategy. Tracing those constraints connects a capacity estimate to an explanation of the portfolio that was actually attainable.\nThe core engine is being prepared for open-source release. The project page describes the current workflow and availability.\nSoftware · All research notes"
   },
   {
-    "objectID": "index.html#research-experience",
-    "href": "index.html#research-experience",
-    "title": "Home",
-    "section": "Research Experience",
-    "text": "Research Experience\n\n\n\nCounterfactual Learning for Adaptive Decision Systems\n\nDuke Kunshan University / Duke University · Jan. 2025 – Present\n\n\nCounterfactual estimation, online auditing, and fairness control for evolving graphs; COPF and its COMET extension.\n\n\n\n\n\n\nTaylor-Model Reachability for Neural-Network-Controlled Systems\n\nUIUC · Prof. Huan Zhang’s group · May 2026 – Present\n\n\nA PyTorch engine for validated ODE flowpipes, with step-level comparisons against Flow* and certified neural-network couplings.\n\n\n\n\n\n\nAudit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\n\n\nAuditing scaffold adequacy and local identifiability, then testing targeted refinements on MIMIC-IV-ECG.\n\n\n\n\n\n\nContextual Information and Alarm Utility in Time-Series Anomaly Detection\n\nDuke Kunshan University · Signature Work · 2025 – 2026\n\n\nMatched experiments separate the value of temporal history from alarm timing, recall, and warning burden.\n\n\n\n\n\n\nFair Graph Anomaly Detection\n\nDuke Kunshan University · Jul. 2024 – May 2025\n\n\nDECAF-GAD combines causal disentanglement and counterfactual regularization to improve fairness in graph autoencoders.\n\n\n\nMore about my research"
-  },
-  {
-    "objectID": "index.html#research-notes",
-    "href": "index.html#research-notes",
-    "title": "Home",
-    "section": "Research Notes",
-    "text": "Research Notes\n\nWhen Does a Better Anomaly Score Lead to Better Alarms?\nWhat a controlled comparison reveals about event recall, detection delay, and the burden of warnings.\n\n\nWhen Does a Factor Become Too Large to Trade?\nHow execution constraints turn a target portfolio into a different realized path as capital increases.\n\nAll research notes"
-  },
-  {
-    "objectID": "index.html#software",
-    "href": "index.html#software",
-    "title": "Home",
-    "section": "Software",
-    "text": "Software\n\nL2-Based Factor Capacity Analysis\nA tool that evaluates factor strategies across initial capital levels using Level-2 execution simulation and generates a PDF capacity report.\n\nOpen-source release in preparation · Project overview"
-  },
-  {
-    "objectID": "index.html#work-experience",
-    "href": "index.html#work-experience",
-    "title": "Home",
-    "section": "Work Experience",
-    "text": "Work Experience\n\n\nShangchen Private Fund · Shanghai, China\nQuantitative Research Intern (Sep. 2026 – Present)\nPreviously Quantitative Developer Intern (Jul. – Sep. 2026)\n\n\nJul. 2026 – Present\n\n\nLiquidity-aware factor backtesting and macroeconomic consensus research, building on earlier work in financial-document retrieval and Python/SQL data pipelines."
-  },
-  {
-    "objectID": "blog/2026-11-11-alarm-quality.html",
-    "href": "blog/2026-11-11-alarm-quality.html",
-    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
+    "objectID": "blog/2026-11-14-reader-first.html",
+    "href": "blog/2026-11-14-reader-first.html",
+    "title": "Why I Built Reader First",
     "section": "",
-    "text": "Skip to content\nAn anomaly detector produces a score. Someone monitoring a system needs a warning while there is still time to respond. Between those two outputs sit several choices: when a score becomes available, whether to act on it immediately, whether to accumulate evidence, and when an existing alarm should count as a new warning. My Signature Work studies this gap by separating the information a detector uses from the decisions made with its scores."
+    "text": "Skip to content\nI built Reader First because I want explanations that let me keep reading. A technical answer can contain the right facts and still require work to connect them: a condition arrives after the claim it limits, several nouns conceal an action, or “this” could refer to three different things. My aim was to make that work visible to the writer. If the writer already knows how the pieces fit together, some of those relationships can be stated directly.\nA study by Clark, Martin, and Mahowald gave me a useful starting point. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. Across chat and coding in particular, many models used longer dependencies and more stacked nouns than their round-trip paraphrases, although the pattern varied by model, feature, and setting. A separate experiment shows that a length penalty can shift a small model toward shorter grammatical variants. The study measures linguistic features and model preferences; it does not directly test human comprehension of the generated passages."
   },
   {
-    "objectID": "blog/2026-11-11-alarm-quality.html#the-same-ranking-can-yield-different-warnings",
-    "href": "blog/2026-11-11-alarm-quality.html#the-same-ranking-can-yield-different-warnings",
-    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
-    "section": "The same ranking can yield different warnings",
-    "text": "The same ranking can yield different warnings\nConsider three events, each lasting four observation blocks. Place one high score at the beginning of each event. A threshold rule can warn during all three. Now move those same three high scores into consecutive blocks of a single event. The positive examples retain exactly the same score distribution, and the negative examples are unchanged. Average precision and AUROC therefore stay fixed, even though the warnings cover fewer events.\nIn the analytic construction in my thesis, both arrangements have AP 0.750 and AUROC 0.625. The spread arrangement detects three of three events, each after 64 samples. The concentrated arrangement detects one of three, after 128 samples. Consecutive active ticks count as one alarm interval. These are constructed sequences showing what ranking metrics leave unspecified: they retain score–label relationships while discarding the order that determines event coverage and delay."
+    "objectID": "blog/2026-11-14-reader-first.html#spend-words-where-they-help-the-reader",
+    "href": "blog/2026-11-14-reader-first.html#spend-words-where-they-help-the-reader",
+    "title": "Why I Built Reader First",
+    "section": "Spend words where they help the reader",
+    "text": "Spend words where they help the reader\nThe design question I took from this was how to spend words where they help someone follow a thought. A reader meets a sentence in sequence. An explanation should introduce the object under discussion, make its action clear, and place the relevant conditions where they can guide interpretation. I made the skill’s objective explicit: reduce the extra inference and rereading needed to recover the intended meaning. That gives each proposed edit a purpose beyond changing the sound of the prose.\nThe following is an illustrative example from the skill, translated into English. It was written to explain an editing decision; it is neither a quotation from the paper nor a report of an actual test.\n\nDense version: I added three concurrent-write cache-invalidation regression tests, all passing locally; production reliability under high load remains unverified.\n\n\nExpanded version: I added three regression tests to check whether the cache is invalidated as expected during concurrent writes. All three tests passed locally. Reliability under high production load has not been verified.\n\nThe expanded version gives “tests” an explicit purpose and makes concurrent writing a condition of the check. Repeating “three tests” keeps the local result attached to the work just described. The final sentence identifies the remaining question. The technical content survives: there are three tests, they concern invalidation during concurrent writes, they passed locally, and production reliability remains unverified. Invalidation also keeps its technical meaning: making a cached value unusable when appropriate. Replacing it with “cache failure” would change the claim.\nThis example also shows why I constrain expansion to relationships the source already supplies. A compressed phrase about timeouts, retries, and fallback may leave their order unspecified. Writing a smooth story in which retries fail and a backup service takes over would introduce behavior that has not been established. I therefore put a meaning check before the readability check. The editor must preserve conditions, quantities, negation, evidence, and uncertainty while deciding how to arrange them."
   },
   {
-    "objectID": "blog/2026-11-11-alarm-quality.html#hold-the-scores-fixed",
-    "href": "blog/2026-11-11-alarm-quality.html#hold-the-scores-fixed",
-    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
-    "section": "Hold the scores fixed",
-    "text": "Hold the scores fixed\nThis observation also helps distinguish two uses of history. A model can use earlier observations to judge whether the current observation is unusual. An alarm rule can accumulate earlier scores before deciding to warn. To investigate the first, I paired the same raw history and current blocks in different ways. A fixed detector reading only the current block then has identical score distributions in the two classes; any useful distinction must come from their relationship. To investigate the second, I kept the fitted score at every time step fixed and changed the alarm rule.\n\n\n\nTwo experimental controls: re-pairing shared blocks isolates contextual information; applying different alarm rules to a shared score stream isolates the effect of the decision rule.\n\n\nFor the alarm comparison, a threshold responds to an individual score, while CUSUM accumulates transformed score evidence over time. Both receive scores from the same contextual model trained on normal data. In the primary simulated experiment, each rule uses 50,000 normal calibration ticks, a nominal budget of 100 new alarm onsets per 10,000 ticks, and a 5% alarm-occupancy cap. Each score arrives only after its 64-sample block is complete. A hit requires a new alarm onset during the event; an alarm already active when the event starts receives no credit."
+    "objectID": "blog/2026-11-14-reader-first.html#adapt-the-principle-to-chinese",
+    "href": "blog/2026-11-14-reader-first.html#adapt-the-principle-to-chinese",
+    "title": "Why I Built Reader First",
+    "section": "Adapt the principle to Chinese",
+    "text": "Adapt the principle to Chinese\nChinese needed its own treatment. The original example contains the phrase “三个并发写入场景下的缓存失效回归测试.” Before reaching “tests,” the reader has already encountered the number, operating condition, cache operation, and test category. My revision names the tests first, then explains what they check. That is a decision about when information becomes useful. I also allow a concrete noun to recur when “这,” “其,” or “上述” could point to several objects. Keeping a concept’s name stable can be worth the repetition.\nThese Chinese rules are my practical extension of the motivation. English advice about an optional that cannot simply become a rule for adding or removing “的.” I want the editor to locate the actual difficulty: a long modifier, an unclear reference, or an unstated condition. Sometimes a short clause resolves it. Sometimes the existing sentence is already clear. The skill consequently has no fixed sentence-length limit or target number of technical terms.\nI wanted that flexibility to extend to the reader. Someone familiar with systems programming can usually work with “garbage collector” without a replacement definition. A reader learning the mechanism may need a brief explanation of its role. The same principle governs detail: keep what the reader needs to understand the claim, and remove commentary that adds no useful relationship. Splitting every sentence or turning every paragraph into bullets would create a different obstacle by making the reader reconnect fragments."
   },
   {
-    "objectID": "blog/2026-11-11-alarm-quality.html#read-recall-alongside-warning-burden",
-    "href": "blog/2026-11-11-alarm-quality.html#read-recall-alongside-warning-burden",
-    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
-    "section": "Read recall alongside warning burden",
-    "text": "Read recall alongside warning burden\nThe two simulated transition patterns give the following results with fixed fitted detectors:\n\n\n\n\n\n\n\n\n\nSetting\nThreshold event recall\nCUSUM event recall\nThreshold / CUSUM normal onsets\n\n\n\n\nRing\n19.2%\n28.8%\n98.15 / 94.65\n\n\nCluster\n7.8%\n10.7%\n102.85 / 93.45\n\n\n\nRecall counts detections within four completed blocks and keeps every event in the denominator. Normal onsets are measured per 10,000 score ticks on independent normal streams. The common calibration target does not make the observed warning costs identical. Reporting those costs beside recall is necessary to understand what each operating point provides.\nThe recall gains also need a timing explanation. In the ring setting, CUSUM detects 128 events that thresholding misses, while thresholding detects 32 that CUSUM misses, among 1,000 scheduled events. That difference accounts for the 9.6-percentage-point recall gain. On events both rules detect, CUSUM is usually equally fast or slower. Its advantage comes from covering additional events. A utility measure that includes misses and rewards earlier warnings improves clearly for ring; the corresponding cluster interval includes zero."
+    "objectID": "blog/2026-11-14-reader-first.html#keep-the-claim-intact",
+    "href": "blog/2026-11-14-reader-first.html#keep-the-claim-intact",
+    "title": "Why I Built Reader First",
+    "section": "Keep the claim intact",
+    "text": "Keep the claim intact\nFor technical work, I gave particular attention to completion states. A proposed change, an edited file, a test that passed locally, and a deployed fix are different facts. An explanation becomes less useful if polishing makes those states interchangeable. Reader First asks for the supported result first, with its scope close by, followed by the reason or evidence needed to assess it. This is where readability and factual precision need to work together."
   },
   {
-    "objectID": "blog/2026-11-11-alarm-quality.html#what-changes-in-real-series",
-    "href": "blog/2026-11-11-alarm-quality.html#what-changes-in-real-series",
-    "title": "When Does a Better Anomaly Score Lead to Better Alarms?",
-    "section": "What changes in real series",
-    "text": "What changes in real series\nEvaluation on 119 real series from five sources makes the operating-point issue more visible. Accumulation provides no consistent detection gain. In the eight-sample-block comparison, CUSUM reduces both mean event recall and warnings during normal-labeled periods on four sources. Those warning counts describe the normal-labeled portions of mixed streams, where alarm state can carry over from an event. They answer a different question from the independent normal-stream rates in the simulation.\nFor me, a convincing claim about better alarms needs a paired explanation: which events were gained or lost, when the shared detections occurred, and what warning burden accompanied the change. A useful next comparison would examine event coverage and timing across overlapping ranges of measured warning burden. That would help distinguish benefits from accumulated evidence from changes caused by operating at a different alarm cost. A better score creates an opportunity; the deadline and decision rule determine how much of that opportunity reaches the person monitoring the system.\nResearch project · All research notes"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Research Notes",
-    "section": "",
-    "text": "Skip to content\n\n\n\n\n\n\nNotes from my research and software development: the questions behind an experiment, the assumptions behind an evaluation, and what the results let us conclude.\n\n\n\n\n\n\n\n\n\n\nWhen Does a Better Anomaly Score Lead to Better Alarms?\n\n\nAn anomaly score earns its value through the events its alarms cover, their timing, and their measured warning burden.\n\n\n\n\n\nNov 11, 2026\n\n\n\n\n\n\n\nWhen Does a Factor Become Too Large to Trade?\n\n\nEvaluating factor capacity through capital-scaled L2 execution backtests and a same-day completion rule.\n\n\n\n\n\nNov 11, 2026\n\n\n\n\n\nNo matching items"
+    "objectID": "blog/2026-11-14-reader-first.html#what-i-would-evaluate-next",
+    "href": "blog/2026-11-14-reader-first.html#what-i-would-evaluate-next",
+    "title": "Why I Built Reader First",
+    "section": "What I would evaluate next",
+    "text": "What I would evaluate next\nI regard the skill as a set of editing decisions to examine in use. A meaningful evaluation would ask independent readers the same content questions and record misunderstandings and places where they needed to reread. Those observations could show which expansions help and which merely add length. For now, the design is available to inspect: preserve the claim, find the relationship that costs effort to reconstruct, and make that relationship explicit.\nDownload Reader First · All research notes"
   },
   {
     "objectID": "about.html",

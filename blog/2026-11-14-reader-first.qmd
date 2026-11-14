@@ -1,0 +1,49 @@
+---
+title: "Why I Built Reader First"
+date: 2026-11-14
+description: "The editing decisions behind a writing skill designed to make actions, conditions, and evidence easier to follow while preserving meaning."
+toc: false
+format:
+  html:
+    body-classes: research-note
+---
+
+I built Reader First because I want explanations that let me keep reading. A technical answer can contain the right facts and still require work to connect them: a condition arrives after the claim it limits, several nouns conceal an action, or “this” could refer to three different things. My aim was to make that work visible to the writer. If the writer already knows how the pieces fit together, some of those relationships can be stated directly.
+
+A study by [Clark, Martin, and Mahowald](https://arxiv.org/abs/2610.29162v1) gave me a useful starting point. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. Across chat and coding in particular, many models used longer dependencies and more stacked nouns than their round-trip paraphrases, although the pattern varied by model, feature, and setting. A separate experiment shows that a length penalty can shift a small model toward shorter grammatical variants. The study measures linguistic features and model preferences; it does not directly test human comprehension of the generated passages.
+
+::: {.source-credit}
+Thomas Hikaru Clark, Matias B. Martin, and Kyle Mahowald. *Why is AI-generated language so hard to understand?* [arXiv:2610.29162v1](https://arxiv.org/abs/2610.29162v1), 2026.
+:::
+
+## Spend words where they help the reader
+
+The design question I took from this was how to spend words where they help someone follow a thought. A reader meets a sentence in sequence. An explanation should introduce the object under discussion, make its action clear, and place the relevant conditions where they can guide interpretation. I made the skill's objective explicit: reduce the extra inference and rereading needed to recover the intended meaning. That gives each proposed edit a purpose beyond changing the sound of the prose.
+
+The following is an illustrative example from the skill, translated into English. It was written to explain an editing decision; it is neither a quotation from the paper nor a report of an actual test.
+
+> **Dense version:** I added three concurrent-write cache-invalidation regression tests, all passing locally; production reliability under high load remains unverified.
+
+> **Expanded version:** I added three regression tests to check whether the cache is invalidated as expected during concurrent writes. All three tests passed locally. Reliability under high production load has not been verified.
+
+The expanded version gives “tests” an explicit purpose and makes concurrent writing a condition of the check. Repeating “three tests” keeps the local result attached to the work just described. The final sentence identifies the remaining question. The technical content survives: there are three tests, they concern invalidation during concurrent writes, they passed locally, and production reliability remains unverified. Invalidation also keeps its technical meaning: making a cached value unusable when appropriate. Replacing it with “cache failure” would change the claim.
+
+This example also shows why I constrain expansion to relationships the source already supplies. A compressed phrase about timeouts, retries, and fallback may leave their order unspecified. Writing a smooth story in which retries fail and a backup service takes over would introduce behavior that has not been established. I therefore put a meaning check before the readability check. The editor must preserve conditions, quantities, negation, evidence, and uncertainty while deciding how to arrange them.
+
+## Adapt the principle to Chinese
+
+Chinese needed its own treatment. The original example contains the phrase “三个并发写入场景下的缓存失效回归测试.” Before reaching “tests,” the reader has already encountered the number, operating condition, cache operation, and test category. My revision names the tests first, then explains what they check. That is a decision about when information becomes useful. I also allow a concrete noun to recur when “这,” “其,” or “上述” could point to several objects. Keeping a concept's name stable can be worth the repetition.
+
+These Chinese rules are my practical extension of the motivation. English advice about an optional *that* cannot simply become a rule for adding or removing “的.” I want the editor to locate the actual difficulty: a long modifier, an unclear reference, or an unstated condition. Sometimes a short clause resolves it. Sometimes the existing sentence is already clear. The skill consequently has no fixed sentence-length limit or target number of technical terms.
+
+I wanted that flexibility to extend to the reader. Someone familiar with systems programming can usually work with “garbage collector” without a replacement definition. A reader learning the mechanism may need a brief explanation of its role. The same principle governs detail: keep what the reader needs to understand the claim, and remove commentary that adds no useful relationship. Splitting every sentence or turning every paragraph into bullets would create a different obstacle by making the reader reconnect fragments.
+
+## Keep the claim intact
+
+For technical work, I gave particular attention to completion states. A proposed change, an edited file, a test that passed locally, and a deployed fix are different facts. An explanation becomes less useful if polishing makes those states interchangeable. Reader First asks for the supported result first, with its scope close by, followed by the reason or evidence needed to assess it. This is where readability and factual precision need to work together.
+
+## What I would evaluate next
+
+I regard the skill as a set of editing decisions to examine in use. A meaningful evaluation would ask independent readers the same content questions and record misunderstandings and places where they needed to reread. Those observations could show which expansions help and which merely add length. For now, the design is available to inspect: preserve the claim, find the relationship that costs effort to reconstruct, and make that relationship explicit.
+
+[Download Reader First](../assets/skills/reader-first.zip) · [All research notes](index.qmd)

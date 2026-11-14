@@ -22,6 +22,8 @@ format:
 I am an undergraduate in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
 
 I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
+
+I also write [research notes](blog/index.qmd) about the questions and design choices behind my work, and build [research software](software.qmd). My latest note explains [why I built Reader First](blog/2026-11-14-reader-first.qmd), a writing skill for making technical explanations easier to follow.
 :::
 ::::
 
@@ -155,6 +157,12 @@ DECAF-GAD combines causal disentanglement and counterfactual regularization to i
 ---
 
 ## Research Notes
+
+::: {.note-entry}
+### [Why I Built Reader First](blog/2026-11-14-reader-first.qmd)
+
+Turning a paper on AI-generated language into a writing skill that makes actions, conditions, and connections easier to follow.
+:::
 
 ::: {.note-entry}
 ### [When Does a Better Anomaly Score Lead to Better Alarms?](blog/2026-11-11-alarm-quality.qmd)

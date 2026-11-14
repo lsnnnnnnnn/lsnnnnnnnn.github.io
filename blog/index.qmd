@@ -1,6 +1,6 @@
 ---
 title: "Research Notes"
-description: "Notes from my work on evaluating learning and decision systems."
+description: "Notes on research, software, and making technical ideas easier to understand."
 toc: false
 listing:
   contents: "20*.qmd"
@@ -11,5 +11,5 @@ listing:
 ---
 
 ::: {.research-intro}
-Notes from my research and software development: the questions behind an experiment, the assumptions behind an evaluation, and what the results let us conclude.
+Notes from my research and software development: how I frame questions, design evaluations, and turn ideas into tools.
 :::

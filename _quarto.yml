@@ -5,7 +5,12 @@ project:
     - assets/Shengen_Li_CV.pdf
     - assets/profile.jpg
     - assets/favicon.svg
-    - assets/research/*.webp
+    - assets/research/copf-framework.webp
+    - assets/research/decaf-gad-architecture.webp
+    - assets/research/audit-refine-framework.webp
+    - assets/research/history-alarm-controls.webp
+    - assets/research/reachability-system.webp
+    - assets/skills/reader-first.zip
     - styles.css
     - .nojekyll
 
@@ -43,7 +48,7 @@ format:
     theme: default
     include-in-header:
       text: |
-        <link rel="stylesheet" href="/styles.css?v=20261111-notes">
+        <link rel="stylesheet" href="/styles.css?v=20261114-reader-first">
     toc: false
     pagetitle: "{{< meta title >}}"
     anchor-sections: false
