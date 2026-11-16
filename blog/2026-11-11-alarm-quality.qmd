@@ -1,46 +1,42 @@
 ---
-title: "When Does a Better Anomaly Score Lead to Better Alarms?"
+title: "How to Miss Two Events Without Hurting Your Score"
 date: 2026-11-11
-description: "An anomaly score earns its value through the events its alarms cover, their timing, and their measured warning burden."
+description: "I rearranged three high anomaly scores. Two events lost their warnings. AP and AUROC did not move."
 toc: false
 format:
   html:
     body-classes: research-note
 ---
 
-An anomaly detector produces a score. Someone monitoring a system needs a warning while there is still time to respond. Between those two outputs sit several choices: when a score becomes available, whether to act on it immediately, whether to accumulate evidence, and when an existing alarm should count as a new warning. My Signature Work studies this gap by separating the information a detector uses from the decisions made with its scores.
+I can make an anomaly detector miss two out of three events without lowering its average precision. Its AUROC will stay exactly the same, too. All I need to do is rearrange three high scores.
 
-## The same ranking can yield different warnings
+Here is the toy construction from my Signature Work. Imagine three anomalous events. Each lasts four blocks of observations, and a detector produces one score at the end of each block. Every score is either 0 or 1. A score above 0.5 switches the alarm on; consecutive high scores keep the same alarm running.
 
-Consider three events, each lasting four observation blocks. Place one high score at the beginning of each event. A threshold rule can warn during all three. Now move those same three high scores into consecutive blocks of a single event. The positive examples retain exactly the same score distribution, and the negative examples are unchanged. Average precision and AUROC therefore stay fixed, even though the warnings cover fewer events.
+First, put one high score at the beginning of each event. Then try putting all three high scores into the second, third, and fourth blocks of the first event:
 
-In the analytic construction in my thesis, both arrangements have AP **0.750** and AUROC **0.625**. The spread arrangement detects three of three events, each after 64 samples. The concentrated arrangement detects one of three, after 128 samples. Consecutive active ticks count as one alarm interval. These are constructed sequences showing what ranking metrics leave unspecified: they retain score–label relationships while discarding the order that determines event coverage and delay.
+| Arrangement | Event 1 | Event 2 | Event 3 |
+|:--|:--:|:--:|:--:|
+| Spread out | `1 0 0 0` | `1 0 0 0` | `1 0 0 0` |
+| Bunched up | `0 1 1 1` | `0 0 0 0` | `0 0 0 0` |
 
-## Hold the scores fixed
+Two normal blocks precede each event. All six normal scores are 0 in both arrangements. Nothing about the event labels changes.
 
-This observation also helps distinguish two uses of history. A model can use earlier observations to judge whether the current observation is unusual. An alarm rule can accumulate earlier scores before deciding to warn. To investigate the first, I paired the same raw history and current blocks in different ways. A fixed detector reading only the current block then has identical score distributions in the two classes; any useful distinction must come from their relationship. To investigate the second, I kept the fitted score at every time step fixed and changed the alarm rule.
+The first arrangement warns during all three events. The second starts one alarm during Event 1 and stays silent throughout Events 2 and 3. Those three consecutive 1s do not warn about three different problems. They keep warning about the same one.
 
-![Two experimental controls: re-pairing shared blocks isolates contextual information; applying different alarm rules to a shared score stream isolates the effect of the decision rule.](../assets/research/history-alarm-controls.webp){fig-alt="A schematic of matched history–current block pairs and threshold versus CUSUM alarm rules applied to the same scores." width=640}
+Even that one warning arrives later. With 64 observations per block, the spread-out arrangement warns after 64 observations in each event. The bunched-up arrangement first warns after 128 observations in Event 1. The other two events end without a warning.
 
-For the alarm comparison, a threshold responds to an individual score, while CUSUM accumulates transformed score evidence over time. Both receive scores from the same contextual model trained on normal data. In the primary simulated experiment, each rule uses 50,000 normal calibration ticks, a nominal budget of 100 new alarm onsets per 10,000 ticks, and a 5% alarm-occupancy cap. Each score arrives only after its 64-sample block is complete. A hit requires a new alarm onset during the event; an alarm already active when the event starts receives no credit.
+Yet both arrangements receive **AP = 0.750 and AUROC = 0.625**. These are exact values for the constructed sequences, using grouped ties for AP and half credit for AUROC ties.
 
-## Read recall alongside warning burden
+The reason is simple once the scores are sorted. In both cases, the anomalous blocks have three 1s and nine 0s. The normal blocks have six 0s. AP and AUROC see the same scores attached to the same labels. They have no way to tell whether the three high scores belong to three separate events or are all spent on one.
 
-The two simulated transition patterns give the following results with fixed fitted detectors:
+I had initially paid most attention to the final performance numbers in my SW. After several modeling attempts failed to produce the consistent advantage I wanted, I began looking more closely at what each comparison could explain. The example above gives a compact reason to follow the scores back into time. A ranking can tell me which observations look more suspicious. I still need to find out which events receive a warning before they end.
 
-| Setting | Threshold event recall | CUSUM event recall | Threshold / CUSUM normal onsets |
-|:--|--:|--:|--:|
-| Ring | 19.2% | 28.8% | 98.15 / 94.65 |
-| Cluster | 7.8% | 10.7% | 102.85 / 93.45 |
+That question also made an actual experimental result more interesting. I gave two alarm rules exactly the same learned scores. One reacted to individual high scores. The other, CUSUM, accumulated evidence, allowing several moderately unusual scores to build toward a warning.
 
-Recall counts detections within four completed blocks and keeps every event in the denominator. Normal onsets are measured per 10,000 score ticks on independent normal streams. The common calibration target does not make the observed warning costs identical. Reporting those costs beside recall is necessary to understand what each operating point provides.
+In one simulated setting, out of 1,000 events, CUSUM detected 128 that the threshold rule missed. It also missed 32 that the threshold rule detected. The net gain was 96 events, taking recall from 19.2% to 28.8% within the four-block deadline. Both rules used the same calibration target for normal alarms; their measured normal-warning rates were close, though not identical.
 
-The recall gains also need a timing explanation. In the ring setting, CUSUM detects 128 events that thresholding misses, while thresholding detects 32 that CUSUM misses, among 1,000 scheduled events. That difference accounts for the 9.6-percentage-point recall gain. On events both rules detect, CUSUM is usually equally fast or slower. Its advantage comes from covering additional events. A utility measure that includes misses and rewards earlier warnings improves clearly for ring; the corresponding cluster interval includes zero.
+I could have stopped at the higher recall. Looking at the paired events gave a more specific explanation. On events both rules detected, CUSUM was usually equally fast or slower. Its recall gain came from reaching additional events. The benefit of waiting for more evidence showed up in *which events were detected*, even though waiting did not generally make the shared detections earlier.
 
-## What changes in real series
-
-Evaluation on 119 real series from five sources makes the operating-point issue more visible. Accumulation provides no consistent detection gain. In the eight-sample-block comparison, CUSUM reduces both mean event recall and warnings during normal-labeled periods on four sources. Those warning counts describe the normal-labeled portions of mixed streams, where alarm state can carry over from an event. They answer a different question from the independent normal-stream rates in the simulation.
-
-For me, a convincing claim about better alarms needs a paired explanation: which events were gained or lost, when the shared detections occurred, and what warning burden accompanied the change. A useful next comparison would examine event coverage and timing across overlapping ranges of *measured* warning burden. That would help distinguish benefits from accumulated evidence from changes caused by operating at a different alarm cost. A better score creates an opportunity; the deadline and decision rule determine how much of that opportunity reaches the person monitoring the system.
+I still want better anomaly scores. But now, when I look at a result, I want to put the scores back on a timeline and mark the first warning in every event. In the little example above, that is all it takes to see the two warnings the ranking metrics could not account for.
 
 [Research project](../projects.qmd#contextual-anomaly-detection)
