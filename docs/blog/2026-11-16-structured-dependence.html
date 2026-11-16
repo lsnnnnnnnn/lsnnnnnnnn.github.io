@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-11-16">
-<meta name="description" content="A hidden coin, a tempting concentration bound, and the extra structure that makes averaging work.">
+<meta name="description" content="Why more data can fail to average out, and what dependency graphs leave out of a confidence bound.">
 
-<title>What a dependency graph forgets – Sheng’en Li</title>
+<title>A thousand comparisons, one coin flip – Sheng’en Li</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -101,9 +101,9 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="What a dependency graph forgets">
-<meta property="og:description" content="A hidden coin, a tempting concentration bound, and the extra structure that makes averaging work.">
-<meta property="og:image" content="https://lsnnnnnnnn.github.io/assets/notes/structured-dependence/cover-costs.svg">
+<meta property="og:title" content="A thousand comparisons, one coin flip">
+<meta property="og:description" content="Why more data can fail to average out, and what dependency graphs leave out of a confidence bound.">
+<meta property="og:image" content="https://lsnnnnnnnn.github.io/assets/notes/structured-dependence/cover-costs.svg?v=20261116-pastel">
 <meta property="og:site_name" content="Sheng’en Li">
 <meta property="og:image:alt" content="A triangle and six isolated vertices above a comparison of four valid denominators: global Janson 27, Zhang's feasible forest cover 20.25, an alternative feasible cover about 18.63, and independent-component aggregation 15. The cover values are not claimed to be optimal.">
 </head>
@@ -167,12 +167,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What a dependency graph forgets</h1>
+<h1 class="title">A thousand comparisons, one coin flip</h1>
 </div>
 
 <div>
   <div class="description">
-    A hidden coin, a tempting concentration bound, and the extra structure that makes averaging work.
+    Why more data can fail to average out, and what dependency graphs leave out of a confidence bound.
   </div>
 </div>
 
@@ -233,7 +233,7 @@ f=mZ,\qquad \frac{f}{m}=Z.
 <p>The right side falls below <span class="math inline">1/2</span> as soon as <span class="math inline">m\ge6</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../assets/notes/structured-dependence/xor-common-bit.svg" class="img-fluid figure-img" alt="A complete bipartite input graph is transformed into a complete graph of disagreement terms, all equal to Z. Below, the true tail probability stays at one half while the invalid expression exp(-m/8) decreases below it from m=6." width="800"></p>
+<p><img src="../assets/notes/structured-dependence/xor-common-bit.svg?v=20261116-pastel" class="img-fluid figure-img" alt="A complete bipartite input graph is transformed into a complete graph of disagreement terms, all equal to Z. Below, the true tail probability stays at one half while the invalid expression exp(-m/8) decreases below it from m=6." width="800"></p>
 <figcaption>The input graph has two independent sides, but each disagreement term equals the same hidden bit. The analytic tail comparison shows where the proposed bound fails.</figcaption>
 </figure>
 </div>
@@ -269,7 +269,7 @@ Q_G(F,c)=
 <p>Then a simpler observation helps further. The triangle is independent of all six isolated vertices. Bound the triangle’s sum as one variable with range length three, paying <span class="math inline">3^2=9</span>. The isolated vertices cost one each. Independence lets these costs add, giving <span class="math inline">15</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../assets/notes/structured-dependence/cover-costs.svg" class="img-fluid figure-img" alt="A triangle and six isolated vertices above a comparison of four valid denominators: global Janson 27, Zhang's feasible forest cover 20.25, an alternative feasible cover about 18.63, and independent-component aggregation 15. The cover values are not claimed to be optimal." width="800"></p>
+<p><img src="../assets/notes/structured-dependence/cover-costs.svg?v=20261116-pastel" class="img-fluid figure-img" alt="A triangle and six isolated vertices above a comparison of four valid denominators: global Janson 27, Zhang's feasible forest cover 20.25, an alternative feasible cover about 18.63, and independent-component aggregation 15. The cover values are not claimed to be optimal." width="800"></p>
 <figcaption>For a triangle and six isolated vertices, valid tail-bound denominators decrease as the proof uses more of the available structure.</figcaption>
 </figure>
 </div>
@@ -322,7 +322,7 @@ D_{\mathcal C}=\left(\sum_F\omega_F\sqrt{Q_G(F,c)}\right)^2.
 <p>One average has standard deviation of order <span class="math inline">1/n</span>; the other has order <span class="math inline">1/\sqrt n</span>. The graph and the individual marginal distributions are identical.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../assets/notes/structured-dependence/source-cancellation.svg" class="img-fluid figure-img" alt="For four adjacent differences, internal source coefficients cancel and only the two endpoints remain. With plus signs, internal coefficients become two. A log-log plot shows exact mean variances decaying as n to the minus two and approximately n to the minus one." width="800"></p>
+<p><img src="../assets/notes/structured-dependence/source-cancellation.svg?v=20261116-pastel" class="img-fluid figure-img" alt="For four adjacent differences, internal source coefficients cancel and only the two endpoints remain. With plus signs, internal coefficients become two. A log-log plot shows exact mean variances decaying as n to the minus two and approximately n to the minus one." width="800"></p>
 <figcaption>The signs of shared-source contributions determine whether internal noise cancels. Exact variance curves show different averaging rates despite identical path graphs and node marginals.</figcaption>
 </figure>
 </div>
@@ -399,7 +399,14 @@ r_\theta=32^{1/p}\nu_\theta
 <p>The examples suggest a compact experiment: hold the path graph and node marginals fixed, vary the source signs, and then vary the weights. Compare the resulting confidence radii with exact variances. Include a shared-source example and a fully dependent case alongside the cancellation example. These would be tests of what each certificate recognizes; the figures here are analytic constructions, not experimental results.</p>
 <p>The question I started with was whether a finer graph parameter could replace a coloring penalty. The more useful question is what information a proof has actually used. A graph can justify independence. A compatible function decomposition lets us use that independence for the statistic at hand. A source model can reveal cancellations that both the graph and the marginal distributions leave unspecified. Each extra piece of information can change how much averaging helps.</p>
 <div class="source-credit">
-<p>This note adapts the calculations in a longer working note on structured dependence and COMET. The forest results and original cover example are due to <a href="https://arxiv.org/abs/2110.05374v2">Rui-Ray Zhang</a>; the shared-sign counterexample mechanism is due to <a href="https://arxiv.org/abs/1212.2013v1">Daniel Paulin</a>. The alternative cover, component comparison, source calculations, and block-moment interface are derivations presented here, without a claim of literature priority. All figures are redrawn from the stated constructions and formulas.</p>
+<p>References</p>
+<ul>
+<li>Svante Janson. <a href="https://www2.math.uu.se/~svantejs/papers/sj150.pdf"><em>Large deviations for sums of partly dependent random variables</em></a>. 2004.</li>
+<li>Rui-Ray Zhang. <a href="https://arxiv.org/abs/2110.05374v2"><em>When Janson meets McDiarmid: Bounded difference inequalities under graph-dependence</em></a>. 2022.</li>
+<li>Daniel Paulin. <a href="https://arxiv.org/abs/1212.2013v1"><em>Concentration Inequalities in Locally Dependent Spaces</em></a>. 2012.</li>
+<li>Iosif Pinelis. <a href="https://arxiv.org/abs/1008.5350v2"><em>Best possible bounds of the von Bahr–Esseen type</em></a>. 2015.</li>
+</ul>
+<p>Related working manuscript: COMET.</p>
 </div>
 
 

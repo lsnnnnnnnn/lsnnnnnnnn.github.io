@@ -1,7 +1,7 @@
 ---
-title: "What a dependency graph forgets"
+title: "A thousand comparisons, one coin flip"
 date: 2026-11-16
-description: "A hidden coin, a tempting concentration bound, and the extra structure that makes averaging work."
+description: "Why more data can fail to average out, and what dependency graphs leave out of a confidence bound."
 toc: false
 format:
   html:
@@ -63,7 +63,7 @@ $$
 
 The right side falls below $1/2$ as soon as $m\ge6$.
 
-![The input graph has two independent sides, but each disagreement term equals the same hidden bit. The analytic tail comparison shows where the proposed bound fails.](../assets/notes/structured-dependence/xor-common-bit.svg){fig-alt="A complete bipartite input graph is transformed into a complete graph of disagreement terms, all equal to Z. Below, the true tail probability stays at one half while the invalid expression exp(-m/8) decreases below it from m=6." width=800}
+![The input graph has two independent sides, but each disagreement term equals the same hidden bit. The analytic tail comparison shows where the proposed bound fails.](../assets/notes/structured-dependence/xor-common-bit.svg?v=20261116-pastel){fig-alt="A complete bipartite input graph is transformed into a complete graph of disagreement terms, all equal to Z. Below, the true tail probability stays at one half while the invalid expression exp(-m/8) decreases below it from m=6." width=800}
 
 The apparent paradox disappears when we ask which variables are being added. The summands are $Y_i=\mathbf 1\{A_i\ne B_i\}=Z$. Their dependency graph is a complete graph on $m$ vertices. All the observations have become copies of one random quantity.
 
@@ -107,7 +107,7 @@ A nine-variable example makes this concrete. Take a triangle and six isolated ve
 
 Then a simpler observation helps further. The triangle is independent of all six isolated vertices. Bound the triangle's sum as one variable with range length three, paying $3^2=9$. The isolated vertices cost one each. Independence lets these costs add, giving $15$.
 
-![For a triangle and six isolated vertices, valid tail-bound denominators decrease as the proof uses more of the available structure.](../assets/notes/structured-dependence/cover-costs.svg){fig-alt="A triangle and six isolated vertices above a comparison of four valid denominators: global Janson 27, Zhang's feasible forest cover 20.25, an alternative feasible cover about 18.63, and independent-component aggregation 15. The cover values are not claimed to be optimal." width=800}
+![For a triangle and six isolated vertices, valid tail-bound denominators decrease as the proof uses more of the available structure.](../assets/notes/structured-dependence/cover-costs.svg?v=20261116-pastel){fig-alt="A triangle and six isolated vertices above a comparison of four valid denominators: global Janson 27, Zhang's feasible forest cover 20.25, an alternative feasible cover about 18.63, and independent-component aggregation 15. The cover values are not claimed to be optimal." width=800}
 
 These are valid constructions, rather than a proof of the best possible constant. They suggest a useful order of work: exploit obvious independent components, then look for a better cover.
 
@@ -161,7 +161,7 @@ $$
 
 One average has standard deviation of order $1/n$; the other has order $1/\sqrt n$. The graph and the individual marginal distributions are identical.
 
-![The signs of shared-source contributions determine whether internal noise cancels. Exact variance curves show different averaging rates despite identical path graphs and node marginals.](../assets/notes/structured-dependence/source-cancellation.svg){fig-alt="For four adjacent differences, internal source coefficients cancel and only the two endpoints remain. With plus signs, internal coefficients become two. A log-log plot shows exact mean variances decaying as n to the minus two and approximately n to the minus one." width=800}
+![The signs of shared-source contributions determine whether internal noise cancels. Exact variance curves show different averaging rates despite identical path graphs and node marginals.](../assets/notes/structured-dependence/source-cancellation.svg?v=20261116-pastel){fig-alt="For four adjacent differences, internal source coefficients cancel and only the two endpoints remain. With plus signs, internal coefficients become two. A log-log plot shows exact mean variances decaying as n to the minus two and approximately n to the minus one." width=800}
 
 The source calculation behind this is simple. Suppose centered observations satisfy $X_u=\sum_s b_{us}\varepsilon_s$ for independent centered sources. For a weighted sum,
 
@@ -248,5 +248,12 @@ The examples suggest a compact experiment: hold the path graph and node marginal
 The question I started with was whether a finer graph parameter could replace a coloring penalty. The more useful question is what information a proof has actually used. A graph can justify independence. A compatible function decomposition lets us use that independence for the statistic at hand. A source model can reveal cancellations that both the graph and the marginal distributions leave unspecified. Each extra piece of information can change how much averaging helps.
 
 ::: {.source-credit}
-This note adapts the calculations in a longer working note on structured dependence and COMET. The forest results and original cover example are due to [Rui-Ray Zhang](https://arxiv.org/abs/2110.05374v2); the shared-sign counterexample mechanism is due to [Daniel Paulin](https://arxiv.org/abs/1212.2013v1). The alternative cover, component comparison, source calculations, and block-moment interface are derivations presented here, without a claim of literature priority. All figures are redrawn from the stated constructions and formulas.
+References
+
+- Svante Janson. [*Large deviations for sums of partly dependent random variables*](https://www2.math.uu.se/~svantejs/papers/sj150.pdf). 2004.
+- Rui-Ray Zhang. [*When Janson meets McDiarmid: Bounded difference inequalities under graph-dependence*](https://arxiv.org/abs/2110.05374v2). 2022.
+- Daniel Paulin. [*Concentration Inequalities in Locally Dependent Spaces*](https://arxiv.org/abs/1212.2013v1). 2012.
+- Iosif Pinelis. [*Best possible bounds of the von Bahr–Esseen type*](https://arxiv.org/abs/1008.5350v2). 2015.
+
+Related working manuscript: COMET.
 :::

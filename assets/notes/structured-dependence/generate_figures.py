@@ -11,26 +11,35 @@ import xml.etree.ElementTree as ET
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
+from matplotlib.patches import Circle, FancyBboxPatch
 from matplotlib.ticker import ScalarFormatter
 import numpy as np
 
 OUT = Path(__file__).resolve().parent
 PREVIEW = Path(tempfile.gettempdir()) / "comet-figure-previews"
 PREVIEW.mkdir(exist_ok=True)
-BLUE = "#2764A0"
-TEAL = "#087F8C"
-ORANGE = "#C66720"
-INK = "#28333D"
-MUTED = "#65717C"
-LIGHT = "#D8E1E7"
-GRID = "#E9EEF1"
+BLUE = "#6FA7CA"
+RED = "#E47173"
+GREEN = "#75C077"
+PURPLE = "#B99CD3"
+INK = "#222222"
+MUTED = "#626262"
+BORDER = "#888888"
+LIGHT = "#CFD5DA"
+GRID = "#ECECEC"
+NODE_STYLES = {
+    BLUE: ("#E7F2F9", "#4F8CA7"),
+    RED: ("#FBEAEB", "#B45F66"),
+    GREEN: ("#EDF6EA", "#5A9258"),
+    PURPLE: ("#F1EAF6", "#8B739F"),
+}
 plt.rcParams.update({
     "font.family": "DejaVu Sans", "font.size": 11,
     "text.color": INK, "axes.labelcolor": INK,
     "xtick.color": MUTED, "ytick.color": MUTED,
-    "axes.edgecolor": LIGHT, "axes.spines.top": False,
-    "axes.spines.right": False, "axes.titleweight": "semibold",
+    "axes.edgecolor": BORDER, "axes.linewidth": .85,
+    "axes.spines.top": True, "axes.spines.right": True,
+    "axes.titleweight": "semibold", "axes.axisbelow": True,
     "svg.fonttype": "none", "svg.hashsalt": "structured-dependence-20261116",
     "figure.facecolor": "white", "axes.facecolor": "white",
 })
@@ -61,8 +70,18 @@ def finish(fig, name, title, description):
 
 
 def node(ax, xy, label, color, radius=0.18):
-    ax.add_patch(Circle(xy, radius, facecolor=color, edgecolor="white", lw=1.3, zorder=3))
-    ax.text(*xy, label, color="white", ha="center", va="center", fontsize=10.5, zorder=4)
+    fill, edge = NODE_STYLES[color]
+    ax.add_patch(Circle(xy, radius, facecolor=fill, edgecolor=edge, lw=1.35, zorder=3))
+    ax.text(*xy, label, color=INK, ha="center", va="center", fontsize=10.5, zorder=4)
+
+
+def panel_frame(ax, xpad=0):
+    ax.add_patch(FancyBboxPatch(
+        (-xpad, 0), 1 + 2*xpad, 1, transform=ax.transAxes,
+        boxstyle="round,pad=0.025,rounding_size=0.025",
+        facecolor="white", edgecolor=BORDER, linewidth=.85,
+        clip_on=False, zorder=-1,
+    ))
 
 
 def xor_figure():
@@ -80,46 +99,48 @@ def xor_figure():
             left.plot([a[0], b[0]], [a[1], b[1]], color=LIGHT, lw=1.1, zorder=1)
     for i, (a, b) in enumerate(zip(apos, bpos), 1):
         node(left, a, f"A{i}", BLUE)
-        node(left, b, f"B{i}", TEAL)
-    left.text(0, 2.95, "Independent\nwithin A", ha="center", va="center", color=BLUE, fontsize=10.5)
-    left.text(1.8, 2.95, "Independent\nwithin B", ha="center", va="center", color=TEAL, fontsize=10.5)
+        node(left, b, f"B{i}", GREEN)
+    left.text(0, 2.95, "Independent\nwithin A", ha="center", va="center", color=NODE_STYLES[BLUE][1], fontsize=10.5)
+    left.text(1.8, 2.95, "Independent\nwithin B", ha="center", va="center", color=NODE_STYLES[GREEN][1], fontsize=10.5)
     left.text(0.9, -0.52, r"$B_i=A_i\oplus Z$", ha="center", fontsize=12)
     left.text(0.9, -0.94, r"Strong dependency graph $K_{4,4}$", ha="center", fontsize=10.3)
     left.text(0.9, -1.27, r"Fractional chromatic number $=2$", ha="center", fontsize=10.3)
     left.set_xlim(-0.50, 2.30)
     left.set_ylim(-1.48, 3.25)
+    panel_frame(left, xpad=.30)
 
     right.set_title("B. The terms being averaged", loc="left", fontsize=12.3, pad=11)
     ypos = [(0, 2.15), (1.7, 2.15), (0, 0.45), (1.7, 0.45)]
     for a, b in combinations(ypos, 2):
-        right.plot([a[0], b[0]], [a[1], b[1]], color=ORANGE, alpha=.50, lw=1.8)
+        right.plot([a[0], b[0]], [a[1], b[1]], color=RED, alpha=.8, lw=1.5)
     for i, a in enumerate(ypos, 1):
-        node(right, a, f"Y{i}", ORANGE, .20)
-    right.text(.85, 2.95, "Every term equals\nthe same hidden bit Z", color=ORANGE,
+        node(right, a, f"Y{i}", RED, .20)
+    right.text(.85, 2.95, "Every term equals\nthe same hidden bit Z", color=NODE_STYLES[RED][1],
                ha="center", va="center", fontsize=10.5)
     right.text(.85, -0.20, r"$Y_i=\mathbf{1}\{A_i\ne B_i\}=Z$", ha="center", fontsize=12)
     right.text(.85, -0.68, r"Term dependency graph $K_4$", ha="center", fontsize=10.3)
     right.text(.85, -1.03, r"Fractional chromatic number $=4$", ha="center", fontsize=10.3)
     right.set_xlim(-.55, 2.25)
     right.set_ylim(-1.48, 3.25)
+    panel_frame(right, xpad=.30)
 
     ax = fig.add_subplot(gs[1, :])
     m = np.arange(1, 41)
-    ax.plot(m, np.full_like(m, .5, dtype=float), color=TEAL, lw=2.7,
+    ax.plot(m, np.full_like(m, .5, dtype=float), color=BLUE, lw=2.7,
             label=r"Exact tail probability $1/2$")
-    ax.plot(m, np.exp(-m / 8), color=ORANGE, lw=2.4, ls="--",
+    ax.plot(m, np.exp(-m / 8), color=RED, lw=2.4, ls="--",
             label=r"Invalid formula $e^{-m/8}$")
-    ax.scatter([6], [np.exp(-6/8)], s=35, color=ORANGE, zorder=5)
+    ax.scatter([6], [np.exp(-6/8)], s=35, color=RED, edgecolor=NODE_STYLES[RED][1], linewidth=.8, zorder=5)
     ax.annotate("Already fails at m = 6", xy=(6, np.exp(-6/8)), xytext=(12, .74),
-                fontsize=10.5, color=ORANGE,
-                arrowprops={"arrowstyle": "->", "color": ORANGE, "lw": 1.2})
+                fontsize=10.5, color=NODE_STYLES[RED][1],
+                arrowprops={"arrowstyle": "->", "color": NODE_STYLES[RED][1], "lw": 1.2})
     ax.set_title(r"C. Can the average concentrate when $f=mZ$?", loc="left", fontsize=12.3, pad=10)
     ax.set_xlabel("Number of paired comparisons, m")
     ax.set_ylabel("Tail probability")
     ax.set_xlim(1, 40)
     ax.set_ylim(0, 1)
     ax.set_yticks([0, .25, .5, .75, 1])
-    ax.grid(axis="y", color=GRID, zorder=0)
+    ax.grid(color=GRID, linewidth=.65, zorder=0)
     ax.legend(loc="upper right", frameon=False, fontsize=10.3)
     ax.text(0, -.37, r"Event: $f-\mathbb{E}f\geq m/2$. Analytical construction, not simulation.",
             transform=ax.transAxes, color=MUTED, fontsize=10)
@@ -143,22 +164,24 @@ def covers_figure():
     for i, xy in enumerate(tri, 1):
         node(ax, xy, str(i), BLUE, .17)
     for i, x in enumerate(np.linspace(2.5, 7, 6), 4):
-        node(ax, (x, .38), str(i), TEAL, .17)
+        node(ax, (x, .38), str(i), GREEN, .17)
     ax.text(3.5, -.40, "Node oscillations are all c = 1", ha="center", fontsize=10.6, color=MUTED)
     ax.set_xlim(-.3, 7.3)
     ax.set_ylim(-.7, 1.35)
+    panel_frame(ax)
     ax = fig.add_subplot(gs[1])
     vals = [27, 81/4, (np.sqrt(11)+1)**2, 15]
     labels = ["Janson", "Zhang's example cover", "Alternative feasible cover", "Independent components"]
     bars = ax.barh(np.arange(4), vals, height=.56,
-                   color=[BLUE, "#5A93BB", TEAL, ORANGE], zorder=2)
+                   color=[BLUE, RED, GREEN, PURPLE],
+                   edgecolor=[NODE_STYLES[c][1] for c in [BLUE, RED, GREEN, PURPLE]],
+                   linewidth=1, zorder=2)
     ax.set_yticks(np.arange(4), labels, fontsize=10.5)
     ax.invert_yaxis()
     ax.set_xlim(0, 30)
     ax.set_xticks([0, 5, 10, 15, 20, 25, 30])
     ax.set_xlabel(r"Valid denominator $D$ in $\exp(-2t^2/D)$")
     ax.grid(axis="x", color=GRID, zorder=0)
-    ax.spines["left"].set_visible(False)
     ax.tick_params(axis="y", length=0)
     ax.set_title("B. Smaller denominators give tighter bounds", loc="left", fontsize=12.4, pad=13)
     for bar, val, label in zip(bars, vals, ["27", "20.25", "18.63", "15"]):
@@ -182,29 +205,31 @@ def cancellation_figure():
     ax.set_title("A. Add four neighboring terms, then collect each source", loc="left", fontsize=12.4, pad=15)
     xs = np.arange(5) * 1.1
     for i, x in enumerate(xs):
-        node(ax, (x, 2.0), f"Z{i}", TEAL, .21)
-    ax.text(-.52, 2.0, "Independent\nfair bits", ha="right", va="center", fontsize=10.5, color=TEAL)
-    for y, coeff, color in [(1.05, [-1, 0, 0, 0, 1], BLUE), (.10, [1, 2, 2, 2, 1], ORANGE)]:
+        node(ax, (x, 2.0), f"Z{i}", PURPLE, .21)
+    ax.text(-.52, 2.0, "Independent\nfair bits", ha="right", va="center", fontsize=10.5, color=NODE_STYLES[PURPLE][1])
+    for y, coeff, color in [(1.05, [-1, 0, 0, 0, 1], BLUE), (.10, [1, 2, 2, 2, 1], RED)]:
         for x, value in zip(xs, coeff):
             active = value != 0
             ax.plot([x, x], [1.7, y+.23], lw=1.2,
                     color=color if active else LIGHT, zorder=0, alpha=.65)
-            ax.add_patch(Circle((x, y), .22, facecolor=color if active else "#F1F4F6",
-                                edgecolor="white", lw=1.3, zorder=2))
+            ax.add_patch(Circle((x, y), .22, facecolor=NODE_STYLES[color][0] if active else "#F6F6F6",
+                                edgecolor=NODE_STYLES[color][1] if active else "#B8B8B8",
+                                linestyle="-" if active else "--", lw=1.3, zorder=2))
             ax.text(x, y, f"{value:+d}" if value else "0", ha="center", va="center",
-                    color="white" if active else MUTED, fontsize=11, zorder=3)
-    ax.text(-.52, 1.05, "Signed differences\nnet source loads", ha="right", va="center", color=BLUE, fontsize=10.5)
-    ax.text(-.52, .1, "Centered sums\nnet source loads", ha="right", va="center", color=ORANGE, fontsize=10.5)
-    ax.text(2.2, -.55, r"$\sum_{i=1}^{4}(Z_i-Z_{i-1})=Z_4-Z_0$", ha="center", fontsize=12, color=BLUE)
+                    color=INK if active else MUTED, fontsize=11, zorder=3)
+    ax.text(-.52, 1.05, "Signed differences\nnet source loads", ha="right", va="center", color=NODE_STYLES[BLUE][1], fontsize=10.5)
+    ax.text(-.52, .1, "Centered sums\nnet source loads", ha="right", va="center", color=NODE_STYLES[RED][1], fontsize=10.5)
+    ax.text(2.2, -.55, r"$\sum_{i=1}^{4}(Z_i-Z_{i-1})=Z_4-Z_0$", ha="center", fontsize=12, color=INK)
     ax.text(2.2, -.98, "For centered sums, loads act on Zj − 1/2.", ha="center", fontsize=10.3, color=MUTED)
     ax.set_xlim(-1.85, 4.9)
     ax.set_ylim(-1.18, 2.4)
+    panel_frame(ax)
 
     ax = fig.add_subplot(gs[1])
     n = np.arange(2, 257)
     minus = 1/(2*n**2)
     plus = (4*n-2)/(4*n**2)
-    ax.loglog(n, plus, color=ORANGE, lw=2.7, label=r"Centered sums: $(4n-2)/(4n^2)$")
+    ax.loglog(n, plus, color=RED, lw=2.7, label=r"Centered sums: $(4n-2)/(4n^2)$")
     ax.loglog(n, minus, color=BLUE, lw=2.7, ls="--", label=r"Differences: $1/(2n^2)$")
     ax.set_title("B. Same path graph and node marginals, different averaging", loc="left", fontsize=12.4, pad=12)
     ax.set_xlabel("Number of terms, n")
