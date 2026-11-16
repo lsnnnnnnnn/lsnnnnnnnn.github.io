@@ -138,6 +138,33 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .source-credit { margin: 10px 0 20px; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
 .source-credit p { margin: 0; }
 
+.reader-first-note .paper-figure { margin: 24px 0 28px; }
+.reader-first-note .paper-figure img { display: block; width: 100%; height: auto; }
+.reader-first-note .revision-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+.reader-first-note .revision-example {
+  padding: 16px 18px;
+  background: #f6f7f8;
+  border-top: 2px solid #a8adb3;
+}
+.reader-first-note .revision-example.revised {
+  background: #f2f7fa;
+  border-top-color: #6c93ad;
+}
+.reader-first-note .revision-label {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font: 600 12px/1.4 var(--heading-font);
+}
+.reader-first-note .revision-example p:last-child { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .reader-first-note .revision-pair { grid-template-columns: 1fr; gap: 10px; }
+}
+
 .quarto-listing-default .quarto-post { padding: 14px 0; border-color: var(--line); }
 .quarto-listing .listing-title a { color: var(--text); }
 .quarto-listing-default .listing-description,

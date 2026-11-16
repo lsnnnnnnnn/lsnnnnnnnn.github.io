@@ -43,4 +43,4 @@ Evaluation on 119 real series from five sources makes the operating-point issue 
 
 For me, a convincing claim about better alarms needs a paired explanation: which events were gained or lost, when the shared detections occurred, and what warning burden accompanied the change. A useful next comparison would examine event coverage and timing across overlapping ranges of *measured* warning burden. That would help distinguish benefits from accumulated evidence from changes caused by operating at a different alarm cost. A better score creates an opportunity; the deadline and decision rule determine how much of that opportunity reaches the person monitoring the system.
 
-[Research project](../projects.qmd#contextual-anomaly-detection) · [All research notes](index.qmd)
+[Research project](../projects.qmd#contextual-anomaly-detection)

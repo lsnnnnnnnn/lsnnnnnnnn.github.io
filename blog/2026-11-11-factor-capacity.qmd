@@ -32,4 +32,4 @@ The question I want the report to make answerable is where feasibility is lost a
 
 The core engine is being prepared for open-source release. [The project page](../software.qmd) describes the current workflow and availability.
 
-[Software](../software.qmd) · [All research notes](index.qmd)
+[Software](../software.qmd)

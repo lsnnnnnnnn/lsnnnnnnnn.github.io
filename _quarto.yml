@@ -11,6 +11,8 @@ project:
     - assets/research/history-alarm-controls.webp
     - assets/research/reachability-system.webp
     - assets/skills/reader-first.zip
+    - assets/notes/reader-first/when-ai-stacks-nouns.png
+    - assets/notes/reader-first/length-penalty-figure7.svg
     - styles.css
     - .nojekyll
 
@@ -48,7 +50,7 @@ format:
     theme: default
     include-in-header:
       text: |
-        <link rel="stylesheet" href="/styles.css?v=20261114-reader-first">
+        <link rel="stylesheet" href="/styles.css?v=20261116-reader-first">
     toc: false
     pagetitle: "{{< meta title >}}"
     anchor-sections: false

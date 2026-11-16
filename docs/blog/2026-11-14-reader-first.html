@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-11-14">
-<meta name="description" content="The editing decisions behind a writing skill designed to make actions, conditions, and evidence easier to follow while preserving meaning.">
+<meta name="description" content="Notes on AI-generated language, the effort of reading technical prose, and the editing choices behind Reader First.">
 
-<title>Why I Built Reader First – Sheng’en Li</title>
+<title>Reader First: Making technical writing easier to follow – Sheng’en Li</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -55,15 +55,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="stylesheet" href="../styles.css?v=20261114-reader-first">
+<link rel="stylesheet" href="../styles.css?v=20261116-reader-first">
 
 
-<meta property="og:title" content="Why I Built Reader First">
-<meta property="og:description" content="The editing decisions behind a writing skill designed to make actions, conditions, and evidence easier to follow while preserving meaning.">
+<meta property="og:title" content="Reader First: Making technical writing easier to follow">
+<meta property="og:description" content="Notes on AI-generated language, the effort of reading technical prose, and the editing choices behind Reader First.">
+<meta property="og:image" content="https://lsnnnnnnnn.github.io/assets/notes/reader-first/when-ai-stacks-nouns.png">
 <meta property="og:site_name" content="Sheng’en Li">
+<meta property="og:image:alt" content="Four-panel comic: a reader faces a wall of stacked nouns about drone obstacle-avoidance rain-test results, struggles to connect the facts, then understands a rewrite that states what was tested, under what conditions, and what happened.">
+<meta property="og:image:height" content="1086">
+<meta property="og:image:width" content="1448">
 </head>
 
-<body class="nav-fixed research-note fullcontent quarto-light">
+<body class="nav-fixed research-note reader-first-note fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -122,12 +126,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Why I Built Reader First</h1>
+<h1 class="title">Reader First: Making technical writing easier to follow</h1>
 </div>
 
 <div>
   <div class="description">
-    The editing decisions behind a writing skill designed to make actions, conditions, and evidence easier to follow while preserving meaning.
+    Notes on AI-generated language, the effort of reading technical prose, and the editing choices behind Reader First.
   </div>
 </div>
 
@@ -150,38 +154,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I built Reader First because I want explanations that let me keep reading. A technical answer can contain the right facts and still require work to connect them: a condition arrives after the claim it limits, several nouns conceal an action, or “this” could refer to three different things. My aim was to make that work visible to the writer. If the writer already knows how the pieces fit together, some of those relationships can be stated directly.</p>
-<p>A study by <a href="https://arxiv.org/abs/2610.29162v1">Clark, Martin, and Mahowald</a> gave me a useful starting point. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. Across chat and coding in particular, many models used longer dependencies and more stacked nouns than their round-trip paraphrases, although the pattern varied by model, feature, and setting. A separate experiment shows that a length penalty can shift a small model toward shorter grammatical variants. The study measures linguistic features and model preferences; it does not directly test human comprehension of the generated passages.</p>
+<p>A technical explanation can contain the right facts and still make the reader work to connect them. In AI-generated answers, I often encounter a condition that arrives after the claim it limits, a stack of nouns that leaves the action unclear, or a “this” with several possible references. I can usually recover the meaning, but I would rather spend that effort thinking about the answer.</p>
+<div class="paper-figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/reader-first/when-ai-stacks-nouns.png" alt="Four-panel comic: a reader faces a wall of stacked nouns about drone obstacle-avoidance rain-test results, struggles to connect the facts, then understands a rewrite that states what was tested, under what conditions, and what happened." width="1448" height="1086" class="figure-img"></p>
+<figcaption>When AI stacks nouns. Created with Codex using the <a href="https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-comic">baoyu-comic</a> skill.</figcaption>
+</figure>
+</div>
+</div>
+<p><a href="https://arxiv.org/abs/2610.29162v1">Clark, Martin, and Mahowald’s study</a> helped me think more precisely about this problem. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. In chat and coding tasks in particular, many models used longer dependencies and more stacked nouns than versions of the same sentences translated into Japanese and back into English. The pattern varied by model, feature, and setting.</p>
+<p>The study measures linguistic features and model preferences, rather than how well people understand the generated passages.</p>
 <div class="source-credit">
 <p>Thomas Hikaru Clark, Matias B. Martin, and Kyle Mahowald. <em>Why is AI-generated language so hard to understand?</em> <a href="https://arxiv.org/abs/2610.29162v1">arXiv:2610.29162v1</a>, 2026.</p>
 </div>
+<p>The paper gave me a starting point for Reader First, a writing skill that asks an editor to look for relationships the reader has to reconstruct. If the writer knows how a condition limits a result, or what action a stack of nouns describes, the explanation can often state that relationship directly.</p>
 <section id="spend-words-where-they-help-the-reader" class="level2">
 <h2 data-anchor-id="spend-words-where-they-help-the-reader">Spend words where they help the reader</h2>
-<p>The design question I took from this was how to spend words where they help someone follow a thought. A reader meets a sentence in sequence. An explanation should introduce the object under discussion, make its action clear, and place the relevant conditions where they can guide interpretation. I made the skill’s objective explicit: reduce the extra inference and rereading needed to recover the intended meaning. That gives each proposed edit a purpose beyond changing the sound of the prose.</p>
-<p>The following is an illustrative example from the skill, translated into English. It was written to explain an editing decision; it is neither a quotation from the paper nor a report of an actual test.</p>
-<blockquote class="blockquote">
-<p><strong>Dense version:</strong> I added three concurrent-write cache-invalidation regression tests, all passing locally; production reliability under high load remains unverified.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>Expanded version:</strong> I added three regression tests to check whether the cache is invalidated as expected during concurrent writes. All three tests passed locally. Reliability under high production load has not been verified.</p>
-</blockquote>
-<p>The expanded version gives “tests” an explicit purpose and makes concurrent writing a condition of the check. Repeating “three tests” keeps the local result attached to the work just described. The final sentence identifies the remaining question. The technical content survives: there are three tests, they concern invalidation during concurrent writes, they passed locally, and production reliability remains unverified. Invalidation also keeps its technical meaning: making a cached value unusable when appropriate. Replacing it with “cache failure” would change the claim.</p>
-<p>This example also shows why I constrain expansion to relationships the source already supplies. A compressed phrase about timeouts, retries, and fallback may leave their order unspecified. Writing a smooth story in which retries fail and a backup service takes over would introduce behavior that has not been established. I therefore put a meaning check before the readability check. The editor must preserve conditions, quantities, negation, evidence, and uncertainty while deciding how to arrange them.</p>
+<p>A reader encounters an explanation one sentence at a time. Each new detail needs something to attach to. Naming the object before describing its behavior, or placing a condition beside the claim it limits, can make that connection easier to follow.</p>
+<p>I chose this objective for Reader First: reduce the extra inference and rereading needed to recover the intended meaning. An edit should help the reader understand a particular relationship. Adding words is useful when those words do that work.</p>
+<p>The example below comes from the skill and is translated into English. It illustrates an editing choice using a hypothetical test report.</p>
+<div class="revision-pair">
+<div class="revision-example">
+<div class="revision-label">
+<p>Original</p>
+</div>
+<p>I added three concurrent-write cache-invalidation regression tests, all passing locally; production reliability under high load remains unverified.</p>
+</div>
+<div class="revision-example revised">
+<div class="revision-label">
+<p>Revised</p>
+</div>
+<p>I added three regression tests to check whether the cache is invalidated as expected during concurrent writes. All three tests passed locally. Reliability under high production load has not been verified.</p>
+</div>
+</div>
+<p>The expanded version names the tests, then explains what they check. Concurrent writing becomes an explicit condition of the check. Repeating “three tests” ties the local result to those tests, and the final sentence states what remains unverified. The reader gets the same facts in an order that makes their relationships explicit.</p>
+<p>The technical terms matter too. Cache invalidation means making a cached value unusable when appropriate. Replacing it with “cache failure” would change what the tests concern. The editor needs to preserve that distinction while making the sentence easier to follow.</p>
+<p>Expansion needs the same care. A compressed phrase about timeouts, retries, and fallback may leave their order unspecified. Turning it into a story in which retries fail and a backup service takes over would add behavior the source never established. Before rearranging a sentence, the editor needs to identify the conditions, quantities, negation, evidence, and uncertainty that must survive the edit.</p>
+<p>The paper’s controlled experiment makes the choice of objective concrete. In an event-to-sentence task, a token-length penalty shifted Qwen2.5-1.5B-Instruct toward shorter grammatical variants. That result is one reason I do not use output length as a proxy for a good edit.</p>
+<div class="paper-figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/reader-first/length-penalty-figure7.svg" alt="Figure 7 from Clark, Martin, and Mahowald: plots compare length-penalty strengths and the model's preference for shorter grammatical alternatives, with and without KL regularization." width="907" height="510" class="figure-img"></p>
+<figcaption>Length penalties shift the small model toward shorter grammatical variants. Reproduced from Clark, Martin, and Mahowald (2026), <a href="https://arxiv.org/html/2610.29162v1#S3.F7">Figure 7</a>, under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+</figure>
+</div>
+</div>
 </section>
 <section id="adapt-the-principle-to-chinese" class="level2">
 <h2 data-anchor-id="adapt-the-principle-to-chinese">Adapt the principle to Chinese</h2>
-<p>Chinese needed its own treatment. The original example contains the phrase “三个并发写入场景下的缓存失效回归测试.” Before reaching “tests,” the reader has already encountered the number, operating condition, cache operation, and test category. My revision names the tests first, then explains what they check. That is a decision about when information becomes useful. I also allow a concrete noun to recur when “这,” “其,” or “上述” could point to several objects. Keeping a concept’s name stable can be worth the repetition.</p>
-<p>These Chinese rules are my practical extension of the motivation. English advice about an optional <em>that</em> cannot simply become a rule for adding or removing “的.” I want the editor to locate the actual difficulty: a long modifier, an unclear reference, or an unstated condition. Sometimes a short clause resolves it. Sometimes the existing sentence is already clear. The skill consequently has no fixed sentence-length limit or target number of technical terms.</p>
-<p>I wanted that flexibility to extend to the reader. Someone familiar with systems programming can usually work with “garbage collector” without a replacement definition. A reader learning the mechanism may need a brief explanation of its role. The same principle governs detail: keep what the reader needs to understand the claim, and remove commentary that adds no useful relationship. Splitting every sentence or turning every paragraph into bullets would create a different obstacle by making the reader reconnect fragments.</p>
+<p>Chinese needs its own editing decisions. In the original phrase “三个并发写入场景下的缓存失效回归测试”, the reader encounters the number, operating condition, cache operation, and test category before reaching “测试”. The revision introduces the tests first, then explains what they check.</p>
+<div class="revision-pair" lang="zh-CN">
+<div class="revision-example">
+<div class="revision-label">
+<p>原句</p>
+</div>
+<p>我新增了三个并发写入场景下的缓存失效回归测试，本地全部通过；线上高负载情况下的可靠性尚未验证。</p>
+</div>
+<div class="revision-example revised">
+<div class="revision-label">
+<p>改写</p>
+</div>
+<p>我新增了三个回归测试，检查并发写入时缓存能否按预期失效。三个测试在本地都通过了；线上高负载下是否可靠，还没有验证。</p>
+</div>
+</div>
+<p>The change concerns when the reader receives each piece of information. The same reasoning applies to references. If “这”, “其”, or “上述” could point to several objects, repeating the relevant noun may save the reader from looking back.</p>
+<p>These Chinese editing rules are my practical extension of the paper’s motivation. Advice about an optional English <em>that</em> does not translate into a rule for adding or removing “的”. The editor has to find the difficulty in the sentence at hand. A long modifier may need to become a clause. An unclear pronoun may need a noun. A sentence that is already clear can stay as it is.</p>
+<p>The intended reader matters too. Someone familiar with systems programming may need no explanation of “garbage collector”. Someone learning the mechanism may need a sentence about what it does. Reader First therefore sets no fixed sentence-length limit or target number of technical terms. It asks whether the reader has the information needed to follow the explanation. Splitting every sentence or replacing every paragraph with bullets can leave the reader with more fragments to reconnect.</p>
 </section>
 <section id="keep-the-claim-intact" class="level2">
 <h2 data-anchor-id="keep-the-claim-intact">Keep the claim intact</h2>
-<p>For technical work, I gave particular attention to completion states. A proposed change, an edited file, a test that passed locally, and a deployed fix are different facts. An explanation becomes less useful if polishing makes those states interchangeable. Reader First asks for the supported result first, with its scope close by, followed by the reason or evidence needed to assess it. This is where readability and factual precision need to work together.</p>
-</section>
-<section id="what-i-would-evaluate-next" class="level2">
-<h2 data-anchor-id="what-i-would-evaluate-next">What I would evaluate next</h2>
-<p>I regard the skill as a set of editing decisions to examine in use. A meaningful evaluation would ask independent readers the same content questions and record misunderstandings and places where they needed to reread. Those observations could show which expansions help and which merely add length. For now, the design is available to inspect: preserve the claim, find the relationship that costs effort to reconstruct, and make that relationship explicit.</p>
-<p><a href="../assets/skills/reader-first.zip">Download Reader First</a> · <a href="../blog/index.html">All research notes</a></p>
+<p>Technical explanations also need to preserve the state of the work. A proposed change, an edited file, a test that passed locally, and a deployed fix describe different things. Polishing the wording should leave those differences clear.</p>
+<p>For a progress report, this means stating the supported result and keeping its scope nearby. “All three tests passed locally” tells the reader both what happened and where the result applies. The evidence that follows can then explain how the result was checked.</p>
+<p>This is the editing habit I want Reader First to encourage. Find the relationship that takes effort to reconstruct, state it where the reader needs it, and check that the claim still means the same thing.</p>
+<p><a href="../assets/skills/reader-first.zip">Download Reader First</a></p>
 
 
 </section>
