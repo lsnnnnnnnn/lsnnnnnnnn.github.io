@@ -1,6 +1,8 @@
 ---
 title: "How to Miss Two Events Without Hurting Your Score"
-date: 2026-11-11
+date: 2025-12-01
+image: ../assets/notes/covers/miss-two-events.webp
+image-alt: "An alarm watches one burning machine while two more pass on a conveyor belt."
 description: "I rearranged three high anomaly scores. Two events lost their warnings. AP and AUROC did not move."
 toc: false
 format:
@@ -40,3 +42,4 @@ I could have stopped at the higher recall. Looking at the paired events gave a m
 I still want better anomaly scores. But now, when I look at a result, I want to put the scores back on a timeline and mark the first warning in every event. In the little example above, that is all it takes to see the two warnings the ranking metrics could not account for.
 
 [Research project](../projects.qmd#contextual-anomaly-detection)
+

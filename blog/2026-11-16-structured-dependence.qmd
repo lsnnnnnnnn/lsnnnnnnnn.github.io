@@ -1,6 +1,8 @@
 ---
 title: "A thousand comparisons, one coin flip"
-date: 2026-11-16
+date: 2026-05-01
+image: ../assets/notes/covers/one-coin-flip.webp
+image-alt: "One coin connects many repeated comparison cards."
 description: "Why more data can fail to average out, and what dependency graphs leave out of a confidence bound."
 toc: false
 format:
@@ -257,3 +259,4 @@ References
 
 Related working manuscript: COMET.
 :::
+

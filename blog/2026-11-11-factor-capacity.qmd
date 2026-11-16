@@ -1,6 +1,6 @@
 ---
 title: "When Does a Factor Become Too Large to Trade?"
-date: 2026-11-11
+date: 2026-10-01
 description: "Evaluating factor capacity through capital-scaled L2 execution backtests and a same-day completion rule."
 toc: false
 format:
@@ -33,3 +33,4 @@ The question I want the report to make answerable is where feasibility is lost a
 The core engine is being prepared for open-source release. [The project page](../software.qmd) describes the current workflow and availability.
 
 [Software](../software.qmd)
+

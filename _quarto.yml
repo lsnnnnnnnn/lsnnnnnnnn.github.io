@@ -50,7 +50,7 @@ format:
     theme: default
     include-in-header:
       text: |
-        <link rel="stylesheet" href="/styles.css?v=20261116-reader-first">
+        <link rel="stylesheet" href="/styles.css?v=20261116-notes-covers">
     toc: false
     pagetitle: "{{< meta title >}}"
     anchor-sections: false
@@ -61,3 +61,4 @@ format:
       body-width: 820px
       sidebar-width: 0px
       margin-width: 0px
+

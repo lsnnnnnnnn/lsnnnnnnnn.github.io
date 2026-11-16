@@ -1,6 +1,8 @@
 ---
 title: "Reader First: Making technical writing easier to follow"
 date: 2026-11-14
+image: ../assets/notes/covers/reader-first.webp
+image-alt: "A reader struggles with tangled ribbons coming from an open book."
 description: "Notes on AI-generated language, the effort of reading technical prose, and the editing choices behind Reader First."
 toc: false
 format:
@@ -99,3 +101,4 @@ For a progress report, this means stating the supported result and keeping its s
 This is the editing habit I want Reader First to encourage. Find the relationship that takes effort to reconstruct, state it where the reader needs it, and check that the claim still means the same thing.
 
 [Download Reader First](../assets/skills/reader-first.zip)
+

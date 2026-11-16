@@ -1,5 +1,7 @@
+date-format: "MMMM YYYY"
 format:
   html:
     toc-location: body
     grid:
       body-width: 800px
+

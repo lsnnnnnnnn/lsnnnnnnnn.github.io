@@ -7,9 +7,11 @@ listing:
   sort: "date desc"
   type: default
   categories: false
-  fields: [date, title, description]
+  fields: [date, title, description, image]
+  date-format: "MMMM YYYY"
 ---
 
 ::: {.research-intro}
 Notes from my research and software development: how I frame questions, design evaluations, and turn ideas into tools.
 :::
+

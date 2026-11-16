@@ -166,6 +166,7 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 }
 
 .quarto-listing-default .quarto-post { padding: 14px 0; border-color: var(--line); }
+.quarto-listing-default .thumbnail:has(.listing-item-img-placeholder) { display: none; }
 .quarto-listing .listing-title a { color: var(--text); }
 .quarto-listing-default .listing-description,
 .quarto-listing-default .listing-date { color: var(--muted); }
@@ -227,3 +228,4 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
   body { font-size: 11pt; }
   .publication, .simple-row, .research-row, .research-detail { break-inside: avoid; }
 }
+
