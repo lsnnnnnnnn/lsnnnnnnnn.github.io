@@ -30,7 +30,8 @@ I separate this completion test from the judgment that trading costs are accepta
 
 The question I want the report to make answerable is where feasibility is lost as capital increases. A volume constraint, an incomplete sale, and a purchase blocked by available cash can all leave a plan unfinished, but they point to different changes in the strategy. Tracing those constraints connects a capacity estimate to an explanation of the portfolio that was actually attainable.
 
-The core engine is being prepared for open-source release. [The project page](../software.qmd) describes the current workflow and availability.
+The core engine is being prepared for open-source release. [The project page](../tools.qmd#l2-factor-capacity) describes the current workflow and availability.
 
-[Software](../software.qmd)
+[Tools](../tools.qmd)
+
 

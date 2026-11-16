@@ -1,87 +1,199 @@
 [
   {
-    "objectID": "software.html",
-    "href": "software.html",
-    "title": "Software",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "More",
     "section": "",
     "text": "Skip to content"
   },
   {
-    "objectID": "software.html#l2-based-factor-capacity-analysis",
-    "href": "software.html#l2-based-factor-capacity-analysis",
-    "title": "Software",
-    "section": "L2-Based Factor Capacity Analysis",
-    "text": "L2-Based Factor Capacity Analysis\n\nDeveloped by Sheng’en Li · Open-source release in preparation\n\nI developed a factor-capacity evaluation tool that takes a factor signal and generates a PDF report comparing execution feasibility across initial capital levels. The engine uses Level-2 market data to simulate how a strategy’s planned trades translate into simulated holdings under trading constraints."
+    "objectID": "about.html#honors",
+    "href": "about.html#honors",
+    "title": "More",
+    "section": "Honors",
+    "text": "Honors\n\nDean’s List with Distinction, Fall 2023 and Spring 2024\nSummer Research Scholar, 2024 and 2025"
   },
   {
-    "objectID": "software.html#from-a-factor-to-a-capacity-report",
-    "href": "software.html#from-a-factor-to-a-capacity-report",
-    "title": "Software",
-    "section": "From a factor to a capacity report",
-    "text": "From a factor to a capacity report\n\nSpecify the strategy. Supply the factor signal and the portfolio and trading rules used for the evaluation.\nSimulate each capital level. Track orders, cash, and holdings under a volume-participation limit, available-cash and sellable-position constraints, trading suspensions, and price limits.\nInspect the report. Compare the tested capital levels using completion checks, execution diagnostics, and return differences. Partial fills and unfinished orders help identify where execution becomes constrained."
+    "objectID": "about.html#leadership-and-service",
+    "href": "about.html#leadership-and-service",
+    "title": "More",
+    "section": "Leadership and Service",
+    "text": "Leadership and Service\n\nGroup technical support: GPU/server maintenance and junior-student mentoring, 2025 – Present\nResident Assistant, Duke Kunshan University, Aug. 2024 – May 2025\nVolunteer Mathematics Instructor, Tongren, China, Jul. 2024"
   },
   {
-    "objectID": "software.html#what-the-capacity-estimate-means",
-    "href": "software.html#what-the-capacity-estimate-means",
-    "title": "Software",
-    "section": "What the capacity estimate means",
-    "text": "What the capacity estimate means\nThe current evaluation criterion combines a 10% participation limit with 100% same-day completion of planned trades. The reported execution capacity is the largest tested capital level that satisfies this criterion over the evaluation period.\nThis definition makes the result interpretable: it is tied to a specified factor strategy, market-data period, execution protocol, and set of tested capital levels. A larger account changes order sizes, which can change fills, available cash, and subsequent holdings. Repeating the simulation at each capital level captures these changes in the portfolio’s path.\nMy focus is the connection between the desired portfolio and the portfolio that can actually be built. The report makes that connection visible alongside the capacity estimate, so a user can inspect which constraints bind as capital increases."
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "More",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nProgramming: Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript\nFrameworks and tools: PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite\nMethods: causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility"
   },
   {
-    "objectID": "software.html#availability",
-    "href": "software.html#availability",
-    "title": "Software",
-    "section": "Availability",
-    "text": "Availability\nThe tool currently runs on company Level-2 data. I am preparing the core engine for open-source release; the public data interface is still being worked out. Code and example-report links will be added when the release is available.\n\nRelated research note\nWhen Does a Factor Become Too Large to Trade? examines the reasoning behind this execution-capacity criterion."
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "blog/2026-11-14-reader-first.html",
+    "href": "blog/2026-11-14-reader-first.html",
+    "title": "Reader First: Making technical writing easier to follow",
     "section": "",
-    "text": "Skip to content\n* Equal contribution."
+    "text": "Skip to content\nA technical explanation can contain the right facts and still make the reader work to connect them. In AI-generated answers, I often encounter a condition that arrives after the claim it limits, a stack of nouns that leaves the action unclear, or a “this” with several possible references. I can usually recover the meaning, but I would rather spend that effort thinking about the answer.\nClark, Martin, and Mahowald’s study helped me think more precisely about this problem. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. In chat and coding tasks in particular, many models used longer dependencies and more stacked nouns than versions of the same sentences translated into Japanese and back into English. The pattern varied by model, feature, and setting.\nThe study measures linguistic features and model preferences, rather than how well people understand the generated passages.\nThe paper gave me a starting point for Reader First, a writing skill that asks an editor to look for relationships the reader has to reconstruct. If the writer knows how a condition limits a result, or what action a stack of nouns describes, the explanation can often state that relationship directly."
   },
   {
-    "objectID": "publications.html#peer-reviewed-publications",
-    "href": "publications.html#peer-reviewed-publications",
-    "title": "Publications",
-    "section": "Peer-reviewed Publications",
-    "text": "Peer-reviewed Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShouju Wang*, Yuchen Song*, Sheng’en Li*, Dongmian Zou\nECAI 2025 · Co-first author\npaper"
+    "objectID": "blog/2026-11-14-reader-first.html#spend-words-where-they-help-the-reader",
+    "href": "blog/2026-11-14-reader-first.html#spend-words-where-they-help-the-reader",
+    "title": "Reader First: Making technical writing easier to follow",
+    "section": "Spend words where they help the reader",
+    "text": "Spend words where they help the reader\nA reader encounters an explanation one sentence at a time. Each new detail needs something to attach to. Naming the object before describing its behavior, or placing a condition beside the claim it limits, can make that connection easier to follow.\nI chose this objective for Reader First: reduce the extra inference and rereading needed to recover the intended meaning. An edit should help the reader understand a particular relationship. Adding words is useful when those words do that work.\nThe example below comes from the skill and is translated into English. It illustrates an editing choice using a hypothetical test report.\n\n\n\nOriginal\n\nI added three concurrent-write cache-invalidation regression tests, all passing locally; production reliability under high load remains unverified.\n\n\n\nRevised\n\nI added three regression tests to check whether the cache is invalidated as expected during concurrent writes. All three tests passed locally. Reliability under high production load has not been verified.\n\n\nThe expanded version names the tests, then explains what they check. Concurrent writing becomes an explicit condition of the check. Repeating “three tests” ties the local result to those tests, and the final sentence states what remains unverified. The reader gets the same facts in an order that makes their relationships explicit.\nThe technical terms matter too. Cache invalidation means making a cached value unusable when appropriate. Replacing it with “cache failure” would change what the tests concern. The editor needs to preserve that distinction while making the sentence easier to follow.\nExpansion needs the same care. A compressed phrase about timeouts, retries, and fallback may leave their order unspecified. Turning it into a story in which retries fail and a backup service takes over would add behavior the source never established. Before rearranging a sentence, the editor needs to identify the conditions, quantities, negation, evidence, and uncertainty that must survive the edit.\nThe paper’s controlled experiment makes the choice of objective concrete. In an event-to-sentence task, a token-length penalty shifted Qwen2.5-1.5B-Instruct toward shorter grammatical variants. That result is one reason I do not use output length as a proxy for a good edit.\n\n\n\n\nLength penalties shift the small model toward shorter grammatical variants. Reproduced from Clark, Martin, and Mahowald (2026), Figure 7, under CC BY 4.0."
   },
   {
-    "objectID": "publications.html#submitted-manuscript",
-    "href": "publications.html#submitted-manuscript",
-    "title": "Publications",
-    "section": "Submitted Manuscript",
-    "text": "Submitted Manuscript\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\nSubmitted to Artificial Intelligence in Medicine · Co-first author\nResearch overview"
+    "objectID": "blog/2026-11-14-reader-first.html#adapt-the-principle-to-chinese",
+    "href": "blog/2026-11-14-reader-first.html#adapt-the-principle-to-chinese",
+    "title": "Reader First: Making technical writing easier to follow",
+    "section": "Adapt the principle to Chinese",
+    "text": "Adapt the principle to Chinese\nChinese needs its own editing decisions. In the original phrase “三个并发写入场景下的缓存失效回归测试”, the reader encounters the number, operating condition, cache operation, and test category before reaching “测试”. The revision introduces the tests first, then explains what they check.\n\n\n\n原句\n\n我新增了三个并发写入场景下的缓存失效回归测试，本地全部通过；线上高负载情况下的可靠性尚未验证。\n\n\n\n改写\n\n我新增了三个回归测试，检查并发写入时缓存能否按预期失效。三个测试在本地都通过了；线上高负载下是否可靠，还没有验证。\n\n\nThe change concerns when the reader receives each piece of information. The same reasoning applies to references. If “这”, “其”, or “上述” could point to several objects, repeating the relevant noun may save the reader from looking back.\nThese Chinese editing rules are my practical extension of the paper’s motivation. Advice about an optional English that does not translate into a rule for adding or removing “的”. The editor has to find the difficulty in the sentence at hand. A long modifier may need to become a clause. An unclear pronoun may need a noun. A sentence that is already clear can stay as it is.\nThe intended reader matters too. Someone familiar with systems programming may need no explanation of “garbage collector”. Someone learning the mechanism may need a sentence about what it does. Reader First therefore sets no fixed sentence-length limit or target number of technical terms. It asks whether the reader has the information needed to follow the explanation. Splitting every sentence or replacing every paragraph with bullets can leave the reader with more fragments to reconnect."
   },
   {
-    "objectID": "publications.html#manuscripts-in-preparation",
-    "href": "publications.html#manuscripts-in-preparation",
-    "title": "Publications",
-    "section": "Manuscripts in Preparation",
-    "text": "Manuscripts in Preparation\n\nCOMET: Counterfactual Moment Auditing under Weak Overlap and Dependent Feedback\nSheng’en Li* et al.\nIn preparation · First author"
+    "objectID": "blog/2026-11-14-reader-first.html#keep-the-claim-intact",
+    "href": "blog/2026-11-14-reader-first.html#keep-the-claim-intact",
+    "title": "Reader First: Making technical writing easier to follow",
+    "section": "Keep the claim intact",
+    "text": "Keep the claim intact\nTechnical explanations also need to preserve the state of the work. A proposed change, an edited file, a test that passed locally, and a deployed fix describe different things. Polishing the wording should leave those differences clear.\nFor a progress report, this means stating the supported result and keeping its scope nearby. “All three tests passed locally” tells the reader both what happened and where the result applies. The evidence that follows can then explain how the result was checked.\nThis is the editing habit I want Reader First to encourage. Find the relationship that takes effort to reconstruct, state it where the reader needs it, and check that the claim still means the same thing.\nReader First on GitHub · Download the skill · Tools"
   },
   {
-    "objectID": "publications.html#signature-work",
-    "href": "publications.html#signature-work",
-    "title": "Publications",
-    "section": "Signature Work",
-    "text": "Signature Work\n\nIsolating Contextual Information and Alarm Utility in Multivariate Time-Series Anomaly Detection\nSheng’en Li\nDuke Kunshan University · 2026 · Undergraduate Signature Work\nResearch overview"
-  },
-  {
-    "objectID": "publications.html#under-review",
-    "href": "publications.html#under-review",
-    "title": "Publications",
-    "section": "Under Review",
-    "text": "Under Review\nCo-first author on each manuscript below.\n\nPambda: Privacy Alignment with Calibration\nUnder review at KDD 2027 · Co-first author\n\n\nLambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding\nUnder review at KDD 2027 · Co-first author\n\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\nUnder review at KDD 2027 · Co-first author\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nUnder review at KDD 2027 · Co-first author\n\n\nFToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction\nUnder review at KDD 2027 · Co-first author"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Research Notes",
+    "objectID": "blog/2026-11-11-factor-capacity.html",
+    "href": "blog/2026-11-11-factor-capacity.html",
+    "title": "When Does a Factor Become Too Large to Trade?",
     "section": "",
-    "text": "Skip to content\n\n\n\n\n\n\n\nNotes from my research and software development: how I frame questions, design evaluations, and turn ideas into tools.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReader First: Making technical writing easier to follow\n\n\nNotes on AI-generated language, the effort of reading technical prose, and the editing choices behind Reader First.\n\n\n\n\n\nNovember 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhen Does a Factor Become Too Large to Trade?\n\n\nEvaluating factor capacity through capital-scaled L2 execution backtests and a same-day completion rule.\n\n\n\n\n\nOctober 2026\n\n\n\n\n\n\n\n\n\n\n\n\nA thousand comparisons, one coin flip\n\n\nWhy more data can fail to average out, and what dependency graphs leave out of a confidence bound.\n\n\n\n\n\nMay 2026\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Miss Two Events Without Hurting Your Score\n\n\nI rearranged three high anomaly scores. Two events lost their warnings. AP and AUROC did not move.\n\n\n\n\n\nDecember 2025\n\n\n\n\n\nNo matching items"
+    "text": "Skip to content\nA factor signal, together with portfolio-construction rules, defines the positions a strategy aims to hold. Increasing the capital allocated to it also increases the trading needed to reach those positions. My question is how far that allocation can grow while the trading plan remains executable under a stated set of rules. Answering it requires following the orders through time: the intended portfolio alone does not tell me which positions the strategy can actually acquire or unwind.\nI developed a tool that takes a factor as input, runs execution backtests at multiple initial-capital levels using Level 2 market data, and produces a PDF capacity report. The current evaluation uses a 10% participation-rate limit and requires 100% of each day’s planned trading to finish that day. These settings give the experiment an explicit pass condition. A run that leaves an order unfinished fails that completion requirement, even if most of its planned trading succeeds."
+  },
+  {
+    "objectID": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
+    "href": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
+    "title": "When Does a Factor Become Too Large to Trade?",
+    "section": "Follow the portfolio through execution",
+    "text": "Follow the portfolio through execution\nThe execution simulation tracks fills and maintains the state needed to decide whether orders can fill. That state includes cash and sellable shares, alongside the restrictions associated with suspensions and daily price limits. Partial fills change the portfolio immediately; unfinished orders remain unfinished. This matters because a target weight is only a request. A backtest must account for the holdings and available resources that emerge as the request is executed.\nConsider two runs with identical factor inputs but different starting capital. Both receive the same instruction to sell one position and buy another. The larger run requests more shares and needs more execution opportunities within the participation limit. If its sale fills only partially, it retains more of the old position and receives less cash than the plan anticipated. A subsequent purchase must use the cash actually available. The two runs can therefore follow different holding paths even though their factor rankings and target weights agree. Scaling capital changes the sequence of attainable portfolios."
+  },
+  {
+    "objectID": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
+    "href": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
+    "title": "When Does a Factor Become Too Large to Trade?",
+    "section": "Execution opportunities have a time window",
+    "text": "Execution opportunities have a time window\nTiming also explains why a full day’s trading volume is insufficient to establish capacity. Consider an order submitted late in the session for a stock that traded heavily earlier that morning. The earlier trades contribute to daily volume, but they provide no execution opportunity for an instruction that did not yet exist. The relevant sequence begins after that instruction and ends at its deadline. Applying the participation rule to the opportunities within that sequence can leave the order incomplete despite a large daily total. Available cash, sellable shares, and trading restrictions further determine which of those opportunities the simulated strategy can use."
+  },
+  {
+    "objectID": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
+    "href": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
+    "title": "When Does a Factor Become Too Large to Trade?",
+    "section": "Define the capacity criterion",
+    "text": "Define the capacity criterion\nFor this tool, capacity is the largest tested capital level that passes the execution criteria over the evaluated data period. The word “tested” is essential. A capital grid produces verdicts for its individual levels; it does not establish an exact optimum between them. The reported value belongs to that grid, that period, and those execution rules. Changing the trading deadline or participation limit changes the question being evaluated. I therefore report the estimate together with the evaluation period and execution settings.\nI separate this completion test from the judgment that trading costs are acceptable. An order may finish within the participation limit while the economics of executing it remain unattractive. Conversely, an attractive intended portfolio does not compensate for trades that cannot finish. The current completion criterion answers a feasibility question. Assessing whether the executed strategy is worth allocating capital to requires a further cost judgment.\nThe question I want the report to make answerable is where feasibility is lost as capital increases. A volume constraint, an incomplete sale, and a purchase blocked by available cash can all leave a plan unfinished, but they point to different changes in the strategy. Tracing those constraints connects a capacity estimate to an explanation of the portfolio that was actually attainable.\nThe core engine is being prepared for open-source release. The project page describes the current workflow and availability.\nTools"
+  },
+  {
+    "objectID": "blog/2026-11-11-alarm-quality.html",
+    "href": "blog/2026-11-11-alarm-quality.html",
+    "title": "How to Miss Two Events Without Hurting Your Score",
+    "section": "",
+    "text": "Skip to content\n\n\n\n\n\n\nI can make an anomaly detector miss two out of three events without lowering its average precision. Its AUROC will stay exactly the same, too. All I need to do is rearrange three high scores.\nHere is the toy construction from my Signature Work. Imagine three anomalous events. Each lasts four blocks of observations, and a detector produces one score at the end of each block. Every score is either 0 or 1. A score above 0.5 switches the alarm on; consecutive high scores keep the same alarm running.\nFirst, put one high score at the beginning of each event. Then try putting all three high scores into the second, third, and fourth blocks of the first event:\n\n\n\nArrangement\nEvent 1\nEvent 2\nEvent 3\n\n\n\n\nSpread out\n1 0 0 0\n1 0 0 0\n1 0 0 0\n\n\nBunched up\n0 1 1 1\n0 0 0 0\n0 0 0 0\n\n\n\nTwo normal blocks precede each event. All six normal scores are 0 in both arrangements. Nothing about the event labels changes.\nThe first arrangement warns during all three events. The second starts one alarm during Event 1 and stays silent throughout Events 2 and 3. Those three consecutive 1s do not warn about three different problems. They keep warning about the same one.\nEven that one warning arrives later. With 64 observations per block, the spread-out arrangement warns after 64 observations in each event. The bunched-up arrangement first warns after 128 observations in Event 1. The other two events end without a warning.\nYet both arrangements receive AP = 0.750 and AUROC = 0.625. These are exact values for the constructed sequences, using grouped ties for AP and half credit for AUROC ties.\nThe reason is simple once the scores are sorted. In both cases, the anomalous blocks have three 1s and nine 0s. The normal blocks have six 0s. AP and AUROC see the same scores attached to the same labels. They have no way to tell whether the three high scores belong to three separate events or are all spent on one.\nI had initially paid most attention to the final performance numbers in my SW. After several modeling attempts failed to produce the consistent advantage I wanted, I began looking more closely at what each comparison could explain. The example above gives a compact reason to follow the scores back into time. A ranking can tell me which observations look more suspicious. I still need to find out which events receive a warning before they end.\nThat question also made an actual experimental result more interesting. I gave two alarm rules exactly the same learned scores. One reacted to individual high scores. The other, CUSUM, accumulated evidence, allowing several moderately unusual scores to build toward a warning.\nIn one simulated setting, out of 1,000 events, CUSUM detected 128 that the threshold rule missed. It also missed 32 that the threshold rule detected. The net gain was 96 events, taking recall from 19.2% to 28.8% within the four-block deadline. Both rules used the same calibration target for normal alarms; their measured normal-warning rates were close, though not identical.\nI could have stopped at the higher recall. Looking at the paired events gave a more specific explanation. On events both rules detected, CUSUM was usually equally fast or slower. Its recall gain came from reaching additional events. The benefit of waiting for more evidence showed up in which events were detected, even though waiting did not generally make the shared detections earlier.\nI still want better anomaly scores. But now, when I look at a result, I want to put the scores back on a timeline and mark the first warning in every event. In the little example above, that is all it takes to see the two warnings the ranking metrics could not account for.\nResearch project"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Home",
+    "section": "News",
+    "text": "News\n\n[Nov. 20, 2026 · Upcoming] I will present my Signature Work at Duke Kunshan University, marking the completion of my undergraduate studies.\n[Oct. 2026] I completed my L2-based factor capacity analysis tool.\n[2026] COPF was accepted to ICML 2026.\n[2025] DECAF-GAD was accepted to ECAI 2025."
+  },
+  {
+    "objectID": "index.html#selected-publications",
+    "href": "index.html#selected-publications",
+    "title": "Home",
+    "section": "Selected Publications",
+    "text": "Selected Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShouju Wang*, Yuchen Song*, Sheng’en Li*, Dongmian Zou\nECAI 2025 · Co-first author\npaper\n\n* Equal contribution. Full publication list."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Home",
+    "section": "Education",
+    "text": "Education\n\n\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics and Computer Science, dual-degree program\nGPA: 3.80/4.00\n\n\nExpected Dec. 2026\n\n\nDean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar (2024, 2025)."
+  },
+  {
+    "objectID": "index.html#research-experience",
+    "href": "index.html#research-experience",
+    "title": "Home",
+    "section": "Research Experience",
+    "text": "Research Experience\n\n\n\nCounterfactual Learning for Adaptive Decision Systems\n\nDuke Kunshan University / Duke University · Jan. 2025 – Present\n\n\nCounterfactual estimation, online auditing, and fairness control for evolving graphs; COPF and its COMET extension.\n\n\n\n\n\n\nTaylor-Model Reachability for Neural-Network-Controlled Systems\n\nUIUC · Prof. Huan Zhang’s group · May 2026 – Present\n\n\nA PyTorch engine for validated ODE flowpipes, with step-level comparisons against Flow* and certified neural-network couplings.\n\n\n\n\n\n\nAudit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\n\n\nAuditing scaffold adequacy and local identifiability, then testing targeted refinements on MIMIC-IV-ECG.\n\n\n\n\n\n\nContextual Information and Alarm Utility in Time-Series Anomaly Detection\n\nDuke Kunshan University · Signature Work · 2025 – 2026\n\n\nMatched experiments separate the value of temporal history from alarm timing, recall, and warning burden.\n\n\n\n\n\n\nFair Graph Anomaly Detection\n\nDuke Kunshan University · Jul. 2024 – May 2025\n\n\nDECAF-GAD combines causal disentanglement and counterfactual regularization to improve fairness in graph autoencoders.\n\n\n\nMore about my research"
+  },
+  {
+    "objectID": "index.html#work-experience",
+    "href": "index.html#work-experience",
+    "title": "Home",
+    "section": "Work Experience",
+    "text": "Work Experience\n\n\nShangchen Private Fund · Shanghai, China\nQuantitative Research Intern (Sep. 2026 – Present)\nPreviously Quantitative Developer Intern (Jul. – Sep. 2026)\n\n\nJul. 2026 – Present\n\n\nLiquidity-aware factor backtesting and macroeconomic consensus research, building on earlier work in financial-document retrieval and Python/SQL data pipelines."
+  },
+  {
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "Tools",
+    "section": "",
+    "text": "Skip to content\nA few tools that grew out of questions in my research and everyday work."
+  },
+  {
+    "objectID": "tools.html#reader-first",
+    "href": "tools.html#reader-first",
+    "title": "Tools",
+    "section": "Reader First",
+    "text": "Reader First\n\nWriting skill · English and Chinese · Available on GitHub\n\nI can understand every word in an AI-generated sentence and still need a second pass to work out what it says. Reader First is the editing skill I built for those sentences.\nIt asks an AI editor to make actions, conditions, and references clear as the reader encounters them. A stack of nouns may need a verb. A vague “this” may need the name of the thing it refers to. The aim is to make the explanation easier to follow while preserving the facts and technical meaning.\n\nGitHub and installation · The note behind the skill"
+  },
+  {
+    "objectID": "tools.html#l2-factor-capacity",
+    "href": "tools.html#l2-factor-capacity",
+    "title": "Tools",
+    "section": "L2-based factor capacity analysis",
+    "text": "L2-based factor capacity analysis\n\nDeveloped by Sheng’en Li · Open-source release in preparation\n\nI developed a factor-capacity evaluation tool that takes a factor signal and generates a PDF report comparing execution feasibility across initial capital levels. The engine uses Level-2 market data to simulate how a strategy’s planned trades translate into simulated holdings under trading constraints.\n\nFrom a factor to a capacity report\n\nSpecify the strategy. Supply the factor signal and the portfolio and trading rules used for the evaluation.\nSimulate each capital level. Track orders, cash, and holdings under a volume-participation limit, available-cash and sellable-position constraints, trading suspensions, and price limits.\nInspect the report. Compare the tested capital levels using completion checks, execution diagnostics, and return differences. Partial fills and unfinished orders help identify where execution becomes constrained.\n\n\n\nWhat the capacity estimate means\nThe current evaluation criterion combines a 10% participation limit with 100% same-day completion of planned trades. The reported execution capacity is the largest tested capital level that satisfies this criterion over the evaluation period.\nThis definition makes the result interpretable: it is tied to a specified factor strategy, market-data period, execution protocol, and set of tested capital levels. A larger account changes order sizes, which can change fills, available cash, and subsequent holdings. Repeating the simulation at each capital level captures these changes in the portfolio’s path.\nMy focus is the connection between the desired portfolio and the portfolio that can actually be built. The report makes that connection visible alongside the capacity estimate, so a user can inspect which constraints bind as capital increases.\n\n\nAvailability\nThe tool currently runs on company Level-2 data. I am preparing the core engine for open-source release; the public data interface is still being worked out. Code and example-report links will be added when the release is available.\n\nWhen Does a Factor Become Too Large to Trade? examines the reasoning behind this execution-capacity criterion."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Research",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "projects.html#counterfactual-learning",
+    "href": "projects.html#counterfactual-learning",
+    "title": "Research",
+    "section": "Counterfactual Learning for Adaptive Decision Systems",
+    "text": "Counterfactual Learning for Adaptive Decision Systems\n\n\n\nCOPF · Protocol flowchart\n\n\n\nDuke Kunshan University / Duke University · Jan. 2025 – Present\nAdvised by Prof. Dongmian Zou and Prof. Fan Wei\n\nOnline recommenders change the graph and feedback they later learn from, so fairness measured on logged outcomes can drift after deployment. I developed COPF, a decision-layer framework that combines explicit exploration and propensity logging with graph-aware doubly robust estimation. An online multicalibration auditor and primal–dual controller then monitor and adjust group-level exposure disparities.\nEvaluations on two Temporal Graph Benchmark streams and a controlled synthetic stream show reduced worst-case disparity spikes with modest effects on ranking utility. I am extending this work in COMET to study counterfactual moments under weak overlap and dependent feedback.\n\nPaper · ICML 2026 · Code · First author"
+  },
+  {
+    "objectID": "projects.html#verified-reachability",
+    "href": "projects.html#verified-reachability",
+    "title": "Research",
+    "section": "Taylor-Model Reachability for Neural-Network-Controlled Systems",
+    "text": "Taylor-Model Reachability for Neural-Network-Controlled Systems\n\n\n\nNN control and flowpipes Illustration: Xiangru Zhong\n\n\n\nUniversity of Illinois Urbana-Champaign · May 2026 – Present\nResearch collaboration with Prof. Huan Zhang’s group\n\nI am developing a PyTorch Taylor-model engine for safety verification of neural-network-controlled systems. The engine propagates polynomial approximations together with validated remainder bounds through nonlinear ODEs, combining interval arithmetic and Picard iteration. My work includes step-level comparisons against Flow* to diagnose polynomial truncation, remainder growth, enclosure tightness, and CPU/GPU consistency.\nThe broader project connects GPU-batched flowpipes to CROWN-type neural-network verifiers through certified polynomial couplings. These interfaces preserve dependencies that interval-only bounds discard, helping assess how numerical precision and controller bounds affect the reachable sets used to certify safety."
+  },
+  {
+    "objectID": "projects.html#audit-refine",
+    "href": "projects.html#audit-refine",
+    "title": "Research",
+    "section": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference",
+    "text": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\n\n\nAudit–Refine · Framework overview\n\n\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\nAdvised by Prof. Shixin Xu and Prof. Dongmian Zou\n\nI co-developed an Audit–Refine framework for testing whether a partial-physics model’s mechanistic scaffold is supported by data. In ECG-based electrolyte inference, a projective Plausibility Index measures waveform alignment, while tangent and Fisher-information diagnostics assess whether electrolyte concentrations can be recovered locally. The framework combines matched null models, held-out inverse error, residual structure, and robustness checks to decide which refinements to accept.\nI built and validated analyte-specific MIMIC-IV-ECG pipelines and evaluated reduced-rank potassium refinements. Four of seven electrolyte–scaffold hypotheses passed the audit; the accepted potassium spline reduced held-out MAE from 0.417 to 0.396 mEq/L, a 5.0% relative improvement.\n\nSubmitted to Artificial Intelligence in Medicine · Co-first author"
+  },
+  {
+    "objectID": "projects.html#contextual-anomaly-detection",
+    "href": "projects.html#contextual-anomaly-detection",
+    "title": "Research",
+    "section": "Contextual Information and Alarm Utility in Time-Series Anomaly Detection",
+    "text": "Contextual Information and Alarm Utility in Time-Series Anomaly Detection\n\n\n\nSignature Work · Experimental design\n\n\n\nDuke Kunshan University · 2025 – 2026\nSignature Work · Advised by Prof. Dongmian Zou\n\nMy Signature Work separates three questions in anomaly detection: what temporal context adds, how much evidence a model captures, and when its scores produce useful warnings. I designed matched-block experiments that preserve observed data while changing history–current pairings, proving chance-level ranking for fixed current-only detectors. A covariance-based Markov model trained on normal data measures the value of contextual relationships.\nI compare thresholding and accumulation on identical scores, tracking event recall, detection delay, and warning burden. CUSUM increased four-block recall by 9.6 and 2.9 percentage points in two simulated settings. Evaluation across 119 real series from five sources found no consistent detection gain from accumulation, highlighting the need to evaluate recall alongside the frequency of warnings during normal periods.\n\nResearch note: from anomaly scores to useful alarms"
+  },
+  {
+    "objectID": "projects.html#fair-graph-anomaly-detection",
+    "href": "projects.html#fair-graph-anomaly-detection",
+    "title": "Research",
+    "section": "Fair Graph Anomaly Detection",
+    "text": "Fair Graph Anomaly Detection\n\n\n\nDECAF-GAD · Model architecture\n\n\n\nDuke Kunshan University · Jul. 2024 – May 2025\nSummer Research Scholar · Advised by Prof. Dongmian Zou\n\nGraph autoencoders can mistake differences between demographic groups for anomalies. I co-developed DECAF-GAD, a fairness-aware framework that uses a structural causal model to separate sensitive information from the representations used for detection. A shared encoder processes original and counterfactual graphs, while disentanglement, adversarial learning, and counterfactual consistency losses guide reconstruction.\nThe framework can be added to existing autoencoder-based detectors. Through experiments on synthetic and real-world graphs and component ablations, we evaluated the fairness–utility trade-off and found improved fairness metrics while maintaining competitive anomaly detection performance.\n\nPaper · ECAI 2025 · Code · Co-first author"
   },
   {
     "objectID": "blog/2026-11-16-structured-dependence.html",
@@ -140,178 +252,52 @@
     "text": "What I would compare next\nThe examples suggest a compact experiment: hold the path graph and node marginals fixed, vary the source signs, and then vary the weights. Compare the resulting confidence radii with exact variances. Include a shared-source example and a fully dependent case alongside the cancellation example. These would be tests of what each certificate recognizes; the figures here are analytic constructions, not experimental results.\nThe question I started with was whether a finer graph parameter could replace a coloring penalty. The more useful question is what information a proof has actually used. A graph can justify independence. A compatible function decomposition lets us use that independence for the statistic at hand. A source model can reveal cancellations that both the graph and the marginal distributions leave unspecified. Each extra piece of information can change how much averaging helps.\n\nReferences\n\nSvante Janson. Large deviations for sums of partly dependent random variables. 2004.\nRui-Ray Zhang. When Janson meets McDiarmid: Bounded difference inequalities under graph-dependence. 2022.\nDaniel Paulin. Concentration Inequalities in Locally Dependent Spaces. 2012.\nIosif Pinelis. Best possible bounds of the von Bahr–Esseen type. 2015.\n\nRelated working manuscript: COMET."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Research",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Research Notes",
     "section": "",
-    "text": "Skip to content"
+    "text": "Skip to content\n\n\n\n\n\n\n\nNotes from my research and software development: how I frame questions, design evaluations, and turn ideas into tools.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReader First: Making technical writing easier to follow\n\n\nNotes on AI-generated language, the effort of reading technical prose, and the editing choices behind Reader First.\n\n\n\n\n\nNovember 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhen Does a Factor Become Too Large to Trade?\n\n\nEvaluating factor capacity through capital-scaled L2 execution backtests and a same-day completion rule.\n\n\n\n\n\nOctober 2026\n\n\n\n\n\n\n\n\n\n\n\n\nA thousand comparisons, one coin flip\n\n\nWhy more data can fail to average out, and what dependency graphs leave out of a confidence bound.\n\n\n\n\n\nMay 2026\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Miss Two Events Without Hurting Your Score\n\n\nI rearranged three high anomaly scores. Two events lost their warnings. AP and AUROC did not move.\n\n\n\n\n\nDecember 2025\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects.html#counterfactual-learning",
-    "href": "projects.html#counterfactual-learning",
-    "title": "Research",
-    "section": "Counterfactual Learning for Adaptive Decision Systems",
-    "text": "Counterfactual Learning for Adaptive Decision Systems\n\n\n\nCOPF · Protocol flowchart\n\n\n\nDuke Kunshan University / Duke University · Jan. 2025 – Present\nAdvised by Prof. Dongmian Zou and Prof. Fan Wei\n\nOnline recommenders change the graph and feedback they later learn from, so fairness measured on logged outcomes can drift after deployment. I developed COPF, a decision-layer framework that combines explicit exploration and propensity logging with graph-aware doubly robust estimation. An online multicalibration auditor and primal–dual controller then monitor and adjust group-level exposure disparities.\nEvaluations on two Temporal Graph Benchmark streams and a controlled synthetic stream show reduced worst-case disparity spikes with modest effects on ranking utility. I am extending this work in COMET to study counterfactual moments under weak overlap and dependent feedback.\n\nPaper · ICML 2026 · Code · First author"
-  },
-  {
-    "objectID": "projects.html#verified-reachability",
-    "href": "projects.html#verified-reachability",
-    "title": "Research",
-    "section": "Taylor-Model Reachability for Neural-Network-Controlled Systems",
-    "text": "Taylor-Model Reachability for Neural-Network-Controlled Systems\n\n\n\nNN control and flowpipes Illustration: Xiangru Zhong\n\n\n\nUniversity of Illinois Urbana-Champaign · May 2026 – Present\nResearch collaboration with Prof. Huan Zhang’s group\n\nI am developing a PyTorch Taylor-model engine for safety verification of neural-network-controlled systems. The engine propagates polynomial approximations together with validated remainder bounds through nonlinear ODEs, combining interval arithmetic and Picard iteration. My work includes step-level comparisons against Flow* to diagnose polynomial truncation, remainder growth, enclosure tightness, and CPU/GPU consistency.\nThe broader project connects GPU-batched flowpipes to CROWN-type neural-network verifiers through certified polynomial couplings. These interfaces preserve dependencies that interval-only bounds discard, helping assess how numerical precision and controller bounds affect the reachable sets used to certify safety."
-  },
-  {
-    "objectID": "projects.html#audit-refine",
-    "href": "projects.html#audit-refine",
-    "title": "Research",
-    "section": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference",
-    "text": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\n\n\nAudit–Refine · Framework overview\n\n\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\nAdvised by Prof. Shixin Xu and Prof. Dongmian Zou\n\nI co-developed an Audit–Refine framework for testing whether a partial-physics model’s mechanistic scaffold is supported by data. In ECG-based electrolyte inference, a projective Plausibility Index measures waveform alignment, while tangent and Fisher-information diagnostics assess whether electrolyte concentrations can be recovered locally. The framework combines matched null models, held-out inverse error, residual structure, and robustness checks to decide which refinements to accept.\nI built and validated analyte-specific MIMIC-IV-ECG pipelines and evaluated reduced-rank potassium refinements. Four of seven electrolyte–scaffold hypotheses passed the audit; the accepted potassium spline reduced held-out MAE from 0.417 to 0.396 mEq/L, a 5.0% relative improvement.\n\nSubmitted to Artificial Intelligence in Medicine · Co-first author"
-  },
-  {
-    "objectID": "projects.html#contextual-anomaly-detection",
-    "href": "projects.html#contextual-anomaly-detection",
-    "title": "Research",
-    "section": "Contextual Information and Alarm Utility in Time-Series Anomaly Detection",
-    "text": "Contextual Information and Alarm Utility in Time-Series Anomaly Detection\n\n\n\nSignature Work · Experimental design\n\n\n\nDuke Kunshan University · 2025 – 2026\nSignature Work · Advised by Prof. Dongmian Zou\n\nMy Signature Work separates three questions in anomaly detection: what temporal context adds, how much evidence a model captures, and when its scores produce useful warnings. I designed matched-block experiments that preserve observed data while changing history–current pairings, proving chance-level ranking for fixed current-only detectors. A covariance-based Markov model trained on normal data measures the value of contextual relationships.\nI compare thresholding and accumulation on identical scores, tracking event recall, detection delay, and warning burden. CUSUM increased four-block recall by 9.6 and 2.9 percentage points in two simulated settings. Evaluation across 119 real series from five sources found no consistent detection gain from accumulation, highlighting the need to evaluate recall alongside the frequency of warnings during normal periods.\n\nResearch note: from anomaly scores to useful alarms"
-  },
-  {
-    "objectID": "projects.html#fair-graph-anomaly-detection",
-    "href": "projects.html#fair-graph-anomaly-detection",
-    "title": "Research",
-    "section": "Fair Graph Anomaly Detection",
-    "text": "Fair Graph Anomaly Detection\n\n\n\nDECAF-GAD · Model architecture\n\n\n\nDuke Kunshan University · Jul. 2024 – May 2025\nSummer Research Scholar · Advised by Prof. Dongmian Zou\n\nGraph autoencoders can mistake differences between demographic groups for anomalies. I co-developed DECAF-GAD, a fairness-aware framework that uses a structural causal model to separate sensitive information from the representations used for detection. A shared encoder processes original and counterfactual graphs, while disentanglement, adversarial learning, and counterfactual consistency losses guide reconstruction.\nThe framework can be added to existing autoencoder-based detectors. Through experiments on synthetic and real-world graphs and component ablations, we evaluated the fairness–utility trade-off and found improved fairness metrics while maintaining competitive anomaly detection performance.\n\nPaper · ECAI 2025 · Code · Co-first author"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "Skip to content"
+    "text": "Skip to content\n* Equal contribution."
   },
   {
-    "objectID": "index.html#news",
-    "href": "index.html#news",
-    "title": "Home",
-    "section": "News",
-    "text": "News\n\n[Nov. 20, 2026 · Upcoming] I will present my Signature Work at Duke Kunshan University, marking the completion of my undergraduate studies.\n[Oct. 2026] I completed my L2-based factor capacity analysis tool.\n[2026] COPF was accepted to ICML 2026.\n[2025] DECAF-GAD was accepted to ECAI 2025."
+    "objectID": "publications.html#peer-reviewed-publications",
+    "href": "publications.html#peer-reviewed-publications",
+    "title": "Publications",
+    "section": "Peer-reviewed Publications",
+    "text": "Peer-reviewed Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShouju Wang*, Yuchen Song*, Sheng’en Li*, Dongmian Zou\nECAI 2025 · Co-first author\npaper"
   },
   {
-    "objectID": "index.html#selected-publications",
-    "href": "index.html#selected-publications",
-    "title": "Home",
-    "section": "Selected Publications",
-    "text": "Selected Publications\n\nCOPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs\nSheng’en Li, Dongmian Zou\nICML 2026 · First author\npaper\n\n\nDECAF-GAD: Enhancing Fairness in Autoencoders for Node-Level Graph Anomaly Detection\nShouju Wang*, Yuchen Song*, Sheng’en Li*, Dongmian Zou\nECAI 2025 · Co-first author\npaper\n\n* Equal contribution. Full publication list."
+    "objectID": "publications.html#submitted-manuscript",
+    "href": "publications.html#submitted-manuscript",
+    "title": "Publications",
+    "section": "Submitted Manuscript",
+    "text": "Submitted Manuscript\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\nSubmitted to Artificial Intelligence in Medicine · Co-first author\nResearch overview"
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Home",
-    "section": "Education",
-    "text": "Education\n\n\nDuke Kunshan University & Duke University\nB.S. in Applied Mathematics and Computer Science, dual-degree program\nGPA: 3.80/4.00\n\n\nExpected Dec. 2026\n\n\nDean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar (2024, 2025)."
+    "objectID": "publications.html#manuscripts-in-preparation",
+    "href": "publications.html#manuscripts-in-preparation",
+    "title": "Publications",
+    "section": "Manuscripts in Preparation",
+    "text": "Manuscripts in Preparation\n\nCOMET: Counterfactual Moment Auditing under Weak Overlap and Dependent Feedback\nSheng’en Li* et al.\nIn preparation · First author"
   },
   {
-    "objectID": "index.html#research-experience",
-    "href": "index.html#research-experience",
-    "title": "Home",
-    "section": "Research Experience",
-    "text": "Research Experience\n\n\n\nCounterfactual Learning for Adaptive Decision Systems\n\nDuke Kunshan University / Duke University · Jan. 2025 – Present\n\n\nCounterfactual estimation, online auditing, and fairness control for evolving graphs; COPF and its COMET extension.\n\n\n\n\n\n\nTaylor-Model Reachability for Neural-Network-Controlled Systems\n\nUIUC · Prof. Huan Zhang’s group · May 2026 – Present\n\n\nA PyTorch engine for validated ODE flowpipes, with step-level comparisons against Flow* and certified neural-network couplings.\n\n\n\n\n\n\nAudit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\n\n\nAuditing scaffold adequacy and local identifiability, then testing targeted refinements on MIMIC-IV-ECG.\n\n\n\n\n\n\nContextual Information and Alarm Utility in Time-Series Anomaly Detection\n\nDuke Kunshan University · Signature Work · 2025 – 2026\n\n\nMatched experiments separate the value of temporal history from alarm timing, recall, and warning burden.\n\n\n\n\n\n\nFair Graph Anomaly Detection\n\nDuke Kunshan University · Jul. 2024 – May 2025\n\n\nDECAF-GAD combines causal disentanglement and counterfactual regularization to improve fairness in graph autoencoders.\n\n\n\nMore about my research"
+    "objectID": "publications.html#signature-work",
+    "href": "publications.html#signature-work",
+    "title": "Publications",
+    "section": "Signature Work",
+    "text": "Signature Work\n\nIsolating Contextual Information and Alarm Utility in Multivariate Time-Series Anomaly Detection\nSheng’en Li\nDuke Kunshan University · 2026 · Undergraduate Signature Work\nResearch overview"
   },
   {
-    "objectID": "index.html#work-experience",
-    "href": "index.html#work-experience",
-    "title": "Home",
-    "section": "Work Experience",
-    "text": "Work Experience\n\n\nShangchen Private Fund · Shanghai, China\nQuantitative Research Intern (Sep. 2026 – Present)\nPreviously Quantitative Developer Intern (Jul. – Sep. 2026)\n\n\nJul. 2026 – Present\n\n\nLiquidity-aware factor backtesting and macroeconomic consensus research, building on earlier work in financial-document retrieval and Python/SQL data pipelines."
-  },
-  {
-    "objectID": "blog/2026-11-11-alarm-quality.html",
-    "href": "blog/2026-11-11-alarm-quality.html",
-    "title": "How to Miss Two Events Without Hurting Your Score",
-    "section": "",
-    "text": "Skip to content\n\n\n\n\n\n\nI can make an anomaly detector miss two out of three events without lowering its average precision. Its AUROC will stay exactly the same, too. All I need to do is rearrange three high scores.\nHere is the toy construction from my Signature Work. Imagine three anomalous events. Each lasts four blocks of observations, and a detector produces one score at the end of each block. Every score is either 0 or 1. A score above 0.5 switches the alarm on; consecutive high scores keep the same alarm running.\nFirst, put one high score at the beginning of each event. Then try putting all three high scores into the second, third, and fourth blocks of the first event:\n\n\n\nArrangement\nEvent 1\nEvent 2\nEvent 3\n\n\n\n\nSpread out\n1 0 0 0\n1 0 0 0\n1 0 0 0\n\n\nBunched up\n0 1 1 1\n0 0 0 0\n0 0 0 0\n\n\n\nTwo normal blocks precede each event. All six normal scores are 0 in both arrangements. Nothing about the event labels changes.\nThe first arrangement warns during all three events. The second starts one alarm during Event 1 and stays silent throughout Events 2 and 3. Those three consecutive 1s do not warn about three different problems. They keep warning about the same one.\nEven that one warning arrives later. With 64 observations per block, the spread-out arrangement warns after 64 observations in each event. The bunched-up arrangement first warns after 128 observations in Event 1. The other two events end without a warning.\nYet both arrangements receive AP = 0.750 and AUROC = 0.625. These are exact values for the constructed sequences, using grouped ties for AP and half credit for AUROC ties.\nThe reason is simple once the scores are sorted. In both cases, the anomalous blocks have three 1s and nine 0s. The normal blocks have six 0s. AP and AUROC see the same scores attached to the same labels. They have no way to tell whether the three high scores belong to three separate events or are all spent on one.\nI had initially paid most attention to the final performance numbers in my SW. After several modeling attempts failed to produce the consistent advantage I wanted, I began looking more closely at what each comparison could explain. The example above gives a compact reason to follow the scores back into time. A ranking can tell me which observations look more suspicious. I still need to find out which events receive a warning before they end.\nThat question also made an actual experimental result more interesting. I gave two alarm rules exactly the same learned scores. One reacted to individual high scores. The other, CUSUM, accumulated evidence, allowing several moderately unusual scores to build toward a warning.\nIn one simulated setting, out of 1,000 events, CUSUM detected 128 that the threshold rule missed. It also missed 32 that the threshold rule detected. The net gain was 96 events, taking recall from 19.2% to 28.8% within the four-block deadline. Both rules used the same calibration target for normal alarms; their measured normal-warning rates were close, though not identical.\nI could have stopped at the higher recall. Looking at the paired events gave a more specific explanation. On events both rules detected, CUSUM was usually equally fast or slower. Its recall gain came from reaching additional events. The benefit of waiting for more evidence showed up in which events were detected, even though waiting did not generally make the shared detections earlier.\nI still want better anomaly scores. But now, when I look at a result, I want to put the scores back on a timeline and mark the first warning in every event. In the little example above, that is all it takes to see the two warnings the ranking metrics could not account for.\nResearch project"
-  },
-  {
-    "objectID": "blog/2026-11-11-factor-capacity.html",
-    "href": "blog/2026-11-11-factor-capacity.html",
-    "title": "When Does a Factor Become Too Large to Trade?",
-    "section": "",
-    "text": "Skip to content\nA factor signal, together with portfolio-construction rules, defines the positions a strategy aims to hold. Increasing the capital allocated to it also increases the trading needed to reach those positions. My question is how far that allocation can grow while the trading plan remains executable under a stated set of rules. Answering it requires following the orders through time: the intended portfolio alone does not tell me which positions the strategy can actually acquire or unwind.\nI developed a tool that takes a factor as input, runs execution backtests at multiple initial-capital levels using Level 2 market data, and produces a PDF capacity report. The current evaluation uses a 10% participation-rate limit and requires 100% of each day’s planned trading to finish that day. These settings give the experiment an explicit pass condition. A run that leaves an order unfinished fails that completion requirement, even if most of its planned trading succeeds."
-  },
-  {
-    "objectID": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
-    "href": "blog/2026-11-11-factor-capacity.html#follow-the-portfolio-through-execution",
-    "title": "When Does a Factor Become Too Large to Trade?",
-    "section": "Follow the portfolio through execution",
-    "text": "Follow the portfolio through execution\nThe execution simulation tracks fills and maintains the state needed to decide whether orders can fill. That state includes cash and sellable shares, alongside the restrictions associated with suspensions and daily price limits. Partial fills change the portfolio immediately; unfinished orders remain unfinished. This matters because a target weight is only a request. A backtest must account for the holdings and available resources that emerge as the request is executed.\nConsider two runs with identical factor inputs but different starting capital. Both receive the same instruction to sell one position and buy another. The larger run requests more shares and needs more execution opportunities within the participation limit. If its sale fills only partially, it retains more of the old position and receives less cash than the plan anticipated. A subsequent purchase must use the cash actually available. The two runs can therefore follow different holding paths even though their factor rankings and target weights agree. Scaling capital changes the sequence of attainable portfolios."
-  },
-  {
-    "objectID": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
-    "href": "blog/2026-11-11-factor-capacity.html#execution-opportunities-have-a-time-window",
-    "title": "When Does a Factor Become Too Large to Trade?",
-    "section": "Execution opportunities have a time window",
-    "text": "Execution opportunities have a time window\nTiming also explains why a full day’s trading volume is insufficient to establish capacity. Consider an order submitted late in the session for a stock that traded heavily earlier that morning. The earlier trades contribute to daily volume, but they provide no execution opportunity for an instruction that did not yet exist. The relevant sequence begins after that instruction and ends at its deadline. Applying the participation rule to the opportunities within that sequence can leave the order incomplete despite a large daily total. Available cash, sellable shares, and trading restrictions further determine which of those opportunities the simulated strategy can use."
-  },
-  {
-    "objectID": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
-    "href": "blog/2026-11-11-factor-capacity.html#define-the-capacity-criterion",
-    "title": "When Does a Factor Become Too Large to Trade?",
-    "section": "Define the capacity criterion",
-    "text": "Define the capacity criterion\nFor this tool, capacity is the largest tested capital level that passes the execution criteria over the evaluated data period. The word “tested” is essential. A capital grid produces verdicts for its individual levels; it does not establish an exact optimum between them. The reported value belongs to that grid, that period, and those execution rules. Changing the trading deadline or participation limit changes the question being evaluated. I therefore report the estimate together with the evaluation period and execution settings.\nI separate this completion test from the judgment that trading costs are acceptable. An order may finish within the participation limit while the economics of executing it remain unattractive. Conversely, an attractive intended portfolio does not compensate for trades that cannot finish. The current completion criterion answers a feasibility question. Assessing whether the executed strategy is worth allocating capital to requires a further cost judgment.\nThe question I want the report to make answerable is where feasibility is lost as capital increases. A volume constraint, an incomplete sale, and a purchase blocked by available cash can all leave a plan unfinished, but they point to different changes in the strategy. Tracing those constraints connects a capacity estimate to an explanation of the portfolio that was actually attainable.\nThe core engine is being prepared for open-source release. The project page describes the current workflow and availability.\nSoftware"
-  },
-  {
-    "objectID": "blog/2026-11-14-reader-first.html",
-    "href": "blog/2026-11-14-reader-first.html",
-    "title": "Reader First: Making technical writing easier to follow",
-    "section": "",
-    "text": "Skip to content\nA technical explanation can contain the right facts and still make the reader work to connect them. In AI-generated answers, I often encounter a condition that arrives after the claim it limits, a stack of nouns that leaves the action unclear, or a “this” with several possible references. I can usually recover the meaning, but I would rather spend that effort thinking about the answer.\nClark, Martin, and Mahowald’s study helped me think more precisely about this problem. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. In chat and coding tasks in particular, many models used longer dependencies and more stacked nouns than versions of the same sentences translated into Japanese and back into English. The pattern varied by model, feature, and setting.\nThe study measures linguistic features and model preferences, rather than how well people understand the generated passages.\nThe paper gave me a starting point for Reader First, a writing skill that asks an editor to look for relationships the reader has to reconstruct. If the writer knows how a condition limits a result, or what action a stack of nouns describes, the explanation can often state that relationship directly."
-  },
-  {
-    "objectID": "blog/2026-11-14-reader-first.html#spend-words-where-they-help-the-reader",
-    "href": "blog/2026-11-14-reader-first.html#spend-words-where-they-help-the-reader",
-    "title": "Reader First: Making technical writing easier to follow",
-    "section": "Spend words where they help the reader",
-    "text": "Spend words where they help the reader\nA reader encounters an explanation one sentence at a time. Each new detail needs something to attach to. Naming the object before describing its behavior, or placing a condition beside the claim it limits, can make that connection easier to follow.\nI chose this objective for Reader First: reduce the extra inference and rereading needed to recover the intended meaning. An edit should help the reader understand a particular relationship. Adding words is useful when those words do that work.\nThe example below comes from the skill and is translated into English. It illustrates an editing choice using a hypothetical test report.\n\n\n\nOriginal\n\nI added three concurrent-write cache-invalidation regression tests, all passing locally; production reliability under high load remains unverified.\n\n\n\nRevised\n\nI added three regression tests to check whether the cache is invalidated as expected during concurrent writes. All three tests passed locally. Reliability under high production load has not been verified.\n\n\nThe expanded version names the tests, then explains what they check. Concurrent writing becomes an explicit condition of the check. Repeating “three tests” ties the local result to those tests, and the final sentence states what remains unverified. The reader gets the same facts in an order that makes their relationships explicit.\nThe technical terms matter too. Cache invalidation means making a cached value unusable when appropriate. Replacing it with “cache failure” would change what the tests concern. The editor needs to preserve that distinction while making the sentence easier to follow.\nExpansion needs the same care. A compressed phrase about timeouts, retries, and fallback may leave their order unspecified. Turning it into a story in which retries fail and a backup service takes over would add behavior the source never established. Before rearranging a sentence, the editor needs to identify the conditions, quantities, negation, evidence, and uncertainty that must survive the edit.\nThe paper’s controlled experiment makes the choice of objective concrete. In an event-to-sentence task, a token-length penalty shifted Qwen2.5-1.5B-Instruct toward shorter grammatical variants. That result is one reason I do not use output length as a proxy for a good edit.\n\n\n\n\nLength penalties shift the small model toward shorter grammatical variants. Reproduced from Clark, Martin, and Mahowald (2026), Figure 7, under CC BY 4.0."
-  },
-  {
-    "objectID": "blog/2026-11-14-reader-first.html#adapt-the-principle-to-chinese",
-    "href": "blog/2026-11-14-reader-first.html#adapt-the-principle-to-chinese",
-    "title": "Reader First: Making technical writing easier to follow",
-    "section": "Adapt the principle to Chinese",
-    "text": "Adapt the principle to Chinese\nChinese needs its own editing decisions. In the original phrase “三个并发写入场景下的缓存失效回归测试”, the reader encounters the number, operating condition, cache operation, and test category before reaching “测试”. The revision introduces the tests first, then explains what they check.\n\n\n\n原句\n\n我新增了三个并发写入场景下的缓存失效回归测试，本地全部通过；线上高负载情况下的可靠性尚未验证。\n\n\n\n改写\n\n我新增了三个回归测试，检查并发写入时缓存能否按预期失效。三个测试在本地都通过了；线上高负载下是否可靠，还没有验证。\n\n\nThe change concerns when the reader receives each piece of information. The same reasoning applies to references. If “这”, “其”, or “上述” could point to several objects, repeating the relevant noun may save the reader from looking back.\nThese Chinese editing rules are my practical extension of the paper’s motivation. Advice about an optional English that does not translate into a rule for adding or removing “的”. The editor has to find the difficulty in the sentence at hand. A long modifier may need to become a clause. An unclear pronoun may need a noun. A sentence that is already clear can stay as it is.\nThe intended reader matters too. Someone familiar with systems programming may need no explanation of “garbage collector”. Someone learning the mechanism may need a sentence about what it does. Reader First therefore sets no fixed sentence-length limit or target number of technical terms. It asks whether the reader has the information needed to follow the explanation. Splitting every sentence or replacing every paragraph with bullets can leave the reader with more fragments to reconnect."
-  },
-  {
-    "objectID": "blog/2026-11-14-reader-first.html#keep-the-claim-intact",
-    "href": "blog/2026-11-14-reader-first.html#keep-the-claim-intact",
-    "title": "Reader First: Making technical writing easier to follow",
-    "section": "Keep the claim intact",
-    "text": "Keep the claim intact\nTechnical explanations also need to preserve the state of the work. A proposed change, an edited file, a test that passed locally, and a deployed fix describe different things. Polishing the wording should leave those differences clear.\nFor a progress report, this means stating the supported result and keeping its scope nearby. “All three tests passed locally” tells the reader both what happened and where the result applies. The evidence that follows can then explain how the result was checked.\nThis is the editing habit I want Reader First to encourage. Find the relationship that takes effort to reconstruct, state it where the reader needs it, and check that the claim still means the same thing.\nDownload Reader First"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "More",
-    "section": "",
-    "text": "Skip to content"
-  },
-  {
-    "objectID": "about.html#honors",
-    "href": "about.html#honors",
-    "title": "More",
-    "section": "Honors",
-    "text": "Honors\n\nDean’s List with Distinction, Fall 2023 and Spring 2024\nSummer Research Scholar, 2024 and 2025"
-  },
-  {
-    "objectID": "about.html#leadership-and-service",
-    "href": "about.html#leadership-and-service",
-    "title": "More",
-    "section": "Leadership and Service",
-    "text": "Leadership and Service\n\nGroup technical support: GPU/server maintenance and junior-student mentoring, 2025 – Present\nResident Assistant, Duke Kunshan University, Aug. 2024 – May 2025\nVolunteer Mathematics Instructor, Tongren, China, Jul. 2024"
-  },
-  {
-    "objectID": "about.html#technical-skills",
-    "href": "about.html#technical-skills",
-    "title": "More",
-    "section": "Technical Skills",
-    "text": "Technical Skills\n\nProgramming: Python, C++, SQL, MATLAB; working knowledge of Java and JavaScript\nFrameworks and tools: PyTorch, NumPy, pandas, scikit-learn, Git/GitHub, Linux, LaTeX, pytest, MySQL/SQLite\nMethods: causal inference and off-policy evaluation, graph neural networks, temporal modeling, diffusion and normalizing-flow models, numerical verification, experiment design, and reproducibility"
+    "objectID": "publications.html#under-review",
+    "href": "publications.html#under-review",
+    "title": "Publications",
+    "section": "Under Review",
+    "text": "Under Review\nCo-first author on each manuscript below.\n\nPambda: Privacy Alignment with Calibration\nUnder review at KDD 2027 · Co-first author\n\n\nLambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding\nUnder review at KDD 2027 · Co-first author\n\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\nUnder review at KDD 2027 · Co-first author\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nUnder review at KDD 2027 · Co-first author\n\n\nFToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction\nUnder review at KDD 2027 · Co-first author"
   }
 ]

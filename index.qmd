@@ -9,13 +9,13 @@ format:
 :::: {.profile}
 ::: {.profile-photo-wrap}
 <img class="profile-photo" src="assets/profile.jpg" alt="Sheng’en Li">
-:::
-::: {.profile-heading}
-<h1>Sheng’en Li</h1>
 
 ::: {.profile-links}
 [CV](assets/Shengen_Li_CV.pdf) / [GitHub](https://github.com/lsnnnnnnnn) / [Email](mailto:sl879@duke.edu)
 :::
+:::
+::: {.profile-heading}
+<h1>Sheng’en Li</h1>
 :::
 
 ::: {.profile-bio}
@@ -23,7 +23,7 @@ I am an undergraduate in Applied Mathematics and Computer Science in the dual-de
 
 I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
 
-You can find my [research notes](blog/index.qmd) and [software](software.qmd) here.
+My [research notes](/blog/index.html?v=20261117-tools) start with things I find hard to leave alone. A detector can miss two events without losing a point; a thousand comparisons can still amount to one coin flip. I write about these puzzles, and put some of the things I build along the way in [tools](tools.qmd), including Reader First for technical writing that takes less work to follow.
 :::
 ::::
 
@@ -32,7 +32,7 @@ You can find my [research notes](blog/index.qmd) and [software](software.qmd) he
 ## News
 
 - **[Nov. 20, 2026 · Upcoming]** I will present my Signature Work at Duke Kunshan University, marking the completion of my undergraduate studies.
-- **[Oct. 2026]** I completed my [L2-based factor capacity analysis tool](software.qmd).
+- **[Oct. 2026]** I completed my [L2-based factor capacity analysis tool](tools.qmd#l2-factor-capacity).
 - **[2026]** [COPF](https://arxiv.org/abs/2606.00700) was accepted to **ICML 2026**.
 - **[2025]** [DECAF-GAD](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
 
@@ -172,3 +172,4 @@ Jul. 2026 – Present
 :::
 
 Liquidity-aware factor backtesting and macroeconomic consensus research, building on earlier work in financial-document retrieval and Python/SQL data pipelines.
+

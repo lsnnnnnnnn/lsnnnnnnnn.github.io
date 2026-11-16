@@ -1,10 +1,30 @@
 ---
-title: Software
-description: "L2-based factor capacity analysis: execution simulation and PDF reporting across initial capital levels."
+title: Tools
+description: "Reader First for clearer technical writing, and an L2-based engine for testing factor capacity."
 toc: false
+aliases: [software.html]
+format:
+  html:
+    body-classes: tools-page
 ---
 
-## L2-Based Factor Capacity Analysis
+A few tools that grew out of questions in my research and everyday work.
+
+## Reader First {#reader-first}
+
+::: {.entry-meta}
+Writing skill · English and Chinese · Available on GitHub
+:::
+
+I can understand every word in an AI-generated sentence and still need a second pass to work out what it says. Reader First is the editing skill I built for those sentences.
+
+It asks an AI editor to make actions, conditions, and references clear as the reader encounters them. A stack of nouns may need a verb. A vague "this" may need the name of the thing it refers to. The aim is to make the explanation easier to follow while preserving the facts and technical meaning.
+
+::: {.tool-links}
+[GitHub and installation](https://github.com/lsnnnnnnnn/reader-first) · [The note behind the skill](blog/2026-11-14-reader-first.qmd)
+:::
+
+## L2-based factor capacity analysis {#l2-factor-capacity}
 
 ::: {.entry-meta}
 Developed by Sheng’en Li · Open-source release in preparation
@@ -12,13 +32,13 @@ Developed by Sheng’en Li · Open-source release in preparation
 
 I developed a factor-capacity evaluation tool that takes a factor signal and generates a **PDF report comparing execution feasibility across initial capital levels**. The engine uses Level-2 market data to simulate how a strategy's planned trades translate into simulated holdings under trading constraints.
 
-## From a factor to a capacity report
+### From a factor to a capacity report
 
 1. **Specify the strategy.** Supply the factor signal and the portfolio and trading rules used for the evaluation.
 2. **Simulate each capital level.** Track orders, cash, and holdings under a volume-participation limit, available-cash and sellable-position constraints, trading suspensions, and price limits.
 3. **Inspect the report.** Compare the tested capital levels using completion checks, execution diagnostics, and return differences. Partial fills and unfinished orders help identify where execution becomes constrained.
 
-## What the capacity estimate means
+### What the capacity estimate means
 
 The current evaluation criterion combines a **10% participation limit** with **100% same-day completion of planned trades**. The reported execution capacity is the largest tested capital level that satisfies this criterion over the evaluation period.
 
@@ -26,11 +46,10 @@ This definition makes the result interpretable: it is tied to a specified factor
 
 My focus is the connection between the desired portfolio and the portfolio that can actually be built. The report makes that connection visible alongside the capacity estimate, so a user can inspect which constraints bind as capital increases.
 
-## Availability
+### Availability
 
 The tool currently runs on company Level-2 data. I am preparing the core engine for open-source release; the public data interface is still being worked out. Code and example-report links will be added when the release is available.
 
-::: {.related-reading}
-**Related research note**  
+::: {.tool-links}
 [When Does a Factor Become Too Large to Trade?](blog/2026-11-11-factor-capacity.qmd) examines the reasoning behind this execution-capacity criterion.
 :::

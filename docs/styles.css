@@ -71,7 +71,7 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .profile-heading h1 { margin: 0 0 5px; }
 .profile-bio { grid-column: 2; }
 .profile-bio p:last-child { margin-bottom: 0; }
-.profile-links { margin-bottom: 6px; font-size: 14px; }
+.profile-links { margin-top: 10px; font-size: 13px; text-align: center; white-space: nowrap; }
 .profile-links p { margin: 0; }
 
 .publication { margin-bottom: 21px; }
@@ -123,10 +123,12 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .research-intro { color: var(--muted); max-width: 680px; }
 
 .note-entry { margin-bottom: 14px; }
-.note-entry h3 a, .software-entry h3 a { color: var(--text); text-decoration: none; font-weight: inherit; }
-.note-entry h3 a:hover, .software-entry h3 a:hover { color: var(--link); text-decoration: underline; }
-.note-entry p, .software-entry > p { margin: 4px 0 0; }
-.software-entry .entry-meta { margin-top: 6px; }
+.note-entry h3 a { color: var(--text); text-decoration: none; font-weight: inherit; }
+.note-entry h3 a:hover { color: var(--link); text-decoration: underline; }
+.note-entry p { margin: 4px 0 0; }
+.tools-page h2 { margin-top: 30px; }
+.tools-page h3 { margin-top: 22px; }
+.tool-links { margin-top: 12px; font-size: 14px; }
 .related-reading { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--line); }
 .research-note #title-block-header { margin-bottom: 24px; }
 .research-note h1.title { font-size: 30px; line-height: 1.25; }
@@ -209,6 +211,7 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
   h2 { margin-top: 24px; font-size: 20px; }
   .profile { grid-template-columns: 112px minmax(0, 1fr); column-gap: 16px; row-gap: 12px; }
   .profile-photo { width: 112px; height: 140px; }
+  .profile-links { font-size: 11px; }
   .profile-photo-wrap { grid-row: 1; }
   .profile-bio { grid-column: 1 / -1; }
   .simple-row { display: block; }
@@ -228,4 +231,5 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
   body { font-size: 11pt; }
   .publication, .simple-row, .research-row, .research-detail { break-inside: avoid; }
 }
+
 

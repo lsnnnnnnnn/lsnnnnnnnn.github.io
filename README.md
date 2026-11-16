@@ -19,9 +19,11 @@ Commit both the source changes and the generated `docs/` directory. GitHub Pages
 - `assets/Shengen_Li_CV.pdf`: CV linked directly from the navigation
 - `assets/profile.jpg`: small homepage portrait
 - `blog/index.qmd`: Research Notes; dated articles are listed automatically
-- `software.qmd`: the L2 factor-capacity tool, with its current criterion and release status
+- `tools.qmd`: Reader First and the L2 factor-capacity tool, with usage links and release status
 
 The original test post is retained as a draft and excluded from the published Notes listing.
+
+The homepage keeps CV, GitHub, and Email below the profile photo. Tools replaces Software in the navigation; `software.html` redirects to `tools.html`. Reader First is maintained in [its own repository](https://github.com/lsnnnnnnnn/reader-first), with installation instructions and bilingual examples. The downloadable archive mirrors that release. Notes navigation includes a version parameter so visitors reload the updated covers and dates.
 
 Replace the PDF at the same path when updating the CV. Publication statuses and current roles are maintained manually; the November 2026 refresh follows the supplied revised CV.
 
@@ -50,3 +52,4 @@ The November 14 update links Notes and Software from the homepage introduction a
 The November 16 Reader First revision adds the author-supplied *When AI stacks nouns* comic, created with Codex using [baoyu-comic](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-comic), and Figure 7 from Clark, Martin, and Mahowald, [arXiv:2610.29162v1](https://arxiv.org/abs/2610.29162v1). The paper figure is reproduced from the [original SVG](https://arxiv.org/html/2610.29162v1/summary_transfer_figure.svg) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Both files are stored in `assets/notes/reader-first/` and credited beside the images. The note includes English and Chinese revision comparisons; the per-note “All research notes” footer links have been removed.
 
 The November 16 structured-dependence note explores an XOR counterexample, forest-cover bounds, source cancellation, and a block-moment interface for COMET. Three analytical SVG figures and their reproducible NumPy/Matplotlib script are stored in `assets/notes/structured-dependence/`. Run `python assets/notes/structured-dependence/generate_figures.py` to redraw them before `quarto render`. The figures use exact formulas, not simulated results.
+
