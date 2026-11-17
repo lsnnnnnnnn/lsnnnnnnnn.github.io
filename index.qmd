@@ -19,7 +19,7 @@ format:
 :::
 
 ::: {.profile-bio}
-I recently completed my undergraduate studies in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
+I am an undergraduate student in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
 
 I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
 
@@ -31,7 +31,7 @@ Oh, and these are my [notes](blog/index.qmd){.intro-link .intro-notes} and [tool
 
 ## News
 
-- **[Nov. 2026]** I completed my [Signature Work showcase](projects.qmd#contextual-anomaly-detection) and graduated.
+- **[Nov. 2026]** I completed my [Signature Work showcase](projects.qmd#contextual-anomaly-detection).
 - **[Apr. 2026]** [COPF](https://arxiv.org/abs/2606.00700) was accepted to **ICML 2026**.
 - **[Jul. 2025]** [DECAF-GAD](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
 
