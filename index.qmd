@@ -23,7 +23,7 @@ I recently completed my undergraduate studies in Applied Mathematics and Compute
 
 I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
 
-Oh, and these are my [notes](blog/index.qmd){.intro-link .intro-notes} and [tools](tools.qmd){.intro-link .intro-tools}. Make yourself at home.
+Oh, and these are my [notes](blog/index.qmd){.intro-link .intro-notes} and [tools](tools.qmd){.intro-link .intro-tools}. You might want to have a look.
 :::
 ::::
 

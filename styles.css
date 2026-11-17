@@ -37,6 +37,7 @@ p { margin: 0 0 10px; }
 ul { margin-bottom: 12px; }
 hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .home-page hr { display: none; }
+.home-page #news > h2 { margin-top: 36px; }
 
 .navbar {
   padding: 9px 0;

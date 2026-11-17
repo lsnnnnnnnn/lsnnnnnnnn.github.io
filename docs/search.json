@@ -161,18 +161,25 @@
     "text": "Skip to content\nA portfolio can look attractive on paper and still be difficult to build. As capital grows, larger orders compete for limited trading opportunities. An incomplete sale also leaves less cash for the next purchase.\nI built this tool to follow that process. It takes factor inputs or portfolio targets, replays Level-2 market data at each tested capital level, and produces a Chinese PDF report with the LaTeX source bundle. The report puts the capacity verdict and returns across capital levels first, then explains which orders could not finish and why."
   },
   {
+    "objectID": "tools/factor-capacity.html#from-a-factor-to-a-capacity-report",
+    "href": "tools/factor-capacity.html#from-a-factor-to-a-capacity-report",
+    "title": "L2-based factor capacity analysis",
+    "section": "From a factor to a capacity report",
+    "text": "From a factor to a capacity report\n\nSupply the factor signal and the portfolio and trading rules for the evaluation.\nSimulate the strategy at each tested initial-capital level, tracking orders, cash, and holdings as trades fill.\nCompare the report’s completion checks, execution diagnostics, and returns across capital levels. Inspect partial fills and unfinished orders to see where execution becomes constrained."
+  },
+  {
     "objectID": "tools/factor-capacity.html#what-the-replay-follows",
     "href": "tools/factor-capacity.html#what-the-replay-follows",
     "title": "L2-based factor capacity analysis",
     "section": "What the replay follows",
-    "text": "What the replay follows\nEach account carries its simulated cash and holdings through the evaluation period. Orders face available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.\nAn optional market-impact cost scenario enters the cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account."
+    "text": "What the replay follows\nEach account carries its simulated cash and holdings through the evaluation period. Orders face available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.\nA larger account changes order sizes, which can change fills, available cash, and subsequent holdings. Repeating the simulation at each capital level captures these changes in the portfolio’s path.\nAn optional market-impact cost scenario enters the cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account."
   },
   {
     "objectID": "tools/factor-capacity.html#what-counts-as-capacity",
     "href": "tools/factor-capacity.html#what-counts-as-capacity",
     "title": "L2-based factor capacity analysis",
     "section": "What counts as capacity",
-    "text": "What counts as capacity\nThe strict criterion requires every original legal order to finish completely on its planned day. Buying 9,900 of 10,000 planned shares leaves that order incomplete. Any permitted extension is recorded separately and does not rewrite the original day’s outcome.\nCapacity is the largest tested capital level that passes this criterion over the evaluation period. Returns and costs are reported alongside it. Unresolved evidence prevents a pass. Targets rounded to zero and positions that were never established are disclosed separately, so an empty plan cannot stand in for a portfolio that was successfully built."
+    "text": "What counts as capacity\nThe strict criterion requires every original legal order to finish completely on its planned day. Buying 9,900 of 10,000 planned shares leaves that order incomplete. Any permitted extension is recorded separately and does not rewrite the original day’s outcome.\nCapacity is the largest tested capital level that passes this criterion over the evaluation period. Returns and costs are reported alongside it. Unresolved evidence prevents a pass. Targets rounded to zero and positions that were never established are disclosed separately, so an empty plan cannot stand in for a portfolio that was successfully built.\nThe estimate is tied to the specified factor strategy, market-data period, execution protocol, and set of tested capital levels. It describes what those settings allowed the simulated account to complete.\nThe desired portfolio can differ from the portfolio the replay actually builds. The report places execution diagnostics beside the capacity estimate so that a user can inspect which constraints bind as capital increases."
   },
   {
     "objectID": "tools/factor-capacity.html#reports",
