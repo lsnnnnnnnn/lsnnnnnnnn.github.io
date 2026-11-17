@@ -115,7 +115,6 @@ ul.task-list li input[type="checkbox"] {
 <a class="skip-link" href="#quarto-document-content">Skip to content</a>
 <script>document.body.prepend(document.currentScript.previousElementSibling);</script>
 
-
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Tools</h1>
@@ -155,28 +154,25 @@ ul.task-list li input[type="checkbox"] {
 <section id="l2-factor-capacity" class="level2">
 <h2 data-anchor-id="l2-factor-capacity">L2-based factor capacity analysis</h2>
 <div class="entry-meta">
-<p>Developed by Sheng’en Li · Open-source release in preparation</p>
+<p>Developed by Sheng’en Li · Core engine release in preparation</p>
 </div>
-<p>I developed a factor-capacity evaluation tool that takes a factor signal and generates a <strong>PDF report comparing execution feasibility across initial capital levels</strong>. The engine uses Level-2 market data to simulate how a strategy’s planned trades translate into simulated holdings under trading constraints.</p>
-<section id="from-a-factor-to-a-capacity-report" class="level3">
-<h3 data-anchor-id="from-a-factor-to-a-capacity-report">From a factor to a capacity report</h3>
-<ol type="1">
-<li><strong>Specify the strategy.</strong> Supply the factor signal and the portfolio and trading rules used for the evaluation.</li>
-<li><strong>Simulate each capital level.</strong> Track orders, cash, and holdings under a volume-participation limit, available-cash and sellable-position constraints, trading suspensions, and price limits.</li>
-<li><strong>Inspect the report.</strong> Compare the tested capital levels using completion checks, execution diagnostics, and return differences. Partial fills and unfinished orders help identify where execution becomes constrained.</li>
-</ol>
+<p>A portfolio can look attractive on paper and still be difficult to build. As capital grows, larger orders compete for limited trading opportunities. An incomplete sale also leaves less cash for the next purchase.</p>
+<p>I built this tool to follow that process. It takes factor inputs or portfolio targets, replays Level-2 market data at each tested capital level, and produces a Chinese PDF report with the LaTeX source bundle. The report puts the capacity verdict and returns across capital levels first, then explains which orders could not finish and why.</p>
+<section id="what-the-replay-follows" class="level3">
+<h3 data-anchor-id="what-the-replay-follows">What the replay follows</h3>
+<p>Each account carries its simulated cash and holdings through the evaluation period. Orders face available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.</p>
+<p>An optional market-impact cost scenario enters the cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account.</p>
 </section>
-<section id="what-the-capacity-estimate-means" class="level3">
-<h3 data-anchor-id="what-the-capacity-estimate-means">What the capacity estimate means</h3>
-<p>The current evaluation criterion combines a <strong>10% participation limit</strong> with <strong>100% same-day completion of planned trades</strong>. The reported execution capacity is the largest tested capital level that satisfies this criterion over the evaluation period.</p>
-<p>This definition makes the result interpretable: it is tied to a specified factor strategy, market-data period, execution protocol, and set of tested capital levels. A larger account changes order sizes, which can change fills, available cash, and subsequent holdings. Repeating the simulation at each capital level captures these changes in the portfolio’s path.</p>
-<p>My focus is the connection between the desired portfolio and the portfolio that can actually be built. The report makes that connection visible alongside the capacity estimate, so a user can inspect which constraints bind as capital increases.</p>
+<section id="what-counts-as-capacity" class="level3">
+<h3 data-anchor-id="what-counts-as-capacity">What counts as capacity</h3>
+<p>The strict criterion requires every original legal order to finish completely on its planned day. Buying 9,900 of 10,000 planned shares leaves that order incomplete. Any permitted extension is recorded separately and does not rewrite the original day’s outcome.</p>
+<p>Capacity is the largest <strong>tested</strong> capital level that passes this criterion over the evaluation period. Returns and costs are reported alongside it. Unresolved evidence prevents a pass. Targets rounded to zero and positions that were never established are disclosed separately, so an empty plan cannot stand in for a portfolio that was successfully built.</p>
 </section>
 <section id="availability" class="level3">
 <h3 data-anchor-id="availability">Availability</h3>
-<p>The tool currently runs on company Level-2 data. I am preparing the core engine for open-source release; the public data interface is still being worked out. Code and example-report links will be added when the release is available.</p>
+<p>The engine currently uses private Level-2 data. Public reports are available in the <a href="https://github.com/lsnnnnnnnn/factor_liquidity">report repository</a>; release of the core engine and its public data interface is in preparation.</p>
 <div class="tool-links">
-<p><a href="./blog/2026-11-11-factor-capacity.html">When Does a Factor Become Too Large to Trade?</a> examines the reasoning behind this execution-capacity criterion.</p>
+<p><a href="./blog/2026-11-11-factor-capacity.html">Can we choose a trade without knowing its impact?</a></p>
 </div>
 
 

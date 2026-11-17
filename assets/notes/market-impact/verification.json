@@ -1,0 +1,86 @@
+{
+  "kind": "analytical construction; no market observations or account runs",
+  "schedules": {
+    "A": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "B": [
+      1,
+      3,
+      4,
+      6
+    ],
+    "shares_per_child": 2500,
+    "total_shares": 10000
+  },
+  "cost_definition": "half of x^T K_z x, x_i=1/4 at each scheduled slot; K_ij=z^abs(i-j)",
+  "difference_power_coefficients": [
+    "0",
+    "1/16",
+    "-1/8",
+    "-1/16",
+    "1/8"
+  ],
+  "exact_fraction_checks": {
+    "0": "0",
+    "1/4": "15/2048",
+    "1/2": "0",
+    "3/4": "-21/2048",
+    "1": "0"
+  },
+  "exact_method": "Bernstein convex-hull enclosure, recursive midpoint de Casteljau subdivision, Fraction arithmetic",
+  "absolute_extremum_tolerance": "1/10000000000000",
+  "maximum": {
+    "lower": {
+      "fraction": "277845499180472816145/37778931862957161709568",
+      "decimal": 0.007354509126630568
+    },
+    "upper": {
+      "fraction": "138922749590516482819/18889465931478580854784",
+      "decimal": 0.007354509126645395
+    },
+    "best_evaluated_z": {
+      "fraction": "61485/262144",
+      "decimal": 0.23454666137695312
+    },
+    "subdivisions": 18
+  },
+  "minimum": {
+    "lower": {
+      "fraction": "-52238785144794465898923/4835703278458516698824704",
+      "decimal": -0.010802727573774273
+    },
+    "upper": {
+      "fraction": "-104477570289539803353375/9671406556917033397649408",
+      "decimal": -0.010802727573769192
+    },
+    "best_evaluated_z": {
+      "fraction": "842663/1048576",
+      "decimal": 0.8036260604858398
+    },
+    "subdivisions": 20
+  },
+  "sensitivity_assumptions_bp": {
+    "baseline_A_minus_B": -0.5,
+    "combined_residual_radius": 0.1,
+    "amplitude_range": [
+      0,
+      100
+    ]
+  },
+  "strict_advantage_threshold_bp": {
+    "lower": {
+      "fraction": "37778931862957161709568/694613747952582414095",
+      "decimal": 54.388402150566314
+    },
+    "upper": {
+      "fraction": "75557863725914323419136/1389227495902364080725",
+      "decimal": 54.388402150675965
+    }
+  },
+  "upper_bound": "-0.4 + M * max d(z)",
+  "lower_bound": "-0.6 + M * min d(z)"
+}

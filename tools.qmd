@@ -27,29 +27,29 @@ It asks an AI editor to make actions, conditions, and references clear as the re
 ## L2-based factor capacity analysis {#l2-factor-capacity}
 
 ::: {.entry-meta}
-Developed by Sheng’en Li · Open-source release in preparation
+Developed by Sheng’en Li · Core engine release in preparation
 :::
 
-I developed a factor-capacity evaluation tool that takes a factor signal and generates a **PDF report comparing execution feasibility across initial capital levels**. The engine uses Level-2 market data to simulate how a strategy's planned trades translate into simulated holdings under trading constraints.
+A portfolio can look attractive on paper and still be difficult to build. As capital grows, larger orders compete for limited trading opportunities. An incomplete sale also leaves less cash for the next purchase.
 
-### From a factor to a capacity report
+I built this tool to follow that process. It takes factor inputs or portfolio targets, replays Level-2 market data at each tested capital level, and produces a Chinese PDF report with the LaTeX source bundle. The report puts the capacity verdict and returns across capital levels first, then explains which orders could not finish and why.
 
-1. **Specify the strategy.** Supply the factor signal and the portfolio and trading rules used for the evaluation.
-2. **Simulate each capital level.** Track orders, cash, and holdings under a volume-participation limit, available-cash and sellable-position constraints, trading suspensions, and price limits.
-3. **Inspect the report.** Compare the tested capital levels using completion checks, execution diagnostics, and return differences. Partial fills and unfinished orders help identify where execution becomes constrained.
+### What the replay follows
 
-### What the capacity estimate means
+Each account carries its simulated cash and holdings through the evaluation period. Orders face available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.
 
-The current evaluation criterion combines a **10% participation limit** with **100% same-day completion of planned trades**. The reported execution capacity is the largest tested capital level that satisfies this criterion over the evaluation period.
+An optional market-impact cost scenario enters the cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account.
 
-This definition makes the result interpretable: it is tied to a specified factor strategy, market-data period, execution protocol, and set of tested capital levels. A larger account changes order sizes, which can change fills, available cash, and subsequent holdings. Repeating the simulation at each capital level captures these changes in the portfolio's path.
+### What counts as capacity
 
-My focus is the connection between the desired portfolio and the portfolio that can actually be built. The report makes that connection visible alongside the capacity estimate, so a user can inspect which constraints bind as capital increases.
+The strict criterion requires every original legal order to finish completely on its planned day. Buying 9,900 of 10,000 planned shares leaves that order incomplete. Any permitted extension is recorded separately and does not rewrite the original day's outcome.
+
+Capacity is the largest **tested** capital level that passes this criterion over the evaluation period. Returns and costs are reported alongside it. Unresolved evidence prevents a pass. Targets rounded to zero and positions that were never established are disclosed separately, so an empty plan cannot stand in for a portfolio that was successfully built.
 
 ### Availability
 
-The tool currently runs on company Level-2 data. I am preparing the core engine for open-source release; the public data interface is still being worked out. Code and example-report links will be added when the release is available.
+The engine currently uses private Level-2 data. Public reports are available in the [report repository](https://github.com/lsnnnnnnnn/factor_liquidity); release of the core engine and its public data interface is in preparation.
 
 ::: {.tool-links}
-[When Does a Factor Become Too Large to Trade?](blog/2026-11-11-factor-capacity.qmd) examines the reasoning behind this execution-capacity criterion.
+[Can we choose a trade without knowing its impact?](blog/2026-11-11-factor-capacity.qmd)
 :::
