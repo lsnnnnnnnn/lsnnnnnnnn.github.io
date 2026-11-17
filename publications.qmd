@@ -23,7 +23,7 @@ ECAI 2025 · Co-first author
 [paper](https://arxiv.org/abs/2508.10785)
 :::
 
-## Submitted Manuscript
+## Selected Manuscripts
 
 ::: {.publication}
 ### Auditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference
@@ -33,13 +33,18 @@ Submitted to *Artificial Intelligence in Medicine* · Co-first author
 [Research overview](projects.qmd#audit-refine)
 :::
 
-## Manuscripts in Preparation
-
 ::: {.publication}
-### COMET: Counterfactual Moment Auditing under Weak Overlap and Dependent Feedback
+### COMET: Counterfactual Moment Auditing with Structured Dependence and Contrast Information
 
 **Sheng’en Li**\* et al.  
-In preparation · First author
+First author  
+[Research overview](projects.qmd#comet)
+:::
+
+::: {.publication}
+### DriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields
+
+Submitted to CVPR 2027 · Co-first author
 :::
 
 ## Signature Work
@@ -52,36 +57,3 @@ Duke Kunshan University · 2026 · Undergraduate Signature Work
 [Research overview](projects.qmd#contextual-anomaly-detection)
 :::
 
-## Under Review
-
-Co-first author on each manuscript below.
-
-::: {.publication}
-### Pambda: Privacy Alignment with Calibration
-
-Under review at KDD 2027 · Co-first author
-:::
-
-::: {.publication}
-### LambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding
-
-Under review at KDD 2027 · Co-first author
-:::
-
-::: {.publication}
-### MHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization
-
-Under review at KDD 2027 · Co-first author
-:::
-
-::: {.publication}
-### DriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields
-
-Under review at KDD 2027 · Co-first author
-:::
-
-::: {.publication}
-### FToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction
-
-Under review at KDD 2027 · Co-first author
-:::

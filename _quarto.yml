@@ -13,6 +13,9 @@ project:
     - assets/skills/reader-first.zip
     - assets/notes/reader-first/when-ai-stacks-nouns.png
     - assets/notes/reader-first/length-penalty-figure7.svg
+    - assets/notes/structured-dependence/cover-costs.svg
+    - assets/notes/structured-dependence/source-cancellation.svg
+    - assets/notes/structured-dependence/xor-common-bit.svg
     - styles.css
     - .nojekyll
 
@@ -35,19 +38,18 @@ website:
       - text: Publications
         href: publications.qmd
       - text: Notes
-        href: /blog/index.html?v=20261117-tools
+        href: blog/index.qmd
       - text: Tools
         href: tools.qmd
   page-footer:
     left: "© 2026 Sheng’en Li"
-    right: "[More about me](/about.qmd) · Updated November 2026"
 
 format:
   html:
     theme: default
     include-in-header:
       text: |
-        <link rel="stylesheet" href="/styles.css?v=20261117-tools">
+        <link rel="stylesheet" href="/styles.css?v=20261117-refresh">
     toc: false
     pagetitle: "{{< meta title >}}"
     anchor-sections: false

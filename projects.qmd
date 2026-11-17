@@ -23,11 +23,25 @@ Advised by Prof. Dongmian Zou and Prof. Fan Wei
 
 Online recommenders change the graph and feedback they later learn from, so fairness measured on logged outcomes can drift after deployment. I developed **COPF**, a decision-layer framework that combines explicit exploration and propensity logging with graph-aware doubly robust estimation. An online multicalibration auditor and primal–dual controller then monitor and adjust group-level exposure disparities.
 
-Evaluations on two Temporal Graph Benchmark streams and a controlled synthetic stream show reduced worst-case disparity spikes with modest effects on ranking utility. I am extending this work in **COMET** to study counterfactual moments under weak overlap and dependent feedback.
+Evaluations on two Temporal Graph Benchmark streams and a controlled synthetic stream show reduced worst-case disparity spikes with modest effects on ranking utility.
 
 ::: {.research-links}
 [Paper · ICML 2026](https://arxiv.org/abs/2606.00700) · [Code](https://github.com/lsnnnnnnnn/COPF) · First author
 :::
+:::
+::::
+
+## COMET: Counterfactual Moment Auditing {#comet}
+
+:::: {.research-detail .research-detail--text}
+::: {.research-copy}
+::: {.entry-meta}
+**Working project** · Counterfactual inference and dependent data
+:::
+
+A counterfactual audit can return a valid confidence interval and still leave a decision unresolved. I am developing **COMET** to study what an audit can establish when relevant outcomes are rarely observed, observations are dependent, and outcomes can have heavy tails. The framework expresses policy and subgroup comparisons as signed moments, with explicit assumptions about exposure probabilities, dependence, and the bias introduced by clipping extreme observations.
+
+Current work examines how information about shared random sources can tighten uncertainty bounds. A separate analysis asks when a bound on the difference between potential outcomes permits sharper inference than bounds on their levels alone. I use finite-sample theory and controlled synthetic experiments to test when these additional assumptions yield intervals narrow enough to detect a violation or support a policy comparison.
 :::
 ::::
 
@@ -80,7 +94,7 @@ Submitted to *Artificial Intelligence in Medicine* · Co-first author
 
 :::: {.research-detail}
 ::: {.research-visual}
-<a class="research-thumb" href="assets/research/history-alarm-controls.webp" target="_blank" aria-label="View the time-series experiment design figure"><img src="assets/research/history-alarm-controls.webp" alt="Two controlled experiments isolate the contribution of temporal history and the effect of alarm rules." width="1200" height="690" loading="lazy"></a>
+<a class="research-thumb" href="assets/research/history-alarm-controls.webp?v=20261117" target="_blank" aria-label="View the time-series experiment design figure"><img src="assets/research/history-alarm-controls.webp?v=20261117" alt="Two controlled experiments isolate the contribution of temporal history and the effect of alarm rules." width="1354" height="928" loading="lazy"></a>
 
 Signature Work · Experimental design
 :::
@@ -95,7 +109,7 @@ My Signature Work separates three questions in anomaly detection: **what tempora
 I compare thresholding and accumulation on identical scores, tracking event recall, detection delay, and warning burden. CUSUM increased four-block recall by **9.6 and 2.9 percentage points** in two simulated settings. Evaluation across **119 real series from five sources** found no consistent detection gain from accumulation, highlighting the need to evaluate recall alongside the frequency of warnings during normal periods.
 
 ::: {.research-links}
-[Research note: from anomaly scores to useful alarms](blog/2026-11-11-alarm-quality.qmd)
+[Research note: How to Miss Two Events Without Hurting Your Score](blog/2026-11-11-alarm-quality.qmd)
 :::
 :::
 ::::

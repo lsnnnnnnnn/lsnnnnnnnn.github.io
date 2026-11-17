@@ -19,11 +19,11 @@ format:
 :::
 
 ::: {.profile-bio}
-I am an undergraduate in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
+I recently completed my undergraduate studies in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
 
 I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
 
-My [research notes](/blog/index.html?v=20261117-tools) start with things I find hard to leave alone. A detector can miss two events without losing a point; a thousand comparisons can still amount to one coin flip. I write about these puzzles, and put some of the things I build along the way in [tools](tools.qmd), including Reader First for technical writing that takes less work to follow.
+Oh, and these are my [notes](blog/index.qmd){.intro-link .intro-notes} and [tools](tools.qmd){.intro-link .intro-tools}. Make yourself at home.
 :::
 ::::
 
@@ -31,10 +31,9 @@ My [research notes](/blog/index.html?v=20261117-tools) start with things I find 
 
 ## News
 
-- **[Nov. 20, 2026 · Upcoming]** I will present my Signature Work at Duke Kunshan University, marking the completion of my undergraduate studies.
-- **[Oct. 2026]** I completed my [L2-based factor capacity analysis tool](tools.qmd#l2-factor-capacity).
-- **[2026]** [COPF](https://arxiv.org/abs/2606.00700) was accepted to **ICML 2026**.
-- **[2025]** [DECAF-GAD](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
+- **[Nov. 2026]** I completed my [Signature Work showcase](projects.qmd#contextual-anomaly-detection) and graduated.
+- **[Apr. 2026]** [COPF](https://arxiv.org/abs/2606.00700) was accepted to **ICML 2026**.
+- **[Jul. 2025]** [DECAF-GAD](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
 
 ---
 
@@ -56,28 +55,17 @@ ECAI 2025 · Co-first author
 [paper](https://arxiv.org/abs/2508.10785)
 :::
 
-\* Equal contribution. [Full publication list](publications.qmd).
+::: {.publication-note}
+\* Equal contribution.
+:::
+
+::: {.publication-index}
+[Full publication list →](publications.qmd)
+:::
 
 ---
 
-## Education
-
-::: {.simple-row}
-::: {}
-**Duke Kunshan University & Duke University**  
-B.S. in Applied Mathematics and Computer Science, dual-degree program  
-GPA: 3.80/4.00
-:::
-::: {.row-date}
-Expected Dec. 2026
-:::
-:::
-
-Dean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar (2024, 2025).
-
----
-
-## Research Experience
+## Research Projects
 
 :::: {.research-row}
 <a class="research-thumb" href="projects.qmd#counterfactual-learning" aria-label="Read about Counterfactual Learning for Adaptive Decision Systems"><img src="assets/research/copf-framework.webp" alt="COPF protocol linking policy and logging, estimation, auditing, and online control." width="1400" height="756" loading="lazy"></a>
@@ -89,7 +77,7 @@ Dean’s List with Distinction (Fall 2023, Spring 2024); Summer Research Scholar
 Duke Kunshan University / Duke University · <span class="research-date">Jan. 2025 – Present</span>
 :::
 ::: {.research-summary}
-Counterfactual estimation, online auditing, and fairness control for evolving graphs; COPF and its COMET extension.
+Counterfactual estimation, online auditing, and fairness control for link recommendation on evolving graphs.
 :::
 :::
 ::::
@@ -125,7 +113,7 @@ Auditing scaffold adequacy and local identifiability, then testing targeted refi
 ::::
 
 :::: {.research-row}
-<a class="research-thumb" href="projects.qmd#contextual-anomaly-detection" aria-label="Read about Contextual Information and Alarm Utility in Time-Series Anomaly Detection"><img src="assets/research/history-alarm-controls.webp" alt="Controlled experiments for temporal context and alarm utility." width="1200" height="690" loading="lazy"></a>
+<a class="research-thumb" href="projects.qmd#contextual-anomaly-detection" aria-label="Read about Contextual Information and Alarm Utility in Time-Series Anomaly Detection"><img src="assets/research/history-alarm-controls.webp?v=20261117" alt="Controlled experiments for temporal context and alarm utility." width="1354" height="928" loading="lazy"></a>
 
 ::: {}
 ### [Contextual Information and Alarm Utility in Time-Series Anomaly Detection](projects.qmd#contextual-anomaly-detection)

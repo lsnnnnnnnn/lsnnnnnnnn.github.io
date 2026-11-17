@@ -1,6 +1,6 @@
 ---
 title: Tools
-description: "Reader First for clearer technical writing, and an L2-based engine for testing factor capacity."
+description: "Some things I made. You might find them useful, too."
 toc: false
 aliases: [software.html]
 format:
@@ -8,48 +8,15 @@ format:
     body-classes: tools-page
 ---
 
-A few tools that grew out of questions in my research and everyday work.
-
-## Reader First {#reader-first}
-
-::: {.entry-meta}
-Writing skill · English and Chinese · Available on GitHub
-:::
-
-I can understand every word in an AI-generated sentence and still need a second pass to work out what it says. Reader First is the editing skill I built for those sentences.
-
-It asks an AI editor to make actions, conditions, and references clear as the reader encounters them. A stack of nouns may need a verb. A vague "this" may need the name of the thing it refers to. The aim is to make the explanation easier to follow while preserving the facts and technical meaning.
-
-::: {.tool-links}
-[GitHub and installation](https://github.com/lsnnnnnnnn/reader-first) · [The note behind the skill](blog/2026-11-14-reader-first.qmd)
-:::
-
-## L2-based factor capacity analysis {#l2-factor-capacity}
-
-::: {.entry-meta}
-Developed by Sheng’en Li · Core engine release in preparation
-:::
-
-A portfolio can look attractive on paper and still be difficult to build. As capital grows, larger orders compete for limited trading opportunities. An incomplete sale also leaves less cash for the next purchase.
-
-I built this tool to follow that process. It takes factor inputs or portfolio targets, replays Level-2 market data at each tested capital level, and produces a Chinese PDF report with the LaTeX source bundle. The report puts the capacity verdict and returns across capital levels first, then explains which orders could not finish and why.
-
-### What the replay follows
-
-Each account carries its simulated cash and holdings through the evaluation period. Orders face available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.
-
-An optional market-impact cost scenario enters the cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account.
-
-### What counts as capacity
-
-The strict criterion requires every original legal order to finish completely on its planned day. Buying 9,900 of 10,000 planned shares leaves that order incomplete. Any permitted extension is recorded separately and does not rewrite the original day's outcome.
-
-Capacity is the largest **tested** capital level that passes this criterion over the evaluation period. Returns and costs are reported alongside it. Unresolved evidence prevents a pass. Targets rounded to zero and positions that were never established are disclosed separately, so an empty plan cannot stand in for a portfolio that was successfully built.
-
-### Availability
-
-The engine currently uses private Level-2 data. Public reports are available in the [report repository](https://github.com/lsnnnnnnnn/factor_liquidity); release of the core engine and its public data interface is in preparation.
-
-::: {.tool-links}
-[Can we choose a trade without knowing its impact?](blog/2026-11-11-factor-capacity.qmd)
-:::
+```{=html}
+<div class="tool-grid">
+  <a class="tool-card" id="reader-first" href="tools/reader-first.html" target="_self">
+    <span class="tool-card-title">Reader First</span>
+    <span class="tool-card-description">An editing skill for clearer Chinese and English writing.</span>
+  </a>
+  <a class="tool-card" id="l2-factor-capacity" href="tools/factor-capacity.html" target="_self">
+    <span class="tool-card-title">L2 factor capacity</span>
+    <span class="tool-card-description">Test factor capacity by replaying orders on Level-2 market data.</span>
+  </a>
+</div>
+```

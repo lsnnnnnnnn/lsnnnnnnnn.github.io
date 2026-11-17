@@ -73,12 +73,36 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .profile-bio p:last-child { margin-bottom: 0; }
 .profile-links { margin-top: 10px; font-size: 13px; text-align: center; white-space: nowrap; }
 .profile-links p { margin: 0; }
+.profile-bio .intro-link {
+  display: inline-block;
+  padding: 0 3px;
+  color: #435d73;
+  font-size: 1.28em;
+  font-style: italic;
+  line-height: 1.25;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  border-radius: 4px;
+}
+.profile-bio .intro-notes { background: #f0eafa; transform: rotate(-2deg); }
+.profile-bio .intro-tools { background: #e8f3ed; transform: rotate(2deg); }
+.profile-bio .intro-link:hover { color: #17496f; text-decoration-thickness: 2px; }
 
 .publication { margin-bottom: 21px; }
 .publication h3 a { color: var(--text); font-weight: inherit; text-decoration: none; }
 .publication h3 a:hover { color: var(--link); text-decoration: underline; }
 .publication p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
 .publication strong { color: var(--text); }
+.publication-note { color: var(--muted); font-size: 12.5px; }
+.publication-index { margin: 12px 0 22px; }
+.publication-index a {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  font: 500 14px/1.5 var(--heading-font);
+  text-decoration: none;
+}
+.publication-index p { margin: 0; }
 
 .simple-row { display: flex; justify-content: space-between; gap: 24px; margin-bottom: 12px; }
 .simple-row p { margin: 0; }
@@ -96,6 +120,7 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .research-row { margin: 0; padding: 10px 0 16px; align-items: center; }
 .research-row:last-of-type { margin-bottom: 3px; }
 .research-detail { grid-template-columns: 160px minmax(0, 1fr); }
+.research-detail.research-detail--text { grid-template-columns: minmax(0, 1fr); }
 .research-row > p, .research-summary p { margin: 0; }
 .research-thumb {
   display: flex;
@@ -129,6 +154,28 @@ hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); opacity: 1; }
 .tools-page h2 { margin-top: 30px; }
 .tools-page h3 { margin-top: 22px; }
 .tool-links { margin-top: 12px; font-size: 14px; }
+.tool-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  margin: 24px 0 12px;
+}
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 0;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--text);
+  background: #fff;
+  text-decoration: none;
+}
+.tool-card:hover { color: var(--text); border-color: #8fa7b9; background: #fcfdfe; }
+.tool-card-title { font: 600 17px/1.4 var(--heading-font); }
+.tool-card-description { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.tool-back { margin-bottom: 20px; font-size: 13px; }
 .related-reading { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--line); }
 .research-note #title-block-header { margin-bottom: 24px; }
 .research-note h1.title { font-size: 30px; line-height: 1.25; }

@@ -1,0 +1,37 @@
+---
+title: L2-based factor capacity analysis
+description: "Test factor capacity by following orders, cash, and holdings through a market replay."
+toc: false
+format:
+  html:
+    body-classes: tools-page tool-detail
+---
+
+::: {.tool-back}
+[← All tools](../tools.qmd)
+:::
+
+
+A portfolio can look attractive on paper and still be difficult to build. As capital grows, larger orders compete for limited trading opportunities. An incomplete sale also leaves less cash for the next purchase.
+
+I built this tool to follow that process. It takes factor inputs or portfolio targets, replays Level-2 market data at each tested capital level, and produces a Chinese PDF report with the LaTeX source bundle. The report puts the capacity verdict and returns across capital levels first, then explains which orders could not finish and why.
+
+## What the replay follows
+
+Each account carries its simulated cash and holdings through the evaluation period. Orders face available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.
+
+An optional market-impact cost scenario enters the cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account.
+
+## What counts as capacity
+
+The strict criterion requires every original legal order to finish completely on its planned day. Buying 9,900 of 10,000 planned shares leaves that order incomplete. Any permitted extension is recorded separately and does not rewrite the original day's outcome.
+
+Capacity is the largest **tested** capital level that passes this criterion over the evaluation period. Returns and costs are reported alongside it. Unresolved evidence prevents a pass. Targets rounded to zero and positions that were never established are disclosed separately, so an empty plan cannot stand in for a portfolio that was successfully built.
+
+## Reports
+
+Public reports are available in the [report repository](https://github.com/lsnnnnnnnn/factor_liquidity). The engine uses private Level-2 data.
+
+::: {.tool-links}
+[Can we choose a trade without knowing its impact?](../blog/2026-11-11-factor-capacity.qmd)
+:::

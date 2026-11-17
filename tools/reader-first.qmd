@@ -1,0 +1,21 @@
+---
+title: Reader First
+description: "An editing skill for clearer explanations in Chinese and English."
+toc: false
+format:
+  html:
+    body-classes: tools-page tool-detail
+---
+
+::: {.tool-back}
+[← All tools](../tools.qmd)
+:::
+
+
+I can understand every word in an AI-generated sentence and still need a second pass to work out what it says. Reader First is the editing skill I built for those sentences.
+
+It asks an AI editor to make actions, conditions, and references clear as the reader encounters them. A stack of nouns may need a verb. A vague "this" may need the name of the thing it refers to. The aim is to make the explanation easier to follow while preserving the facts and technical meaning.
+
+::: {.tool-links}
+[GitHub and installation](https://github.com/lsnnnnnnnn/reader-first) · [The note behind the skill](../blog/2026-11-14-reader-first.qmd)
+:::

@@ -53,7 +53,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="stylesheet" href="./styles.css?v=20261117-tools">
+<link rel="stylesheet" href="./styles.css?v=20261117-refresh">
 
 
 <meta property="og:title" content="Research">
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html?v=20261117-tools"> 
+    <a class="nav-link" href="./blog/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
@@ -114,7 +114,6 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 <a class="skip-link" href="#quarto-document-content">Skip to content</a>
 <script>document.body.prepend(document.currentScript.previousElementSibling);</script>
-
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -151,10 +150,22 @@ ul.task-list li input[type="checkbox"] {
 Advised by Prof.&nbsp;Dongmian Zou and Prof.&nbsp;Fan Wei</p>
 </div>
 <p>Online recommenders change the graph and feedback they later learn from, so fairness measured on logged outcomes can drift after deployment. I developed <strong>COPF</strong>, a decision-layer framework that combines explicit exploration and propensity logging with graph-aware doubly robust estimation. An online multicalibration auditor and primal–dual controller then monitor and adjust group-level exposure disparities.</p>
-<p>Evaluations on two Temporal Graph Benchmark streams and a controlled synthetic stream show reduced worst-case disparity spikes with modest effects on ranking utility. I am extending this work in <strong>COMET</strong> to study counterfactual moments under weak overlap and dependent feedback.</p>
+<p>Evaluations on two Temporal Graph Benchmark streams and a controlled synthetic stream show reduced worst-case disparity spikes with modest effects on ranking utility.</p>
 <div class="research-links">
 <p><a href="https://arxiv.org/abs/2606.00700">Paper · ICML 2026</a> · <a href="https://github.com/lsnnnnnnnn/COPF">Code</a> · First author</p>
 </div>
+</div>
+</div>
+</section>
+<section id="comet" class="level2">
+<h2 data-anchor-id="comet">COMET: Counterfactual Moment Auditing</h2>
+<div class="research-detail research-detail--text">
+<div class="research-copy">
+<div class="entry-meta">
+<p><strong>Working project</strong> · Counterfactual inference and dependent data</p>
+</div>
+<p>A counterfactual audit can return a valid confidence interval and still leave a decision unresolved. I am developing <strong>COMET</strong> to study what an audit can establish when relevant outcomes are rarely observed, observations are dependent, and outcomes can have heavy tails. The framework expresses policy and subgroup comparisons as signed moments, with explicit assumptions about exposure probabilities, dependence, and the bias introduced by clipping extreme observations.</p>
+<p>Current work examines how information about shared random sources can tighten uncertainty bounds. A separate analysis asks when a bound on the difference between potential outcomes permits sharper inference than bounds on their levels alone. I use finite-sample theory and controlled synthetic experiments to test when these additional assumptions yield intervals narrow enough to detect a violation or support a policy comparison.</p>
 </div>
 </div>
 </section>
@@ -199,7 +210,7 @@ Advised by Prof.&nbsp;Shixin Xu and Prof.&nbsp;Dongmian Zou</p>
 <h2 data-anchor-id="contextual-anomaly-detection">Contextual Information and Alarm Utility in Time-Series Anomaly Detection</h2>
 <div class="research-detail">
 <div class="research-visual">
-<p><a class="research-thumb" href="assets/research/history-alarm-controls.webp" target="_blank" aria-label="View the time-series experiment design figure"><img src="assets/research/history-alarm-controls.webp" alt="Two controlled experiments isolate the contribution of temporal history and the effect of alarm rules." width="1200" height="690" loading="lazy"></a></p>
+<p><a class="research-thumb" href="assets/research/history-alarm-controls.webp?v=20261117" target="_blank" aria-label="View the time-series experiment design figure"><img src="assets/research/history-alarm-controls.webp?v=20261117" alt="Two controlled experiments isolate the contribution of temporal history and the effect of alarm rules." width="1354" height="928" loading="lazy"></a></p>
 <p>Signature Work · Experimental design</p>
 </div>
 <div class="research-copy">
@@ -210,7 +221,7 @@ Signature Work · Advised by Prof.&nbsp;Dongmian Zou</p>
 <p>My Signature Work separates three questions in anomaly detection: <strong>what temporal context adds, how much evidence a model captures, and when its scores produce useful warnings</strong>. I designed matched-block experiments that preserve observed data while changing history–current pairings, proving chance-level ranking for fixed current-only detectors. A covariance-based Markov model trained on normal data measures the value of contextual relationships.</p>
 <p>I compare thresholding and accumulation on identical scores, tracking event recall, detection delay, and warning burden. CUSUM increased four-block recall by <strong>9.6 and 2.9 percentage points</strong> in two simulated settings. Evaluation across <strong>119 real series from five sources</strong> found no consistent detection gain from accumulation, highlighting the need to evaluate recall alongside the frequency of warnings during normal periods.</p>
 <div class="research-links">
-<p><a href="./blog/2026-11-11-alarm-quality.html">Research note: from anomaly scores to useful alarms</a></p>
+<p><a href="./blog/2026-11-11-alarm-quality.html">Research note: How to Miss Two Events Without Hurting Your Score</a></p>
 </div>
 </div>
 </div>
@@ -647,8 +658,8 @@ Summer Research Scholar · Advised by Prof.&nbsp;Dongmian Zou</p>
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="./about.html">More about me</a> · Updated November 2026</p>
-</div>
+      &nbsp;
+    </div>
   </div>
 </footer>
 
