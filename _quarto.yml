@@ -49,7 +49,7 @@ format:
     theme: default
     include-in-header:
       text: |
-        <link rel="stylesheet" href="/styles.css?v=20261117-refresh">
+        <link rel="stylesheet" href="/styles.css?v=20261117-tool-cards">
     toc: false
     pagetitle: "{{< meta title >}}"
     anchor-sections: false

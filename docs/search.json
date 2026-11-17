@@ -151,7 +151,7 @@
     "href": "tools.html",
     "title": "Tools",
     "section": "",
-    "text": "Skip to content\n\n\n\n\n\n\n  \n    Reader First\n    An editing skill for clearer Chinese and English writing.\n  \n  \n    L2 factor capacity\n    Test factor capacity by replaying orders on Level-2 market data."
+    "text": "Skip to content\n\n\n\n\n\n\n  \n    Reader First\n    A writing skill that helps AI editors untangle dense sentences in Chinese and English. It makes actions and references clear while preserving the facts and technical meaning.\n  \n  \n    L2 factor capacity\n    Test how much capital a factor strategy can handle with Level-2 market replays. Follow orders, fills, cash, and holdings, then use the report to see which trades finish and where execution gets stuck."
   },
   {
     "objectID": "tools/factor-capacity.html",
