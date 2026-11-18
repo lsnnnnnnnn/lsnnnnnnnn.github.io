@@ -4,7 +4,7 @@ toc: false
 ---
 
 ::: {.research-intro}
-I study how learning systems behave under changing data, imperfect models, and deployment feedback. My work spans counterfactual fairness, numerical verification, scientific machine learning, sequential detection, and matrix visualization.
+I study how learning systems behave under changing data, imperfect models, and deployment feedback. My work spans counterfactual fairness, numerical verification, scientific machine learning, sequential detection, matrix visualization, and 3D reconstruction.
 :::
 
 ## Counterfactual Learning for Adaptive Decision Systems {#counterfactual-learning}
@@ -86,6 +86,29 @@ I built and validated analyte-specific **MIMIC-IV-ECG** pipelines and evaluated 
 
 ::: {.research-links}
 Submitted to *Artificial Intelligence in Medicine* · Co-first author
+:::
+:::
+::::
+
+## DriftNeRF: Sparse-View 3D Reconstruction {#driftnerf}
+
+:::: {.research-detail}
+::: {.research-visual}
+<a class="research-thumb" href="assets/research/driftnerf-framework.png" target="_blank" aria-label="View the DriftNeRF framework diagram"><img src="assets/research/driftnerf-framework.png" alt="DriftNeRF combines image rendering with a density consensus formed from nearby samples on different camera rays." width="1384" height="657" loading="lazy"></a>
+
+DriftNeRF · Cross-ray density consensus
+:::
+::: {.research-copy}
+::: {.entry-meta}
+**Duke Kunshan University** · Sparse-view 3D reconstruction
+:::
+
+With only a few training images, a NeRF can reproduce observed pixels while assigning inconsistent densities to nearby 3D points. I co-developed **DriftNeRF** to measure this disagreement across camera rays and turn it into a training signal. For each sample, it pools nearby density predictions from other rays into a consensus target, holds that target fixed during the update (**stop-gradient**), and adjusts the sample's density toward it alongside the standard rendering objective.
+
+The regularizer uses only sampled positions, ray identifiers, and predicted densities, requiring no pretrained model, external geometry, or additional images. Across **NeRF-Synthetic, DTU, and LLFF**, it improves three-view PSNR by **0.42–0.65 dB** over the strongest tested MLP-NeRF baseline. Experiments also show that the same loss transfers to a hash-grid representation.
+
+::: {.research-links}
+[Paper](https://arxiv.org/abs/2610.29106) · Submitted to CVPR 2027 · Co-first author
 :::
 :::
 ::::

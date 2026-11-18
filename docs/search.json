@@ -231,6 +231,13 @@
     "text": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\n\n\nAudit–Refine · Framework overview\n\n\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\nAdvised by Prof. Shixin Xu and Prof. Dongmian Zou\n\nI co-developed an Audit–Refine framework for testing whether a partial-physics model’s mechanistic scaffold is supported by data. In ECG-based electrolyte inference, a projective Plausibility Index measures waveform alignment, while tangent and Fisher-information diagnostics assess whether electrolyte concentrations can be recovered locally. The framework combines matched null models, held-out inverse error, residual structure, and robustness checks to decide which refinements to accept.\nI built and validated analyte-specific MIMIC-IV-ECG pipelines and evaluated reduced-rank potassium refinements. Four of seven electrolyte–scaffold hypotheses passed the audit; the accepted potassium spline reduced held-out MAE from 0.417 to 0.396 mEq/L, a 5.0% relative improvement.\n\nSubmitted to Artificial Intelligence in Medicine · Co-first author"
   },
   {
+    "objectID": "projects.html#driftnerf",
+    "href": "projects.html#driftnerf",
+    "title": "Research",
+    "section": "DriftNeRF: Sparse-View 3D Reconstruction",
+    "text": "DriftNeRF: Sparse-View 3D Reconstruction\n\n\n\nDriftNeRF · Cross-ray density consensus\n\n\n\nDuke Kunshan University · Sparse-view 3D reconstruction\n\nWith only a few training images, a NeRF can reproduce observed pixels while assigning inconsistent densities to nearby 3D points. I co-developed DriftNeRF to measure this disagreement across camera rays and turn it into a training signal. For each sample, it pools nearby density predictions from other rays into a consensus target, holds that target fixed during the update (stop-gradient), and adjusts the sample’s density toward it alongside the standard rendering objective.\nThe regularizer uses only sampled positions, ray identifiers, and predicted densities, requiring no pretrained model, external geometry, or additional images. Across NeRF-Synthetic, DTU, and LLFF, it improves three-view PSNR by 0.42–0.65 dB over the strongest tested MLP-NeRF baseline. Experiments also show that the same loss transfers to a hash-grid representation.\n\nPaper · Submitted to CVPR 2027 · Co-first author"
+  },
+  {
     "objectID": "projects.html#mheatmap",
     "href": "projects.html#mheatmap",
     "title": "Research",
@@ -333,7 +340,7 @@
     "href": "publications.html#selected-manuscripts",
     "title": "Publications",
     "section": "Selected Manuscripts",
-    "text": "Selected Manuscripts\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\nJuntang Wang, Sheng’en Li, Liming Zhu, Yihan Wang, Siyuan Cao, Hao Wu, Man Zhang, Shixin Xu, Dongmian Zou\nPreprint · 2026\npaper · Research overview\n\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\nSubmitted to Artificial Intelligence in Medicine · Co-first author\nResearch overview\n\n\nCOMET: Counterfactual Moment Auditing with Structured Dependence and Contrast Information\nSheng’en Li* et al.\nFirst author\nResearch overview\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nSubmitted to CVPR 2027 · Co-first author"
+    "text": "Selected Manuscripts\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\nJuntang Wang, Sheng’en Li, Liming Zhu, Yihan Wang, Siyuan Cao, Hao Wu, Man Zhang, Shixin Xu, Dongmian Zou\nPreprint · 2026\npaper · Research overview\n\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\nSubmitted to Artificial Intelligence in Medicine · Co-first author\nResearch overview\n\n\nCOMET: Counterfactual Moment Auditing with Structured Dependence and Contrast Information\nSheng’en Li* et al.\nFirst author\nResearch overview\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nJuntang Wang, Yihan Wang, Sheng’en Li, Hao Wu, Dongmian Zou, Shixin Xu\nSubmitted to CVPR 2027 · Co-first author\npaper · Research overview"
   },
   {
     "objectID": "publications.html#signature-work",

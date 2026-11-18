@@ -50,9 +50,11 @@ First author
 :::
 
 ::: {.publication}
-### DriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields
+### [DriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields](https://arxiv.org/abs/2610.29106)
 
-Submitted to CVPR 2027 · Co-first author
+Juntang Wang, Yihan Wang, **Sheng’en Li**, Hao Wu, Dongmian Zou, Shixin Xu  
+Submitted to CVPR 2027 · Co-first author  
+[paper](https://arxiv.org/abs/2610.29106) · [Research overview](projects.qmd#driftnerf)
 :::
 
 ## Signature Work
