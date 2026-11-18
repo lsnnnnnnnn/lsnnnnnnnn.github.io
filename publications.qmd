@@ -26,6 +26,14 @@ ECAI 2025 · Co-first author
 ## Selected Manuscripts
 
 ::: {.publication}
+### [MHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization](https://arxiv.org/abs/2610.29114)
+
+Juntang Wang, **Sheng’en Li**, Liming Zhu, Yihan Wang, Siyuan Cao, Hao Wu, Man Zhang, Shixin Xu, Dongmian Zou  
+Preprint · 2026  
+[paper](https://arxiv.org/abs/2610.29114) · [Research overview](projects.qmd#mheatmap)
+:::
+
+::: {.publication}
 ### Auditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference
 
 Juntang Wang\*, **Sheng’en Li**\*, Yihan Wang\*, Jiayu Gao\*, Duanduan Wang\*, Dongmian Zou, Shixin Xu  

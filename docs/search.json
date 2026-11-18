@@ -231,6 +231,13 @@
     "text": "Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference\n\n\n\nAudit–Refine · Framework overview\n\n\n\nDuke Kunshan University · Mar. 2026 – Aug. 2026\nAdvised by Prof. Shixin Xu and Prof. Dongmian Zou\n\nI co-developed an Audit–Refine framework for testing whether a partial-physics model’s mechanistic scaffold is supported by data. In ECG-based electrolyte inference, a projective Plausibility Index measures waveform alignment, while tangent and Fisher-information diagnostics assess whether electrolyte concentrations can be recovered locally. The framework combines matched null models, held-out inverse error, residual structure, and robustness checks to decide which refinements to accept.\nI built and validated analyte-specific MIMIC-IV-ECG pipelines and evaluated reduced-rank potassium refinements. Four of seven electrolyte–scaffold hypotheses passed the audit; the accepted potassium spline reduced held-out MAE from 0.417 to 0.396 mEq/L, a 5.0% relative improvement.\n\nSubmitted to Artificial Intelligence in Medicine · Co-first author"
   },
   {
+    "objectID": "projects.html#mheatmap",
+    "href": "projects.html#mheatmap",
+    "title": "Research",
+    "section": "MHeatmap: Reordering and Visualizing Rectangular Matrices",
+    "text": "MHeatmap: Reordering and Visualizing Rectangular Matrices\n\n\n\nMHeatmap · Workflow comparison\n\n\n\nDuke Kunshan University · Matrix visualization and spectral methods\n\nA matrix can contain clear groups and still look scattered when its rows and columns are in the wrong order. I co-developed MHeatmap to make these relationships easier to inspect. Its Two-Walk method combines direct row-to-column connections with similarities between rows that share columns, and between columns that share rows. A graph Laplacian then provides coordinated orders for both axes.\nThe Mosaic layout adds a separate visual cue: row heights and column widths reflect their totals, while color shows each observed entry. We derive a sparse computation that avoids forming dense similarity matrices and evaluate the ordering on 300 synthetic matrices and seven real datasets. The largest gains appear when shared neighborhoods capture the underlying structure.\n\nPaper · arXiv preprint"
+  },
+  {
     "objectID": "projects.html#contextual-anomaly-detection",
     "href": "projects.html#contextual-anomaly-detection",
     "title": "Research",
@@ -326,7 +333,7 @@
     "href": "publications.html#selected-manuscripts",
     "title": "Publications",
     "section": "Selected Manuscripts",
-    "text": "Selected Manuscripts\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\nSubmitted to Artificial Intelligence in Medicine · Co-first author\nResearch overview\n\n\nCOMET: Counterfactual Moment Auditing with Structured Dependence and Contrast Information\nSheng’en Li* et al.\nFirst author\nResearch overview\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nSubmitted to CVPR 2027 · Co-first author"
+    "text": "Selected Manuscripts\n\nMHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization\nJuntang Wang, Sheng’en Li, Liming Zhu, Yihan Wang, Siyuan Cao, Hao Wu, Man Zhang, Shixin Xu, Dongmian Zou\nPreprint · 2026\npaper · Research overview\n\n\nAuditing and Refining Partial-Physics Models: Scaffold Adequacy, Local Identifiability and ECG-Based Electrolyte Inference\nJuntang Wang*, Sheng’en Li*, Yihan Wang*, Jiayu Gao*, Duanduan Wang*, Dongmian Zou, Shixin Xu\nSubmitted to Artificial Intelligence in Medicine · Co-first author\nResearch overview\n\n\nCOMET: Counterfactual Moment Auditing with Structured Dependence and Contrast Information\nSheng’en Li* et al.\nFirst author\nResearch overview\n\n\nDriftNeRF: Cross-Ray Density Drifting for Sparse-View Neural Radiance Fields\nSubmitted to CVPR 2027 · Co-first author"
   },
   {
     "objectID": "publications.html#signature-work",

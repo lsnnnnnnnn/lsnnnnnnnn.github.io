@@ -4,7 +4,7 @@ toc: false
 ---
 
 ::: {.research-intro}
-I study how learning systems behave under changing data, imperfect models, and deployment feedback. My work spans counterfactual fairness, numerical verification, scientific machine learning, and sequential detection.
+I study how learning systems behave under changing data, imperfect models, and deployment feedback. My work spans counterfactual fairness, numerical verification, scientific machine learning, sequential detection, and matrix visualization.
 :::
 
 ## Counterfactual Learning for Adaptive Decision Systems {#counterfactual-learning}
@@ -86,6 +86,29 @@ I built and validated analyte-specific **MIMIC-IV-ECG** pipelines and evaluated 
 
 ::: {.research-links}
 Submitted to *Artificial Intelligence in Medicine* · Co-first author
+:::
+:::
+::::
+
+## MHeatmap: Reordering and Visualizing Rectangular Matrices {#mheatmap}
+
+:::: {.research-detail}
+::: {.research-visual}
+<a class="research-thumb" href="assets/research/mheatmap-workflow.png" target="_blank" aria-label="View the four MHeatmap workflow comparisons"><img src="assets/research/mheatmap-workflow.png" alt="Four views of the same author–topic matrix compare the original order, Two-Walk reordering, Mosaic layout, and their combination." width="2809" height="756" loading="lazy"></a>
+
+MHeatmap · Workflow comparison
+:::
+::: {.research-copy}
+::: {.entry-meta}
+**Duke Kunshan University** · Matrix visualization and spectral methods
+:::
+
+A matrix can contain clear groups and still look scattered when its rows and columns are in the wrong order. I co-developed **MHeatmap** to make these relationships easier to inspect. Its **Two-Walk** method combines direct row-to-column connections with similarities between rows that share columns, and between columns that share rows. A graph Laplacian then provides coordinated orders for both axes.
+
+The **Mosaic layout** adds a separate visual cue: row heights and column widths reflect their totals, while color shows each observed entry. We derive a sparse computation that avoids forming dense similarity matrices and evaluate the ordering on **300 synthetic matrices and seven real datasets**. The largest gains appear when shared neighborhoods capture the underlying structure.
+
+::: {.research-links}
+[Paper · arXiv preprint](https://arxiv.org/abs/2610.29114)
 :::
 :::
 ::::

@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="research-intro">
-<p>I study how learning systems behave under changing data, imperfect models, and deployment feedback. My work spans counterfactual fairness, numerical verification, scientific machine learning, and sequential detection.</p>
+<p>I study how learning systems behave under changing data, imperfect models, and deployment feedback. My work spans counterfactual fairness, numerical verification, scientific machine learning, sequential detection, and matrix visualization.</p>
 </div>
 <section id="counterfactual-learning" class="level2">
 <h2 data-anchor-id="counterfactual-learning">Counterfactual Learning for Adaptive Decision Systems</h2>
@@ -202,6 +202,25 @@ Advised by Prof.&nbsp;Shixin Xu and Prof.&nbsp;Dongmian Zou</p>
 <p>I built and validated analyte-specific <strong>MIMIC-IV-ECG</strong> pipelines and evaluated reduced-rank potassium refinements. Four of seven electrolyte–scaffold hypotheses passed the audit; the accepted potassium spline reduced held-out MAE from <strong>0.417 to 0.396 mEq/L</strong>, a <strong>5.0%</strong> relative improvement.</p>
 <div class="research-links">
 <p>Submitted to <em>Artificial Intelligence in Medicine</em> · Co-first author</p>
+</div>
+</div>
+</div>
+</section>
+<section id="mheatmap" class="level2">
+<h2 data-anchor-id="mheatmap">MHeatmap: Reordering and Visualizing Rectangular Matrices</h2>
+<div class="research-detail">
+<div class="research-visual">
+<p><a class="research-thumb" href="assets/research/mheatmap-workflow.png" target="_blank" aria-label="View the four MHeatmap workflow comparisons"><img src="assets/research/mheatmap-workflow.png" alt="Four views of the same author–topic matrix compare the original order, Two-Walk reordering, Mosaic layout, and their combination." width="2809" height="756" loading="lazy"></a></p>
+<p>MHeatmap · Workflow comparison</p>
+</div>
+<div class="research-copy">
+<div class="entry-meta">
+<p><strong>Duke Kunshan University</strong> · Matrix visualization and spectral methods</p>
+</div>
+<p>A matrix can contain clear groups and still look scattered when its rows and columns are in the wrong order. I co-developed <strong>MHeatmap</strong> to make these relationships easier to inspect. Its <strong>Two-Walk</strong> method combines direct row-to-column connections with similarities between rows that share columns, and between columns that share rows. A graph Laplacian then provides coordinated orders for both axes.</p>
+<p>The <strong>Mosaic layout</strong> adds a separate visual cue: row heights and column widths reflect their totals, while color shows each observed entry. We derive a sparse computation that avoids forming dense similarity matrices and evaluate the ordering on <strong>300 synthetic matrices and seven real datasets</strong>. The largest gains appear when shared neighborhoods capture the underlying structure.</p>
+<div class="research-links">
+<p><a href="https://arxiv.org/abs/2610.29114">Paper · arXiv preprint</a></p>
 </div>
 </div>
 </div>
