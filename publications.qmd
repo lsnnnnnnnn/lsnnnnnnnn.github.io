@@ -26,6 +26,22 @@ ECAI 2025 · Co-first author
 ## Selected Manuscripts
 
 ::: {.publication}
+### FToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction
+
+Juntang Wang, Yihan Wang, **Sheng’en Li**, Dongmian Zou, Shixin Xu\
+Preprint · 2026\
+[Research overview](projects.qmd#ftoken)
+:::
+
+::: {.publication}
+### LambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding
+
+Juntang Wang, Yihan Wang, **Sheng’en Li**, Siyuan Cao, Liming Zhu, Man Zhang, Dongmian Zou, Shixin Xu\
+Preprint · 2026\
+[Research overview](projects.qmd#lambdalens)
+:::
+
+::: {.publication}
 ### [MHeatmap: Two-Walk Laplacian Reordering and Mosaic Layout for Rectangular Matrix Visualization](https://arxiv.org/abs/2610.29114)
 
 Juntang Wang, **Sheng’en Li**, Liming Zhu, Yihan Wang, Siyuan Cao, Hao Wu, Man Zhang, Shixin Xu, Dongmian Zou  

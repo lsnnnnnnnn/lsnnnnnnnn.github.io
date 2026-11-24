@@ -11,6 +11,8 @@ project:
     - assets/research/history-alarm-controls.webp
     - assets/research/reachability-system.webp
     - assets/research/mheatmap-workflow.png
+    - assets/research/ftoken-architecture.png
+    - assets/research/lambdalens-workflow.png
     - assets/research/driftnerf-framework.png
     - assets/skills/reader-first.zip
     - assets/notes/reader-first/when-ai-stacks-nouns.png

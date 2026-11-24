@@ -90,6 +90,48 @@ Submitted to *Artificial Intelligence in Medicine* · Co-first author
 :::
 ::::
 
+## FToken: Reading Stock–Factor Panels Along Two Axes {#ftoken}
+
+:::: {.research-detail}
+::: {.research-visual}
+<a class="research-thumb" href="assets/research/ftoken-architecture.png" target="_blank" aria-label="View the FToken diagram"><img src="assets/research/ftoken-architecture.png" alt="A stock–factor panel splits into stock and factor attention branches. A gate combines their stock-level forecasts." width="1360" height="411" loading="lazy"></a>
+
+FToken · Dual-axis forecasting model
+:::
+::: {.research-copy}
+::: {.entry-meta}
+**Duke Kunshan University** · Cross-sectional return prediction
+:::
+
+A daily stock–factor panel can be read by row or by column. Each row describes one stock, while each column shows how one factor varies across the market. **FToken** applies attention in both directions. Each branch predicts a return for every stock, and a gate uses recent factor covariance and market volatility to weight the two forecasts.
+
+On NASDAQ with 158 factors, the strongest external baseline has a mean information coefficient of **0.0392**. Averaging the two branches reaches **0.0421**, and the learned gate reaches **0.0443**. The gate also earns the highest annualized excess return after trading costs, while equal weighting gives the highest portfolio information ratio.
+:::
+::::
+
+## LambdaLens: How Rescaling Neighbors Changes a Graph Embedding {#lambdalens}
+
+:::: {.research-detail}
+::: {.research-visual}
+<a class="research-thumb" href="assets/research/lambdalens-workflow.png" target="_blank" aria-label="View the LambdaLens diagram"><img src="assets/research/lambdalens-workflow.png" alt="Neighbor weights change as λ varies. Matched graph layouts show how far nodes move and how well they preserve class structure." width="1360" height="403" loading="lazy"></a>
+
+LambdaLens · Graph embedding audit
+:::
+::: {.research-copy}
+::: {.entry-meta}
+**Duke Kunshan University** · Graph embedding and dimensionality reduction
+:::
+
+When a cluster splits in a graph embedding, what changed? In SG-t-SNE-Π, the parameter λ changes the weight assigned to each neighbor before the layout is optimized. **LambdaLens** traces that change from individual edges to node positions. We compare layouts from the same graph and starting coordinates to isolate the effect of rescaling.
+
+The six graphs respond differently. Cora’s layout keeps moving across several settings, while MNIST’s changes little over the same range. On four labeled datasets, testing **four settings** recovers **98.48–100%** of the best label-fidelity score in a 16-setting sweep.
+
+::: {.research-links}
+[Experiment code](https://github.com/Q9gJYx/LambdaLens)
+:::
+:::
+::::
+
 ## DriftNeRF: Sparse-View 3D Reconstruction {#driftnerf}
 
 :::: {.research-detail}
