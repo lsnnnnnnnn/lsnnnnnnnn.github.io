@@ -65,7 +65,7 @@ ECAI 2025 · Co-first author
 
 ---
 
-## Research Projects
+## Selected Research Projects {#research-projects}
 
 :::: {.research-row}
 <a class="research-thumb" href="projects.qmd#counterfactual-learning" aria-label="Read about Counterfactual Learning for Adaptive Decision Systems"><img src="assets/research/copf-framework.webp" alt="COPF protocol linking policy and logging, estimation, auditing, and online control." width="1400" height="756" loading="lazy"></a>
@@ -77,67 +77,7 @@ ECAI 2025 · Co-first author
 Duke Kunshan University / Duke University · <span class="research-date">Jan. 2025 – Present</span>
 :::
 ::: {.research-summary}
-Counterfactual estimation, online auditing, and fairness control for link recommendation on evolving graphs.
-:::
-:::
-::::
-
-:::: {.research-row}
-<a class="research-thumb" href="projects.qmd#verified-reachability" aria-label="Read about Taylor-model reachability"><img src="assets/research/reachability-system.webp" alt="Neural-network controller and plant feedback loop, with flowpipes enclosing reachable trajectories between control updates." width="1200" height="431" loading="lazy"></a>
-
-::: {}
-### [Taylor-Model Reachability for Neural-Network-Controlled Systems](projects.qmd#verified-reachability)
-
-::: {.entry-meta}
-UIUC · Prof. Huan Zhang’s group · <span class="research-date">May 2026 – Present</span>
-:::
-::: {.research-summary}
-A PyTorch engine for validated ODE flowpipes, with step-level comparisons against Flow* and certified neural-network couplings.
-:::
-:::
-::::
-
-:::: {.research-row}
-<a class="research-thumb" href="projects.qmd#audit-refine" aria-label="Read about Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference"><img src="assets/research/audit-refine-framework.webp" alt="The Audit–Refine workflow for mechanistic ECG models." width="1200" height="740" loading="lazy"></a>
-
-::: {}
-### [Audit–Refine Partial-Physics Models for ECG-Based Electrolyte Inference](projects.qmd#audit-refine)
-
-::: {.entry-meta}
-Duke Kunshan University · <span class="research-date">Mar. 2026 – Aug. 2026</span>
-:::
-::: {.research-summary}
-We test whether ECG data support the model’s assumptions and whether the model can distinguish nearby electrolyte concentrations. We then evaluate targeted refinements on MIMIC-IV-ECG.
-:::
-:::
-::::
-
-:::: {.research-row}
-<a class="research-thumb" href="projects.qmd#ftoken" aria-label="Read about FToken"><img src="assets/research/ftoken-architecture.png" alt="A stock–factor panel splits into stock and factor attention branches. A gate combines their stock-level forecasts." width="1360" height="411" loading="lazy"></a>
-
-::: {}
-### [FToken: Reading Stock–Factor Panels Along Two Axes](projects.qmd#ftoken)
-
-::: {.entry-meta}
-Duke Kunshan University · <span class="research-date">2026</span>
-:::
-::: {.research-summary}
-Two attention models read the same daily panel across stocks and across factors, then combine their forecasts of stock returns.
-:::
-:::
-::::
-
-:::: {.research-row}
-<a class="research-thumb" href="projects.qmd#lambdalens" aria-label="Read about LambdaLens"><img src="assets/research/lambdalens-workflow.png" alt="Neighbor weights change as λ varies. Matched graph layouts show how far nodes move and how well they preserve class structure." width="1360" height="403" loading="lazy"></a>
-
-::: {}
-### [LambdaLens: How Rescaling Neighbors Changes a Graph Embedding](projects.qmd#lambdalens)
-
-::: {.entry-meta}
-Duke Kunshan University · <span class="research-date">2026</span>
-:::
-::: {.research-summary}
-Tracking neighbor weights and node positions reveals why the same parameter change can reshape one graph embedding and leave another almost unchanged.
+I developed COPF to track and adjust disparities in who receives recommendations as the network evolves.
 :::
 :::
 ::::
@@ -152,27 +92,29 @@ Tracking neighbor weights and node positions reveals why the same parameter chan
 Duke Kunshan University · Signature Work · <span class="research-date">2025 – 2026</span>
 :::
 ::: {.research-summary}
-Matched experiments separate the value of temporal history from alarm timing, recall, and warning burden.
+I study when past observations help detect an anomaly and whether an alarm arrives before the event ends.
 :::
 :::
 ::::
 
 :::: {.research-row}
-<a class="research-thumb" href="projects.qmd#fair-graph-anomaly-detection" aria-label="Read about Fair Graph Anomaly Detection"><img src="assets/research/decaf-gad-architecture.webp" alt="The DECAF-GAD architecture for fair graph anomaly detection." width="1197" height="753" loading="lazy"></a>
+<a class="research-thumb" href="projects.qmd#verified-reachability" aria-label="Read about Taylor-model reachability"><img src="assets/research/reachability-system.webp" alt="Neural-network controller and plant feedback loop, with flowpipes enclosing reachable trajectories between control updates." width="1200" height="431" loading="lazy"></a>
 
 ::: {}
-### [Fair Graph Anomaly Detection](projects.qmd#fair-graph-anomaly-detection)
+### [Taylor-Model Reachability for Neural-Network-Controlled Systems](projects.qmd#verified-reachability)
 
 ::: {.entry-meta}
-Duke Kunshan University · <span class="research-date">Jul. 2024 – May 2025</span>
+UIUC · Prof. Huan Zhang’s group · <span class="research-date">May 2026 – Present</span>
 :::
 ::: {.research-summary}
-DECAF-GAD combines causal disentanglement and counterfactual regularization to improve fairness in graph autoencoders.
+I’m building a PyTorch engine that bounds the paths a system can take under a neural network controller.
 :::
 :::
 ::::
 
-[More about my research](projects.qmd)
+::: {.publication-index}
+[All research projects →](projects.qmd)
+:::
 
 ---
 
