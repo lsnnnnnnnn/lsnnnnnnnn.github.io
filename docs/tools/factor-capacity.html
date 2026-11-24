@@ -154,9 +154,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-the-replay-follows" class="level2">
 <h2 data-anchor-id="what-the-replay-follows">What the replay follows</h2>
-<p>Each account carries its simulated cash and holdings through the evaluation period. Orders face available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.</p>
+<p>Each account carries its simulated cash and holdings through the evaluation period. When processing orders, the replay accounts for available book depth, execution delays, available cash, sellable shares, legal order sizes, suspensions, and price limits. Ordinary trades use a 10% volume-participation limit. The baseline also includes the specified policy for execution near daily price limits.</p>
 <p>A larger account changes order sizes, which can change fills, available cash, and subsequent holdings. Repeating the simulation at each capital level captures these changes in the portfolio’s path.</p>
-<p>An optional market-impact cost scenario enters the cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account.</p>
+<p>In the optional market-impact cost scenario, the replay includes the cost in its cash calculation before a trade fills. A higher cost can therefore reduce an affordable purchase and change later holdings, rather than simply lower the final reported return. The cost scale is an explicit, uncalibrated assumption. Historical quotes do not react to the simulated account.</p>
 </section>
 <section id="what-counts-as-capacity" class="level2">
 <h2 data-anchor-id="what-counts-as-capacity">What counts as capacity</h2>

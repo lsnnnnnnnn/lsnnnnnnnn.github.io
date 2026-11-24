@@ -88,7 +88,7 @@ $$
 
 The identity follows by expanding $(\sum_t w_t)^2=1$. Because A and B contain the same four quarter-size orders, $\sum_t w_t^2=1/4$. Each pays the same permanent term, $3\gamma/8$, whatever the timing.
 
-We may have no finite upper bound on either schedule's absolute cost. Their difference still loses this permanent term exactly. We subtract two finite costs within each possible market, then consider all the markets; we never subtract infinity from infinity.
+We may have no finite upper bound on either schedule's absolute cost. The permanent term still cancels exactly from their cost difference. We subtract two finite costs within each possible market, then consider all the markets; we never subtract infinity from infinity.
 
 This is why I compare both schedules under one shared mechanism. Giving A the most expensive possible market and B a different, cheap market throws away the cancellation. Such separate bounds can be valid and still tell us very little about choosing between A and B in the same market.
 

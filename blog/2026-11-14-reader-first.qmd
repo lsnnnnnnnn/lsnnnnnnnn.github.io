@@ -16,7 +16,7 @@ A technical explanation can contain the right facts and still make the reader wo
 ![When AI stacks nouns. Created with Codex using the [baoyu-comic](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-comic) skill.](../assets/notes/reader-first/when-ai-stacks-nouns.png){width=1448 height=1086 fig-alt="Four-panel comic: a reader faces a wall of stacked nouns about drone obstacle-avoidance rain-test results, struggles to connect the facts, then understands a rewrite that states what was tested, under what conditions, and what happened."}
 :::
 
-[Clark, Martin, and Mahowald's study](https://arxiv.org/abs/2610.29162v1) helped me think more precisely about this problem. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. In chat and coding tasks in particular, many models used longer dependencies and more stacked nouns than versions of the same sentences translated into Japanese and back into English. The pattern varied by model, feature, and setting.
+[Clark, Martin, and Mahowald's study](https://arxiv.org/abs/2610.29162v1) helped me think more precisely about this problem. They examine English features associated with processing difficulty, including long syntactic dependencies and stacked nouns. In chat and coding tasks in particular, sentences from many models had longer dependencies and more stacked nouns than versions of the same sentences translated into Japanese and back into English. The pattern varied by model, feature, and setting.
 
 The study measures linguistic features and model preferences, rather than how well people understand the generated passages.
 

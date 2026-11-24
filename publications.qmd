@@ -26,19 +26,19 @@ ECAI 2025 · Co-first author
 ## Selected Manuscripts
 
 ::: {.publication}
-### FToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction
+### [FToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction](https://arxiv.org/abs/2611.30112)
 
 Juntang Wang, Yihan Wang, **Sheng’en Li**, Dongmian Zou, Shixin Xu\
 Preprint · 2026\
-[Research overview](projects.qmd#ftoken)
+[paper](https://arxiv.org/abs/2611.30112) · [Research overview](projects.qmd#ftoken)
 :::
 
 ::: {.publication}
-### LambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding
+### [LambdaLens: Auditing a Representation-Changing Hyperparameter in Graph Neighbor Embedding](https://arxiv.org/abs/2611.30140)
 
 Juntang Wang, Yihan Wang, **Sheng’en Li**, Siyuan Cao, Liming Zhu, Man Zhang, Dongmian Zou, Shixin Xu\
 Preprint · 2026\
-[Research overview](projects.qmd#lambdalens)
+[paper](https://arxiv.org/abs/2611.30140) · [Research overview](projects.qmd#lambdalens)
 :::
 
 ::: {.publication}

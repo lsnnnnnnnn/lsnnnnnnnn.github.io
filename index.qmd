@@ -19,9 +19,9 @@ format:
 :::
 
 ::: {.profile-bio}
-I am an undergraduate student in Applied Mathematics and Computer Science in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
+I study Applied Mathematics and Computer Science as an undergraduate in the dual-degree program at [Duke Kunshan University](https://www.dukekunshan.edu.cn/) and [Duke University](https://duke.edu/).
 
-I study how to evaluate and improve learning and decision systems under feedback, temporal dependence, and modeling uncertainty. My work spans counterfactual evaluation, sequential detection, and numerical verification.
+My research asks how to evaluate and improve learning and decision systems when decisions shape future data, observations depend on past ones, or we are uncertain about the model. My work spans counterfactual evaluation, sequential detection, and numerical verification.
 
 Oh, and these are my [notes](blog/index.qmd){.intro-link .intro-notes} and [tools](tools.qmd){.intro-link .intro-tools}. You might want to have a look.
 :::
@@ -31,7 +31,7 @@ Oh, and these are my [notes](blog/index.qmd){.intro-link .intro-notes} and [tool
 
 ## News
 
-- **[Nov. 2026]** I completed my [Signature Work showcase](projects.qmd#contextual-anomaly-detection).
+- **[Nov. 2026]** I presented my [Signature Work](projects.qmd#contextual-anomaly-detection) at the showcase.
 - **[Apr. 2026]** [COPF](https://arxiv.org/abs/2606.00700) was accepted to **ICML 2026**.
 - **[Jul. 2025]** [DECAF-GAD](https://arxiv.org/abs/2508.10785) was accepted to **ECAI 2025**.
 
@@ -107,7 +107,7 @@ A PyTorch engine for validated ODE flowpipes, with step-level comparisons agains
 Duke Kunshan University · <span class="research-date">Mar. 2026 – Aug. 2026</span>
 :::
 ::: {.research-summary}
-Auditing scaffold adequacy and local identifiability, then testing targeted refinements on MIMIC-IV-ECG.
+We test whether ECG data support the model’s assumptions and whether the model can distinguish nearby electrolyte concentrations. We then evaluate targeted refinements on MIMIC-IV-ECG.
 :::
 :::
 ::::
@@ -189,5 +189,5 @@ Jul. 2026 – Present
 :::
 :::
 
-Liquidity-aware factor backtesting and macroeconomic consensus research, building on earlier work in financial-document retrieval and Python/SQL data pipelines.
+I backtest factor strategies under liquidity constraints and study macroeconomic consensus. In my earlier developer role, I worked on financial document retrieval and on data pipelines in Python and SQL.
 

@@ -10,7 +10,7 @@ toc: false
 
 ## Leadership and Service
 
-- Group technical support: GPU/server maintenance and junior-student mentoring, 2025 – Present
+- Maintain GPUs and servers for the research group and mentor junior students, 2025 – Present
 - Resident Assistant, Duke Kunshan University, Aug. 2024 – May 2025
 - Volunteer Mathematics Instructor, Tongren, China, Jul. 2024
 

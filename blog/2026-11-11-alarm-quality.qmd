@@ -31,7 +31,7 @@ Yet both arrangements receive **AP = 0.750 and AUROC = 0.625**. These are exact 
 
 The reason is simple once the scores are sorted. In both cases, the anomalous blocks have three 1s and nine 0s. The normal blocks have six 0s. AP and AUROC see the same scores attached to the same labels. They have no way to tell whether the three high scores belong to three separate events or are all spent on one.
 
-I had initially paid most attention to the final performance numbers in my SW. After several modeling attempts failed to produce the consistent advantage I wanted, I began looking more closely at what each comparison could explain. The example above gives a compact reason to follow the scores back into time. A ranking can tell me which observations look more suspicious. I still need to find out which events receive a warning before they end.
+I had initially paid most attention to the final performance numbers in my SW. After several modeling attempts failed to produce the consistent advantage I wanted, I began looking more closely at what each comparison could explain. The example above shows why I need to look at when the scores occur. A ranking can tell me which observations look more suspicious. I still need to find out which events receive a warning before they end.
 
 That question also made an actual experimental result more interesting. I gave two alarm rules exactly the same learned scores. One reacted to individual high scores. The other, CUSUM, accumulated evidence, allowing several moderately unusual scores to build toward a warning.
 

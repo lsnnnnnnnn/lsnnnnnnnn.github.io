@@ -176,7 +176,7 @@ Compute each source's **net coefficient** before taking absolute values. Replaci
 
 ## Put the improvement where the proof can use it
 
-For COMET, the useful destination for this structure is a bound on the moment of a centered block sum. Write
+For COMET, we can use this structure to bound a moment of a centered block sum. Write
 
 $$
 S_b(\theta)=\sum_{u\in b}X_u(\theta),\qquad
@@ -241,7 +241,7 @@ Thus the change enters through the block moment, with the estimator and independ
 
 There is one particularly consequential detail for counterfactual scores. Importance weights depend on random exposures. They can disrupt cancellation: in a weighted difference sum, the internal source coefficients become $a_i-a_{i+1}$. Conditioning on the exposures fixes those weights, but generally leaves an exposure-dependent residual mean. The complete centered score needs both that residual and the source-noise term. A dependency graph for outcome noise alone does not establish a graph for the whole score.
 
-The interface above therefore keeps the fixed-design, independent-evaluation-block setting. A source shared across blocks can invalidate block independence, so independence must be established for the complete block scores. Adaptive histories and mutually fitted nuisance estimates need their own argument.
+The interface above therefore assumes a fixed design and independent evaluation blocks. A source shared across blocks can invalidate block independence, so independence must be established for the complete block scores. Adaptive histories and mutually fitted nuisance estimates need their own argument.
 
 ## What I would compare next
 

@@ -219,6 +219,9 @@ Advised by Prof.&nbsp;Shixin Xu and Prof.&nbsp;Dongmian Zou</p>
 </div>
 <p>A daily stock–factor panel can be read by row or by column. Each row describes one stock, while each column shows how one factor varies across the market. <strong>FToken</strong> applies attention in both directions. Each branch predicts a return for every stock, and a gate uses recent factor covariance and market volatility to weight the two forecasts.</p>
 <p>On NASDAQ with 158 factors, the strongest external baseline has a mean information coefficient of <strong>0.0392</strong>. Averaging the two branches reaches <strong>0.0421</strong>, and the learned gate reaches <strong>0.0443</strong>. The gate also earns the highest annualized excess return after trading costs, while equal weighting gives the highest portfolio information ratio.</p>
+<div class="research-links">
+<p><a href="https://arxiv.org/abs/2611.30112">Paper · arXiv preprint</a></p>
+</div>
 </div>
 </div>
 </section>
@@ -236,7 +239,7 @@ Advised by Prof.&nbsp;Shixin Xu and Prof.&nbsp;Dongmian Zou</p>
 <p>When a cluster splits in a graph embedding, what changed? In SG-t-SNE-Π, the parameter λ changes the weight assigned to each neighbor before the layout is optimized. <strong>LambdaLens</strong> traces that change from individual edges to node positions. We compare layouts from the same graph and starting coordinates to isolate the effect of rescaling.</p>
 <p>The six graphs respond differently. Cora’s layout keeps moving across several settings, while MNIST’s changes little over the same range. On four labeled datasets, testing <strong>four settings</strong> recovers <strong>98.48–100%</strong> of the best label-fidelity score in a 16-setting sweep.</p>
 <div class="research-links">
-<p><a href="https://github.com/Q9gJYx/LambdaLens">Experiment code</a></p>
+<p><a href="https://arxiv.org/abs/2611.30140">Paper · arXiv preprint</a></p>
 </div>
 </div>
 </div>
@@ -252,7 +255,7 @@ Advised by Prof.&nbsp;Shixin Xu and Prof.&nbsp;Dongmian Zou</p>
 <div class="entry-meta">
 <p><strong>Duke Kunshan University</strong> · Sparse-view 3D reconstruction</p>
 </div>
-<p>With only a few training images, a NeRF can reproduce observed pixels while assigning inconsistent densities to nearby 3D points. I co-developed <strong>DriftNeRF</strong> to measure this disagreement across camera rays and turn it into a training signal. For each sample, it pools nearby density predictions from other rays into a consensus target, holds that target fixed during the update (<strong>stop-gradient</strong>), and adjusts the sample’s density toward it alongside the standard rendering objective.</p>
+<p>With only a few training images, a NeRF can reproduce observed pixels while assigning inconsistent densities to nearby 3D points. I co-developed <strong>DriftNeRF</strong> to measure this disagreement across camera rays and turn it into a training signal. For each sample, DriftNeRF averages nearby density predictions from other rays, giving closer points more weight. During each update, it holds this target fixed (<strong>stop-gradient</strong>) and adjusts the sample’s density toward it while fitting the observed pixels.</p>
 <p>The regularizer uses only sampled positions, ray identifiers, and predicted densities, requiring no pretrained model, external geometry, or additional images. Across <strong>NeRF-Synthetic, DTU, and LLFF</strong>, it improves three-view PSNR by <strong>0.42–0.65 dB</strong> over the strongest tested MLP-NeRF baseline. Experiments also show that the same loss transfers to a hash-grid representation.</p>
 <div class="research-links">
 <p><a href="https://arxiv.org/abs/2610.29106">Paper</a> · Submitted to CVPR 2027 · Co-first author</p>
@@ -291,7 +294,7 @@ Advised by Prof.&nbsp;Shixin Xu and Prof.&nbsp;Dongmian Zou</p>
 <p><strong>Duke Kunshan University</strong> · 2025 – 2026<br>
 Signature Work · Advised by Prof.&nbsp;Dongmian Zou</p>
 </div>
-<p>My Signature Work separates three questions in anomaly detection: <strong>what temporal context adds, how much evidence a model captures, and when its scores produce useful warnings</strong>. I designed matched-block experiments that preserve observed data while changing history–current pairings, proving chance-level ranking for fixed current-only detectors. A covariance-based Markov model trained on normal data measures the value of contextual relationships.</p>
+<p>My Signature Work separates three questions in anomaly detection: <strong>what temporal context adds, how much evidence a model captures, and when its scores produce useful warnings</strong>. I designed matched-block experiments that keep the observed blocks and change which history precedes each current block. I show that, under this construction, a fixed detector that sees only the current block ranks anomalies at chance. A covariance-based Markov model trained on normal data measures the value of contextual relationships.</p>
 <p>I compare thresholding and accumulation on identical scores, tracking event recall, detection delay, and warning burden. CUSUM increased four-block recall by <strong>9.6 and 2.9 percentage points</strong> in two simulated settings. Evaluation across <strong>119 real series from five sources</strong> found no consistent detection gain from accumulation, highlighting the need to evaluate recall alongside the frequency of warnings during normal periods.</p>
 <div class="research-links">
 <p><a href="./blog/2026-11-11-alarm-quality.html">Research note: How to Miss Two Events Without Hurting Your Score</a></p>
